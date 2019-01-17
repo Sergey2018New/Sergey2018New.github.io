@@ -27,6 +27,7 @@ $(document).ready(function() {
 			arrows: true,
 			prevArrow: prevArrow,
 			nextArrow: nextArrow, 
+			lazyLoad: 'progressive',
 			responsive: [
 				 {
 					  breakpoint: 992,
@@ -65,6 +66,7 @@ $(document).ready(function() {
 			arrows: true,
 			prevArrow: prevArrow,
 			nextArrow: nextArrow, 
+			lazyLoad: 'progressive',
 			responsive: [
 				 {
 					  breakpoint: 992,
