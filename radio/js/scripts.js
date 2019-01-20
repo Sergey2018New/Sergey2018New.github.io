@@ -125,6 +125,72 @@ $(document).ready(function() {
 		$('.accordions-carousel').slick(accordionsOptions);
 	}
 	
+	// Инициализация слайдера "Примеры музыкальных баз" (плагин slick)
+	if ($('.examples__carousel').length){
+		$('.examples__carousel').slick({
+			dots: true,
+			infinite: false,
+			touchThreshold: 20,
+			slidesToShow: 2,
+			slidesToScroll: 1,
+         slidesPerRow: 1,
+			arrows: true,
+			prevArrow: prevArrow,
+			nextArrow: nextArrow, 
+			lazyLoad: 'progressive',
+			responsive: [
+				 {
+					  breakpoint: 992,
+					  settings: {
+							slidesToShow: 4,
+							arrows: false
+					  }
+				 },
+				 {
+					  breakpoint: 576,
+					  settings: {
+						  slidesToShow: 2,
+							rows: 5,
+							arrows: false
+					  }
+				 }
+			]
+		});
+	}
+	
+	// Инициализация слайдера "Музыка для звукового оформления" (плагин slick)
+	if ($('.carousel-places').length){
+		$('.carousel-places').slick({
+			dots: true,
+			infinite: true,
+			touchThreshold: 20,
+			slidesToShow: 4,
+			slidesToScroll: 4,
+         slidesPerRow: 1,
+			arrows: true,
+			prevArrow: prevArrow,
+			nextArrow: nextArrow, 
+			lazyLoad: 'progressive',
+			responsive: [
+				 {
+					  breakpoint: 992,
+					  settings: {
+							slidesToShow: 4,
+							arrows: false
+					  }
+				 },
+				 {
+					  breakpoint: 576,
+					  settings: {
+						  slidesToShow: 2,
+							rows: 5,
+							arrows: false
+					  }
+				 }
+			]
+		});
+	}
+	
 	if ($(".broadcast-item").length){
 		$(".broadcast-item").each(function(){
 			var title = $(this).find(".broadcast-item__title > div"),
@@ -146,6 +212,64 @@ $(document).ready(function() {
 			$('.menu ul').removeAttr("style");
 			$('.menu > li').removeClass("open");
 		}
+		
+		// holidays 
+		if ($(".holidays__items").length){
+			$(".holidays__items").after('<div class="holidays__items-clone"><div></div></div>');
+			var itemsClone, divLast, divFirst, divCenter;
+			itemsClone = $(".holidays__items-clone");
+		
+			if (w <= 1199){
+				$('.holiday-item').each(function(elem){
+					divLast = itemsClone.children("div:last-child");
+					elem++;
+					if (elem % 2 != 0 && elem != 1){
+						 itemsClone.append("<div></div>");
+						divLast = itemsClone.children("div:last-child");
+						divLast.append($(this));
+					}
+					else{
+						divLast.append($(this));
+					}
+				});
+			}
+			else{
+				itemsClone.append('<div></div><div></div>');
+			
+				$('.holiday-item').each(function(elem){
+					
+					divFirst = itemsClone.children("div:first-child");
+					divLast = itemsClone.children("div:last-child");
+					divCenter = itemsClone.children("div:nth-child(2)");
+					elem++;
+					
+					switch(elem){
+						case 1:
+						case 2:
+						case 6:
+						case 7:
+							divFirst.append($(this));
+						break;
+						
+						case 3:
+						case 8:
+							divCenter.append($(this));
+						break;
+						
+						case 4:
+						case 5:
+						case 9:
+						case 10:
+							divLast.append($(this));
+						break;
+					}
+				});
+			}
+			
+			$(".holidays__items").empty().append(itemsClone.children());
+			itemsClone.remove();
+		}
+			
 	}
 	windowSize();
 	$(window).on('resize', windowSize); 
@@ -383,5 +507,18 @@ $(document).ready(function() {
 		
 	});
 	
+	// player
+	$('.example-item').on("click", function(){
+		$('.example-item').not($(this)).removeClass("playing");
+		$(this).toggleClass("playing");
+	});
+	
+	$('[data-animation="spin"]').on('inview.uk.scrollspy', function() {
+		$this = $(this);
+		   $this.spincrement({
+				 thousandSeparator: " ",
+				 duration: $this.data("duration")
+			});
+    });
 	
 });
