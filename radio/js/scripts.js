@@ -142,15 +142,13 @@ $(document).ready(function() {
 				 {
 					  breakpoint: 992,
 					  settings: {
-							slidesToShow: 4,
 							arrows: false
 					  }
 				 },
 				 {
-					  breakpoint: 576,
+					  breakpoint: 768,
 					  settings: {
-						  slidesToShow: 2,
-							rows: 5,
+						  slidesToShow: 1,
 							arrows: false
 					  }
 				 }
@@ -173,18 +171,28 @@ $(document).ready(function() {
 			lazyLoad: 'progressive',
 			responsive: [
 				 {
+					  breakpoint: 1200,
+					  settings: {
+							slidesToShow: 3,
+							slidesToScroll: 3
+					  }
+				 },
+				 {
 					  breakpoint: 992,
 					  settings: {
-							slidesToShow: 4,
-							arrows: false
+						  slidesToShow: 2,
+						  slidesToScroll: 2,
+						  arrows: false
+					
 					  }
 				 },
 				 {
 					  breakpoint: 576,
 					  settings: {
-						  slidesToShow: 2,
-							rows: 5,
-							arrows: false
+						  slidesToShow: 1,
+						  slidesToScroll: 1,
+						  arrows: false
+					
 					  }
 				 }
 			]
