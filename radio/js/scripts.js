@@ -529,4 +529,111 @@ $(document).ready(function() {
 			});
     });
 	
+	    // FORM VALIDATION
+    $(function() {
+        //flick('.error_msg', 1000);
+		  
+        $('.ajax_form').submit(function() {
+			  
+            var form = $(this),
+                action = form.attr('action'),
+                msg = form.serialize(),
+                req = form.find('.required'),
+                req_num = 0,
+                req_summ = req.length;
+					 
+            req.focus(function(event) {
+                $(this).removeClass('error').next('.error_msg').remove();
+            });
+				
+            // if (req_summ == req_num) {
+            if ($('[name="name"]').val() && $('[name="phone"]').val() || $('[name="email"]').val()) {
+                // alert('поздравляем! вы заполнили все поля. теперь, если вы не против мы отправим форму... ))');
+                // НЕ УДАЛЯТЬ !!!
+                $.ajax({
+                    url: action,
+                    data: msg,
+                    success: function(data) {
+                        // console.log(data);
+                        form[0].reset();
+                        form.addClass('form_sent');
+                        form.find('.required').removeClass('error');
+                        form.find('.error_msg').remove();
+								setTimeout(function(){
+									form.removeClass('form_sent');
+								}, 3000); 
+                    },
+                    error: function(xhr, str) {
+                        alert('Возникла ошибка: ' + xhr.responseCode);
+                    }
+                })
+            } 
+				
+				else {
+                req.each(function(i, elem) {
+                    var inpt_val = $(this).val(),
+                        top = $(this).offset().top,
+                        left = $(this).offset().left,
+                        erroe_msg = $(this).data('required'),
+                        error_elem = '<div class="error_msg">' + erroe_msg + '</div>';
+                    if (inpt_val) {
+                        $(this).removeClass('error');
+                        $(this).next('.error_msg').remove();
+                        req_num += 1;
+                    } else {
+                        // if ($(this).attr('name') == 'phone') {
+
+                        // }
+                        if (!$(this).hasClass('error')) {
+                            // $(this).attr('placeholder', '');
+                            $(this).addClass('error');
+                            $(this).after(error_elem).fadeIn();
+                        }
+                    }
+                });
+            };
+            return false;
+        });
+        $(document).click(function(event) {
+            if ($(event.target).closest(".contacts__form").length && !$(event.target).closest(".contacts__form").hasClass('form_sent')) return;
+            $('.contacts__form').removeClass('form_sent')
+            event.stopPropagation();
+        });
+        $('.contacts__form input, .contacts__form textarea').focus(function() {
+            $('.contacts__form').find('.required').removeClass('error');
+            $('.contacts__form').find('.error_msg').remove();
+        });
+    })
+
+	 $(".form-control").on('focus', function() {
+		$(this).next('.placeholder').fadeOut(200);
+	 });
+	 $(".form-control").on('blur', function() {
+		if (!$(this).val()) {
+			 $(this).next('.placeholder').fadeIn(200);
+		}
+	 });
+	 
+	 
+    // VALIDATION ANIMATION RESET
+    $(document).click(function(event) {
+        if ($(event.target).closest('form').length) return;
+        $('form').find('.required').removeClass('error');
+        $('form').find('.error_msg').remove();
+        event.stopPropagation();
+    });
+	 
+	  
+	  // фильтрация ввода в поля
+	$('.input-count').keypress(function(event){
+		var key, keyChar;
+		if(!event) var event = window.event;	
+		if (event.keyCode) key = event.keyCode;
+		else if(event.which) key = event.which;
+		if(key==null || key==0 || key==8 || key==13 || key==9 || key==46 || key==37 || key==39 ) return true;
+		keyChar=String.fromCharCode(key);
+		if(!/\d/.test(keyChar))	return false;
+	});
+		
+	
 });
