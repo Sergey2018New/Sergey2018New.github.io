@@ -11,7 +11,9 @@ $(document).ready(function() {
 	// Путь до файла иконок, иконки слайдера
 	var srcIcons = 'img/icons.svg',
 		 prevArrow = '<button type="button" class="slick-prev slick-arrow"><svg class="icon icon-nav"><use xlink:href="' + srcIcons + '#icon-nav"/></svg></button>',
-		 nextArrow = '<button type="button" class="slick-next slick-arrow"><svg class="icon icon-nav"><use xlink:href="' + srcIcons + '#icon-nav"/></svg></button>';
+		 nextArrow = '<button type="button" class="slick-next slick-arrow"><svg class="icon icon-nav"><use xlink:href="' + srcIcons + '#icon-nav"/></svg></button>',
+		 prevArrow2 = '<button type="button" class="slick-prev slick-arrow"><svg class="icon icon-arrow-2"><use xlink:href="' + srcIcons + '#icon-arrow-2"/></svg></button>',
+		 nextArrow2 = '<button type="button" class="slick-next slick-arrow"><svg class="icon icon-arrow-2"><use xlink:href="' + srcIcons + '#icon-arrow-2"/></svg></button>';
 	
 	// Инициализация слайдера "Зоны вещаний" (плагин slick)
 	if ($('.broadcast__carousel').length){
@@ -234,6 +236,15 @@ $(document).ready(function() {
 		});
 	}
 	
+	
+	// Инициализация плагина hoverdir
+	if ($(".music-advantages").length){
+		$('.music-advantage-item__content').each(function(){ 
+			$(this).hoverdir(); 
+		});
+	}
+	
+	
 	// Инициализация модальных окон (плагин fancybox)
 	
 	function showModalFunctions (){
@@ -334,6 +345,50 @@ $(document).ready(function() {
 			$(".holidays__items").empty().append(itemsClone.children());
 			itemsClone.remove();
 		}
+		
+			if ($('.music-advantages__carousel').length){
+				if (w <= 991){
+					if (!$('.music-advantages__carousel.slick-initialized').length){
+						$('.music-advantages__carousel').slick({
+							dots: true,
+							infinite: false,
+							touchThreshold: 20,
+							slidesToShow: 2,
+							slidesToScroll: 2,
+							arrows: true,
+							prevArrow: prevArrow2,
+							nextArrow: nextArrow2, 
+							lazyLoad: 'progressive',
+							responsive: [
+								 {
+									  breakpoint: 576,
+									  settings: {
+										 slidesToShow: 1,
+										 slidesToScroll: 1
+									
+									  }
+								 },
+								 {
+									  breakpoint: 351,
+									  settings: {
+										 slidesToShow: 1,
+										 slidesToScroll: 1,
+										arrows: false,
+									  }
+								 }
+							]
+						});
+					}
+					
+				}
+				else{
+					if ($('.music-advantages__carousel.slick-initialized').length){
+						$('.music-advantages__carousel').slick('unslick');
+					}
+					
+				}
+				
+			}
 			
 	}
 	windowSize();

@@ -1422,6 +1422,11 @@ hr {
   height: 31px;
   fill: #9b256a;
 }
+.icon-arrow-2 {
+  width: 20px;
+  height: 45px;
+  fill: #9b256a;
+}
 .icon-ads {
   width: 50px;
   height: 40px;
@@ -1878,6 +1883,86 @@ hr {
 .icon-note-2 {
   width: 78px;
   height: 78px;
+  fill: #656565;
+}
+.icon-note-3 {
+  width: 40px;
+  height: 46px;
+  fill: #f9f9f9;
+}
+.icon-place {
+  width: 43px;
+  height: 63px;
+  fill: #737373;
+}
+.icon-ruble {
+  width: 50px;
+  height: 54px;
+  fill: #737373;
+}
+.icon-seats {
+  width: 61px;
+  height: 61px;
+  fill: #737373;
+}
+.icon-disk {
+  width: 46px;
+  height: 46px;
+  fill: #f9f9f9;
+}
+.icon-grid {
+  width: 41px;
+  height: 41px;
+  fill: #f9f9f9;
+}
+.icon-instrument {
+  width: 41px;
+  height: 41px;
+  fill: #f9f9f9;
+}
+.icon-instrument {
+  width: 41px;
+  height: 41px;
+  fill: #f9f9f9;
+}
+.icon-mood {
+  width: 50px;
+  height: 50px;
+  fill: #656565;
+}
+.icon-suit {
+  width: 44px;
+  height: 49px;
+  fill: #656565;
+}
+.icon-armchair {
+  width: 54px;
+  height: 42px;
+  fill: #656565;
+}
+.icon-headphones-3 {
+  width: 57px;
+  height: 53px;
+  fill: #656565;
+}
+.icon-hourglass {
+  width: 44px;
+  height: 48px;
+  fill: #656565;
+}
+.icon-fireworks {
+  width: 59px;
+  height: 55px;
+  fill: #656565;
+}
+.icon-cards {
+  width: 56px;
+  height: 58px;
+  fill: #656565;
+}
+.icon-reward {
+  width: 41px;
+  height: 56px;
   fill: #656565;
 }
 /* Элементы форм */
@@ -3106,6 +3191,14 @@ textarea.form-control {
   max-width: 420px;
   background: #9b256a;
 }
+.title-bar__border {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border: 1px solid #fff;
+}
 .title-bar--border {
   max-width: 210px;
   padding-top: 37px;
@@ -3162,6 +3255,95 @@ textarea.form-control {
 .title-bar--circle:before {
   -webkit-border-radius: 50%;
           border-radius: 50%;
+}
+.content-link {
+  display: inline-block;
+  position: relative;
+  height: 42px;
+  line-height: 42px;
+  margin-left: 20px;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: bold;
+  color: #9b256a;
+  cursor: pointer;
+  background: none;
+  outline: none;
+  -webkit-border-radius: 0;
+          border-radius: 0;
+  border: none;
+  padding: 0 20px 0 66px;
+  text-decoration: none;
+  -webkit-transition: 0.25s all ease-in-out;
+  -o-transition: 0.25s all ease-in-out;
+  transition: 0.25s all ease-in-out;
+}
+.content-link:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 42px;
+  -webkit-border-radius: 24px;
+          border-radius: 24px;
+  background: #9b256a;
+  -webkit-transition: 0.25s all ease-in-out;
+  -o-transition: 0.25s all ease-in-out;
+  transition: 0.25s all ease-in-out;
+}
+.content-link:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 8px;
+  width: 18px;
+  height: 2px;
+  margin-top: -1px;
+  background: #ffffff;
+  opacity: 0;
+  -webkit-border-top-left-radius: 2px;
+          border-top-left-radius: 2px;
+  -webkit-border-bottom-left-radius: 2px;
+          border-bottom-left-radius: 2px;
+  -webkit-transition: 0.25s all ease-in-out;
+  -o-transition: 0.25s all ease-in-out;
+  transition: 0.25s all ease-in-out;
+}
+.content-link .icon {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 16px;
+  height: 22px;
+  width: 12px;
+  fill: #fff;
+  -webkit-transform: translate(0, -50%);
+      -ms-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  -webkit-transition: 0.25s all ease-in-out;
+  -o-transition: 0.25s all ease-in-out;
+  transition: 0.25s all ease-in-out;
+}
+.content-link span {
+  position: relative;
+}
+.content-link:hover {
+  color: #ffffff;
+}
+.content-link:hover:before {
+  width: 100%;
+}
+.content-link:hover:after {
+  opacity: 1;
+  -webkit-transform: translate(15px, 0);
+      -ms-transform: translate(15px, 0);
+          transform: translate(15px, 0);
+}
+.content-link:hover .icon {
+  -webkit-transform: translate(15px, -50%);
+      -ms-transform: translate(15px, -50%);
+          transform: translate(15px, -50%);
 }
 /* Стартовый блок */
 .main-block {
@@ -5374,18 +5556,42 @@ textarea.form-control {
 .music-abilities .title-bar {
   max-width: 360px;
 }
-/*  */
-.legality__text {
+/* Официальные партнеры */
+.official-partners__title {
+  margin-top: 25px;
+  text-align: center;
+  padding: 26px 20px;
+  margin-bottom: 58px;
+  max-width: 414px;
+  color: #9b256a;
+  font-size: 15px;
+  letter-spacing: 0.035em;
+  background: #f9f9f9;
+}
+.official-partners__title:before {
+  display: none;
+}
+.official-partners__title > div {
+  display: inline-block;
+  padding: 13px 28px 12px;
+  border: 2px solid #9b256a;
+}
+.official-partners__title > div:before,
+.official-partners__title > div:after {
+  display: none;
+}
+.official-partners__text {
   text-align: center;
   max-width: 388px;
   margin: 0 auto 44px;
   line-height: 1.5;
   color: #434343;
 }
-.legality__text:first-child {
+.official-partners__text:first-child {
   line-height: 1.3;
 }
-.legality__logos {
+.official-partners__logos {
+  position: relative;
   margin: 62px 0 44px;
   text-align: center;
   display: -webkit-box;
@@ -5397,12 +5603,28 @@ textarea.form-control {
       -ms-flex-pack: center;
           justify-content: center;
 }
-.legality__logos > div {
-  margin: 0 44px;
+.official-partners__logos img {
+  display: block;
 }
-.legality__logos > div + div {
-  margin-left: 34px;
-  margin-right: 54px;
+.official-partners__logos-line {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 2px;
+  height: 120px;
+  background: #9b256a;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+.official-partners__logos > div {
+  margin: 0 39px;
+}
+.official-partners__logos > div:nth-child(3) {
+  margin: 0;
+}
+.legality {
+  padding-bottom: 20px;
 }
 .legality .content-title {
   margin-bottom: 25px;
@@ -5662,9 +5884,6 @@ textarea.form-control {
 .example-item + .example-item {
   margin-top: 15px;
 }
-.examples {
-  padding-bottom: 20px;
-}
 .examples__carousel {
   display: -webkit-box;
   display: -webkit-flex;
@@ -5693,6 +5912,7 @@ textarea.form-control {
 }
 .examples .content-subtitle {
   margin-bottom: 28px;
+  max-width: 370px;
 }
 .examples .content-subtitle h3 {
   margin-bottom: 0;
@@ -6263,11 +6483,11 @@ textarea.form-control {
 .what-music__more-link:hover .icon {
   fill: #9b256a;
 }
-/* Выбирайте обдумано лицензию на музыку: */
-.music-license {
+/* Блок с информацией: */
+.information {
   margin-bottom: 60px;
 }
-.music-license__content {
+.information__content {
   max-width: 764px;
   margin: 0 auto;
   -webkit-box-align: center;
@@ -6281,7 +6501,7 @@ textarea.form-control {
   padding: 45px 88px 45px 90px;
   background: #f9f9f9;
 }
-.music-license__box {
+.information__box {
   width: 134px;
   -webkit-box-flex: 0;
   -webkit-flex: none;
@@ -6289,7 +6509,7 @@ textarea.form-control {
           flex: none;
   margin-right: 30px;
 }
-.music-license__box .title-bar {
+.information__box .title-bar {
   margin: 0;
   height: 134px;
   display: -webkit-box;
@@ -6306,11 +6526,11 @@ textarea.form-control {
           justify-content: center;
   font-size: 20px;
 }
-.music-license__box .title-bar > div:before,
-.music-license__box .title-bar > div:after {
+.information__box .title-bar > div:before,
+.information__box .title-bar > div:after {
   display: none;
 }
-.music-license__text {
+.information__text {
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
       -ms-flex-positive: 1;
@@ -6318,9 +6538,35 @@ textarea.form-control {
   color: #535353;
   line-height: 1.5;
 }
-.music-license .content-subtitle {
-  max-width: 300px;
+.information__text a {
+  display: inline-block;
+}
+.information__icon {
+  width: 134px;
+  height: 134px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 2px solid #9b256a;
+}
+.information .content-subtitle {
+  max-width: 340px;
   margin-bottom: 29px;
+}
+.information .content-subtitle + .title-bar {
+  margin-bottom: 60px;
+  max-width: 274px;
+  font-size: 17px;
+  padding: 10px 20px;
 }
 /* Контакты */
 .social {
@@ -7177,6 +7423,403 @@ textarea.form-control {
 .production-info__text p {
   margin: 8px 0;
 }
+/* Музыка для ресторана и кафе */
+.music-restaurant .official-partners__logos {
+  margin-top: 58px;
+  margin-bottom: 52px;
+}
+.music-restaurant .official-partners__text {
+  margin-bottom: 42px;
+}
+.music-restaurant .information {
+  margin-bottom: 55px;
+}
+.music-restaurant .examples .content-text__inner {
+  max-width: 515px;
+}
+.music-business {
+  text-align: center;
+}
+.music-business__box {
+  max-width: 240px;
+  padding: 35px 45px;
+  margin-top: 39px;
+  margin-bottom: 26px;
+  font-size: 21px;
+  line-height: 1.25;
+}
+.music-business__box span {
+  position: relative;
+  font-size: 22px;
+  font-weight: normal;
+}
+.music-business__box span:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 1px;
+  bottom: 0;
+  background: #ffffff;
+}
+.music-business__box strong:first-child {
+  letter-spacing: 0.035em;
+}
+.music-business__box strong:last-child {
+  font-size: 19px;
+}
+.music-business__box:before {
+  display: none;
+}
+.music-business__box > div {
+  position: relative;
+  padding: 20px 5px 21px;
+}
+.music-business__box > div:before,
+.music-business__box > div:after {
+  display: none;
+}
+.music-business__line {
+  margin: 26px auto 25px;
+  height: 25px;
+  width: 2px;
+  background: #9b256a;
+}
+/* Зачем нужна фоновая музыка */
+.music-advantage-item {
+  position: relative;
+  height: 250px;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+          background-size: cover;
+  text-align: center;
+  overflow: hidden;
+  margin: 0 4px 8px;
+}
+.music-advantage-item__title {
+  max-width: 115px;
+  margin: 0 auto;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.3;
+  color: #9b256a;
+}
+.music-advantage-item__icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100px;
+  height: 100px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: rgba(255, 255, 255, 0.8);
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transition: 0.25s all ease-in-out;
+  -o-transition: 0.25s all ease-in-out;
+  transition: 0.25s all ease-in-out;
+}
+.music-advantage-item__content {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.music-advantage-item__content > div {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 100%;
+}
+.music-advantage-item__content > div > div {
+  position: absolute;
+  top: 25px;
+  bottom: 25px;
+  left: 25px;
+  right: 25px;
+  background: rgba(255, 255, 255, 0.92);
+}
+.music-advantage-item__content .music-advantage-item__icon {
+  position: relative;
+  top: auto;
+  left: auto;
+  width: 94px;
+  height: 92px;
+  margin: 0 auto 15px;
+  background: #9b256a;
+  -webkit-transform: none;
+      -ms-transform: none;
+          transform: none;
+}
+.music-advantage-item__content .music-advantage-item__icon .icon {
+  fill: #fff;
+  -webkit-transform: scale(0.8);
+      -ms-transform: scale(0.8);
+          transform: scale(0.8);
+}
+.music-advantage-item__circles {
+  margin: 0 auto 10px;
+  width: 5px;
+  height: 5px;
+  background: #a1a1a1;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  position: relative;
+}
+.music-advantage-item__circles:before,
+.music-advantage-item__circles:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -13px;
+  width: 5px;
+  height: 5px;
+  background: #a1a1a1;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+}
+.music-advantage-item__circles:after {
+  left: 13px;
+}
+.music-advantage-item:hover > .music-advantage-item__icon {
+  opacity: 0;
+}
+.music-advantage-item--5 .music-advantage-item__title {
+  max-width: 145px;
+}
+.music-advantages {
+  margin-bottom: 31px;
+}
+.music-advantages__carousel {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  margin: 0 -4px;
+}
+.music-advantages__carousel > div {
+  width: 25%;
+}
+.music-advantages__carousel .slick-arrow {
+  height: 45px;
+  width: 20px;
+  margin-top: -5px;
+}
+.music-advantages__carousel .slick-dots {
+  bottom: -19px;
+}
+.music-advantages .content-subtitle {
+  max-width: 420px;
+}
+.music-advantages .container {
+  max-width: 1054px;
+}
+/* С нами вам доступны */
+.availability {
+  margin-bottom: 45px;
+}
+.availability__content {
+  padding: 40px 0;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+          background-size: cover;
+}
+.availability__items {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  margin: 0 -7.5px;
+}
+.availability .container {
+  max-width: 1115px;
+}
+.availability .content-subtitle {
+  margin-bottom: 20px;
+}
+.availability-item {
+  position: relative;
+  width: -webkit-calc(25% - 15px);
+  width: calc(25% - 15px);
+  height: 260px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 7.5px;
+}
+.availability-item:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #fff;
+  opacity: 0.9;
+}
+.availability-item__box {
+  position: relative;
+  width: 154px;
+  height: 154px;
+  text-align: center;
+  padding: 23px 10px 10px;
+  background: #9b256a;
+}
+.availability-item__icon {
+  height: 46px;
+  line-height: 46px;
+  margin-bottom: 12px;
+}
+.availability-item__title {
+  max-width: 90px;
+  margin: 0 auto;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 1.3;
+  color: #ffffff;
+}
+.availability-item:first-child .availability-item__title,
+.availability-item:last-child .availability-item__title {
+  max-width: 70px;
+}
+/* Сколько стоит музыка для ресторана и кафе */
+.calc-steps {
+  padding-bottom: 80px;
+  margin-top: 46px;
+}
+.calc-steps__items {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 6px;
+}
+.calc-steps .container {
+  max-width: 1210px;
+}
+.calc-steps .content-subtitle {
+  max-width: 305px;
+}
+.calc-step-item {
+  width: 32.35%;
+  padding-left: 34px;
+  position: relative;
+}
+.calc-step-item:before {
+  content: '';
+  top: 98px;
+  left: 33px;
+  position: absolute;
+  bottom: 0;
+  width: 2px;
+  background: #9b256a;
+}
+.calc-step-item__header {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: -34px;
+  margin-bottom: 38px;
+}
+.calc-step-item__count {
+  -webkit-box-flex: 0;
+  -webkit-flex: none;
+      -ms-flex: none;
+          flex: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 68px;
+  height: 68px;
+  -webkit-border-radius: 10px;
+          border-radius: 10px;
+  font-weight: bold;
+  font-size: 36px;
+  color: #ffffff;
+  background: #9b256a;
+}
+.calc-step-item__title {
+  height: 50px;
+  padding: 5px 15px 5px 46px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 1.2;
+  color: #9b256a;
+  background: #f9f9f9;
+}
+.calc-step-item__content {
+  padding: 24px 20px 32px 82px;
+}
+.calc-step-item__icon {
+  height: 98px;
+}
+.calc-step-item__text {
+  font-style: italic;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #434343;
+  max-width: 242px;
+}
+.calc-step-item:first-child:before {
+  display: none;
+}
+.calc-step-item:last-child {
+  width: 100% -64.7%;
+}
 /* Подвал */
 .footer {
   padding: 40px 0;
@@ -7589,11 +8232,11 @@ textarea.form-control {
   .holidays .content-subtitle {
     margin-bottom: 31px;
   }
-  .music-license__content {
+  .information__content {
     padding-left: 75px;
     padding-right: 77px;
   }
-  .music-license__text {
+  .information__text {
     padding-bottom: 3px;
   }
   .music-abilities__column {
@@ -7725,6 +8368,52 @@ textarea.form-control {
   }
   .prices-examples .content-subtitle {
     margin-bottom: 29px;
+  }
+  .music-advantages {
+    margin-bottom: 58px;
+  }
+  .music-advantages__carousel {
+    max-width: 658px;
+    padding-left: 71px;
+    padding-right: 71px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .music-advantages__carousel > div {
+    width: 50%;
+  }
+  .music-advantages__carousel.slick-initialized {
+    display: block;
+  }
+  .music-advantages__carousel.slick-initialized > div {
+    width: auto;
+    margin: 0;
+  }
+  .availability-item {
+    margin-bottom: 15px;
+    width: -webkit-calc(50% - 15px);
+    width: calc(50% - 15px);
+  }
+  .availability__content {
+    padding-bottom: 25px;
+  }
+  .availability .container {
+    max-width: 565px;
+  }
+  .calc-steps {
+    padding-bottom: 50px;
+  }
+  .calc-steps__items {
+    max-width: 381px;
+    margin: 0 auto;
+    display: block;
+  }
+  .calc-step-item {
+    margin-bottom: 30px;
+    width: auto;
+  }
+  .calc-step-item:first-child:before {
+    display: block;
   }
 }
 @media (max-width: 768px) {
@@ -8329,10 +9018,10 @@ textarea.form-control {
         -ms-flex-order: 3;
             order: 3;
   }
-  .music-license {
+  .information {
     margin-bottom: 50px;
   }
-  .music-license__content {
+  .information__content {
     display: block;
     margin-left: -15px;
     margin-right: -15px;
@@ -8341,7 +9030,7 @@ textarea.form-control {
     text-align: center;
     padding-bottom: 35px;
   }
-  .music-license__box {
+  .information__box {
     margin: 0 auto 25px;
   }
   .content-title__box {
@@ -8349,21 +9038,21 @@ textarea.form-control {
     padding-left: 15px;
     padding-right: 15px;
   }
-  .legality__text {
+  .official-partners__text {
     margin-bottom: 41px;
   }
-  .legality__text:first-child {
+  .official-partners__text:first-child {
     max-width: 300px;
   }
-  .legality__logos {
+  .official-partners__logos {
     margin-bottom: 52px;
   }
-  .legality__logos > div {
-    margin: 0 30px 0 0;
+  .official-partners__logos > div {
+    margin: 0 38px 0 0;
   }
-  .legality__logos > div + div {
+  .official-partners__logos > div + div {
     margin-right: 0;
-    margin-left: 30px;
+    margin-left: 38px;
   }
   .legality .content-title__inner {
     height: 231px;
@@ -8704,6 +9393,53 @@ textarea.form-control {
   .production-audio-item__title {
     margin-top: 11px;
   }
+  .music-advantages__carousel {
+    max-width: 344px;
+    padding-left: 43px;
+    padding-right: 43px;
+  }
+  .music-advantages__carousel > div {
+    width: 100%;
+  }
+  .availability__content {
+    background-image: url("../img/bg/availability/bg-375.jpg");
+  }
+  .official-partners__title {
+    max-width: none;
+    margin-left: -10px;
+    margin-right: -10px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .official-partners__title > div {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .availability__items {
+    max-width: 260px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .availability-item {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .music-advantages {
+    margin-bottom: 48px;
+  }
+  .music-advantages .content-subtitle {
+    max-width: 296px;
+  }
+  .music-restaurant .examples .content-text__inner {
+    max-width: 285px;
+  }
+  .calc-step-item__content {
+    padding: 16px 20px 39px 63px;
+  }
+  .calc-step-item__title {
+    padding-left: 27px;
+  }
 }
 @media (max-width: 480px) {
   .production-audio__items {
@@ -8894,17 +9630,17 @@ textarea.form-control {
   .music-abilities__column--left .ability-item {
     padding-left: 35px;
   }
-  .legality__logos {
+  .official-partners__logos {
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
-  .legality__logos > div {
+  .official-partners__logos > div {
     margin-left: 0;
     margin-right: 0;
   }
-  .legality__logos > div + div {
+  .official-partners__logos > div + div {
     margin-left: 0;
   }
   .examples .content-subtitle {
@@ -8977,6 +9713,31 @@ textarea.form-control {
     padding-left: 5px;
     padding-right: 5px;
   }
+  .music-advantages__carousel {
+    max-width: 258px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .information__text > div {
+    margin-left: -5px;
+    margin-right: -5px;
+  }
+  .music-restaurant .examples .content-text__inner {
+    max-width: 284px;
+  }
+  .calc-steps .content-subtitle {
+    max-width: 275px;
+  }
+  .calc-step-item__title {
+    padding-left: 13px;
+    padding-right: 5px;
+    font-size: 13px;
+  }
+  .calc-step-item__content {
+    padding-left: 46px;
+    padding-right: 0;
+    padding-bottom: 20px;
+  }
 }
 @media (min-width: 576px) {
   .statistics__items {
@@ -9038,6 +9799,9 @@ textarea.form-control {
   .prices-examples__content {
     background-image: url("../img/bg/prices-examples/bg-768.jpg");
   }
+  .availability__content {
+    background-image: url("../img/bg/availability/bg-768.jpg");
+  }
 }
 @media (min-width: 992px) {
   .menu ul {
@@ -9077,6 +9841,9 @@ textarea.form-control {
   }
   .prices-examples__content {
     background-image: url("../img/bg/prices-examples/bg-1920.jpg");
+  }
+  .availability__content {
+    background-image: url("../img/bg/availability/bg-1920.jpg");
   }
 }
 @media (min-width: 1200px) {
