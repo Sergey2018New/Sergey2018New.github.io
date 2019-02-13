@@ -1,0 +1,930 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Title</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/main.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet">
+</head>
+<body>
+  <header class="header">
+    <div class="header__top">
+      <div class="container">
+        <div class="header__row">
+          <div class="header__top-menu">
+            <button class="btn-menu-toggle">
+              <span>Меню</span>
+            </button>
+            <ul class="top-menu">
+              <li><a href="#">О нас</a></li>
+              <li><a href="#">Магазин Москва</a></li>
+              <li><a href="#">Доставка и оплата</a></li>
+              <li><a href="#">Пункты выдачи</a></li>
+              <li><a href="#">Продукция на заказ</a></li>
+              <li><a href="#">Контакты</a></li>
+              <li><a href="#">Отзывы</a></li>
+            </ul>
+          </div>
+          <div class="header__social">
+            <ul class="social">
+              <li class="social__item"><a class="social__link" href="#"><svg class="icon icon-ok"><use xlink:href="img/icons.svg#icon-ok"/></svg></a></li>
+              <li class="social__item"><a class="social__link" href="#"><svg class="icon icon-vk"><use xlink:href="img/icons.svg#icon-vk"/></svg></a></li>
+                <li class="social__item"><a class="social__link" href="#"><svg class="icon icon-fb"><use xlink:href="img/icons.svg#icon-fb"/></svg></a></li>
+
+            </ul>
+          </div>
+          <div class="header__addresses">
+            <a href="#" class="header__addresses-link">
+              <svg class="icon icon-pointer"><use xlink:href="img/icons.svg#icon-pointer"/></svg>
+              <span>Адреса<span> магазинов</span></span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="header__center">
+      <div class="container">
+        <div class="header__row">
+          <div class="header__logo">
+            <a href="#" class="logo"><img class="logo__img" src="img/logo.png" width="258" height="59" alt=""></a>
+          </div>
+          <div class="header__search">
+            <div class="search">
+              <form action="#">
+                <input type="text" placeholder="Поиск по каталогу" class="search__input">
+                <button type="submit" class="search__btn-submit">
+                  <svg class="icon icon-search">
+                    <use xlink:href="img/icons.svg#icon-search"/>
+                  </svg>
+                  <span>Поиск</span></button>
+              </form>
+            </div>
+          </div>
+          <div class="header__contacts">
+            <div>
+              Москва<br>
+              <a href="tel:84993471406" class="header__contacts-link">8 (499) 347 14 06</a>
+            </div>
+            <div>
+              Люберцы<br>
+              <a href="tel:84993400203" class="header__contacts-link">8 (499) 340 02 03</a>
+            </div>
+          </div>
+          <div class="header__basket">
+            <a href="#" class="header__basket-link">
+              <svg class="icon icon-cart"><use xlink:href="img/icons.svg#icon-cart"/></svg>
+              <span class="header__basket-count">1</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="header__bottom">
+      <div class="container">
+        <ul class="menu">
+          <li>
+            <a href="#">
+              <span><svg class="icon icon-discount" fill="url(#gradient-bottom)"><use xlink:href="img/icons.svg#icon-discount"/></svg></span>
+              <span>Акции</span>
+            </a>
+          </li>
+          <li class="menu__dropdown">
+            <a href="#">
+              <span><svg class="icon icon-chandeliers" fill="url(#gradient-bottom)"><use xlink:href="img/icons.svg#icon-chandeliers"/></svg></span>
+              <span>Люстры</span>
+            </a>
+            <div class="menu__submenu">
+              <div class="container">
+                <div class="category-menu">
+                  <div class="category-menu__column">
+                    <div class="category-menu__item">
+                      <div class="category-menu__title">
+                        <a href="#">Вазы Хрустальные</a>
+                      </div>
+                      <ul class="category-menu__list">
+                        <li><a href="#">Цветной хрусталь</a></li>
+                        <li><a href="#">Бесцветный хрусталь</a></li>
+                      </ul>
+                    </div>
+                    <div class="category-menu__item">
+                      <div class="category-menu__title">
+                        <a href="#">Бокалы Фужеры</a>
+                      </div>
+                      <ul class="category-menu__list">
+                        <li><a href="#">Цветной хрусталь</a></li>
+                        <li><a href="#">Бесцветный хрусталь</a></li>
+                      </ul>
+                    </div>
+                    <div class="category-menu__item">
+                      <div class="category-menu__title">
+                        <a href="#">Стопки Рюмки</a>
+                      </div>
+                      <ul class="category-menu__list">
+                        <li><a href="#">Цветной хрусталь</a></li>
+                        <li><a href="#">Бесцветный хрусталь</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="category-menu__column">
+                    <div class="category-menu__item">
+                      <div class="category-menu__title">
+                        <a href="#">Стаканы</a>
+                      </div>
+                    </div>
+                    <div class="category-menu__item">
+                      <div class="category-menu__title">
+                        <a href="#">Салатники Рыбницы</a>
+                      </div>
+                      <ul class="category-menu__list">
+                        <li><a href="#">Цветной хрусталь</a></li>
+                        <li><a href="#">Бесцветный хрусталь</a></li>
+                      </ul>
+                    </div>
+                    <div class="category-menu__item">
+                      <div class="category-menu__title">
+                        <a href="#">Вазы для фруктов конфет</a>
+                      </div>
+                      <ul class="category-menu__list">
+                        <li><a href="#">Цветной хрусталь</a></li>
+                        <li><a href="#">Бесцветный хрусталь</a></li>
+                        <li><a href="#">Вазы на ножке</a></li>
+                        <li><a href="#">Глубокие вазы</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="category-menu__column">
+                    <div class="category-menu__item">
+                      <div class="category-menu__title">
+                        <a href="#">Хрусталь Чайные Предметы</a>
+                      </div>
+                    </div>
+                    <div class="category-menu__item">
+                      <div class="category-menu__title">
+                        <a href="#">Наборы Графины Кувшины</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <button class="menu__submenu-close">
+                  <svg class="icon icon-close"><use xlink:href="img/icons.svg#icon-close"/></svg>
+                </button>
+              </div>
+            </div>
+          </li>
+          <li>
+            <a href="#">
+              <span><svg class="icon icon-wall-lamps" fill="url(#gradient-bottom)"><use xlink:href="img/icons.svg#icon-wall-lamps"/></svg></span>
+              <span>Бра</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span><svg class="icon icon-floor-lamps" fill="url(#gradient-bottom)"><use xlink:href="img/icons.svg#icon-floor-lamps"/></svg></span>
+              <span>Торшеры</span>
+            </a>
+          </li>
+          <li class="menu__dropdown">
+            <a href="#">
+              <span><svg class="icon icon-table-setting" fill="url(#gradient-bottom)"><use xlink:href="img/icons.svg#icon-table-setting"/></svg></span>
+              <span>Сервировка стола</span>
+            </a>
+            <div class="menu__submenu">
+              <div class="container">
+                <div class="category-menu">
+                  <div class="category-menu__column">
+                    <div class="category-menu__item">
+                      <div class="category-menu__title">
+                        <a href="#">Вазы Хрустальные</a>
+                      </div>
+                      <ul class="category-menu__list">
+                        <li><a href="#">Цветной хрусталь</a></li>
+                        <li><a href="#">Бесцветный хрусталь</a></li>
+                      </ul>
+                    </div>
+                    <div class="category-menu__item">
+                      <div class="category-menu__title">
+                        <a href="#">Бокалы Фужеры</a>
+                      </div>
+                      <ul class="category-menu__list">
+                        <li><a href="#">Цветной хрусталь</a></li>
+                        <li><a href="#">Бесцветный хрусталь</a></li>
+                      </ul>
+                    </div>
+                    <div class="category-menu__item">
+                      <div class="category-menu__title">
+                        <a href="#">Стопки Рюмки</a>
+                      </div>
+                      <ul class="category-menu__list">
+                        <li><a href="#">Цветной хрусталь</a></li>
+                        <li><a href="#">Бесцветный хрусталь</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="category-menu__column">
+                    <div class="category-menu__item">
+                      <div class="category-menu__title">
+                        <a href="#">Стаканы</a>
+                      </div>
+                    </div>
+                    <div class="category-menu__item">
+                      <div class="category-menu__title">
+                        <a href="#">Салатники Рыбницы</a>
+                      </div>
+                      <ul class="category-menu__list">
+                        <li><a href="#">Цветной хрусталь</a></li>
+                        <li><a href="#">Бесцветный хрусталь</a></li>
+                      </ul>
+                    </div>
+                    <div class="category-menu__item">
+                      <div class="category-menu__title">
+                        <a href="#">Вазы для фруктов конфет</a>
+                      </div>
+                      <ul class="category-menu__list">
+                        <li><a href="#">Цветной хрусталь</a></li>
+                        <li><a href="#">Бесцветный хрусталь</a></li>
+                        <li><a href="#">Вазы на ножке</a></li>
+                        <li><a href="#">Глубокие вазы</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="category-menu__column">
+                    <div class="category-menu__item">
+                      <div class="category-menu__title">
+                        <a href="#">Хрусталь Чайные Предметы</a>
+                      </div>
+                    </div>
+                    <div class="category-menu__item">
+                      <div class="category-menu__title">
+                        <a href="#">Наборы Графины Кувшины</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <button class="menu__submenu-close">
+                  <svg class="icon icon-close"><use xlink:href="img/icons.svg#icon-close"/></svg>
+                </button>
+              </div>
+            </div>
+          </li>
+          <li>
+            <a href="#">
+              <span><svg class="icon icon-glasses" fill="url(#gradient-bottom)"><use xlink:href="img/icons.svg#icon-glasses"/></svg></span>
+              <span>Для напитков</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span><svg class="icon icon-glass-holders" fill="url(#gradient-bottom)"><use xlink:href="img/icons.svg#icon-glass-holders"/></svg></span>
+              <span>Подстаканники</span>
+            </a>
+          </li>
+          <li class="menu__dropdown">
+            <a href="#">
+              <span><svg class="icon icon-souvenirs" fill="url(#gradient-bottom)"><use xlink:href="img/icons.svg#icon-souvenirs"/></svg></span>
+              <span>Сувениры</span>
+            </a>
+            <div class="menu__submenu">
+              <div class="container">
+                <div class="category-menu">
+                  <div class="category-menu__column">
+                    <div class="category-menu__item">
+                      <div class="category-menu__title">
+                        <a href="#">Вазы Хрустальные</a>
+                      </div>
+                      <ul class="category-menu__list">
+                        <li><a href="#">Цветной хрусталь</a></li>
+                        <li><a href="#">Бесцветный хрусталь</a></li>
+                      </ul>
+                    </div>
+                    <div class="category-menu__item">
+                      <div class="category-menu__title">
+                        <a href="#">Бокалы Фужеры</a>
+                      </div>
+                      <ul class="category-menu__list">
+                        <li><a href="#">Цветной хрусталь</a></li>
+                        <li><a href="#">Бесцветный хрусталь</a></li>
+                      </ul>
+                    </div>
+                    <div class="category-menu__item">
+                      <div class="category-menu__title">
+                        <a href="#">Стопки Рюмки</a>
+                      </div>
+                      <ul class="category-menu__list">
+                        <li><a href="#">Цветной хрусталь</a></li>
+                        <li><a href="#">Бесцветный хрусталь</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="category-menu__column">
+                    <div class="category-menu__item">
+                      <div class="category-menu__title">
+                        <a href="#">Стаканы</a>
+                      </div>
+                    </div>
+                    <div class="category-menu__item">
+                      <div class="category-menu__title">
+                        <a href="#">Салатники Рыбницы</a>
+                      </div>
+                      <ul class="category-menu__list">
+                        <li><a href="#">Цветной хрусталь</a></li>
+                        <li><a href="#">Бесцветный хрусталь</a></li>
+                      </ul>
+                    </div>
+                    <div class="category-menu__item">
+                      <div class="category-menu__title">
+                        <a href="#">Вазы для фруктов конфет</a>
+                      </div>
+                      <ul class="category-menu__list">
+                        <li><a href="#">Цветной хрусталь</a></li>
+                        <li><a href="#">Бесцветный хрусталь</a></li>
+                        <li><a href="#">Вазы на ножке</a></li>
+                        <li><a href="#">Глубокие вазы</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="category-menu__column">
+                    <div class="category-menu__item">
+                      <div class="category-menu__title">
+                        <a href="#">Хрусталь Чайные Предметы</a>
+                      </div>
+                    </div>
+                    <div class="category-menu__item">
+                      <div class="category-menu__title">
+                        <a href="#">Наборы Графины Кувшины</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <button class="menu__submenu-close">
+                  <svg class="icon icon-close"><use xlink:href="img/icons.svg#icon-close"/></svg>
+                </button>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </header>
+  <div class="content">
+    <div class="container">
+      <ul class="breadcrumb">
+        <li><a href="#"><svg class="icon icon-home"><use xlink:href="img/icons.svg#icon-home"/></svg></a></li>
+        <li><a href="#">Корзина</a></li>
+      </ul>
+      <h1>Корзина товаров</h1>
+      <div class="cart">
+        <div class="cart__header">
+          <div class="cart-item cart-item--header">
+            <div class="cart-item__column cart-item__column--info">
+              <div class="cart-item__header-title">
+                Наименование товара
+              </div>
+            </div>
+            <div class="cart-item__column cart-item__column--cost">
+              <div class="cart-item__header-title">
+                Стоимость
+              </div>
+            </div>
+            <div class="cart-item__column cart-item__column--quantity">
+              <div class="cart-item__header-title">
+                Количество
+              </div>
+            </div>
+            <div class="cart-item__column cart-item__column--total">
+              <div class="cart-item__header-title">
+                Сумма
+              </div>
+            </div>
+            <div class="cart-item__column cart-item__column--remove">
+              <div class="cart-item__header-title">
+                Удалить
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="cart__content">
+          <div class="cart-item">
+            <div class="cart-item__column cart-item__column--info">
+              <div class="cart-item__info-row">
+                <div class="cart-item__img">
+                  <a href="#"><img src="img/content/cart-products/img-1.jpg" alt=""></a>
+                </div>
+                <div class="cart-item__info">
+                  <div class="cart-item__title">
+                    <a href="#">Люстра «Виноград» шести ламповая шар</a>
+                  </div>
+                  <div class="cart-item__code">
+                    Артикул: 465765
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="cart-item__column cart-item__column--cost">
+              <div class="cart-item__price">
+                19 700 <span class="rouble">i</span>
+              </div>
+            </div>
+            <div class="cart-item__column cart-item__column--quantity">
+              <input type="text" class="counter" value="1" data-min="1" data-max="999">
+            </div>
+            <div class="cart-item__column cart-item__column--total">
+              <div class="cart-item__price">
+                19 700 <span class="rouble">i</span>
+              </div>
+            </div>
+            <div class="cart-item__column cart-item__column--remove">
+              <button class="cart-item__btn-remove">
+                <svg class="icon icon-close"><use xlink:href="img/icons.svg#icon-close"/></svg>
+              </button>
+            </div>
+          </div>
+          <div class="cart-item">
+            <div class="cart-item__column cart-item__column--info">
+              <div class="cart-item__info-row">
+                <div class="cart-item__img">
+                  <a href="#"><img src="img/content/cart-products/img-2.jpg" alt=""></a>
+                </div>
+                <div class="cart-item__info">
+                  <div class="cart-item__title">
+                    <a href="#">Люстра «Виноград» шести ламповая шар</a>
+                  </div>
+                  <div class="cart-item__code">
+                    Артикул: 465765
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="cart-item__column cart-item__column--cost">
+              <div class="cart-item__price">
+                19 700 <span class="rouble">i</span>
+              </div>
+            </div>
+            <div class="cart-item__column cart-item__column--quantity">
+              <input type="text" class="counter" value="1" data-min="1" data-max="999">
+            </div>
+            <div class="cart-item__column cart-item__column--total">
+              <div class="cart-item__price">
+                19 700 <span class="rouble">i</span>
+              </div>
+            </div>
+            <div class="cart-item__column cart-item__column--remove">
+              <button class="cart-item__btn-remove">
+                <svg class="icon icon-close"><use xlink:href="img/icons.svg#icon-close"/></svg>
+              </button>
+            </div>
+          </div>
+          <div class="cart-item">
+            <div class="cart-item__column cart-item__column--info">
+              <div class="cart-item__info-row">
+                <div class="cart-item__img">
+                  <a href="#"><img src="img/content/cart-products/img-3.jpg" alt=""></a>
+                </div>
+                <div class="cart-item__info">
+                  <div class="cart-item__title">
+                    <a href="#">Люстра «Виноград» шести ламповая шар</a>
+                  </div>
+                  <div class="cart-item__code">
+                    Артикул: 465765
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="cart-item__column cart-item__column--cost">
+              <div class="cart-item__price">
+                19 700 <span class="rouble">i</span>
+              </div>
+            </div>
+            <div class="cart-item__column cart-item__column--quantity">
+              <input type="text" class="counter" value="1" data-min="1" data-max="999">
+            </div>
+            <div class="cart-item__column cart-item__column--total">
+              <div class="cart-item__price">
+                19 700 <span class="rouble">i</span>
+              </div>
+            </div>
+            <div class="cart-item__column cart-item__column--remove">
+              <button class="cart-item__btn-remove">
+                <svg class="icon icon-close"><use xlink:href="img/icons.svg#icon-close"/></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="cart__footer">
+          <div>
+            <a href="#" class="btn cart__btn-return">
+              <i class="icon icon-left-arrow"></i>
+              <span>Вернуться к покупкам</span>
+            </a>
+          </div>
+          <div>
+            <div class="cart__total">
+              <div>Итого:</div>
+              <div class="cart__total-price">
+                19 700 <span class="rouble">i</span>
+              </div>
+            </div>
+            <a href="#" class="btn btn--orange cart__btn-checkout"><span>Оформить заказ</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="other-products other-products--recommendation">
+    <div class="container">
+      <h2>Рекомендуем к вашим покупкам</h2>
+      <div class="products-carousel">
+        <div>
+          <div class="product-item">
+            <div class="product-item__img">
+              <a href="#"><img src="img/content/dishes/img-1.jpg" alt=""></a>
+            </div>
+            <div class="product-item__content">
+              <div class="product-item__compare">
+                <a href="#" class="btn-compare product-item__compare-btn">
+                  <svg class="icon icon-graph"><use xlink:href="img/icons.svg#icon-graph"/></svg>
+                </a>
+              </div>
+              <div class="product-item__title">
+                <a href="#">Люстра «Виноград» шести ламповая шар</a>
+              </div>
+              <div class="availability product-item__availability">
+                <svg class="icon icon-check"><use xlink:href="img/icons.svg#icon-check"/></svg>
+                В наличии
+              </div>
+              <div class="product-item__text">
+                Люстра хрустальная Зима перо одноламповая
+              </div>
+              <div class="product-item__bottom">
+                <div>
+                  <div class="product-item__price">
+                    19 700 <span class="rouble">i</span>
+                  </div>
+                </div>
+                <div>
+                  <a href="#" class="btn btn--orange btn--icon product-item__btn-buy">
+                    <svg class="icon icon-cart"><use xlink:href="img/icons.svg#icon-cart"/></svg>
+                    <span>Купить</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="product-item">
+            <div class="product-item__img">
+              <a href="#"><img src="img/content/dishes/img-2.jpg" alt=""></a>
+            </div>
+            <div class="product-item__content">
+              <div class="product-item__compare">
+                <a href="#" class="btn-compare product-item__compare-btn">
+                  <svg class="icon icon-graph"><use xlink:href="img/icons.svg#icon-graph"/></svg>
+                </a>
+              </div>
+              <div class="product-item__title">
+                <a href="#">Люстра «Виноград» шести ламповая шар</a>
+              </div>
+              <div class="availability product-item__availability">
+                <svg class="icon icon-check"><use xlink:href="img/icons.svg#icon-check"/></svg>
+                В наличии
+              </div>
+              <div class="product-item__text">
+                Люстра хрустальная Зима перо одноламповая
+              </div>
+              <div class="product-item__bottom">
+                <div>
+                  <div class="product-item__price">
+                    19 700 <span class="rouble">i</span>
+                  </div>
+                </div>
+                <div>
+                  <a href="#" class="btn btn--orange btn--icon product-item__btn-buy">
+                    <svg class="icon icon-cart"><use xlink:href="img/icons.svg#icon-cart"/></svg>
+                    <span>Купить</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div>
+          <div class="product-item">
+            <div class="product-item__img">
+              <a href="#"><img src="img/content/dishes/img-3.jpg" alt=""></a>
+            </div>
+            <div class="product-item__content">
+              <div class="product-item__compare">
+                <a href="#" class="btn-compare product-item__compare-btn">
+                  <svg class="icon icon-graph"><use xlink:href="img/icons.svg#icon-graph"/></svg>
+                </a>
+              </div>
+              <div class="product-item__title">
+                <a href="#">Люстра «Виноград» шести ламповая шар</a>
+              </div>
+              <div class="availability product-item__availability">
+                <svg class="icon icon-check"><use xlink:href="img/icons.svg#icon-check"/></svg>
+                В наличии
+              </div>
+              <div class="product-item__text">
+                Люстра хрустальная Зима перо одноламповая
+              </div>
+              <div class="product-item__bottom">
+                <div>
+                  <div class="product-item__price">
+                    19 700 <span class="rouble">i</span>
+                  </div>
+                </div>
+                <div>
+                  <a href="#" class="btn btn--orange btn--icon product-item__btn-buy">
+                    <svg class="icon icon-cart"><use xlink:href="img/icons.svg#icon-cart"/></svg>
+                    <span>Купить</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div>
+          <div class="product-item">
+            <div class="product-item__img">
+              <a href="#"><img src="img/content/dishes/img-4.jpg" alt=""></a>
+            </div>
+            <div class="product-item__content">
+              <div class="product-item__compare">
+                <a href="#" class="btn-compare product-item__compare-btn">
+                  <svg class="icon icon-graph"><use xlink:href="img/icons.svg#icon-graph"/></svg>
+                </a>
+              </div>
+              <div class="product-item__title">
+                <a href="#">Люстра «Виноград» шести ламповая шар</a>
+              </div>
+              <div class="availability product-item__availability">
+                <svg class="icon icon-check"><use xlink:href="img/icons.svg#icon-check"/></svg>
+                В наличии
+              </div>
+              <div class="product-item__text">
+                Люстра хрустальная Зима перо одноламповая
+              </div>
+              <div class="product-item__bottom">
+                <div>
+                  <div class="product-item__price">
+                    19 700 <span class="rouble">i</span>
+                  </div>
+                </div>
+                <div>
+                  <a href="#" class="btn btn--orange btn--icon product-item__btn-buy">
+                    <svg class="icon icon-cart"><use xlink:href="img/icons.svg#icon-cart"/></svg>
+                    <span>Купить</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div>
+          <div class="product-item">
+            <div class="product-item__img">
+              <a href="#"><img src="img/content/dishes/img-1.jpg" alt=""></a>
+            </div>
+            <div class="product-item__content">
+              <div class="product-item__compare">
+                <a href="#" class="btn-compare product-item__compare-btn">
+                  <svg class="icon icon-graph"><use xlink:href="img/icons.svg#icon-graph"/></svg>
+                </a>
+              </div>
+              <div class="product-item__title">
+                <a href="#">Люстра «Виноград» шести ламповая шар</a>
+              </div>
+              <div class="availability product-item__availability">
+                <svg class="icon icon-check"><use xlink:href="img/icons.svg#icon-check"/></svg>
+                В наличии
+              </div>
+              <div class="product-item__text">
+                Люстра хрустальная Зима перо одноламповая
+              </div>
+              <div class="product-item__bottom">
+                <div>
+                  <div class="product-item__price">
+                    19 700 <span class="rouble">i</span>
+                  </div>
+                </div>
+                <div>
+                  <a href="#" class="btn btn--orange btn--icon product-item__btn-buy">
+                    <svg class="icon icon-cart"><use xlink:href="img/icons.svg#icon-cart"/></svg>
+                    <span>Купить</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="product-item">
+            <div class="product-item__img">
+              <a href="#"><img src="img/content/dishes/img-2.jpg" alt=""></a>
+            </div>
+            <div class="product-item__content">
+              <div class="product-item__compare">
+                <a href="#" class="btn-compare product-item__compare-btn">
+                  <svg class="icon icon-graph"><use xlink:href="img/icons.svg#icon-graph"/></svg>
+                </a>
+              </div>
+              <div class="product-item__title">
+                <a href="#">Люстра «Виноград» шести ламповая шар</a>
+              </div>
+              <div class="availability product-item__availability">
+                <svg class="icon icon-check"><use xlink:href="img/icons.svg#icon-check"/></svg>
+                В наличии
+              </div>
+              <div class="product-item__text">
+                Люстра хрустальная Зима перо одноламповая
+              </div>
+              <div class="product-item__bottom">
+                <div>
+                  <div class="product-item__price">
+                    19 700 <span class="rouble">i</span>
+                  </div>
+                </div>
+                <div>
+                  <a href="#" class="btn btn--orange btn--icon product-item__btn-buy">
+                    <svg class="icon icon-cart"><use xlink:href="img/icons.svg#icon-cart"/></svg>
+                    <span>Купить</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div>
+          <div class="product-item">
+            <div class="product-item__img">
+              <a href="#"><img src="img/content/dishes/img-3.jpg" alt=""></a>
+            </div>
+            <div class="product-item__content">
+              <div class="product-item__compare">
+                <a href="#" class="btn-compare product-item__compare-btn">
+                  <svg class="icon icon-graph"><use xlink:href="img/icons.svg#icon-graph"/></svg>
+                </a>
+              </div>
+              <div class="product-item__title">
+                <a href="#">Люстра «Виноград» шести ламповая шар</a>
+              </div>
+              <div class="availability product-item__availability">
+                <svg class="icon icon-check"><use xlink:href="img/icons.svg#icon-check"/></svg>
+                В наличии
+              </div>
+              <div class="product-item__text">
+                Люстра хрустальная Зима перо одноламповая
+              </div>
+              <div class="product-item__bottom">
+                <div>
+                  <div class="product-item__price">
+                    19 700 <span class="rouble">i</span>
+                  </div>
+                </div>
+                <div>
+                  <a href="#" class="btn btn--orange btn--icon product-item__btn-buy">
+                    <svg class="icon icon-cart"><use xlink:href="img/icons.svg#icon-cart"/></svg>
+                    <span>Купить</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div>
+          <div class="product-item">
+            <div class="product-item__img">
+              <a href="#"><img src="img/content/dishes/img-4.jpg" alt=""></a>
+            </div>
+            <div class="product-item__content">
+              <div class="product-item__compare">
+                <a href="#" class="btn-compare product-item__compare-btn">
+                  <svg class="icon icon-graph"><use xlink:href="img/icons.svg#icon-graph"/></svg>
+                </a>
+              </div>
+              <div class="product-item__title">
+                <a href="#">Люстра «Виноград» шести ламповая шар</a>
+              </div>
+              <div class="availability product-item__availability">
+                <svg class="icon icon-check"><use xlink:href="img/icons.svg#icon-check"/></svg>
+                В наличии
+              </div>
+              <div class="product-item__text">
+                Люстра хрустальная Зима перо одноламповая
+              </div>
+              <div class="product-item__bottom">
+                <div>
+                  <div class="product-item__price">
+                    19 700 <span class="rouble">i</span>
+                  </div>
+                </div>
+                <div>
+                  <a href="#" class="btn btn--orange btn--icon product-item__btn-buy">
+                    <svg class="icon icon-cart"><use xlink:href="img/icons.svg#icon-cart"/></svg>
+                    <span>Купить</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <div class="footer__column">
+          <div class="footer__title">
+            Магазин
+          </div>
+          <div class="footer__menu">
+            <div class="footer__menu-column">
+              <ul class="footer__menu-list">
+                <li><a href="#">О нас</a></li>
+                <li><a href="#">Магазин Москва</a></li>
+                <li><a href="#">Доставка и оплата</a></li>
+                <li><a href="#">Пункты выдачи</a></li>
+              </ul>
+            </div>
+            <div class="footer__menu-column">
+              <ul class="footer__menu-list">
+                <li><a href="#">Продукция на заказ</a></li>
+                <li><a href="#">Контакты</a></li>
+                <li><a href="#">Отзывы</a></li>
+                <li><a href="#">Акции</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="footer__column">
+          <div class="footer__title">
+            Каталог
+          </div>
+          <div class="footer__menu">
+            <div class="footer__menu-column">
+              <ul class="footer__menu-list">
+                <li><a href="#">Люстры </a></li>
+                <li><a href="#">Посуда </a></li>
+                <li><a href="#">Сувениры </a></li>
+                <li><a href="#">Настольная лампа </a></li>
+              </ul>
+            </div>
+            <div class="footer__menu-column">
+              <ul class="footer__menu-list">
+                <li><a href="#">Бра</a></li>
+                <li><a href="#">Торшеры</a></li>
+                <li><a href="#">Богемское стекло</a></li>
+                <li><a href="#">Свадебные бокалы</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="footer__column">
+          <div class="footer__title">
+            Наши контакты
+          </div>
+          <div class="footer__contacts">
+            <div>
+              Москва<br>
+              <a href="tel:84993471406" class="footer__contacts-link">8 (499) 347 14 06</a>
+            </div>
+            <div>
+              Люберцы<br>
+              <a href="tel:84993400203" class="footer__contacts-link">8 (499) 340 02 03</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <div>
+          © GusHrustal.ru, 2018 - Официальный сайт завода «ГусьХрустальный»
+        </div>
+        <div>
+          <a href="#">Политика конфиденциальности</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <svg style="position: absolute; width: 0; height: 0;">
+    <!-- Градиент -->
+    <linearGradient id="gradient-bottom" x1="50%" y1="0" x2="50%" y2="100%">
+      <stop offset="0%" stop-color="#ffa300"/>
+      <stop offset="100%" stop-color="#ff9c60"/>
+    </linearGradient>
+  </svg>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="js/libs.min.js"></script>
+	<script src="js/scripts.js"></script>
+</body>
+</html>

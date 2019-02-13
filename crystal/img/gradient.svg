@@ -1,0 +1,8 @@
+<svg>
+  <!-- Градиент -->
+  <linearGradient id="gradient" x1="0" y1="0">
+    <stop offset="0%" stop-color="#ffa300"/>
+    <stop offset="100%" stop-color="#ff9c60"/>
+  </linearGradient>
+
+</svg>
