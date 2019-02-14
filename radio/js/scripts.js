@@ -13,7 +13,9 @@ $(document).ready(function() {
 		 prevArrow = '<button type="button" class="slick-prev slick-arrow"><svg class="icon icon-nav"><use xlink:href="' + srcIcons + '#icon-nav"/></svg></button>',
 		 nextArrow = '<button type="button" class="slick-next slick-arrow"><svg class="icon icon-nav"><use xlink:href="' + srcIcons + '#icon-nav"/></svg></button>',
 		 prevArrow2 = '<button type="button" class="slick-prev slick-arrow"><svg class="icon icon-arrow-2"><use xlink:href="' + srcIcons + '#icon-arrow-2"/></svg></button>',
-		 nextArrow2 = '<button type="button" class="slick-next slick-arrow"><svg class="icon icon-arrow-2"><use xlink:href="' + srcIcons + '#icon-arrow-2"/></svg></button>';
+		 nextArrow2 = '<button type="button" class="slick-next slick-arrow"><svg class="icon icon-arrow-2"><use xlink:href="' + srcIcons + '#icon-arrow-2"/></svg></button>',
+		 prevArrow3 = '<button type="button" class="slick-prev slick-arrow"><svg class="icon icon-nav-2"><use xlink:href="' + srcIcons + '#icon-nav-2"/></svg></button>',
+		 nextArrow3 = '<button type="button" class="slick-next slick-arrow"><svg class="icon icon-nav-2"><use xlink:href="' + srcIcons + '#icon-nav-2"/></svg></button>';
 	
 	// Инициализация слайдера "Зоны вещаний" (плагин slick)
 	if ($('.broadcast__carousel').length){
@@ -56,14 +58,48 @@ $(document).ready(function() {
 	}
 	
 	// Инициализация слайдера "Наши объекты и партнеры" (плагин slick)
-	if ($('.partners__carousel').length){
-		$('.partners__carousel').slick({
+	if ($('.partners--1 .partners__carousel').length){
+		$('.partners--1 .partners__carousel').slick({
 			dots: true,
 			infinite: false,
 			touchThreshold: 20,
 			slidesToShow: 5,
 			slidesToScroll: 1,
 			rows: 4,
+         slidesPerRow: 1,
+			arrows: true,
+			prevArrow: prevArrow,
+			nextArrow: nextArrow, 
+			lazyLoad: 'progressive',
+			responsive: [
+				 {
+					  breakpoint: 992,
+					  settings: {
+							slidesToShow: 4,
+							arrows: false
+					  }
+				 },
+				 {
+					  breakpoint: 576,
+					  settings: {
+						  slidesToShow: 2,
+							rows: 5,
+							arrows: false
+					  }
+				 }
+			]
+		});
+	}
+	
+		// Инициализация слайдера "Партнеры" на внутренних страницах (плагин slick)
+	if ($('.partners--2 .partners__carousel').length){
+		$('.partners--2 .partners__carousel').slick({
+			dots: true,
+			infinite: false,
+			touchThreshold: 20,
+			slidesToShow: 5,
+			slidesToScroll: 1,
+			rows: 2,
          slidesPerRow: 1,
 			arrows: true,
 			prevArrow: prevArrow,
@@ -236,6 +272,32 @@ $(document).ready(function() {
 		});
 	}
 	
+	// Инициализация слайдера "Рекомендованные новости" (плагин slick)
+	if ($('.news__carousel').length){
+		$('.news__carousel').slick({
+			dots: false,
+			infinite: true,
+			touchThreshold: 20,
+			slidesToShow: 3,
+			slidesToScroll: 1,
+			arrows: true,
+			prevArrow: prevArrow3,
+			nextArrow: nextArrow3, 
+			lazyLoad: 'progressive', 
+			responsive: [
+				 {
+					  breakpoint: 576,
+					  settings: {
+						  slidesToShow: 1,
+						  slidesToScroll: 1,
+						  rows: 3
+					
+					  }
+				 }
+			]
+		});
+	}
+	
 	
 	// Инициализация плагина hoverdir
 	if ($(".music-advantages").length){
@@ -384,6 +446,32 @@ $(document).ready(function() {
 				else{
 					if ($('.music-advantages__carousel.slick-initialized').length){
 						$('.music-advantages__carousel').slick('unslick');
+					}
+					
+				}
+				
+			}
+			
+			if ($('.sounds-live__carousel').length){
+				if (w <= 767){
+					if (!$('.sounds-live__carousel.slick-initialized').length){
+						$('.sounds-live__carousel').slick({
+							dots: true,
+							infinite: false,
+							touchThreshold: 20,
+							slidesToShow: 1,
+							slidesToScroll: 1,
+							arrows: false,
+							prevArrow: prevArrow,
+							nextArrow: nextArrow, 
+							lazyLoad: 'progressive'
+						});
+					}
+					
+				}
+				else{
+					if ($('.sounds-live__carousel.slick-initialized').length){
+						$('.sounds-live__carousel').slick('unslick');
 					}
 					
 				}
@@ -642,6 +730,7 @@ $(document).ready(function() {
 		$(this).toggleClass("playing");
 	});
 	
+	// spinner
 	$('[data-animation="spin"]').on('inview.uk.scrollspy', function() {
 		$this = $(this);
 		   $this.spincrement({
@@ -649,6 +738,18 @@ $(document).ready(function() {
 				 duration: $this.data("duration")
 			});
     });
+	 
+	 // Что может звучат в эфире
+	$('.live-item').on('mouseenter', function() {
+		$this = $(this);
+		$this.siblings().addClass("live-item--small");
+		$this.addClass("live-item--active");
+   });
+	$('.live-item').on('mouseleave', function() {
+		$this = $(this);
+		$this.siblings().removeClass("live-item--small");
+		$this.removeClass("live-item--active");
+   });
 	 
 	 // tabs
 	$('.tab-nav > li').on('click', function(e) {
