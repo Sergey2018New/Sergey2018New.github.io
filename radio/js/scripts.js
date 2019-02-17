@@ -125,6 +125,39 @@ $(document).ready(function() {
 		});
 	}
 	
+		// Инициализация слайдера "Наши клиенты" (плагин slick)
+	if ($('.partners--3 .partners__carousel').length){
+		$('.partners--3 .partners__carousel').slick({
+			dots: true,
+			infinite: false,
+			touchThreshold: 20,
+			slidesToShow: 6,
+			slidesToScroll: 1,
+			rows: 5,
+         slidesPerRow: 1,
+			arrows: true,
+			prevArrow: prevArrow,
+			nextArrow: nextArrow, 
+			lazyLoad: 'progressive',
+			responsive: [
+				 {
+					  breakpoint: 992,
+					  settings: {
+							slidesToShow: 5,
+							arrows: false
+					  }
+				 },
+				 {
+					  breakpoint: 576,
+					  settings: {
+						  slidesToShow: 2,
+							arrows: false
+					  }
+				 }
+			]
+		});
+	}
+	
 	// Инициализация слайдера "Вопросы" (плагин slick)
 	if ($('.accordions-carousel').length){
 		var accordionsOptions = {
@@ -238,15 +271,13 @@ $(document).ready(function() {
 	}
 	
 	// Инициализация слайдера "Документы" (плагин slick)
-	if ($('.documents-carousel').length){
-		$('.documents-carousel').slick({
+	if ($('.documents-carousel--1').length){
+		$('.documents-carousel--1').slick({
 			dots: true,
 			infinite: false,
-			
 			touchThreshold: 20,
 			slidesToShow: 3,
-			slidesToScroll: 3,
-         slidesPerRow: 1,
+			slidesToScroll: 1,
 			arrows: true,
 			prevArrow: prevArrow,
 			nextArrow: nextArrow, 
@@ -255,6 +286,42 @@ $(document).ready(function() {
 				 {
 					  breakpoint: 992,
 					  settings: {
+						  arrows: false
+					
+					  }
+				 },
+				 {
+					  breakpoint: 576,
+					  settings: {
+						  slidesToShow: 2,
+						  slidesToScroll: 2,
+						  arrows: false
+					
+					  }
+				 }
+			]
+		});
+	}
+	
+	// Инициализация слайдера "Благодарственные письма" (плагин slick)
+	if ($('.documents-carousel--2').length){
+		$('.documents-carousel--2').slick({
+			dots: true,
+			infinite: false,
+			touchThreshold: 20,
+			slidesToShow: 4,
+			slidesToScroll: 1,
+			arrows: true,
+			prevArrow: prevArrow,
+			nextArrow: nextArrow, 
+			lazyLoad: 'progressive',
+			responsive: [
+				 {
+					  breakpoint: 992,
+
+					  settings: {
+						  slidesToShow: 3,
+							slidesToScroll: 1,
 						  arrows: false
 					
 					  }
@@ -762,8 +829,12 @@ $(document).ready(function() {
 		
 		$(this).addClass("active");
 		tabPane.eq(tabIndex).addClass("active");
-		
-		
+	});
+	 
+	 // tabs
+	$('.listen-online-item').on("click", function(){
+		$(this).siblings().removeClass("playing");
+		$(this).toggleClass("playing");
 	});
 	
 	 // FORM VALIDATION
