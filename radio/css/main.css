@@ -4929,7 +4929,7 @@ textarea.form-control {
 }
 .questions__toggle {
   text-align: center;
-  margin-bottom: 25px;
+  margin-bottom: 33px;
   padding-left: 8px;
 }
 .questions__btn-toggle {
@@ -5018,14 +5018,62 @@ textarea.form-control {
       -ms-transform: translate(15px, -50%);
           transform: translate(15px, -50%);
 }
+.questions__preview {
+  margin: 0 auto;
+  max-width: 768px;
+  -webkit-transition: 0.3s all ease-in-out;
+  -o-transition: 0.3s all ease-in-out;
+  transition: 0.3s all ease-in-out;
+  max-height: 1000px;
+  overflow: hidden;
+}
+.questions__preview-in {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 31px 0 30px;
+  border-top: 1px solid #ebebeb;
+  border-bottom: 1px solid #ebebeb;
+}
+.questions__preview-icon {
+  -webkit-box-flex: 0;
+  -webkit-flex: none;
+      -ms-flex: none;
+          flex: none;
+  width: 108px;
+  margin-right: 20px;
+}
+.questions__preview-icon img {
+  display: block;
+  width: 100%;
+}
+.questions__preview-content {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+.questions__preview-item {
+  margin-bottom: 20px;
+  padding: 12px 19px 13px;
+  font-size: 14px;
+  line-height: 1.3;
+  color: #434343;
+  background: #f9f9f9;
+}
+.questions__preview-item:last-child {
+  margin-bottom: 0;
+}
+.questions__preview.active {
+  max-height: 0;
+  opacity: 0;
+}
 .questions .content-title {
   margin-bottom: 32px;
 }
 .questions .container {
   max-width: 1249px;
-}
-.questions .application-button {
-  margin-top: 28px;
 }
 .accordion {
   margin-right: 19px;
@@ -13920,6 +13968,19 @@ textarea.form-control {
   }
   .using-music-item__bottom-text {
     margin-top: 11px;
+  }
+  .questions__preview {
+    display: block;
+  }
+  .questions__preview-in {
+    padding: 20px 0;
+  }
+  .questions__preview-icon {
+    display: none;
+  }
+  .questions__preview-item {
+    padding: 13px 15px 15px;
+    line-height: 1.5;
   }
 }
 @media (max-width: 480px) {

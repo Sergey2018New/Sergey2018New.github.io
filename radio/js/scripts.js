@@ -782,6 +782,7 @@ $(document).ready(function() {
 		
 		$(this).parent().next().toggleClass("active");
 		$(this).parent().next().slick('setPosition');
+		$(this).parent().next().next().toggleClass("active");
 		
 		
 	});
