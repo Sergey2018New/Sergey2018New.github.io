@@ -3386,15 +3386,6 @@ textarea.form-control {
   left: 0;
   right: 0;
 }
-.content-title__img:before {
-  content: '';
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: rgba(255, 255, 255, 0.6);
-}
 .content-title__img img {
   display: block;
   width: 100%;
@@ -6229,15 +6220,6 @@ textarea.form-control {
           align-items: center;
   padding-top: 2px;
 }
-.way-need-work-item:before {
-  content: '';
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: rgba(47, 45, 45, 0.6);
-}
 .way-need-work-item__text {
   max-width: 180px;
   text-align: center;
@@ -6895,16 +6877,6 @@ textarea.form-control {
   background-repeat: no-repeat;
   -webkit-background-size: cover;
           background-size: cover;
-}
-.what-music:before {
-  content: '';
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: #cccccc;
-  opacity: 0.1;
 }
 .what-music__content {
   display: -webkit-box;
@@ -9791,7 +9763,6 @@ textarea.form-control {
   -webkit-background-size: cover;
           background-size: cover;
   background-position: center center;
-  background-image: url("../img/bg/subscription/bg-1920.jpg");
 }
 .social-subscription .content-subtitle {
   max-width: 310px;
@@ -10666,7 +10637,7 @@ textarea.form-control {
           background-size: auto auto;
   background-repeat: no-repeat;
   background-position: center center;
-  opacity: 0.6;
+  opacity: 0.4;
 }
 .should-block__content {
   position: relative;
@@ -10752,6 +10723,9 @@ textarea.form-control {
 .should-block--character .should-item__icon {
   -webkit-border-radius: 50%;
           border-radius: 50%;
+}
+.should-block--decor .should-block__items:before {
+  opacity: 0.55;
 }
 .should-block--decor .title-bar {
   margin-bottom: 29px;
@@ -14023,6 +13997,9 @@ textarea.form-control {
     -webkit-border-radius: 0;
             border-radius: 0;
   }
+  .social-subscription__content {
+    background-image: url("../img/bg/subscription/bg-375.jpg");
+  }
 }
 @media (max-width: 350px) {
   h1 {
@@ -14380,6 +14357,11 @@ textarea.form-control {
   .duties-law__box {
     padding-left: 25px;
     padding-right: 25px;
+  }
+}
+@media (min-width: 376px) {
+  .social-subscription__content {
+    background-image: url("../img/bg/subscription/bg-1920.jpg");
   }
 }
 @media (min-width: 576px) {
