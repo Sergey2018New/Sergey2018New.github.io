@@ -10,12 +10,11 @@ $(document).ready(function() {
 	
 	// Путь до файла иконок, иконки слайдера
 	var srcIcons = 'img/icons.svg',
-		 prevArrow = '<button type="button" class="slick-prev slick-arrow"><svg class="icon icon-nav"><use xlink:href="' + srcIcons + '#icon-nav"/></svg></button>',
-		 nextArrow = '<button type="button" class="slick-next slick-arrow"><svg class="icon icon-nav"><use xlink:href="' + srcIcons + '#icon-nav"/></svg></button>',
-		 prevArrow2 = '<button type="button" class="slick-prev slick-arrow"><svg class="icon icon-arrow-2"><use xlink:href="' + srcIcons + '#icon-arrow-2"/></svg></button>',
-		 nextArrow2 = '<button type="button" class="slick-next slick-arrow"><svg class="icon icon-arrow-2"><use xlink:href="' + srcIcons + '#icon-arrow-2"/></svg></button>',
-		 prevArrow3 = '<button type="button" class="slick-prev slick-arrow"><svg class="icon icon-nav-2"><use xlink:href="' + srcIcons + '#icon-nav-2"/></svg></button>',
-		 nextArrow3 = '<button type="button" class="slick-next slick-arrow"><svg class="icon icon-nav-2"><use xlink:href="' + srcIcons + '#icon-nav-2"/></svg></button>';
+		 prevArrow = '<button type="button" class="slick-prev slick-arrow"><svg class="icon icon-slider-arrow"><use xlink:href="' + srcIcons + '#icon-slider-arrow"/></svg></button>',
+		 nextArrow = '<button type="button" class="slick-next slick-arrow"><svg class="icon icon-slider-arrow"><use xlink:href="' + srcIcons + '#icon-slider-arrow"/></svg></button>',
+		 prevArrow2 = '<button type="button" class="slick-prev slick-arrow"><svg class="icon icon-nav-2"><use xlink:href="' + srcIcons + '#icon-nav-2"/></svg></button>',
+		 nextArrow2 = '<button type="button" class="slick-next slick-arrow"><svg class="icon icon-nav-2"><use xlink:href="' + srcIcons + '#icon-nav-2"/></svg></button>';
+		
 	
 	// Инициализация слайдера "Зоны вещаний" (плагин slick)
 	if ($('.broadcast__carousel').length){
@@ -262,6 +261,17 @@ $(document).ready(function() {
 					  settings: {
 						  slidesToShow: 1,
 						  slidesToScroll: 1,
+						  arrows: true,
+						  prevArrow: prevArrow2,
+						 nextArrow: nextArrow2
+					
+					  }
+				 },
+				 {
+					  breakpoint: 321,
+					  settings: {
+						  slidesToShow: 1,
+						  slidesToScroll: 1,
 						  arrows: false
 					
 					  }
@@ -348,8 +358,8 @@ $(document).ready(function() {
 			slidesToShow: 3,
 			slidesToScroll: 1,
 			arrows: true,
-			prevArrow: prevArrow3,
-			nextArrow: nextArrow3, 
+			prevArrow: prevArrow2,
+			nextArrow: nextArrow2, 
 			lazyLoad: 'progressive', 
 			responsive: [
 				 {
@@ -774,15 +784,30 @@ $(document).ready(function() {
 	
 	// Открыть / закрыть вопросы
 	$('.questions__btn-toggle').on("click", function(){
-		var currentTitle = $(this).find("span").text(),
-			 dataTitle = $(this).attr("data-toggle-title");
+		var $this = $(this),
+			 currentTitle = $this.find("span").text(),
+			 dataTitle = $this.attr("data-toggle-title");
 		
-		$(this).find("span").text(dataTitle);
-		$(this).attr("data-toggle-title", currentTitle);
+		$this.find("span").text(dataTitle);
+		$this.attr("data-toggle-title", currentTitle);
 		
-		$(this).parent().next().toggleClass("active");
-		$(this).parent().next().slick('setPosition');
-		$(this).parent().next().next().toggleClass("active");
+		if (!$this.parent().next().hasClass("active")){
+			$this.parent().next().next().slideToggle(400);
+			setTimeout(function(){
+				$this.parent().next().toggleClass("active");
+				$this.parent().next().slick('setPosition');
+			}, 600);
+		}
+		else{
+			
+			$this.parent().next().toggleClass("active");
+			setTimeout(function(){
+				$this.parent().next().next().slideToggle(400);
+			}, 600);
+		}
+		
+		
+		
 		
 		
 	});
