@@ -21,8 +21,8 @@
             </div>
             <div class="header__menu">
               <ul class="menu">
-                <li class="active">
-                  <a href="/radio/">Главная</a>
+                <li>
+                  <a href="index.html">Главная</a>
                 </li>
                 <li>
                   <a href="#">Услуги</a>
@@ -103,6 +103,7 @@
                         <div class="music-advantage-item__icon">
                           <svg class="icon icon-hourglass"><use xlink:href="img/icons.svg#icon-hourglass"/></svg>
                         </div>
+                        <div class="music-advantage-item__circles"></div>
                         <div class="music-advantage-item__title">
                           Музыка увеличивает время посещения
                         </div>
@@ -250,20 +251,24 @@
         </div>
         <div class="official-partners">
           <div class="container">
-            <div class="title-bar title-bar--border official-partners__title">
+            <div class="title-bar title-bar--border official-partners__title animation" data-uk-scrollspy="{cls:'zoomOut'}">
               <div>
-                <span>Наши официальные партнеры</span>
+                <div class="title-bar__border animation" data-uk-scrollspy="{cls:'zoomOut', delay: 1200}"></div>
+                <div class="animation" data-uk-scrollspy="{cls:'zoomOut', delay: 700}">
+                  <span>Наши официальные партнеры</span>
+                </div>
+
               </div>
             </div>
             <div class="official-partners__logos">
-              <div class="animation" data-uk-scrollspy="{cls:'slideLeft', delay: 500}">
-                <img src="img/content/logo-vois.png" alt="">
+              <div class="animation" data-uk-scrollspy="{cls:'slideLeft'}">
+                <img src="img/content/logo-vois.png" alt="" width="132" height="52">
               </div>
 
-              <div class="animation" data-uk-scrollspy="{cls:'slideRight', delay: 500}">
-                <img src="img/content/logo-rao.png" alt="">
+              <div class="animation" data-uk-scrollspy="{cls:'slideRight'}">
+                <img src="img/content/logo-rao.png" alt="" width="131" height="54">
               </div>
-              <div class="official-partners__logos-line animation" data-uk-scrollspy="{cls:'fadeIn'}"></div>
+              <div class="official-partners__logos-line animation animation-duration-1_5" data-uk-scrollspy="{cls:'fadeIn'}"></div>
 
             </div>
             <div class="official-partners__text animation" data-uk-scrollspy="{cls:'slideDown', delay: 800}">
@@ -331,7 +336,7 @@
               <h3>Нет никаких ограничений! А1радио это:</h3>
             </div>
             <div class="title-bar">
-              <div>
+              <div class="blink">
                 Любая музыка
               </div>
             </div>

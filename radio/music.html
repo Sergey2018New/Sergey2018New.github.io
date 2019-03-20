@@ -21,10 +21,10 @@
             </div>
             <div class="header__menu">
               <ul class="menu">
-                <li class="active">
-                  <a href="/radio/">Главная</a>
-                </li>
                 <li>
+                  <a href="index.html">Главная</a>
+                </li>
+                <li class="active">
                   <a href="#">Услуги</a>
                   <ul>
                     <li><a href="music.html">Музыка для бизнеса</a></li>
@@ -234,9 +234,15 @@
               </div>
               <div class="music-gallery__text">
                 <div>
-                  С нами
-                  <span>Вам доступна</span>
-                  любая музыка
+                  <div class="animation" data-uk-scrollspy="cls:'slideDown'">
+                    С нами
+                  </div>
+                  <div class="animation" data-uk-scrollspy="cls:'slideDown', delay: 350">
+                    <span>Вам доступна</span>
+                  </div>
+                  <div class="animation" data-uk-scrollspy="cls:'slideDown', delay: 700">
+                    любая музыка
+                  </div>
                 </div>
               </div>
             </div>
@@ -246,7 +252,11 @@
         <div class="music-abilities">
           <div class="container">
             <div class="title-bar">
-              <div>Музыка в бизнесе:</div>
+              <div>
+                <div  class="animation" data-uk-scrollspy="cls:'zoomOut',delay:100">
+                  Музыка в бизнесе:
+                </div>
+              </div>
             </div>
             <div class="music-abilities__row">
               <div class="music-abilities__column music-abilities__column--left">
@@ -258,7 +268,7 @@
                     <span>Создает нужное настроение</span>
                   </div>
                 </div>
-                <div class="ability-item animation" data-uk-scrollspy="cls:'slideLeft', delay:1200">
+                <div class="ability-item animation" data-uk-scrollspy="cls:'slideLeft'">
                   <div class="ability-item__icon">
                     <svg class="icon icon-tie"><use xlink:href="img/icons.svg#icon-tie"/></svg>
                   </div>
@@ -268,14 +278,14 @@
                 </div>
               </div>
               <div class="music-abilities__column music-abilities__column--center">
-                <div class="music-abilities__text-center animation" data-uk-scrollspy="cls:'fadeIn', delay:2200">
+                <div class="music-abilities__text-center animation" data-uk-scrollspy="cls:'fadeIn'">
                   <div>
                     <span>Музыка</span>
                   </div>
                 </div>
               </div>
               <div class="music-abilities__column music-abilities__column--right">
-                <div class="ability-item animation" data-uk-scrollspy="cls:'slideRight', delay:600">
+                <div class="ability-item animation" data-uk-scrollspy="cls:'slideRight'">
                   <div class="ability-item__icon">
                     <svg class="icon icon-time-plus"><use xlink:href="img/icons.svg#icon-time-plus"/></svg>
                   </div>
@@ -283,7 +293,7 @@
                     <span>Увеличивает время посещения</span>
                   </div>
                 </div>
-                <div class="ability-item animation" data-uk-scrollspy="cls:'slideRight', delay:1800">
+                <div class="ability-item animation" data-uk-scrollspy="cls:'slideRight'">
                   <div class="ability-item__icon">
                     <svg class="icon icon-bell"><use xlink:href="img/icons.svg#icon-bell"/></svg>
                   </div>
@@ -317,16 +327,16 @@
             <div class="container">
               <div class="official-partners">
                 <div class="official-partners__text">
-                  <b><em>Организации РАО и ВОИС предоставляют А1радио право легально использовать музыку</em></b>
+                  <b>Организации РАО и ВОИС предоставляют А1радио право легально использовать музыку</b>
                 </div>
                 <div class="official-partners__logos">
-                  <div class="animation" data-uk-scrollspy="{cls:'slideLeft', delay: 400}">
-                    <img src="img/content/logo-vois.png" alt="">
+                  <div class="animation" data-uk-scrollspy="{cls:'slideLeft'}">
+                    <img src="img/content/logo-vois.png" alt="" width="132" height="52">
                   </div>
-                  <div class="animation" data-uk-scrollspy="{cls:'slideRight', delay: 400}">
-                    <img src="img/content/logo-rao.png" alt="">
+                  <div class="animation" data-uk-scrollspy="{cls:'slideRight'}">
+                    <img src="img/content/logo-rao.png" alt="" width="131" height="54">
                   </div>
-                  <div class="official-partners__logos-line animation uk-scrollspy-init-inview uk-scrollspy-inview fadeIn" data-uk-scrollspy="{cls:'fadeIn'}"></div>
+                  <div class="official-partners__logos-line animation animation-duration-1_5" data-uk-scrollspy="{cls:'fadeIn'}"></div>
 
                 </div>
                 <div class="official-partners__text">
@@ -1071,32 +1081,40 @@
             </div>
             <div class="statistics__items">
               <div class="statistic-item">
-                <div class="statistic-item__count">
-                  <span class="spincrement" data-uk-scrollspy data-animation="spin" data-duration="1500">24</span>
-                </div>
-                <div class="statistic-item__box animation animation-duration-1_5" data-uk-scrollspy="{cls:'scaleY'}">
-                  <div class="statistic-item__title animation" data-uk-scrollspy="{cls:'fadeIn', delay: 1500}">
-                    Тематических подборок
+                <div class="statistic-item__content animation animation-duration-1_5" data-uk-scrollspy="{cls:'translateY'}">
+                  <div class="statistic-item__count">
+                    <span class="spincrement" data-uk-scrollspy data-animation="spin" data-duration="2500">24</span>
+                  </div>
+                  <div class="statistic-item__box">
+                    <div class="statistic-item__title animation" data-uk-scrollspy="{cls:'fadeIn', delay: 1500}">
+                      Тематических подборок
+                    </div>
                   </div>
                 </div>
+
               </div>
               <div class="statistic-item">
-                <div class="statistic-item__count">
-                  <span class="spincrement" data-uk-scrollspy data-animation="spin" data-duration="1500">35</span>
-                </div>
-                <div class="statistic-item__box animation animation-duration-1_5" data-uk-scrollspy="{cls:'scaleY'}">
-                  <div class="statistic-item__title animation" data-uk-scrollspy="{cls:'fadeIn', delay: 1500}">
-                    Музыкальных направлений
+                <div class="statistic-item__content animation animation-duration-1_5" data-uk-scrollspy="{cls:'translateY'}">
+                  <div class="statistic-item__count">
+                    <span class="spincrement" data-uk-scrollspy data-animation="spin" data-duration="2500">35</span>
+                  </div>
+                  <div class="statistic-item__box">
+                    <div class="statistic-item__title animation" data-uk-scrollspy="{cls:'fadeIn', delay: 1500}">
+                      Музыкальных направлений
+                    </div>
                   </div>
                 </div>
+
               </div>
               <div class="statistic-item">
-                <div class="statistic-item__count">
-                  <span class="spincrement" data-uk-scrollspy data-animation="spin" data-duration="1500">90 000</span>
-                </div>
-                <div class="statistic-item__box animation animation-duration-1_5" data-uk-scrollspy="{cls:'scaleY'}">
-                  <div class="statistic-item__title animation" data-uk-scrollspy="{cls:'fadeIn', delay: 1500}">
-                    Музыкальных композиций
+                <div class="statistic-item__content animation animation-duration-1_5" data-uk-scrollspy="{cls:'translateY'}">
+                  <div class="statistic-item__count">
+                    <span class="spincrement" data-uk-scrollspy data-animation="spin" data-duration="1500">90 000</span>
+                  </div>
+                  <div class="statistic-item__box" >
+                    <div class="statistic-item__title animation" data-uk-scrollspy="{cls:'fadeIn', delay: 1500}">
+                      Музыкальных композиций
+                    </div>
                   </div>
                 </div>
               </div>
@@ -1309,6 +1327,7 @@
                   <div class="holiday-item__title">
                     Новый год
                   </div>
+                  <audio preload="none"><source src="music/its_my_life.mp3" type="audio/mpeg"></audio>
                 </div>
                 <div class="holiday-item">
                   <div class="holiday-item__img">
@@ -1320,6 +1339,7 @@
                   <div class="holiday-item__title">
                     14 февраля
                   </div>
+                  <audio preload="none"><source src="music/its_my_life.mp3" type="audio/mpeg"></audio>
                 </div>
               </div>
               <div>
@@ -1333,6 +1353,7 @@
                   <div class="holiday-item__title">
                     23 февраля
                   </div>
+                    <audio preload="none"><source src="music/its_my_life.mp3" type="audio/mpeg"></audio>
                 </div>
                 <div class="holiday-item">
                   <div class="holiday-item__img">
@@ -1344,6 +1365,7 @@
                   <div class="holiday-item__title">
                     8 марта
                   </div>
+                    <audio preload="none"><source src="music/its_my_life.mp3" type="audio/mpeg"></audio>
                 </div>
               </div>
               <div>
@@ -1357,6 +1379,7 @@
                   <div class="holiday-item__title">
                     День Победы
                   </div>
+                    <audio preload="none"><source src="music/its_my_life.mp3" type="audio/mpeg"></audio>
                 </div>
                 <div class="holiday-item">
                   <div class="holiday-item__img">
@@ -1368,6 +1391,7 @@
                   <div class="holiday-item__title">
                     1 июня
                   </div>
+                    <audio preload="none"><source src="music/its_my_life.mp3" type="audio/mpeg"></audio>
                 </div>
               </div>
               <div>
@@ -1381,6 +1405,7 @@
                   <div class="holiday-item__title">
                     День России
                   </div>
+                    <audio preload="none"><source src="music/its_my_life.mp3" type="audio/mpeg"></audio>
                 </div>
                 <div class="holiday-item">
                   <div class="holiday-item__img">
@@ -1392,6 +1417,7 @@
                   <div class="holiday-item__title">
                     День знаний
                   </div>
+                    <audio preload="none"><source src="music/its_my_life.mp3" type="audio/mpeg"></audio>
                 </div>
               </div>
               <div>
@@ -1405,6 +1431,7 @@
                   <div class="holiday-item__title">
                     День города
                   </div>
+                    <audio preload="none"><source src="music/its_my_life.mp3" type="audio/mpeg"></audio>
                 </div>
                 <div class="holiday-item">
                   <div class="holiday-item__img">
@@ -1416,6 +1443,7 @@
                   <div class="holiday-item__title">
                     Другие праздники
                   </div>
+                    <audio preload="none"><source src="music/its_my_life.mp3" type="audio/mpeg"></audio>
                 </div>
               </div>
 

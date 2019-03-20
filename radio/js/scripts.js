@@ -18,7 +18,6 @@ $(document).ready(function() {
 	
 	// Инициализация слайдера "Зоны вещаний" (плагин slick)
 	if ($('.broadcast__carousel').length){
-		
 		$('.broadcast__carousel').slick({
 			dots: true,
 			infinite: true,
@@ -30,7 +29,6 @@ $(document).ready(function() {
 			arrows: true,
 			prevArrow: prevArrow,
 			nextArrow: nextArrow, 
-			lazyLoad: 'progressive',
 			responsive: [
 				 {
 					  breakpoint: 992,
@@ -60,7 +58,7 @@ $(document).ready(function() {
 	if ($('.partners--1 .partners__carousel').length){
 		$('.partners--1 .partners__carousel').slick({
 			dots: true,
-			infinite: false,
+			infinite: true,
 			touchThreshold: 20,
 			slidesToShow: 5,
 			slidesToScroll: 1,
@@ -82,7 +80,8 @@ $(document).ready(function() {
 					  breakpoint: 576,
 					  settings: {
 						  slidesToShow: 2,
-							rows: 5,
+							//rows: 4,
+						//	infinite: false,
 							arrows: false
 					  }
 				 }
@@ -94,7 +93,7 @@ $(document).ready(function() {
 	if ($('.partners--2 .partners__carousel').length){
 		$('.partners--2 .partners__carousel').slick({
 			dots: true,
-			infinite: false,
+			infinite: true,
 			touchThreshold: 20,
 			slidesToShow: 5,
 			slidesToScroll: 1,
@@ -128,10 +127,10 @@ $(document).ready(function() {
 	if ($('.partners--3 .partners__carousel').length){
 		$('.partners--3 .partners__carousel').slick({
 			dots: true,
-			infinite: false,
+			infinite: true,
 			touchThreshold: 20,
 			slidesToShow: 6,
-			slidesToScroll: 1,
+			slidesToScroll: 6,
 			rows: 5,
          slidesPerRow: 1,
 			arrows: true,
@@ -143,6 +142,7 @@ $(document).ready(function() {
 					  breakpoint: 992,
 					  settings: {
 							slidesToShow: 5,
+							slidesToScroll: 5,
 							arrows: false
 					  }
 				 },
@@ -150,64 +150,28 @@ $(document).ready(function() {
 					  breakpoint: 576,
 					  settings: {
 						  slidesToShow: 2,
-							arrows: false
+						slidesToScroll: 2,
+						arrows: false
 					  }
 				 }
 			]
 		});
 	}
 	
-	// Инициализация слайдера "Вопросы" (плагин slick)
-	if ($('.accordions-carousel').length){
-		var accordionsOptions = {
-			dots: true,
-			infinite: true,
-			touchThreshold: 20,
-			slidesToShow: 1,
-			slidesToScroll: 1,
-			rows: 3,
-			slidesPerRow: 1,
-			adaptiveHeight: true,
-			arrows: true,
-			prevArrow: prevArrow,
-			nextArrow: nextArrow,
-			
-			responsive: [
-				 {
-					  breakpoint: 992,
-					 
-					  settings: {
-						arrows: false,
-					  }
-				 },
-				 {
-					  breakpoint: 576,
-					  settings: {
-						  dots: true,
-						  infinite: true,
-							rows: 1,
-							slidesPerRow: 1,
-							arrows: false
-					  }
-				 }
-			]
-		}
-		$('.accordions-carousel').slick(accordionsOptions);
-	}
-	
 	// Инициализация слайдера "Примеры музыкальных баз" (плагин slick)
 	if ($('.examples__carousel').length){
 		$('.examples__carousel').slick({
 			dots: true,
-			infinite: false,
+			infinite: true,
 			touchThreshold: 20,
 			slidesToShow: 2,
-			slidesToScroll: 1,
+			slidesToScroll: 2,
          slidesPerRow: 1,
 			arrows: true,
 			prevArrow: prevArrow,
 			nextArrow: nextArrow, 
 			lazyLoad: 'progressive',
+			draggable: false,
 			responsive: [
 				 {
 					  breakpoint: 992,
@@ -219,6 +183,7 @@ $(document).ready(function() {
 					  breakpoint: 768,
 					  settings: {
 						  slidesToShow: 1,
+						  slidesToScroll: 1,
 							arrows: false
 					  }
 				 }
@@ -261,9 +226,7 @@ $(document).ready(function() {
 					  settings: {
 						  slidesToShow: 1,
 						  slidesToScroll: 1,
-						  arrows: true,
-						  prevArrow: prevArrow2,
-						 nextArrow: nextArrow2
+						  arrows: true
 					
 					  }
 				 },
@@ -284,7 +247,7 @@ $(document).ready(function() {
 	if ($('.documents-carousel--1').length){
 		$('.documents-carousel--1').slick({
 			dots: true,
-			infinite: false,
+			infinite: true,
 			touchThreshold: 20,
 			slidesToShow: 3,
 			slidesToScroll: 1,
@@ -317,10 +280,10 @@ $(document).ready(function() {
 	if ($('.documents-carousel--2').length){
 		$('.documents-carousel--2').slick({
 			dots: true,
-			infinite: false,
+			infinite: true,
 			touchThreshold: 20,
 			slidesToShow: 4,
-			slidesToScroll: 1,
+			slidesToScroll: 4,
 			arrows: true,
 			prevArrow: prevArrow,
 			nextArrow: nextArrow, 
@@ -331,12 +294,12 @@ $(document).ready(function() {
 
 					  settings: {
 						  slidesToShow: 3,
-							slidesToScroll: 1,
+							slidesToScroll: 3,
 						  arrows: false
 					
 					  }
 				 },
-				 {
+				 { 
 					  breakpoint: 576,
 					  settings: {
 						  slidesToShow: 2,
@@ -398,6 +361,7 @@ $(document).ready(function() {
 		 animationEffect: "fade",
 		 buttons: false,
 		 hash: false,
+		 infobar: false,
 		 beforeShow : function( instance, current ) {
 			showModalFunctions ();
 		},
@@ -416,6 +380,16 @@ $(document).ready(function() {
 				 titleTextSecond = titleText.substring( titleText.indexOf(" ") + 1, titleText.length);
 				 
 			title.html('<span>' + titleTextFirst + '</span>' + titleTextSecond)
+		});
+	}
+	
+	if ($(".questions__preview").length){
+		$(".questions__preview").each(function(){
+			$(this).find(".questions__preview-in").wrap("<div></div>");
+			var height = $(this).children("div").outerHeight();
+			$(this).find(".questions__preview-in").css("height", height);
+			$(this).children("div").css("height", height );
+			$(this).css("height", height );
 		});
 	}
 		
@@ -495,8 +469,8 @@ $(document).ready(function() {
 							slidesToShow: 2,
 							slidesToScroll: 2,
 							arrows: true,
-							prevArrow: prevArrow2,
-							nextArrow: nextArrow2, 
+							prevArrow: prevArrow,
+							nextArrow: nextArrow, 
 							lazyLoad: 'progressive',
 							responsive: [
 								 {
@@ -555,24 +529,101 @@ $(document).ready(function() {
 				
 			}
 			
+			// Инициализация слайдера "Вопросы" (плагин slick)
+			if ($('.accordions-carousel').length){
+				if (w >= 576){
+					if (!$('.accordions-carousel.slick-initialized').length){
+						$('.accordions-carousel').slick({
+							dots: true,
+							infinite: true,
+							touchThreshold: 20,
+							slidesToShow: 1,
+							slidesToScroll: 1,
+							rows: 3,
+							slidesPerRow: 1,
+							adaptiveHeight: true,
+							arrows: true,
+							prevArrow: prevArrow,
+							nextArrow: nextArrow,
+							responsive: [
+								 {
+									  breakpoint: 992,
+									 
+									  settings: {
+										arrows: false,
+									  }
+								 },
+								 {
+									  breakpoint: 576,
+									  settings: {
+										  dots: true,
+										  infinite: true,
+										  rows: 1,
+										  slidesPerRow: 1,
+										  arrows: false
+									  }
+								 }
+							]
+						});
+					}
+					
+				}
+				else{
+					if ($('.accordions-carousel.slick-initialized').length){
+						$('.accordions-carousel').slick('unslick');
+					}
+					
+				}
+			}
+					
+			
 	}
 	windowSize();
 	$(window).on('resize', windowSize); 
 	
 	// window scroll
-	/*
+	
 	$(window).on("load scroll", function(){
-		var windowScroll = $(window).scrollTop(),
-			blockOffset = $(".header__block").offset().top;
-			
-		if (windowScroll >= blockOffset){
-			$(".nav").addClass("fixed");
-		}
-		else{
-			$(".nav").removeClass("fixed");
-		}
+		var windowScroll = $(window).scrollTop();
+			/*
+			 if ($(".questions__content").length){
+				 $(".questions__content").each(function(){
+					 if ($(this).find(".accordions-carousel").hasClass("active")){
+						 var $this = $(this),
+						  blockOffset = $this.offset().top;
+							
+						 if (windowScroll  > (blockOffset + $this.height())){
+							
+							 btnToggleQuestions = $this.find(".questions__btn-toggle"),
+							 currentTitle = btnToggleQuestions.find("span").text(),
+							 dataTitle = btnToggleQuestions.attr("data-toggle-title"),
+							 previewQuestions = $this.find(".questions__preview"),
+							 accordionsQuestions = $this.find(".accordions-carousel");
+					
+							btnToggleQuestions.find("span").text(dataTitle);
+							btnToggleQuestions.attr("data-toggle-title", currentTitle);
+							
+							previewQuestions.children("div").css("height", "1px");
+								
+							setTimeout(function(){
+								accordionsQuestions.toggleClass("active");
+								accordionsQuestions.slick('setPosition');
+								previewQuestions.addClass("fadeOut");
+							}, 600);
+							
+							setTimeout(function(){
+								previewQuestions.toggleClass("hidden");
+							}, 700);
+						
+						 }
+					 }
+					 
+				 });
+			}
+		
+			*/
 	});
-	*/
+	
 	
 	/* МОБИЛЬНОЕ МЕНЮ */
 	
@@ -792,18 +843,33 @@ $(document).ready(function() {
 		$this.attr("data-toggle-title", currentTitle);
 		
 		if (!$this.parent().next().hasClass("active")){
-			$this.parent().next().next().slideToggle(400);
+			$this.parent().next().next().children("div").css("height", "1px");
+			
 			setTimeout(function(){
 				$this.parent().next().toggleClass("active");
 				$this.parent().next().slick('setPosition');
+				$this.parent().next().next().addClass("fadeOut");
 			}, 600);
+			
+			setTimeout(function(){
+				$this.parent().next().next().toggleClass("hidden");
+			}, 700);
+			
+		
 		}
 		else{
 			
 			$this.parent().next().toggleClass("active");
+			$this.parent().next().next().removeClass("fadeOut");
+			
 			setTimeout(function(){
-				$this.parent().next().next().slideToggle(400);
+				$this.parent().next().next().children("div").css("height", $this.parent().next().next().height());
 			}, 600);
+			
+			
+			setTimeout(function(){
+				$this.parent().next().next().toggleClass("hidden");
+			}, 300);
 		}
 		
 		
@@ -813,15 +879,23 @@ $(document).ready(function() {
 	});
 	
 	// player
-	$('.example-item').on("click", function(){
-		$('.example-item').not($(this)).removeClass("playing");
+	$('.example-item, .track-item, .listen-online-item, .holiday-item').on("click", function(){
+		
+		$('.playing').not($(this)).removeClass("playing");
+		$('audio').trigger('pause');
+		$('audio').prop("currentTime",0);
+		
+		if (!$(this).hasClass('playing')){
+			$(this).find('audio').trigger('play');
+		}
+		else{
+			$(this).find('audio').trigger('pause');
+		}
+		
 		$(this).toggleClass("playing");
+	
 	});
 	
-	$('.track-item').on("click", function(){
-		$('.track-item').not($(this)).removeClass("playing");
-		$(this).toggleClass("playing");
-	});
 	
 	// spinner
 	$('[data-animation="spin"]').on('inview.uk.scrollspy', function() {
@@ -857,11 +931,14 @@ $(document).ready(function() {
 		tabPane.eq(tabIndex).addClass("active");
 	});
 	 
-	 // tabs
-	$('.listen-online-item').on("click", function(){
-		$(this).siblings().removeClass("playing");
-		$(this).toggleClass("playing");
+	 // new hover
+	$('.new-item__text a, .new-item__title a, .new-item__img').on('mouseenter', function(e) {
+		$(this).closest(".new-item").addClass("active");
 	});
+	$('.new-item__text a, .new-item__title a, .new-item__img').on('mouseleave', function(e) {
+		$(this).closest(".new-item").removeClass("active");
+	});
+	
 	
 	 // FORM VALIDATION
     $(function() {
@@ -922,6 +999,8 @@ $(document).ready(function() {
                             // $(this).attr('placeholder', '');
                             $(this).addClass('error');
                             $(this).after(error_elem).fadeIn();
+									 $("html, body").animate({scrollTop: $(".contacts__form").offset().top - $(".header").height()}, 500);
+									 
                         }
                     }
                 });
