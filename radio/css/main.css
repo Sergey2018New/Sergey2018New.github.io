@@ -5076,7 +5076,7 @@ textarea.form-control {
 }
 .questions__toggle {
   text-align: center;
-  margin-bottom: 48px;
+  margin-bottom: 32px;
   padding-left: 8px;
 }
 .questions__btn-toggle {
@@ -5149,7 +5149,7 @@ textarea.form-control {
   position: relative;
 }
 .questions__preview {
-  margin: 25px auto 0;
+  margin: 8px auto 0;
   overflow: hidden;
   max-width: 768px;
   max-height: 800px;
@@ -5378,7 +5378,7 @@ textarea.form-control {
 }
 .accordions-carousel {
   position: relative;
-  margin-top: -25px;
+  margin-top: -8px;
 }
 /* Умные технологии */
 .technology-item {
@@ -7109,12 +7109,13 @@ textarea.form-control {
 }
 .holiday-item.playing .holiday-item__btn-play {
   opacity: 1;
+  border-width: 3px;
 }
 .holiday-item.playing .holiday-item__btn-play:after {
   opacity: 1;
 }
 .holiday-item.playing .holiday-item__btn-play .icon {
-  fill: #fff;
+  opacity: 0;
 }
 .holiday-item.playing .holiday-item__img:after {
   opacity: 1;
@@ -8019,7 +8020,10 @@ textarea.form-control {
       -ms-flex-pack: center;
           justify-content: center;
   padding-top: 4px;
-  border-bottom: 5px solid #9b256a;
+  border-bottom: 5px solid transparent;
+  -webkit-transition: 0.25s all ease-in-out;
+  -o-transition: 0.25s all ease-in-out;
+  transition: 0.25s all ease-in-out;
 }
 .production-audio-item__more .icon {
   margin: 0 auto 12px;
@@ -8053,6 +8057,9 @@ textarea.form-control {
 }
 .production-audio-item:hover .production-audio-item__more-link {
   opacity: 1;
+}
+.production-audio-item:hover .production-audio-item__more {
+  border-bottom-color: #9b256a;
 }
 .production-audio-item:hover .production-audio-item__more .icon {
   fill-opacity: 1;
@@ -8526,6 +8533,9 @@ textarea.form-control {
   height: 45px;
   width: 20px;
   margin-top: -5px;
+}
+.music-advantages__carousel .slick-arrow:before {
+  display: none;
 }
 .music-advantages__carousel .slick-dots {
   bottom: -19px;
@@ -13018,7 +13028,13 @@ textarea.form-control {
     width: auto;
     margin-left: auto;
     margin-right: auto;
-    max-width: 356px;
+    max-width: 350px;
+    height: 155px;
+    border: none;
+    margin-bottom: 2px;
+  }
+  .live-item:last-child {
+    margin-bottom: 0;
   }
   .live-item__content {
     position: relative;
@@ -13026,7 +13042,7 @@ textarea.form-control {
     left: auto;
     top: auto;
     display: block;
-    padding: 13px;
+    padding: 18px 30px 14px;
     opacity: 0;
     -webkit-transition: 0.4s opacity ease-in-out;
     -o-transition: 0.4s opacity ease-in-out;
@@ -13040,21 +13056,22 @@ textarea.form-control {
   }
   .live-item__icon--small {
     width: 55px;
+    left: 27px;
   }
   .live-item__icon--small .icon {
     left: 16px;
-    top: 61px;
+    top: 77px;
     fill: #9b256a;
     -webkit-transform-origin: 0 0;
         -ms-transform-origin: 0 0;
             transform-origin: 0 0;
-    -webkit-transform: scale(0.715);
-        -ms-transform: scale(0.715);
-            transform: scale(0.715);
+    -webkit-transform: scale(0.8);
+        -ms-transform: scale(0.8);
+            transform: scale(0.8);
   }
   .live-item__text {
-    padding-top: 17px;
-    padding-left: 60px;
+    padding-top: 21px;
+    padding-left: 88px;
   }
   .live-item--small .live-item__icon--small {
     opacity: 0;
@@ -13789,6 +13806,9 @@ textarea.form-control {
     width: 20px;
     height: 45px;
   }
+  .carousel-places .slick-arrow:before {
+    display: none;
+  }
   .carousel-places .slick-prev {
     left: 5px;
   }
@@ -14462,7 +14482,7 @@ textarea.form-control {
     margin-right: auto;
     padding: 39px 20px;
   }
-  .audio-clips .content-title {
+  .audio-clips > .content-title {
     margin-bottom: 65px;
   }
   .audio-examples .tracks {
@@ -14948,8 +14968,17 @@ textarea.form-control {
   .sounds-live .content-subtitle {
     max-width: 280px;
   }
+  .live-item__content {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 17px;
+  }
   .live-item__text {
-    padding-top: 13px;
+    padding-right: 5px;
+    padding-top: 12px;
+  }
+  .live-item__icon--small {
+    left: 18px;
   }
   .radio-turnkey .title-bar {
     margin-left: -10px;
@@ -15398,4 +15427,30 @@ textarea.form-control {
 }
 .Desktop .holiday-item__img:hover + .holiday-item__title {
   color: #9b256a;
+}
+html:not(.Desktop) .questions__btn-toggle {
+  width: 145px;
+  text-align: left;
+}
+html:not(.Desktop) .questions__btn-toggle.active {
+  /*
+      .icon{
+        transform: translate(0, -48%) rotate(90deg);
+      }
+      */
+  color: #ffffff;
+}
+html:not(.Desktop) .questions__btn-toggle.active:before {
+  width: 100%;
+}
+html:not(.Desktop) .questions__btn-toggle.active:after {
+  opacity: 1;
+  -webkit-transform: translate(15px, 0);
+      -ms-transform: translate(15px, 0);
+          transform: translate(15px, 0);
+}
+html:not(.Desktop) .questions__btn-toggle.active .icon {
+  -webkit-transform: translate(15px, -50%);
+      -ms-transform: translate(15px, -50%);
+          transform: translate(15px, -50%);
 }

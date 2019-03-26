@@ -13,7 +13,9 @@ $(document).ready(function() {
 		 prevArrow = '<button type="button" class="slick-prev slick-arrow"><svg class="icon icon-slider-arrow"><use xlink:href="' + srcIcons + '#icon-slider-arrow"/></svg></button>',
 		 nextArrow = '<button type="button" class="slick-next slick-arrow"><svg class="icon icon-slider-arrow"><use xlink:href="' + srcIcons + '#icon-slider-arrow"/></svg></button>',
 		 prevArrow2 = '<button type="button" class="slick-prev slick-arrow"><svg class="icon icon-nav-2"><use xlink:href="' + srcIcons + '#icon-nav-2"/></svg></button>',
-		 nextArrow2 = '<button type="button" class="slick-next slick-arrow"><svg class="icon icon-nav-2"><use xlink:href="' + srcIcons + '#icon-nav-2"/></svg></button>';
+		 nextArrow2 = '<button type="button" class="slick-next slick-arrow"><svg class="icon icon-nav-2"><use xlink:href="' + srcIcons + '#icon-nav-2"/></svg></button>',
+		 prevArrow3 = '<button type="button" class="slick-prev slick-arrow"><svg class="icon icon-arrow-2"><use xlink:href="' + srcIcons + '#icon-arrow-2"/></svg></button>',
+		 nextArrow3 = '<button type="button" class="slick-next slick-arrow"><svg class="icon icon-arrow-2"><use xlink:href="' + srcIcons + '#icon-arrow-2"/></svg></button>';
 		
 	
 	// Инициализация слайдера "Зоны вещаний" (плагин slick)
@@ -226,6 +228,8 @@ $(document).ready(function() {
 					  settings: {
 						  slidesToShow: 1,
 						  slidesToScroll: 1,
+						  prevArrow: prevArrow3,
+						 nextArrow: nextArrow3, 
 						  arrows: true
 					
 					  }
@@ -384,15 +388,19 @@ $(document).ready(function() {
 	}
 	
 	if ($(".questions__preview").length){
-		$(".questions__preview").each(function(){
-			$(this).find(".questions__preview-in").wrap("<div></div>");
-			var height = $(this).children("div").outerHeight();
-			$(this).find(".questions__preview-in").css("height", height);
-			$(this).children("div").css("height", height );
-			$(this).css("height", height );
-		});
+		setTimeout(function(){
+			$(".questions__preview").each(function(){
+				
+				$(this).find(".questions__preview-in").wrap("<div></div>");
+				var height = $(this).innerHeight();
+					
+				$(this).find(".questions__preview-in").css("height", height);
+				$(this).children("div").css("height", height);
+				$(this).css("height", height );
+				
+			});
+		}, 200);
 	}
-		
 	
 	// window resize
 	function windowSize(){
@@ -464,13 +472,13 @@ $(document).ready(function() {
 					if (!$('.music-advantages__carousel.slick-initialized').length){
 						$('.music-advantages__carousel').slick({
 							dots: true,
-							infinite: false,
+							infinite: true,
 							touchThreshold: 20,
 							slidesToShow: 2,
 							slidesToScroll: 2,
 							arrows: true,
-							prevArrow: prevArrow,
-							nextArrow: nextArrow, 
+							prevArrow: prevArrow3,
+							nextArrow: nextArrow3, 
 							lazyLoad: 'progressive',
 							responsive: [
 								 {
@@ -531,6 +539,9 @@ $(document).ready(function() {
 			
 			// Инициализация слайдера "Вопросы" (плагин slick)
 			if ($('.accordions-carousel').length){
+				if ($('.accordions-carousel.slick-initialized').length){
+					$('.accordions-carousel').slick('unslick');
+				}
 				if (w >= 576){
 					if (!$('.accordions-carousel.slick-initialized').length){
 						$('.accordions-carousel').slick({
@@ -552,16 +563,6 @@ $(document).ready(function() {
 									  settings: {
 										arrows: false,
 									  }
-								 },
-								 {
-									  breakpoint: 576,
-									  settings: {
-										  dots: true,
-										  infinite: true,
-										  rows: 1,
-										  slidesPerRow: 1,
-										  arrows: false
-									  }
 								 }
 							]
 						});
@@ -569,9 +570,19 @@ $(document).ready(function() {
 					
 				}
 				else{
-					if ($('.accordions-carousel.slick-initialized').length){
-						$('.accordions-carousel').slick('unslick');
+					if (!$('.accordions-carousel.slick-initialized').length){
+				
+						$('.accordions-carousel').slick({
+							dots: true,
+							infinite: true,
+							touchThreshold: 20,
+							slidesToShow: 1,
+							slidesToScroll: 1,
+							adaptiveHeight: true,
+							arrows: false
+						});
 					}
+				
 					
 				}
 			}
@@ -582,48 +593,11 @@ $(document).ready(function() {
 	$(window).on('resize', windowSize); 
 	
 	// window scroll
-	
+	/*
 	$(window).on("load scroll", function(){
 		var windowScroll = $(window).scrollTop();
-			/*
-			 if ($(".questions__content").length){
-				 $(".questions__content").each(function(){
-					 if ($(this).find(".accordions-carousel").hasClass("active")){
-						 var $this = $(this),
-						  blockOffset = $this.offset().top;
-							
-						 if (windowScroll  > (blockOffset + $this.height())){
-							
-							 btnToggleQuestions = $this.find(".questions__btn-toggle"),
-							 currentTitle = btnToggleQuestions.find("span").text(),
-							 dataTitle = btnToggleQuestions.attr("data-toggle-title"),
-							 previewQuestions = $this.find(".questions__preview"),
-							 accordionsQuestions = $this.find(".accordions-carousel");
-					
-							btnToggleQuestions.find("span").text(dataTitle);
-							btnToggleQuestions.attr("data-toggle-title", currentTitle);
-							
-							previewQuestions.children("div").css("height", "1px");
-								
-							setTimeout(function(){
-								accordionsQuestions.toggleClass("active");
-								accordionsQuestions.slick('setPosition');
-								previewQuestions.addClass("fadeOut");
-							}, 600);
-							
-							setTimeout(function(){
-								previewQuestions.toggleClass("hidden");
-							}, 700);
-						
-						 }
-					 }
-					 
-				 });
-			}
-		
-			*/
 	});
-	
+	*/
 	
 	/* МОБИЛЬНОЕ МЕНЮ */
 	
@@ -841,6 +815,8 @@ $(document).ready(function() {
 		
 		$this.find("span").text(dataTitle);
 		$this.attr("data-toggle-title", currentTitle);
+		
+		$this.toggleClass("active");
 		
 		if (!$this.parent().next().hasClass("active")){
 			$this.parent().next().next().children("div").css("height", "1px");
