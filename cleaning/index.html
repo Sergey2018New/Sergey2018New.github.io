@@ -168,7 +168,7 @@
       </div>
       <main class="page-content"> 
         <div class="container">
-          <form action="#" id="order-form">
+          <form action="" method="post" id="order-form">
             <!-- Cleaning type-->
             <input type="radio" name="type" value="general-cleaning" data-base-price="600" id="order-form-type-general">
             <input type="radio" name="type" value="supporting-cleaning" data-base-price="600" id="order-form-type-supporting">
@@ -252,7 +252,8 @@
             </div>
           </section>
           <h2 class="header-h2">Простой рассчет стоимости</h2>
-          <section class="status-bar" data-make-sticky data-make-sticky-end=".choices-section" data-show-until-inst-visible=".make-order-section">
+          <h3 class="header-h3">Шаг 1. Выберите кол-во комнат</h3>
+          <section class="quantity-block">
             <div class="status-bar-counters">
                         <div class="counter">
                           <div class="counter-title"><span>Комнаты</span></div>
@@ -271,13 +272,15 @@
                           </div>
                         </div>
             </div>
+          </section>
+          <section class="status-bar" data-make-sticky data-make-sticky-end=".choices-section" data-show-until-inst-visible=".make-order-section">
             <div class="status-bar-total"><span class="status-bar-total__text">Итого:</span><span class="status-bar-total__price" data-watch-price>0</span><span class="status-bar-total__currency">₽</span></div>
             <div class="status-bar-submit meta-make-order-button">
                         <div class="button button--primary button--shadow"><span>Оформить заказ</span></div>
               <div class="status-bar-message">Выберите тип уборки!</div>
             </div>
           </section>
-          <h3 class="header-h3">Шаг 1. Выберите тип уборки</h3>
+          <h3 class="header-h3">Шаг 2. Выберите тип уборки </h3>
           <section class="main-choices">
             <div class="choice choice--main choice--border" data-updates-by="#order-form-type-general" data-macy-index="0">
               <div class="choice-header">
@@ -423,7 +426,7 @@
           </section>
           <section class="choices-section">
             <div class="choices-wrapper">
-              <h3 class="header-h3">Шаг 2. Выберите дополнительные услуги</h3>
+              <h3 class="header-h3">Шаг 3. Выберите дополнительные услуги</h3>
               <div class="choices-section-header">
                 <div class="choices-section-header-image">
                             <svg class="choices-section-header-image__icon">
@@ -679,7 +682,7 @@
               </div>
             </div>
             <div class="choices-wrapper">
-              <h3 class="header-h3">Шаг 2. Выберите дополнительные услуги</h3>
+              <h3 class="header-h3">Шаг 3. Выберите дополнительные услуги</h3>
               <div class="choices-section-header">
                 <div class="choices-section-header-image">
                             <svg class="choices-section-header-image__icon">
@@ -772,7 +775,7 @@
               </div>
             </div>
             <div class="choices-wrapper">
-              <h3 class="header-h3">Шаг 2. Выберите дополнительные услуги</h3>
+              <h3 class="header-h3">Шаг 3. Выберите дополнительные услуги</h3>
               <div class="choices-section-header">
                 <div class="choices-section-header-image">
                             <svg class="choices-section-header-image__icon">
@@ -1303,6 +1306,10 @@
             </div>
           </form>
         </div>
+      </div>
+      <div class="popup-thanks" id="thanks" style="display: none;">
+        <div class="popup-title">Спасибо заявку!</div>
+        <div class="popup-text">Мы получили Вашу заявку и свяжемся с Вами в ближайшее время по указанным контактам! </div>
       </div>
     </section>
     <script src="js/main.min.js" async></script>
