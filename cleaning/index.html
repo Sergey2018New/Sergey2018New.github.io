@@ -85,7 +85,8 @@
                     <div class="main-slider__title">Компания NowClean</div>
                     <div class="main-slider__text">
                       <p>  Таким образом укрепление и развитие структуры требуют от нас анализа существенных финансовых и административных условий. Задача организации, в особенности же укрепление и развитие структуры играет важную роль в формировании модели развития.</p>
-                      <p>  С другой стороны рамки и место обучения кадров позволяет оценить значение соответствующий условий активизации. Повседневная практика показывает.</p>
+                      <div class="main-slider__button"><a class="callback-button" href="javascript:;" onclick="$.scrollTo('#block-calculation', 500)">
+                                <div class="button button--primary"><span>Рассчитать стоимость</span></div></a></div>
                     </div>
                   </div>
                 </div>
@@ -113,8 +114,10 @@
                   <div class="main-slider__box">
                     <div class="main-slider__title">Уборка в ванной</div>
                     <div class="main-slider__text">
-                      <p>  Таким образом укрепление и развитие структуры требуют от нас анализа существенных финансовых и административных условий. Задача организации, в особенности же укрепление и развитие структуры играет важную роль в формировании модели развития.</p>
-                      <p>  С другой стороны рамки и место обучения кадров позволяет оценить значение соответствующий условий активизации. Повседневная практика показывает.</p>
+                      <p>  Таким образом укрепление и развитие структуры требуют от нас анализа существенных финансовых и административных условий. Задача организации, в особенности же укрепление и развитие структуры играет важную роль в формировании модели развития.
+                        <div class="main-slider__button"><a class="callback-button" href="javascript:;" onclick="$.scrollTo('#block-calculation', 500)">
+                                  <div class="button button--primary"><span>Рассчитать стоимость</span></div></a></div>
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -142,8 +145,10 @@
                   <div class="main-slider__box">
                     <div class="main-slider__title">Уборка на кухне</div>
                     <div class="main-slider__text">
-                      <p>  Таким образом укрепление и развитие структуры требуют от нас анализа существенных финансовых и административных условий. Задача организации, в особенности же укрепление и развитие структуры играет важную роль в формировании модели развития.</p>
-                      <p>  С другой стороны рамки и место обучения кадров позволяет оценить значение соответствующий условий активизации. Повседневная практика показывает.</p>
+                      <p>  Таким образом укрепление и развитие структуры требуют от нас анализа существенных финансовых и административных условий. Задача организации, в особенности же укрепление и развитие структуры играет важную роль в формировании модели развития.
+                        <div class="main-slider__button"><a class="callback-button" href="javascript:;" onclick="$.scrollTo('#block-calculation', 500)">
+                                  <div class="button button--primary"><span>Рассчитать стоимость</span></div></a></div>
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -251,53 +256,54 @@
               </div>
             </div>
           </section>
-          <h2 class="header-h2">Простой рассчет стоимости</h2>
-          <h3 class="header-h3">Шаг 1. Выберите кол-во комнат</h3>
-          <section class="quantity-block">
-            <div class="status-bar-counters">
-                        <div class="counter">
-                          <div class="counter-title"><span>Комнаты</span></div>
-                          <div class="counter-item">
-                            <div class="counter-item-decrement" data-decrement-on="#order-form-rooms"><span>-</span></div>
-                            <input class="counter-item-count" type="number" value="1" data-updates-by="#order-form-rooms">
-                            <div class="counter-item-increment" data-increment-on="#order-form-rooms"><span>+</span></div>
-                          </div>
-                        </div>
-                        <div class="counter">
-                          <div class="counter-title"><span>Санузел</span></div>
-                          <div class="counter-item">
-                            <div class="counter-item-decrement" data-decrement-on="#order-form-bathrooms"><span>-</span></div>
-                            <input class="counter-item-count" type="number" value="1" data-updates-by="#order-form-bathrooms">
-                            <div class="counter-item-increment" data-increment-on="#order-form-bathrooms"><span>+</span></div>
-                          </div>
-                        </div>
-            </div>
-          </section>
-          <section class="status-bar" data-make-sticky data-make-sticky-end=".choices-section" data-show-until-inst-visible=".make-order-section">
-            <div class="status-bar-total"><span class="status-bar-total__text">Итого:</span><span class="status-bar-total__price" data-watch-price>0</span><span class="status-bar-total__currency">₽</span></div>
-            <div class="status-bar-submit meta-make-order-button">
-                        <div class="button button--primary button--shadow"><span>Оформить заказ</span></div>
-              <div class="status-bar-message">Выберите тип уборки!</div>
-            </div>
-          </section>
-          <h3 class="header-h3">Шаг 2. Выберите тип уборки </h3>
-          <section class="main-choices">
-            <div class="choice choice--main choice--border" data-updates-by="#order-form-type-general" data-macy-index="0">
-              <div class="choice-header">
-                <div class="choice-icon">
-                            <svg class="icon icon-cleaning">
-                              <use xlink:href="svg/sprite.svg#svg--cleaning"></use>
-                            </svg>
-                </div><span>Генеральная уборка</span>
+          <div id="block-calculation">
+            <h2 class="header-h2">Простой рассчет стоимости</h2>
+            <h3 class="header-h3">Шаг 1. Выберите кол-во комнат</h3>
+            <section class="quantity-block">
+              <div class="status-bar-counters">
+                            <div class="counter">
+                              <div class="counter-title"><span>Комнаты</span></div>
+                              <div class="counter-item">
+                                <div class="counter-item-decrement" data-decrement-on="#order-form-rooms"><span>-</span></div>
+                                <input class="counter-item-count" type="number" value="1" data-updates-by="#order-form-rooms">
+                                <div class="counter-item-increment" data-increment-on="#order-form-rooms"><span>+</span></div>
+                              </div>
+                            </div>
+                            <div class="counter">
+                              <div class="counter-title"><span>Санузел</span></div>
+                              <div class="counter-item">
+                                <div class="counter-item-decrement" data-decrement-on="#order-form-bathrooms"><span>-</span></div>
+                                <input class="counter-item-count" type="number" value="1" data-updates-by="#order-form-bathrooms">
+                                <div class="counter-item-increment" data-increment-on="#order-form-bathrooms"><span>+</span></div>
+                              </div>
+                            </div>
               </div>
-              <div class="choice-separator"></div>
-              <div class="choice-content">
-                <div class="choice-text">Услуга «Генеральная уборка» самая популярная из всех. Мы сделаем все в лучшем виде, наведем порядок в Вашем доме быстро и качественно. В эту услугу входит:</div>
+            </section>
+            <section class="status-bar" data-make-sticky data-make-sticky-end=".choices-section" data-show-until-inst-visible=".make-order-section">
+              <div class="status-bar-total"><span class="status-bar-total__text">Итого:</span><span class="status-bar-total__price" data-watch-price>0</span><span class="status-bar-total__currency">₽</span></div>
+              <div class="status-bar-submit meta-make-order-button">
+                            <div class="button button--primary button--shadow"><span>Оформить заказ</span></div>
+                <div class="status-bar-message">Выберите тип уборки!</div>
               </div>
-              <div class="choice-bottom">
-                <div class="choice-price"><span>600 ₽</span></div>
-                <div class="choice-included">
-                  <div class="choice-tooltip tooltip" data-tippy="&lt;div class=&quot;tooltip-header&quot;&gt;
+            </section>
+            <h3 class="header-h3">Шаг 2. Выберите тип уборки </h3>
+            <section class="main-choices">
+              <div class="choice choice--main choice--border" data-updates-by="#order-form-type-general" data-macy-index="0">
+                <div class="choice-header">
+                  <div class="choice-icon">
+                                <svg class="icon icon-cleaning">
+                                  <use xlink:href="svg/sprite.svg#svg--cleaning"></use>
+                                </svg>
+                  </div><span>Генеральная уборка</span>
+                </div>
+                <div class="choice-separator"></div>
+                <div class="choice-content">
+                  <div class="choice-text">Услуга «Генеральная уборка» самая популярная из всех. Мы сделаем все в лучшем виде, наведем порядок в Вашем доме быстро и качественно. В эту услугу входит:</div>
+                </div>
+                <div class="choice-bottom">
+                  <div class="choice-price"><span>600 ₽</span></div>
+                  <div class="choice-included">
+                    <div class="choice-tooltip tooltip" data-tippy="&lt;div class=&quot;tooltip-header&quot;&gt;
         &lt;div class=&quot;tooltip-title&quot;&gt;
             Генеральная уборка
         &lt;/div&gt;
@@ -318,33 +324,33 @@
         &lt;li&gt;Поверхностная чистка мебели&lt;/li&gt;
         &lt;li&gt;Поверхностная уборка вещей&lt;/li&gt;
         &lt;li&gt;Мытье полов&lt;/li&gt;
-      &lt;/ul&gt;" data-tippy-trigger="click" data-tippy-theme="choice">
-                              <svg class="icon icon-arrow">
-                                <use xlink:href="svg/sprite.svg#svg--left-arrow"></use>
-                              </svg>
-                              <svg class="icon icon-info">
-                                <use xlink:href="svg/sprite.svg#svg--information"></use>
-                              </svg><span>Что входит в стоимость услуги</span>
+      &lt;/ul&gt;" data-tippy-theme="choice">
+                                  <svg class="icon icon-arrow">
+                                    <use xlink:href="svg/sprite.svg#svg--left-arrow"></use>
+                                  </svg>
+                                  <svg class="icon icon-info">
+                                    <use xlink:href="svg/sprite.svg#svg--information"></use>
+                                  </svg><span>Что входит в стоимость услуги</span>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="choice choice--main choice--border" data-updates-by="#order-form-type-supporting" data-macy-index="1">
-              <div class="choice-header">
-                <div class="choice-icon">
-                            <svg class="icon icon-wardrobe">
-                              <use xlink:href="svg/sprite.svg#svg--wardrobe"></use>
-                            </svg>
-                </div><span>Поддерживающая уборка</span>
-              </div>
-              <div class="choice-separator"></div>
-              <div class="choice-content">
-                <div class="choice-text">Услуга «Генеральная уборка» самая популярная из всех. Мы сделаем все в лучшем виде, наведем порядок в Вашем доме быстро и качественно. В эту услугу входит:</div>
-              </div>
-              <div class="choice-bottom">
-                <div class="choice-price"><span>600 ₽</span></div>
-                <div class="choice-included">
-                  <div class="choice-tooltip tooltip" data-tippy="&lt;div class=&quot;tooltip-header&quot;&gt;
+              <div class="choice choice--main choice--border" data-updates-by="#order-form-type-supporting" data-macy-index="1">
+                <div class="choice-header">
+                  <div class="choice-icon">
+                                <svg class="icon icon-wardrobe">
+                                  <use xlink:href="svg/sprite.svg#svg--wardrobe"></use>
+                                </svg>
+                  </div><span>Поддерживающая уборка</span>
+                </div>
+                <div class="choice-separator"></div>
+                <div class="choice-content">
+                  <div class="choice-text">Услуга «Генеральная уборка» самая популярная из всех. Мы сделаем все в лучшем виде, наведем порядок в Вашем доме быстро и качественно. В эту услугу входит:</div>
+                </div>
+                <div class="choice-bottom">
+                  <div class="choice-price"><span>600 ₽</span></div>
+                  <div class="choice-included">
+                    <div class="choice-tooltip tooltip" data-tippy="&lt;div class=&quot;tooltip-header&quot;&gt;
         &lt;div class=&quot;tooltip-title&quot;&gt;
             Поддерживающая уборка
         &lt;/div&gt;
@@ -365,33 +371,33 @@
         &lt;li&gt;Поверхностная чистка мебели&lt;/li&gt;
         &lt;li&gt;Поверхностная уборка вещей&lt;/li&gt;
         &lt;li&gt;Мытье полов&lt;/li&gt;
-      &lt;/ul&gt;" data-tippy-trigger="click" data-tippy-theme="choice">
-                              <svg class="icon icon-arrow">
-                                <use xlink:href="svg/sprite.svg#svg--left-arrow"></use>
-                              </svg>
-                              <svg class="icon icon-info">
-                                <use xlink:href="svg/sprite.svg#svg--information"></use>
-                              </svg><span>Что входит в стоимость услуги</span>
+      &lt;/ul&gt;" data-tippy-theme="choice">
+                                  <svg class="icon icon-arrow">
+                                    <use xlink:href="svg/sprite.svg#svg--left-arrow"></use>
+                                  </svg>
+                                  <svg class="icon icon-info">
+                                    <use xlink:href="svg/sprite.svg#svg--information"></use>
+                                  </svg><span>Что входит в стоимость услуги</span>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="choice choice--main choice--border" data-updates-by="#order-form-type-repairs" data-macy-index="2">
-              <div class="choice-header">
-                <div class="choice-icon">
-                            <svg class="icon icon-roller">
-                              <use xlink:href="svg/sprite.svg#svg--roller"></use>
-                            </svg>
-                </div><span>Уборка после ремонта</span>
-              </div>
-              <div class="choice-separator"></div>
-              <div class="choice-content">
-                <div class="choice-text">Услуга «Генеральная уборка» самая популярная из всех. Мы сделаем все в лучшем виде, наведем порядок в Вашем доме быстро и качественно. В эту услугу входит:</div>
-              </div>
-              <div class="choice-bottom">
-                <div class="choice-price"><span>600 ₽</span></div>
-                <div class="choice-included">
-                  <div class="choice-tooltip tooltip" data-tippy="&lt;div class=&quot;tooltip-header&quot;&gt;
+              <div class="choice choice--main choice--border" data-updates-by="#order-form-type-repairs" data-macy-index="2">
+                <div class="choice-header">
+                  <div class="choice-icon">
+                                <svg class="icon icon-roller">
+                                  <use xlink:href="svg/sprite.svg#svg--roller"></use>
+                                </svg>
+                  </div><span>Уборка после ремонта</span>
+                </div>
+                <div class="choice-separator"></div>
+                <div class="choice-content">
+                  <div class="choice-text">Услуга «Генеральная уборка» самая популярная из всех. Мы сделаем все в лучшем виде, наведем порядок в Вашем доме быстро и качественно. В эту услугу входит:</div>
+                </div>
+                <div class="choice-bottom">
+                  <div class="choice-price"><span>600 ₽</span></div>
+                  <div class="choice-included"> 
+                    <div class="choice-tooltip tooltip" data-tippy="&lt;div class=&quot;tooltip-header&quot;&gt;
         &lt;div class=&quot;tooltip-title&quot;&gt;
             Уборка после ремонта
         &lt;/div&gt;
@@ -412,710 +418,711 @@
         &lt;li&gt;Поверхностная чистка мебели&lt;/li&gt;
         &lt;li&gt;Поверхностная уборка вещей&lt;/li&gt;
         &lt;li&gt;Мытье полов&lt;/li&gt;
-      &lt;/ul&gt;" data-tippy-trigger="click" data-tippy-theme="choice">
-                              <svg class="icon icon-arrow">
-                                <use xlink:href="svg/sprite.svg#svg--left-arrow"></use>
-                              </svg>
-                              <svg class="icon icon-info">
-                                <use xlink:href="svg/sprite.svg#svg--information"></use>
-                              </svg><span>Что входит в стоимость услуги</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-          <section class="choices-section">
-            <div class="choices-wrapper">
-              <h3 class="header-h3">Шаг 3. Выберите дополнительные услуги</h3>
-              <div class="choices-section-header">
-                <div class="choices-section-header-image">
-                            <svg class="choices-section-header-image__icon">
-                              <use xlink:href="svg/sprite.svg#svg--recommended"></use>
-                            </svg>
-                </div>
-                <div class="choices-section-header__text">Популярные услуги</div>
-              </div>
-              <div class="choices">
-                <div class="choices-item" data-updates-by="#order-form-choice-1">
-                  <div class="choice-tooltip tooltip" data-tippy="Lorem ipsum dolor.">
-                    <div class="tooltip-inner">i</div>
-                  </div>
-                  <div class="choices-item-header"><span>Протирка дверей и дверных ручек</span>
-                    <div class="choices-item-price choices-item-price--mobile"><span class="choices-item-price-value">бесплатно</span></div>
-                  </div>
-                  <div class="choices-item-footer">
-                    <div class="choices-item-price"><span class="choices-item-price-value">бесплатно</span></div>
-                  </div>
-                </div>
-                <div class="choices-item choices-item-square" data-updates-by="#order-form-choice-2">
-                  <div class="choice-tooltip tooltip" data-tippy="Lorem ipsum dolor.">
-                    <div class="tooltip-inner">i</div>
-                  </div>
-                  <div class="choices-item-header"><span>Удаление жировых отложений на поверхностях кухонной мебели</span>
-                    <div class="choices-item-price choices-item-price--mobile"><span class="choices-item-price-from">45</span><span class="choices-item-price-value" data-watch-price-of="#order-form-choice-2">90</span><span>₽</span></div>
-                  </div>
-                  <div class="choices-item-content">
-                              <div class="toggler">
-                                <div class="toggler-text"><span>Шкафчики <strong class="color-azure">+120 ₽</strong></span></div>
-                                <div class="toggler-item" data-updates-by="#order-form-choice-2-trigger"></div>
-                              </div>
-                  </div>
-                  <div class="choices-item-footer">
-                    <div class="choices-item-price"><span class="choices-item-price-from">От</span><span class="choices-item-price-value" data-watch-price-of="#order-form-choice-2">90</span><span>₽</span></div>
-                  </div>
-                </div>
-                <div class="choices-item choices-item-square warning">
-                  <form class="feedback" action="#">
-                    <div class="feedback-pre-header"><span>Мы Вам перезвоним</span></div>
-                    <div class="feedback-header"><span>Оставьте ваш номер телефона и мы Вам перезвоним</span></div>
-                    <input class="feedback-input input--phone" type="text" name="phone" placeholder="Ваш номер телефона" required>
-                              <label class="button button--primary">
-                                <input class="button-native-submit" type="submit" value=""><span>Генеральная уборка</span>
-                              </label>
-                  </form>
-                </div>
-                <div class="choices-item" data-updates-by="#order-form-choice-3">
-                  <div class="choice-tooltip tooltip" data-tippy="Lorem ipsum dolor.">
-                    <div class="tooltip-inner">i</div>
-                  </div>
-                  <div class="choices-item-header"><span>Лёгкая уборка за питомцами</span>
-                    <div class="choices-item-price choices-item-price--mobile"><span class="choices-item-price-from">От</span><span class="choices-item-price-value" data-watch-price-of="#order-form-choice-3">140</span><span>₽</span></div>
-                  </div>
-                  <div class="choices-item-footer">
-                    <div class="choices-item-price"><span class="choices-item-price-from">От</span><span class="choices-item-price-value" data-watch-price-of="#order-form-choice-3">140</span><span>₽</span></div>
-                  </div>
-                </div>
-                <div class="choices-item" data-updates-by="#order-form-choice-4">
-                  <div class="choice-tooltip tooltip" data-tippy="Lorem ipsum dolor.">
-                    <div class="tooltip-inner">i</div>
-                  </div>
-                  <div class="choices-item-header"><span>Полная уборка санузла</span>
-                    <div class="choices-item-price choices-item-price--mobile"><span class="choices-item-price-value" data-watch-price-of="#order-form-choice-4">600</span><span>₽</span></div>
-                  </div>
-                  <div class="choices-item-footer">
-                    <div class="choices-item-price"><span class="choices-item-price-value" data-watch-price-of="#order-form-choice-4">600</span><span>₽</span></div>
-                  </div>
-                </div>
-                <div class="choices-item" data-updates-by="#order-form-choice-5">
-                  <div class="choice-tooltip tooltip" data-tippy="Lorem ipsum dolor.">
-                    <div class="tooltip-inner">i</div>
-                  </div>
-                  <div class="choices-item-header"><span>Протирка подоконников</span>
-                    <div class="choices-item-price choices-item-price--mobile"><span class="choices-item-price-value" data-watch-price-of="#order-form-choice-5">90</span><span>₽ / час</span></div>
-                  </div>
-                  <div class="choices-item-footer">
-                    <div class="choices-item-price"><span class="choices-item-price-value" data-watch-price-of="#order-form-choice-5">90</span><span>₽ / час</span></div>
-                    <div class="choices-item-counter">
-                                <div class="counter">
-                                  <div class="counter-item">
-                                    <div class="counter-item-decrement" data-decrement-on="#order-form-choice-5"><span>-</span></div>
-                                    <input class="counter-item-count" type="number" value="7" data-updates-by="#order-form-choice-5">
-                                    <div class="counter-item-increment" data-increment-on="#order-form-choice-5"><span>+</span></div>
-                                  </div>
-                                </div>
+      &lt;/ul&gt;" data-tippy-theme="choice">
+                                  <svg class="icon icon-arrow">
+                                    <use xlink:href="svg/sprite.svg#svg--left-arrow"></use>
+                                  </svg>
+                                  <svg class="icon icon-info">
+                                    <use xlink:href="svg/sprite.svg#svg--information"></use>
+                                  </svg><span>Что входит в стоимость услуги</span>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div class="choices-section-header">
-                <div class="choices-section-header-image">
-                            <svg class="choices-section-header-image__icon">
-                              <use xlink:href="svg/sprite.svg#svg--discount"></use>
-                            </svg>
-                </div>
-                <div class="choices-section-header__text">Скидки</div>
-              </div>
-              <div class="choices">
-                <div class="choices-item choices-item-square" data-updates-by="#order-form-choice-6">
-                  <div class="choice-tooltip tooltip" data-tippy="Lorem ipsum dolor.">
-                    <div class="tooltip-inner">i</div>
-                  </div>
-                  <div class="choices-item-header"><span>Мытье одной партии посуды</span>
-                    <div class="choices-item-price choices-item-price--mobile"><span class="choices-item-price-value" data-watch-price-of="#order-form-choice-6">360</span><span>₽</span></div>
-                  </div>
-                  <div class="choices-item-content">
-                              <div class="toggler">
-                                <div class="toggler-text"><span>Крупная посуда <strong class="color-azure">+120 ₽</strong></span></div>
-                                <div class="toggler-item" data-updates-by="#order-form-choice-6-trigger"></div>
-                              </div>
-                  </div>
-                  <div class="choices-item-footer">
-                    <div class="choices-item-price"><span class="choices-item-price-value" data-watch-price-of="#order-form-choice-6">360</span><span>₽</span></div>
-                  </div>
-                </div>
-                <div class="choices-item" data-updates-by="#order-form-choice-7">
-                  <div class="choice-tooltip tooltip" data-tippy="Lorem ipsum dolor.">
-                    <div class="tooltip-inner">i</div>
-                  </div>
-                  <div class="choices-item-header"><span>Полная уборка санузла</span>
-                    <div class="choices-item-price choices-item-price--mobile"><span class="choices-item-price-old">800 ₽</span><span class="choices-item-price-value" data-watch-price-of="#order-form-choice-7">600</span><span>₽</span></div>
-                  </div>
-                  <div class="choices-item-footer">
-                    <div class="choices-item-price"><span class="choices-item-price-old">800 ₽</span><span class="choices-item-price-value" data-watch-price-of="#order-form-choice-7">600</span><span>₽</span></div>
-                  </div>
-                </div>
-                <div class="choices-item choices-item-square choices-item-square--no-content" data-updates-by="#order-form-choice-8">
-                  <div class="choice-tooltip tooltip" data-tippy="Lorem ipsum dolor.">
-                    <div class="tooltip-inner">i</div>
-                  </div>
-                  <div class="choices-item-header"><span>Полная очистка интерьера от всех видов загрязнений</span>
-                    <div class="choices-item-price choices-item-price--mobile"><span class="choices-item-price-old">990 ₽</span><span class="choices-item-price-value" data-watch-price-of="#order-form-choice-8">790</span><span>₽</span></div>
-                  </div>
-                  <div class="choices-item-footer">
-                    <div class="choices-item-price"><span class="choices-item-price-old">990 ₽</span><span class="choices-item-price-value" data-watch-price-of="#order-form-choice-8">790</span><span>₽</span></div>
-                  </div>
-                </div>
-                <div class="choices-item choices-item-square warning">
-                  <form class="feedback meta--ask" action="#">
-                    <div class="feedback-header"><span>Спросите нас</span></div>
-                    <textarea class="feedback-input input--phone" name="text" placeholder="Введите текст вопроса" required></textarea>
-                              <label class="button button--primary">
-                                <input class="button-native-submit" type="submit" value=""><span>Задать вопрос</span>
-                              </label>
-                  </form>
-                </div>
-                <div class="choices-item" data-updates-by="#order-form-choice-9">
-                  <div class="choice-tooltip tooltip" data-tippy="Lorem ipsum dolor.">
-                    <div class="tooltip-inner">i</div>
-                  </div>
-                  <div class="choices-item-header"><span>Уборка всех открытых полок</span>
-                    <div class="choices-item-price choices-item-price--mobile"><span class="choices-item-price-value" data-watch-price-of="#order-form-choice-9">20</span><span>₽</span></div>
-                  </div>
-                  <div class="choices-item-footer">
-                    <div class="choices-item-price"><span class="choices-item-price-value" data-watch-price-of="#order-form-choice-9">20</span><span>₽</span></div>
-                    <div class="choices-item-counter">
-                                <div class="counter">
-                                  <div class="counter-item">
-                                    <div class="counter-item-decrement" data-decrement-on="#order-form-choice-9"><span>-</span></div>
-                                    <input class="counter-item-count" type="number" value="7" data-updates-by="#order-form-choice-9">
-                                    <div class="counter-item-increment" data-increment-on="#order-form-choice-9"><span>+</span></div>
-                                  </div>
-                                </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="choices-section-header">
-                <div class="choices-section-header-image">
-                            <svg class="choices-section-header-image__icon">
-                              <use xlink:href="svg/sprite.svg#svg--cleaning"></use>
-                            </svg>
-                </div>
-                <div class="choices-section-header__text">Другие услуги</div>
-              </div>
-              <div class="choices">
-                <div class="choices-item choices-item-square choices-item-square--no-content" data-updates-by="#order-form-choice-10">
-                  <div class="choice-tooltip tooltip" data-tippy="Lorem ipsum dolor.">
-                    <div class="tooltip-inner">i</div>
-                  </div>
-                  <div class="choices-item-header"><span>Нанесение защитной полероли на деревянной мебели</span>
-                    <div class="choices-item-price choices-item-price--mobile"><span class="choices-item-price-from">От</span><span class="choices-item-price-value" data-watch-price-of="#order-form-choice-10">790</span><span>₽</span></div>
-                  </div>
-                  <div class="choices-item-footer">
-                    <div class="choices-item-price"><span class="choices-item-price-from">От</span><span class="choices-item-price-value" data-watch-price-of="#order-form-choice-10">790</span><span>₽</span></div>
-                  </div>
-                </div>
-                <div class="choices-item" data-updates-by="#order-form-choice-11">
-                  <div class="choice-tooltip tooltip" data-tippy="Lorem ipsum dolor.">
-                    <div class="tooltip-inner">i</div>
-                  </div>
-                  <div class="choices-item-header"><span>Уход за кожанной мебелью спец.средствами</span>
-                    <div class="choices-item-price choices-item-price--mobile"><span class="choices-item-price-value" data-watch-price-of="#order-form-choice-11">55</span><span>₽</span></div>
-                  </div>
-                  <div class="choices-item-footer">
-                    <div class="choices-item-price"><span class="choices-item-price-value" data-watch-price-of="#order-form-choice-11">55</span><span>₽</span></div>
-                  </div>
-                </div>
-                <div class="choices-item choices-item-square choices-item-square--no-content" data-updates-by="#order-form-choice-12">
-                  <div class="choice-tooltip tooltip" data-tippy="Lorem ipsum dolor.">
-                    <div class="tooltip-inner">i</div>
-                  </div>
-                  <div class="choices-item-header"><span>Уборка балкона, лоджии</span>
-                    <div class="choices-item-price choices-item-price--mobile"><span class="choices-item-price-from">От</span><span class="choices-item-price-value" data-watch-price-of="#order-form-choice-12">360</span><span>₽</span></div>
-                  </div>
-                  <div class="choices-item-footer">
-                    <div class="choices-item-price"><span class="choices-item-price-from">От</span><span class="choices-item-price-value" data-watch-price-of="#order-form-choice-12">360</span><span>₽</span></div>
-                  </div>
-                </div>
-                <div class="choices-item" data-updates-by="#order-form-choice-13">
-                  <div class="choice-tooltip tooltip" data-tippy="Lorem ipsum dolor.">
-                    <div class="tooltip-inner">i</div>
-                  </div>
-                  <div class="choices-item-header"><span>Ручная стирка штор</span>
-                    <div class="choices-item-price choices-item-price--mobile"><span class="choices-item-price-value" data-watch-price-of="#order-form-choice-13">200</span><span>₽</span></div>
-                  </div>
-                  <div class="choices-item-footer">
-                    <div class="choices-item-price"><span class="choices-item-price-value" data-watch-price-of="#order-form-choice-13">200</span><span>₽</span></div>
-                    <div class="choices-item-counter">
-                                <div class="counter">
-                                  <div class="counter-item">
-                                    <div class="counter-item-decrement" data-decrement-on="#order-form-choice-13"><span>-</span></div>
-                                    <input class="counter-item-count" type="number" value="2" data-updates-by="#order-form-choice-13">
-                                    <div class="counter-item-increment" data-increment-on="#order-form-choice-13"><span>+</span></div>
-                                  </div>
-                                </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="choices-item" data-updates-by="#order-form-choice-14">
-                  <div class="choice-tooltip tooltip" data-tippy="Lorem ipsum dolor.">
-                    <div class="tooltip-inner">i</div>
-                  </div>
-                  <div class="choices-item-header"><span>Уход за кожанной мебелью спец.средствами</span>
-                    <div class="choices-item-price choices-item-price--mobile"><span class="choices-item-price-value" data-watch-price-of="#order-form-choice-14">15</span><span>₽</span></div>
-                  </div>
-                  <div class="choices-item-footer">
-                    <div class="choices-item-price"><span class="choices-item-price-value" data-watch-price-of="#order-form-choice-14">15</span><span>₽</span></div>
-                  </div>
-                </div>
-                <div class="choices-item" data-updates-by="#order-form-choice-15">
-                  <div class="choice-tooltip tooltip" data-tippy="Lorem ipsum dolor.">
-                    <div class="tooltip-inner">i</div>
-                  </div>
-                  <div class="choices-item-header"><span>Сортировка и раскладка вещей</span>
-                    <div class="choices-item-price choices-item-price--mobile"><span class="choices-item-price-value" data-watch-price-of="#order-form-choice-15">60</span><span>₽</span></div>
-                  </div>
-                  <div class="choices-item-footer">
-                    <div class="choices-item-price"><span class="choices-item-price-value" data-watch-price-of="#order-form-choice-15">60</span><span>₽</span></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="choices-wrapper">
-              <h3 class="header-h3">Шаг 3. Выберите дополнительные услуги</h3>
-              <div class="choices-section-header">
-                <div class="choices-section-header-image">
-                            <svg class="choices-section-header-image__icon">
-                              <use xlink:href="svg/sprite.svg#svg--recommended"></use>
-                            </svg>
-                </div>
-                <div class="choices-section-header__text">Популярные услуги</div>
-              </div>
-              <div class="choices">
-                <div class="choices-item" data-updates-by="#order-form-choice-1">
-                  <div class="choice-tooltip tooltip" data-tippy="Lorem ipsum dolor.">
-                    <div class="tooltip-inner">i</div>
-                  </div>
-                  <div class="choices-item-header"><span>Протирка дверей и дверных ручек</span>
-                    <div class="choices-item-price choices-item-price--mobile"><span class="choices-item-price-value" data-watch-price-of="#order-form-choice-1">40</span><span>₽</span></div>
-                  </div>
-                  <div class="choices-item-footer">
-                    <div class="choices-item-price"><span class="choices-item-price-value" data-watch-price-of="#order-form-choice-1">40</span><span>₽</span></div>
-                  </div>
-                </div>
-                <div class="choices-item choices-item-square" data-updates-by="#order-form-choice-2">
-                  <div class="choice-tooltip tooltip" data-tippy="Lorem ipsum dolor.">
-                    <div class="tooltip-inner">i</div>
-                  </div>
-                  <div class="choices-item-header"><span>Удаление жировых отложений на поверхностях кухонной мебели</span>
-                    <div class="choices-item-price choices-item-price--mobile"><span class="choices-item-price-from">От</span><span class="choices-item-price-value" data-watch-price-of="#order-form-choice-2">90</span><span>₽</span></div>
-                  </div>
-                  <div class="choices-item-content">
-                              <div class="toggler">
-                                <div class="toggler-text"><span>Шкафчики <strong class="color-azure">+120 ₽</strong></span></div>
-                                <div class="toggler-item" data-updates-by="#order-form-choice-2-trigger"></div>
-                              </div>
-                  </div>
-                  <div class="choices-item-footer">
-                    <div class="choices-item-price"><span class="choices-item-price-from">От</span><span class="choices-item-price-value" data-watch-price-of="#order-form-choice-2">90</span><span>₽</span></div>
-                  </div>
-                </div>
-                <div class="choices-item choices-item-square warning">
-                  <form class="feedback" action="#">
-                    <div class="feedback-pre-header"><span>Мы Вам перезвоним</span></div>
-                    <div class="feedback-header"><span>Оставьте ваш номер телефона и мы Вам перезвоним</span></div>
-                    <input class="feedback-input input--phone" type="text" name="phone" placeholder="Ваш номер телефона" required>
-                              <label class="button button--primary">
-                                <input class="button-native-submit" type="submit" value=""><span>Генеральная уборка</span>
-                              </label>
-                  </form>
-                </div>
-                <div class="choices-item" data-updates-by="#order-form-choice-3">
-                  <div class="choice-tooltip tooltip" data-tippy="Lorem ipsum dolor.">
-                    <div class="tooltip-inner">i</div>
-                  </div>
-                  <div class="choices-item-header"><span>Лёгкая уборка за питомцами</span>
-                    <div class="choices-item-price choices-item-price--mobile"><span class="choices-item-price-from">От</span><span class="choices-item-price-value" data-watch-price-of="#order-form-choice-3">140</span><span>₽</span></div>
-                  </div>
-                  <div class="choices-item-footer">
-                    <div class="choices-item-price"><span class="choices-item-price-from">От</span><span class="choices-item-price-value" data-watch-price-of="#order-form-choice-3">140</span><span>₽</span></div>
-                  </div>
-                </div>
-                <div class="choices-item" data-updates-by="#order-form-choice-4">
-                  <div class="choice-tooltip tooltip" data-tippy="Lorem ipsum dolor.">
-                    <div class="tooltip-inner">i</div>
-                  </div>
-                  <div class="choices-item-header"><span>Полная уборка санузла</span>
-                    <div class="choices-item-price choices-item-price--mobile"><span class="choices-item-price-value" data-watch-price-of="#order-form-choice-4">600</span><span>₽</span></div>
-                  </div>
-                  <div class="choices-item-footer">
-                    <div class="choices-item-price"><span class="choices-item-price-value" data-watch-price-of="#order-form-choice-4">600</span><span>₽</span></div>
-                  </div>
-                </div>
-                <div class="choices-item" data-updates-by="#order-form-choice-5">
-                  <div class="choice-tooltip tooltip" data-tippy="Lorem ipsum dolor.">
-                    <div class="tooltip-inner">i</div>
-                  </div>
-                  <div class="choices-item-header"><span>Протирка подоконников</span>
-                    <div class="choices-item-price choices-item-price--mobile"><span class="choices-item-price-value" data-watch-price-of="#order-form-choice-5">90</span><span>₽</span></div>
-                  </div>
-                  <div class="choices-item-footer">
-                    <div class="choices-item-price"><span class="choices-item-price-value" data-watch-price-of="#order-form-choice-5">90</span><span>₽</span></div>
-                    <div class="choices-item-counter">
-                                <div class="counter">
-                                  <div class="counter-item">
-                                    <div class="counter-item-decrement" data-decrement-on="#order-form-choice-5"><span>-</span></div>
-                                    <input class="counter-item-count" type="number" value="7" data-updates-by="#order-form-choice-5">
-                                    <div class="counter-item-increment" data-increment-on="#order-form-choice-5"><span>+</span></div>
-                                  </div>
-                                </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="choices-wrapper">
-              <h3 class="header-h3">Шаг 3. Выберите дополнительные услуги</h3>
-              <div class="choices-section-header">
-                <div class="choices-section-header-image">
-                            <svg class="choices-section-header-image__icon">
-                              <use xlink:href="svg/sprite.svg#svg--recommended"></use>
-                            </svg>
-                </div>
-                <div class="choices-section-header__text">Популярные услуги</div>
-              </div>
-              <div class="choices">
-                <div class="choices-item" data-updates-by="#order-form-choice-1">
-                  <div class="choice-tooltip tooltip" data-tippy="Lorem ipsum dolor.">
-                    <div class="tooltip-inner">i</div>
-                  </div>
-                  <div class="choices-item-header"><span>Протирка дверей и дверных ручек</span>
-                    <div class="choices-item-price choices-item-price--mobile"><span class="choices-item-price-value" data-watch-price-of="#order-form-choice-1">40</span><span>₽</span></div>
-                  </div>
-                  <div class="choices-item-footer">
-                    <div class="choices-item-price"><span class="choices-item-price-value" data-watch-price-of="#order-form-choice-1">40</span><span>₽</span></div>
-                  </div>
-                </div>
-                <div class="choices-item choices-item-square" data-updates-by="#order-form-choice-2">
-                  <div class="choice-tooltip tooltip" data-tippy="Lorem ipsum dolor.">
-                    <div class="tooltip-inner">i</div>
-                  </div>
-                  <div class="choices-item-header"><span>Удаление жировых отложений на поверхностях кухонной мебели</span>
-                    <div class="choices-item-price choices-item-price--mobile"><span class="choices-item-price-from">От</span><span class="choices-item-price-value" data-watch-price-of="#order-form-choice-2">90</span><span>₽</span></div>
-                  </div>
-                  <div class="choices-item-content">
-                              <div class="toggler">
-                                <div class="toggler-text"><span>Шкафчики <strong class="color-azure">+120 ₽</strong></span></div>
-                                <div class="toggler-item" data-updates-by="#order-form-choice-2-trigger"></div>
-                              </div>
-                  </div>
-                  <div class="choices-item-footer">
-                    <div class="choices-item-price"><span class="choices-item-price-from">От</span><span class="choices-item-price-value" data-watch-price-of="#order-form-choice-2">90</span><span>₽</span></div>
-                  </div>
-                </div>
-                <div class="choices-item choices-item-square warning">
-                  <form class="feedback" action="#">
-                    <div class="feedback-pre-header"><span>Мы Вам перезвоним</span></div>
-                    <div class="feedback-header"><span>Оставьте ваш номер телефона и мы Вам перезвоним</span></div>
-                    <input class="feedback-input input--phone" type="text" name="phone" placeholder="Ваш номер телефона" required>
-                              <label class="button button--primary">
-                                <input class="button-native-submit" type="submit" value=""><span>Генеральная уборка</span>
-                              </label>
-                  </form>
-                </div>
-                <div class="choices-item" data-updates-by="#order-form-choice-3">
-                  <div class="choice-tooltip tooltip" data-tippy="Lorem ipsum dolor.">
-                    <div class="tooltip-inner">i</div>
-                  </div>
-                  <div class="choices-item-header"><span>Лёгкая уборка за питомцами</span>
-                    <div class="choices-item-price choices-item-price--mobile"><span class="choices-item-price-from">От</span><span class="choices-item-price-value" data-watch-price-of="#order-form-choice-3">140</span><span>₽</span></div>
-                  </div>
-                  <div class="choices-item-footer">
-                    <div class="choices-item-price"><span class="choices-item-price-from">От</span><span class="choices-item-price-value" data-watch-price-of="#order-form-choice-3">140</span><span>₽</span></div>
-                  </div>
-                </div>
-                <div class="choices-item" data-updates-by="#order-form-choice-4">
-                  <div class="choice-tooltip tooltip" data-tippy="Lorem ipsum dolor.">
-                    <div class="tooltip-inner">i</div>
-                  </div>
-                  <div class="choices-item-header"><span>Полная уборка санузла</span>
-                    <div class="choices-item-price choices-item-price--mobile"><span class="choices-item-price-value" data-watch-price-of="#order-form-choice-4">600</span><span>₽</span></div>
-                  </div>
-                  <div class="choices-item-footer">
-                    <div class="choices-item-price"><span class="choices-item-price-value" data-watch-price-of="#order-form-choice-4">600</span><span>₽</span></div>
-                  </div>
-                </div>
-                <div class="choices-item" data-updates-by="#order-form-choice-5">
-                  <div class="choice-tooltip tooltip" data-tippy="Lorem ipsum dolor.">
-                    <div class="tooltip-inner">i</div>
-                  </div>
-                  <div class="choices-item-header"><span>Протирка подоконников</span>
-                    <div class="choices-item-price choices-item-price--mobile"><span class="choices-item-price-value" data-watch-price-of="#order-form-choice-5">90</span><span>₽</span></div>
-                  </div>
-                  <div class="choices-item-footer">
-                    <div class="choices-item-price"><span class="choices-item-price-value" data-watch-price-of="#order-form-choice-5">90</span><span>₽</span></div>
-                    <div class="choices-item-counter">
-                                <div class="counter">
-                                  <div class="counter-item">
-                                    <div class="counter-item-decrement" data-decrement-on="#order-form-choice-5"><span>-</span></div>
-                                    <input class="counter-item-count" type="number" value="7" data-updates-by="#order-form-choice-5">
-                                    <div class="counter-item-increment" data-increment-on="#order-form-choice-5"><span>+</span></div>
-                                  </div>
-                                </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-          <section class="make-order-section" data-show-on-order>
-            <h2>Шаг 4. Оформление заказа</h2>
-            <section class="your-order" data-show-on-order>
-              <h3>Ваш заказ:</h3>
-              <div class="container-separator"></div>
-              <div class="your-order-list">
-                            <div class="your-order-item your-order-item--main your-order-item--border" data-tippy="Lorem ipsum dolor." data-tippy-trigger="click" data-updates-by="#order-form-type-general">
-                              <div class="your-order-item-delete">
-                                            <svg class="your-order-item-delete__icon">
-                                              <use xlink:href="svg/sprite.svg#svg--cancel"></use>
-                                            </svg>
-                              </div>
-                              <div class="your-order-item-header"><span>Генеральная уборка</span></div>
-                              <div class="your-order-item-price"><span>600</span><span> ₽</span></div>
-                            </div>
-                            <div class="your-order-item your-order-item--main your-order-item--border" data-tippy="Lorem ipsum dolor." data-tippy-trigger="click" data-updates-by="#order-form-type-supporting">
-                              <div class="your-order-item-delete">
-                                            <svg class="your-order-item-delete__icon">
-                                              <use xlink:href="svg/sprite.svg#svg--cancel"></use>
-                                            </svg>
-                              </div>
-                              <div class="your-order-item-header"><span>Поддерживающая уборка</span></div>
-                              <div class="your-order-item-price"><span>600</span><span> ₽</span></div>
-                            </div>
-                            <div class="your-order-item your-order-item--main your-order-item--border" data-tippy="Lorem ipsum dolor." data-tippy-trigger="click" data-updates-by="#order-form-type-repairs">
-                              <div class="your-order-item-delete">
-                                            <svg class="your-order-item-delete__icon">
-                                              <use xlink:href="svg/sprite.svg#svg--cancel"></use>
-                                            </svg>
-                              </div>
-                              <div class="your-order-item-header"><span>Уборка после ремонта</span></div>
-                              <div class="your-order-item-price"><span>600</span><span> ₽</span></div>
-                            </div>
-                            <div class="your-order-item your-order-item--shadow" data-tippy="Lorem ipsum dolor." data-tippy-trigger="click" data-updates-by="#order-form-choice-1">
-                              <div class="your-order-item-delete">
-                                            <svg class="your-order-item-delete__icon">
-                                              <use xlink:href="svg/sprite.svg#svg--cancel"></use>
-                                            </svg>
-                              </div>
-                              <div class="your-order-item-header"><span>Протирка дверей и дверных ручек</span></div>
-                              <div class="your-order-item-price"><span data-watch-price-of="#order-form-choice-1">40</span><span> ₽</span></div>
-                            </div>
-                            <div class="your-order-item your-order-item--shadow" data-tippy="Lorem ipsum dolor." data-tippy-trigger="click" data-updates-by="#order-form-choice-2">
-                              <div class="your-order-item-delete">
-                                            <svg class="your-order-item-delete__icon">
-                                              <use xlink:href="svg/sprite.svg#svg--cancel"></use>
-                                            </svg>
-                              </div>
-                              <div class="your-order-item-header"><span>Удаление жировых отложений на поверхностях кухонной мебели</span></div>
-                              <div class="your-order-item-price"><span data-watch-price-of="#order-form-choice-2">90</span><span> ₽</span></div>
-                            </div>
-                            <div class="your-order-item your-order-item--shadow" data-tippy="Lorem ipsum dolor." data-tippy-trigger="click" data-updates-by="#order-form-choice-3">
-                              <div class="your-order-item-delete">
-                                            <svg class="your-order-item-delete__icon">
-                                              <use xlink:href="svg/sprite.svg#svg--cancel"></use>
-                                            </svg>
-                              </div>
-                              <div class="your-order-item-header"><span>Лёгкая уборка за питомцами</span></div>
-                              <div class="your-order-item-price"><span data-watch-price-of="#order-form-choice-3">140</span><span> ₽</span></div>
-                            </div>
-                            <div class="your-order-item your-order-item--shadow" data-tippy="Lorem ipsum dolor." data-tippy-trigger="click" data-updates-by="#order-form-choice-4">
-                              <div class="your-order-item-delete">
-                                            <svg class="your-order-item-delete__icon">
-                                              <use xlink:href="svg/sprite.svg#svg--cancel"></use>
-                                            </svg>
-                              </div>
-                              <div class="your-order-item-header"><span>Полная уборка санузла</span></div>
-                              <div class="your-order-item-price"><span data-watch-price-of="#order-form-choice-4">600</span><span> ₽</span></div>
-                            </div>
-                            <div class="your-order-item your-order-item--shadow" data-tippy="Lorem ipsum dolor." data-tippy-trigger="click" data-updates-by="#order-form-choice-5">
-                              <div class="your-order-item-delete">
-                                            <svg class="your-order-item-delete__icon">
-                                              <use xlink:href="svg/sprite.svg#svg--cancel"></use>
-                                            </svg>
-                              </div>
-                              <div class="your-order-item-header"><span>Протирка подоконников</span></div>
-                              <div class="your-order-item-price"><span data-watch-price-of="#order-form-choice-5">90</span><span> ₽</span></div>
-                            </div>
-                            <div class="your-order-item your-order-item--shadow" data-tippy="Lorem ipsum dolor." data-tippy-trigger="click" data-updates-by="#order-form-choice-6">
-                              <div class="your-order-item-delete">
-                                            <svg class="your-order-item-delete__icon">
-                                              <use xlink:href="svg/sprite.svg#svg--cancel"></use>
-                                            </svg>
-                              </div>
-                              <div class="your-order-item-header"><span>Мытье одной партии посуды</span></div>
-                              <div class="your-order-item-price"><span data-watch-price-of="#order-form-choice-6">360</span><span> ₽</span></div>
-                            </div>
-                            <div class="your-order-item your-order-item--shadow" data-tippy="Lorem ipsum dolor." data-tippy-trigger="click" data-updates-by="#order-form-choice-7">
-                              <div class="your-order-item-delete">
-                                            <svg class="your-order-item-delete__icon">
-                                              <use xlink:href="svg/sprite.svg#svg--cancel"></use>
-                                            </svg>
-                              </div>
-                              <div class="your-order-item-header"><span>Полная уборка санузла</span></div>
-                              <div class="your-order-item-price"><span data-watch-price-of="#order-form-choice-7">600</span><span> ₽</span></div>
-                            </div>
-                            <div class="your-order-item your-order-item--shadow" data-tippy="Lorem ipsum dolor." data-tippy-trigger="click" data-updates-by="#order-form-choice-8">
-                              <div class="your-order-item-delete">
-                                            <svg class="your-order-item-delete__icon">
-                                              <use xlink:href="svg/sprite.svg#svg--cancel"></use>
-                                            </svg>
-                              </div>
-                              <div class="your-order-item-header"><span>Полная очистка интерьера от всех видов загрязнений</span></div>
-                              <div class="your-order-item-price"><span data-watch-price-of="#order-form-choice-8">790</span><span> ₽</span></div>
-                            </div>
-                            <div class="your-order-item your-order-item--shadow" data-tippy="Lorem ipsum dolor." data-tippy-trigger="click" data-updates-by="#order-form-choice-9">
-                              <div class="your-order-item-delete">
-                                            <svg class="your-order-item-delete__icon">
-                                              <use xlink:href="svg/sprite.svg#svg--cancel"></use>
-                                            </svg>
-                              </div>
-                              <div class="your-order-item-header"><span>Уборка всех открытых полок</span></div>
-                              <div class="your-order-item-price"><span data-watch-price-of="#order-form-choice-9">20</span><span> ₽</span></div>
-                            </div>
-                            <div class="your-order-item your-order-item--shadow" data-tippy="Lorem ipsum dolor." data-tippy-trigger="click" data-updates-by="#order-form-choice-10">
-                              <div class="your-order-item-delete">
-                                            <svg class="your-order-item-delete__icon">
-                                              <use xlink:href="svg/sprite.svg#svg--cancel"></use>
-                                            </svg>
-                              </div>
-                              <div class="your-order-item-header"><span>Нанесение защитной полероли на деревянной мебели</span></div>
-                              <div class="your-order-item-price"><span data-watch-price-of="#order-form-choice-10">790</span><span> ₽</span></div>
-                            </div>
-                            <div class="your-order-item your-order-item--shadow" data-tippy="Lorem ipsum dolor." data-tippy-trigger="click" data-updates-by="#order-form-choice-11">
-                              <div class="your-order-item-delete">
-                                            <svg class="your-order-item-delete__icon">
-                                              <use xlink:href="svg/sprite.svg#svg--cancel"></use>
-                                            </svg>
-                              </div>
-                              <div class="your-order-item-header"><span>Уход за кожанной мебелью спец.средствами</span></div>
-                              <div class="your-order-item-price"><span data-watch-price-of="#order-form-choice-11">55</span><span> ₽</span></div>
-                            </div>
-                            <div class="your-order-item your-order-item--shadow" data-tippy="Lorem ipsum dolor." data-tippy-trigger="click" data-updates-by="#order-form-choice-12">
-                              <div class="your-order-item-delete">
-                                            <svg class="your-order-item-delete__icon">
-                                              <use xlink:href="svg/sprite.svg#svg--cancel"></use>
-                                            </svg>
-                              </div>
-                              <div class="your-order-item-header"><span>Уборка балкона, лоджии</span></div>
-                              <div class="your-order-item-price"><span data-watch-price-of="#order-form-choice-12">360</span><span> ₽</span></div>
-                            </div>
-                            <div class="your-order-item your-order-item--shadow" data-tippy="Lorem ipsum dolor." data-tippy-trigger="click" data-updates-by="#order-form-choice-13">
-                              <div class="your-order-item-delete">
-                                            <svg class="your-order-item-delete__icon">
-                                              <use xlink:href="svg/sprite.svg#svg--cancel"></use>
-                                            </svg>
-                              </div>
-                              <div class="your-order-item-header"><span>Ручная стирка штор</span></div>
-                              <div class="your-order-item-price"><span data-watch-price-of="#order-form-choice-13">200</span><span> ₽</span></div>
-                            </div>
-                            <div class="your-order-item your-order-item--shadow" data-tippy="Lorem ipsum dolor." data-tippy-trigger="click" data-updates-by="#order-form-choice-14">
-                              <div class="your-order-item-delete">
-                                            <svg class="your-order-item-delete__icon">
-                                              <use xlink:href="svg/sprite.svg#svg--cancel"></use>
-                                            </svg>
-                              </div>
-                              <div class="your-order-item-header"><span>Уход за кожанной мебелью спец.средствами</span></div>
-                              <div class="your-order-item-price"><span data-watch-price-of="#order-form-choice-14">15</span><span> ₽</span></div>
-                            </div>
-                            <div class="your-order-item your-order-item--shadow" data-tippy="Lorem ipsum dolor." data-tippy-trigger="click" data-updates-by="#order-form-choice-15">
-                              <div class="your-order-item-delete">
-                                            <svg class="your-order-item-delete__icon">
-                                              <use xlink:href="svg/sprite.svg#svg--cancel"></use>
-                                            </svg>
-                              </div>
-                              <div class="your-order-item-header"><span>Сортировка и раскладка вещей</span></div>
-                              <div class="your-order-item-price"><span data-watch-price-of="#order-form-choice-15">60</span><span> ₽</span></div>
-                            </div>
               </div>
             </section>
-            <div class="make-order">
-              <div class="make-order-header">
-                <h3>Подробности</h3>
-              </div>
-              <div class="make-order-inputs">
-                <div class="make-order-inputs-left">
-                  <div class="ps-input">
-                    <div class="ps-input-header"><span>Дата уборки</span></div>
-                    <label class="make-order-date-container">
-                      <div class="make-order-date">
-                        <input class="native-input" type="text" name="date" form="order-form" readonly data-datepicker>
-                        <div class="make-order-date-day"><span>31</span></div>
-                        <div class="make-order-date-month"><span>Декабря</span></div>
-                        <div class="make-order-date-year"><span>2019</span></div>
-                      </div>
-                      <div class="make-order-calendar">
-                                    <svg class="make-order-calendar__icon">
-                                      <use xlink:href="svg/sprite.svg#svg--calendar"></use>
-                                    </svg>
-                      </div>
-                    </label>
+            <section class="choices-section">
+              <div class="choices-wrapper">
+                <h3 class="header-h3">Шаг 3. Выберите дополнительные услуги</h3>
+                <div class="choices-section-header">
+                  <div class="choices-section-header-image">
+                                <svg class="choices-section-header-image__icon">
+                                  <use xlink:href="svg/sprite.svg#svg--recommended"></use>
+                                </svg>
                   </div>
-                  <div class="ps-input">
-                    <div class="ps-input-header"><span>Время уборки</span></div>
-                    <div class="make-order-time">
-                      <input class="make-order-time-hours" name="hours" type="number" placeholder="17" min="0" max="24" required form="order-form"><span class="make-order-time-separator">:</span>
-                      <input class="make-order-time-minutes" name="minutes" type="number" placeholder="30" min="0" max="60" required form="order-form">
+                  <div class="choices-section-header__text">Популярные услуги</div>
+                </div>
+                <div class="choices">
+                  <div class="choices-item" data-updates-by="#order-form-choice-1">
+                    <div class="choice-tooltip tooltip" data-tippy="Lorem ipsum dolor.">
+                      <div class="tooltip-inner">i</div>
+                    </div>
+                    <div class="choices-item-header"><span>Протирка дверей и дверных ручек</span>
+                      <div class="choices-item-price choices-item-price--mobile"><span class="choices-item-price-value">бесплатно</span></div>
+                    </div>
+                    <div class="choices-item-footer">
+                      <div class="choices-item-price"><span class="choices-item-price-value">бесплатно</span></div>
+                    </div>
+                  </div>
+                  <div class="choices-item choices-item-square" data-updates-by="#order-form-choice-2">
+                    <div class="choice-tooltip tooltip" data-tippy="Lorem ipsum dolor.">
+                      <div class="tooltip-inner">i</div>
+                    </div>
+                    <div class="choices-item-header"><span>Удаление жировых отложений на поверхностях кухонной мебели</span>
+                      <div class="choices-item-price choices-item-price--mobile"><span class="choices-item-price-from">45</span><span class="choices-item-price-value" data-watch-price-of="#order-form-choice-2">90</span><span>₽</span></div>
+                    </div>
+                    <div class="choices-item-content">
+                                  <div class="toggler">
+                                    <div class="toggler-text"><span>Шкафчики <strong class="color-azure">+120 ₽</strong></span></div>
+                                    <div class="toggler-item" data-updates-by="#order-form-choice-2-trigger"></div>
+                                  </div>
+                    </div>
+                    <div class="choices-item-footer">
+                      <div class="choices-item-price"><span class="choices-item-price-from">От</span><span class="choices-item-price-value" data-watch-price-of="#order-form-choice-2">90</span><span>₽</span></div>
+                    </div>
+                  </div>
+                  <div class="choices-item choices-item-square warning">
+                    <form class="feedback" action="#">
+                      <div class="feedback-pre-header"><span>Мы Вам перезвоним</span></div>
+                      <div class="feedback-header"><span>Оставьте ваш номер телефона и мы Вам перезвоним</span></div>
+                      <input class="feedback-input input--phone" type="text" name="phone" placeholder="Ваш номер телефона" required>
+                                  <label class="button button--primary">
+                                    <input class="button-native-submit" type="submit" value=""><span>Генеральная уборка</span>
+                                  </label>
+                    </form>
+                  </div>
+                  <div class="choices-item" data-updates-by="#order-form-choice-3">
+                    <div class="choice-tooltip tooltip" data-tippy="Lorem ipsum dolor.">
+                      <div class="tooltip-inner">i</div>
+                    </div>
+                    <div class="choices-item-header"><span>Лёгкая уборка за питомцами</span>
+                      <div class="choices-item-price choices-item-price--mobile"><span class="choices-item-price-from">От</span><span class="choices-item-price-value" data-watch-price-of="#order-form-choice-3">140</span><span>₽</span></div>
+                    </div>
+                    <div class="choices-item-footer">
+                      <div class="choices-item-price"><span class="choices-item-price-from">От</span><span class="choices-item-price-value" data-watch-price-of="#order-form-choice-3">140</span><span>₽</span></div>
+                    </div>
+                  </div>
+                  <div class="choices-item" data-updates-by="#order-form-choice-4">
+                    <div class="choice-tooltip tooltip" data-tippy="Lorem ipsum dolor.">
+                      <div class="tooltip-inner">i</div>
+                    </div>
+                    <div class="choices-item-header"><span>Полная уборка санузла</span>
+                      <div class="choices-item-price choices-item-price--mobile"><span class="choices-item-price-value" data-watch-price-of="#order-form-choice-4">600</span><span>₽</span></div>
+                    </div>
+                    <div class="choices-item-footer">
+                      <div class="choices-item-price"><span class="choices-item-price-value" data-watch-price-of="#order-form-choice-4">600</span><span>₽</span></div>
+                    </div>
+                  </div>
+                  <div class="choices-item" data-updates-by="#order-form-choice-5">
+                    <div class="choice-tooltip tooltip" data-tippy="Lorem ipsum dolor.">
+                      <div class="tooltip-inner">i</div>
+                    </div>
+                    <div class="choices-item-header"><span>Протирка подоконников</span>
+                      <div class="choices-item-price choices-item-price--mobile"><span class="choices-item-price-value" data-watch-price-of="#order-form-choice-5">90</span><span>₽ / час</span></div>
+                    </div>
+                    <div class="choices-item-footer">
+                      <div class="choices-item-price"><span class="choices-item-price-value" data-watch-price-of="#order-form-choice-5">90</span><span>₽ / час</span></div>
+                      <div class="choices-item-counter">
+                                    <div class="counter">
+                                      <div class="counter-item">
+                                        <div class="counter-item-decrement" data-decrement-on="#order-form-choice-5"><span>-</span></div>
+                                        <input class="counter-item-count" type="number" value="7" data-updates-by="#order-form-choice-5">
+                                        <div class="counter-item-increment" data-increment-on="#order-form-choice-5"><span>+</span></div>
+                                      </div>
+                                    </div>
+                      </div>
                     </div>
                   </div>
                 </div>
-                <div class="make-order-inputs-right">
-                  <div class="ps-input">
-                    <div class="ps-input-header"><span>Адрес</span></div>
-                    <input class="input" type="customerAddress" placeholder="Ваш адрес" form="order-form" required>
+                <div class="choices-section-header">
+                  <div class="choices-section-header-image">
+                                <svg class="choices-section-header-image__icon">
+                                  <use xlink:href="svg/sprite.svg#svg--discount"></use>
+                                </svg>
                   </div>
-                  <div class="ps-input">
-                    <div class="ps-input-header"><span>Ваше имя</span></div>
-                    <input class="input" name="customerName" type="text" placeholder="Введите ваше имя" form="order-form" required>
+                  <div class="choices-section-header__text">Скидки</div>
+                </div>
+                <div class="choices">
+                  <div class="choices-item choices-item-square" data-updates-by="#order-form-choice-6">
+                    <div class="choice-tooltip tooltip" data-tippy="Lorem ipsum dolor.">
+                      <div class="tooltip-inner">i</div>
+                    </div>
+                    <div class="choices-item-header"><span>Мытье одной партии посуды</span>
+                      <div class="choices-item-price choices-item-price--mobile"><span class="choices-item-price-value" data-watch-price-of="#order-form-choice-6">360</span><span>₽</span></div>
+                    </div>
+                    <div class="choices-item-content">
+                                  <div class="toggler">
+                                    <div class="toggler-text"><span>Крупная посуда <strong class="color-azure">+120 ₽</strong></span></div>
+                                    <div class="toggler-item" data-updates-by="#order-form-choice-6-trigger"></div>
+                                  </div>
+                    </div>
+                    <div class="choices-item-footer">
+                      <div class="choices-item-price"><span class="choices-item-price-value" data-watch-price-of="#order-form-choice-6">360</span><span>₽</span></div>
+                    </div>
                   </div>
-                  <div class="ps-input">
-                    <div class="ps-input-header"><span>Ваш телефон</span></div>
-                    <input class="input input--phone" name="phone" type="text" placeholder="+7 (___) ___ __ __" required form="order-form">
+                  <div class="choices-item" data-updates-by="#order-form-choice-7">
+                    <div class="choice-tooltip tooltip" data-tippy="Lorem ipsum dolor.">
+                      <div class="tooltip-inner">i</div>
+                    </div>
+                    <div class="choices-item-header"><span>Полная уборка санузла</span>
+                      <div class="choices-item-price choices-item-price--mobile"><span class="choices-item-price-old">800 ₽</span><span class="choices-item-price-value" data-watch-price-of="#order-form-choice-7">600</span><span>₽</span></div>
+                    </div>
+                    <div class="choices-item-footer">
+                      <div class="choices-item-price"><span class="choices-item-price-old">800 ₽</span><span class="choices-item-price-value" data-watch-price-of="#order-form-choice-7">600</span><span>₽</span></div>
+                    </div>
+                  </div>
+                  <div class="choices-item choices-item-square choices-item-square--no-content" data-updates-by="#order-form-choice-8">
+                    <div class="choice-tooltip tooltip" data-tippy="Lorem ipsum dolor.">
+                      <div class="tooltip-inner">i</div>
+                    </div>
+                    <div class="choices-item-header"><span>Полная очистка интерьера от всех видов загрязнений</span>
+                      <div class="choices-item-price choices-item-price--mobile"><span class="choices-item-price-old">990 ₽</span><span class="choices-item-price-value" data-watch-price-of="#order-form-choice-8">790</span><span>₽</span></div>
+                    </div>
+                    <div class="choices-item-footer">
+                      <div class="choices-item-price"><span class="choices-item-price-old">990 ₽</span><span class="choices-item-price-value" data-watch-price-of="#order-form-choice-8">790</span><span>₽</span></div>
+                    </div>
+                  </div>
+                  <div class="choices-item choices-item-square warning">
+                    <form class="feedback meta--ask" action="#">
+                      <div class="feedback-header"><span>Спросите нас</span></div>
+                      <textarea class="feedback-input input--phone" name="text" placeholder="Введите текст вопроса" required></textarea>
+                                  <label class="button button--primary">
+                                    <input class="button-native-submit" type="submit" value=""><span>Задать вопрос</span>
+                                  </label>
+                    </form>
+                  </div>
+                  <div class="choices-item" data-updates-by="#order-form-choice-9">
+                    <div class="choice-tooltip tooltip" data-tippy="Lorem ipsum dolor.">
+                      <div class="tooltip-inner">i</div>
+                    </div>
+                    <div class="choices-item-header"><span>Уборка всех открытых полок</span>
+                      <div class="choices-item-price choices-item-price--mobile"><span class="choices-item-price-value" data-watch-price-of="#order-form-choice-9">20</span><span>₽</span></div>
+                    </div>
+                    <div class="choices-item-footer">
+                      <div class="choices-item-price"><span class="choices-item-price-value" data-watch-price-of="#order-form-choice-9">20</span><span>₽</span></div>
+                      <div class="choices-item-counter">
+                                    <div class="counter">
+                                      <div class="counter-item">
+                                        <div class="counter-item-decrement" data-decrement-on="#order-form-choice-9"><span>-</span></div>
+                                        <input class="counter-item-count" type="number" value="7" data-updates-by="#order-form-choice-9">
+                                        <div class="counter-item-increment" data-increment-on="#order-form-choice-9"><span>+</span></div>
+                                      </div>
+                                    </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="choices-section-header">
+                  <div class="choices-section-header-image">
+                                <svg class="choices-section-header-image__icon">
+                                  <use xlink:href="svg/sprite.svg#svg--cleaning"></use>
+                                </svg>
+                  </div>
+                  <div class="choices-section-header__text">Другие услуги</div>
+                </div>
+                <div class="choices">
+                  <div class="choices-item choices-item-square choices-item-square--no-content" data-updates-by="#order-form-choice-10">
+                    <div class="choice-tooltip tooltip" data-tippy="Lorem ipsum dolor.">
+                      <div class="tooltip-inner">i</div>
+                    </div>
+                    <div class="choices-item-header"><span>Нанесение защитной полероли на деревянной мебели</span>
+                      <div class="choices-item-price choices-item-price--mobile"><span class="choices-item-price-from">От</span><span class="choices-item-price-value" data-watch-price-of="#order-form-choice-10">790</span><span>₽</span></div>
+                    </div>
+                    <div class="choices-item-footer">
+                      <div class="choices-item-price"><span class="choices-item-price-from">От</span><span class="choices-item-price-value" data-watch-price-of="#order-form-choice-10">790</span><span>₽</span></div>
+                    </div>
+                  </div>
+                  <div class="choices-item" data-updates-by="#order-form-choice-11">
+                    <div class="choice-tooltip tooltip" data-tippy="Lorem ipsum dolor.">
+                      <div class="tooltip-inner">i</div>
+                    </div>
+                    <div class="choices-item-header"><span>Уход за кожанной мебелью спец.средствами</span>
+                      <div class="choices-item-price choices-item-price--mobile"><span class="choices-item-price-value" data-watch-price-of="#order-form-choice-11">55</span><span>₽</span></div>
+                    </div>
+                    <div class="choices-item-footer">
+                      <div class="choices-item-price"><span class="choices-item-price-value" data-watch-price-of="#order-form-choice-11">55</span><span>₽</span></div>
+                    </div>
+                  </div>
+                  <div class="choices-item choices-item-square choices-item-square--no-content" data-updates-by="#order-form-choice-12">
+                    <div class="choice-tooltip tooltip" data-tippy="Lorem ipsum dolor.">
+                      <div class="tooltip-inner">i</div>
+                    </div>
+                    <div class="choices-item-header"><span>Уборка балкона, лоджии</span>
+                      <div class="choices-item-price choices-item-price--mobile"><span class="choices-item-price-from">От</span><span class="choices-item-price-value" data-watch-price-of="#order-form-choice-12">360</span><span>₽</span></div>
+                    </div>
+                    <div class="choices-item-footer">
+                      <div class="choices-item-price"><span class="choices-item-price-from">От</span><span class="choices-item-price-value" data-watch-price-of="#order-form-choice-12">360</span><span>₽</span></div>
+                    </div>
+                  </div>
+                  <div class="choices-item" data-updates-by="#order-form-choice-13">
+                    <div class="choice-tooltip tooltip" data-tippy="Lorem ipsum dolor.">
+                      <div class="tooltip-inner">i</div>
+                    </div>
+                    <div class="choices-item-header"><span>Ручная стирка штор</span>
+                      <div class="choices-item-price choices-item-price--mobile"><span class="choices-item-price-value" data-watch-price-of="#order-form-choice-13">200</span><span>₽</span></div>
+                    </div>
+                    <div class="choices-item-footer">
+                      <div class="choices-item-price"><span class="choices-item-price-value" data-watch-price-of="#order-form-choice-13">200</span><span>₽</span></div>
+                      <div class="choices-item-counter">
+                                    <div class="counter">
+                                      <div class="counter-item">
+                                        <div class="counter-item-decrement" data-decrement-on="#order-form-choice-13"><span>-</span></div>
+                                        <input class="counter-item-count" type="number" value="2" data-updates-by="#order-form-choice-13">
+                                        <div class="counter-item-increment" data-increment-on="#order-form-choice-13"><span>+</span></div>
+                                      </div>
+                                    </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="choices-item" data-updates-by="#order-form-choice-14">
+                    <div class="choice-tooltip tooltip" data-tippy="Lorem ipsum dolor.">
+                      <div class="tooltip-inner">i</div>
+                    </div>
+                    <div class="choices-item-header"><span>Уход за кожанной мебелью спец.средствами</span>
+                      <div class="choices-item-price choices-item-price--mobile"><span class="choices-item-price-value" data-watch-price-of="#order-form-choice-14">15</span><span>₽</span></div>
+                    </div>
+                    <div class="choices-item-footer">
+                      <div class="choices-item-price"><span class="choices-item-price-value" data-watch-price-of="#order-form-choice-14">15</span><span>₽</span></div>
+                    </div>
+                  </div>
+                  <div class="choices-item" data-updates-by="#order-form-choice-15">
+                    <div class="choice-tooltip tooltip" data-tippy="Lorem ipsum dolor.">
+                      <div class="tooltip-inner">i</div>
+                    </div>
+                    <div class="choices-item-header"><span>Сортировка и раскладка вещей</span>
+                      <div class="choices-item-price choices-item-price--mobile"><span class="choices-item-price-value" data-watch-price-of="#order-form-choice-15">60</span><span>₽</span></div>
+                    </div>
+                    <div class="choices-item-footer">
+                      <div class="choices-item-price"><span class="choices-item-price-value" data-watch-price-of="#order-form-choice-15">60</span><span>₽</span></div>
+                    </div>
                   </div>
                 </div>
               </div>
-              <div class="make-order-inputs make-order-inputs--counters">
-                          <div class="counter">
-                            <div class="counter-title"><span>Комнаты</span></div>
-                            <div class="counter-item">
-                              <div class="counter-item-decrement" data-decrement-on="#order-form-rooms"><span>-</span></div>
-                              <input class="counter-item-count" type="number" value="0" data-updates-by="#order-form-rooms">
-                              <div class="counter-item-increment" data-increment-on="#order-form-rooms"><span>+</span></div>
-                            </div>
-                          </div>
-                          <div class="counter">
-                            <div class="counter-title"><span>Санузел</span></div>
-                            <div class="counter-item">
-                              <div class="counter-item-decrement" data-decrement-on="#order-form-bathrooms"><span>-</span></div>
-                              <input class="counter-item-count" type="number" value="0" data-updates-by="#order-form-bathrooms">
-                              <div class="counter-item-increment" data-increment-on="#order-form-bathrooms"><span>+</span></div>
-                            </div>
-                          </div>
-              </div>
-              <div class="make-order-textarea">
-                <div class="ps-input-header"><span>Комментарий к заказу</span></div>
-                <textarea class="ps-textarea" placeholder="Нужно хорошо убрать" form="order-form"></textarea>
-              </div>
-              <div class="make-order-footer">
-                <div class="status-bar-total"><span class="status-bar-total__text">Итого:</span><span class="status-bar-total__price" data-watch-price>1390</span><span class="status-bar-total__currency">₽</span></div>
-                <div class="status-bar-submit active"> 
-                            <label class="button button--primary button--shadow">
-                              <input class="button-native-submit" type="submit" value="" form="order-form"><span>Оформить заказ</span>
-                            </label>
-                  <div class="status-bar-message">Выберите тип уборки!</div>
+              <div class="choices-wrapper">
+                <h3 class="header-h3">Шаг 3. Выберите дополнительные услуги</h3>
+                <div class="choices-section-header">
+                  <div class="choices-section-header-image">
+                                <svg class="choices-section-header-image__icon">
+                                  <use xlink:href="svg/sprite.svg#svg--recommended"></use>
+                                </svg>
+                  </div>
+                  <div class="choices-section-header__text">Популярные услуги</div>
+                </div>
+                <div class="choices">
+                  <div class="choices-item" data-updates-by="#order-form-choice-1">
+                    <div class="choice-tooltip tooltip" data-tippy="Lorem ipsum dolor.">
+                      <div class="tooltip-inner">i</div>
+                    </div>
+                    <div class="choices-item-header"><span>Протирка дверей и дверных ручек</span>
+                      <div class="choices-item-price choices-item-price--mobile"><span class="choices-item-price-value" data-watch-price-of="#order-form-choice-1">40</span><span>₽</span></div>
+                    </div>
+                    <div class="choices-item-footer">
+                      <div class="choices-item-price"><span class="choices-item-price-value" data-watch-price-of="#order-form-choice-1">40</span><span>₽</span></div>
+                    </div>
+                  </div>
+                  <div class="choices-item choices-item-square" data-updates-by="#order-form-choice-2">
+                    <div class="choice-tooltip tooltip" data-tippy="Lorem ipsum dolor.">
+                      <div class="tooltip-inner">i</div>
+                    </div>
+                    <div class="choices-item-header"><span>Удаление жировых отложений на поверхностях кухонной мебели</span>
+                      <div class="choices-item-price choices-item-price--mobile"><span class="choices-item-price-from">От</span><span class="choices-item-price-value" data-watch-price-of="#order-form-choice-2">90</span><span>₽</span></div>
+                    </div>
+                    <div class="choices-item-content">
+                                  <div class="toggler">
+                                    <div class="toggler-text"><span>Шкафчики <strong class="color-azure">+120 ₽</strong></span></div>
+                                    <div class="toggler-item" data-updates-by="#order-form-choice-2-trigger"></div>
+                                  </div>
+                    </div>
+                    <div class="choices-item-footer">
+                      <div class="choices-item-price"><span class="choices-item-price-from">От</span><span class="choices-item-price-value" data-watch-price-of="#order-form-choice-2">90</span><span>₽</span></div>
+                    </div>
+                  </div>
+                  <div class="choices-item choices-item-square warning">
+                    <form class="feedback" action="#">
+                      <div class="feedback-pre-header"><span>Мы Вам перезвоним</span></div>
+                      <div class="feedback-header"><span>Оставьте ваш номер телефона и мы Вам перезвоним</span></div>
+                      <input class="feedback-input input--phone" type="text" name="phone" placeholder="Ваш номер телефона" required>
+                                  <label class="button button--primary">
+                                    <input class="button-native-submit" type="submit" value=""><span>Генеральная уборка</span>
+                                  </label>
+                    </form>
+                  </div>
+                  <div class="choices-item" data-updates-by="#order-form-choice-3">
+                    <div class="choice-tooltip tooltip" data-tippy="Lorem ipsum dolor.">
+                      <div class="tooltip-inner">i</div>
+                    </div>
+                    <div class="choices-item-header"><span>Лёгкая уборка за питомцами</span>
+                      <div class="choices-item-price choices-item-price--mobile"><span class="choices-item-price-from">От</span><span class="choices-item-price-value" data-watch-price-of="#order-form-choice-3">140</span><span>₽</span></div>
+                    </div>
+                    <div class="choices-item-footer">
+                      <div class="choices-item-price"><span class="choices-item-price-from">От</span><span class="choices-item-price-value" data-watch-price-of="#order-form-choice-3">140</span><span>₽</span></div>
+                    </div>
+                  </div>
+                  <div class="choices-item" data-updates-by="#order-form-choice-4">
+                    <div class="choice-tooltip tooltip" data-tippy="Lorem ipsum dolor.">
+                      <div class="tooltip-inner">i</div>
+                    </div>
+                    <div class="choices-item-header"><span>Полная уборка санузла</span>
+                      <div class="choices-item-price choices-item-price--mobile"><span class="choices-item-price-value" data-watch-price-of="#order-form-choice-4">600</span><span>₽</span></div>
+                    </div>
+                    <div class="choices-item-footer">
+                      <div class="choices-item-price"><span class="choices-item-price-value" data-watch-price-of="#order-form-choice-4">600</span><span>₽</span></div>
+                    </div>
+                  </div>
+                  <div class="choices-item" data-updates-by="#order-form-choice-5">
+                    <div class="choice-tooltip tooltip" data-tippy="Lorem ipsum dolor.">
+                      <div class="tooltip-inner">i</div>
+                    </div>
+                    <div class="choices-item-header"><span>Протирка подоконников</span>
+                      <div class="choices-item-price choices-item-price--mobile"><span class="choices-item-price-value" data-watch-price-of="#order-form-choice-5">90</span><span>₽</span></div>
+                    </div>
+                    <div class="choices-item-footer">
+                      <div class="choices-item-price"><span class="choices-item-price-value" data-watch-price-of="#order-form-choice-5">90</span><span>₽</span></div>
+                      <div class="choices-item-counter">
+                                    <div class="counter">
+                                      <div class="counter-item">
+                                        <div class="counter-item-decrement" data-decrement-on="#order-form-choice-5"><span>-</span></div>
+                                        <input class="counter-item-count" type="number" value="7" data-updates-by="#order-form-choice-5">
+                                        <div class="counter-item-increment" data-increment-on="#order-form-choice-5"><span>+</span></div>
+                                      </div>
+                                    </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
-          </section>
+              <div class="choices-wrapper">
+                <h3 class="header-h3">Шаг 3. Выберите дополнительные услуги</h3>
+                <div class="choices-section-header">
+                  <div class="choices-section-header-image">
+                                <svg class="choices-section-header-image__icon">
+                                  <use xlink:href="svg/sprite.svg#svg--recommended"></use>
+                                </svg>
+                  </div>
+                  <div class="choices-section-header__text">Популярные услуги</div>
+                </div>
+                <div class="choices">
+                  <div class="choices-item" data-updates-by="#order-form-choice-1">
+                    <div class="choice-tooltip tooltip" data-tippy="Lorem ipsum dolor.">
+                      <div class="tooltip-inner">i</div>
+                    </div>
+                    <div class="choices-item-header"><span>Протирка дверей и дверных ручек</span>
+                      <div class="choices-item-price choices-item-price--mobile"><span class="choices-item-price-value" data-watch-price-of="#order-form-choice-1">40</span><span>₽</span></div>
+                    </div>
+                    <div class="choices-item-footer">
+                      <div class="choices-item-price"><span class="choices-item-price-value" data-watch-price-of="#order-form-choice-1">40</span><span>₽</span></div>
+                    </div>
+                  </div>
+                  <div class="choices-item choices-item-square" data-updates-by="#order-form-choice-2">
+                    <div class="choice-tooltip tooltip" data-tippy="Lorem ipsum dolor.">
+                      <div class="tooltip-inner">i</div>
+                    </div>
+                    <div class="choices-item-header"><span>Удаление жировых отложений на поверхностях кухонной мебели</span>
+                      <div class="choices-item-price choices-item-price--mobile"><span class="choices-item-price-from">От</span><span class="choices-item-price-value" data-watch-price-of="#order-form-choice-2">90</span><span>₽</span></div>
+                    </div>
+                    <div class="choices-item-content">
+                                  <div class="toggler">
+                                    <div class="toggler-text"><span>Шкафчики <strong class="color-azure">+120 ₽</strong></span></div>
+                                    <div class="toggler-item" data-updates-by="#order-form-choice-2-trigger"></div>
+                                  </div>
+                    </div>
+                    <div class="choices-item-footer">
+                      <div class="choices-item-price"><span class="choices-item-price-from">От</span><span class="choices-item-price-value" data-watch-price-of="#order-form-choice-2">90</span><span>₽</span></div>
+                    </div>
+                  </div>
+                  <div class="choices-item choices-item-square warning">
+                    <form class="feedback" action="#">
+                      <div class="feedback-pre-header"><span>Мы Вам перезвоним</span></div>
+                      <div class="feedback-header"><span>Оставьте ваш номер телефона и мы Вам перезвоним</span></div>
+                      <input class="feedback-input input--phone" type="text" name="phone" placeholder="Ваш номер телефона" required>
+                                  <label class="button button--primary">
+                                    <input class="button-native-submit" type="submit" value=""><span>Генеральная уборка</span>
+                                  </label>
+                    </form>
+                  </div>
+                  <div class="choices-item" data-updates-by="#order-form-choice-3">
+                    <div class="choice-tooltip tooltip" data-tippy="Lorem ipsum dolor.">
+                      <div class="tooltip-inner">i</div>
+                    </div>
+                    <div class="choices-item-header"><span>Лёгкая уборка за питомцами</span>
+                      <div class="choices-item-price choices-item-price--mobile"><span class="choices-item-price-from">От</span><span class="choices-item-price-value" data-watch-price-of="#order-form-choice-3">140</span><span>₽</span></div>
+                    </div>
+                    <div class="choices-item-footer">
+                      <div class="choices-item-price"><span class="choices-item-price-from">От</span><span class="choices-item-price-value" data-watch-price-of="#order-form-choice-3">140</span><span>₽</span></div>
+                    </div>
+                  </div>
+                  <div class="choices-item" data-updates-by="#order-form-choice-4">
+                    <div class="choice-tooltip tooltip" data-tippy="Lorem ipsum dolor.">
+                      <div class="tooltip-inner">i</div>
+                    </div>
+                    <div class="choices-item-header"><span>Полная уборка санузла</span>
+                      <div class="choices-item-price choices-item-price--mobile"><span class="choices-item-price-value" data-watch-price-of="#order-form-choice-4">600</span><span>₽</span></div>
+                    </div>
+                    <div class="choices-item-footer">
+                      <div class="choices-item-price"><span class="choices-item-price-value" data-watch-price-of="#order-form-choice-4">600</span><span>₽</span></div>
+                    </div>
+                  </div>
+                  <div class="choices-item" data-updates-by="#order-form-choice-5">
+                    <div class="choice-tooltip tooltip" data-tippy="Lorem ipsum dolor.">
+                      <div class="tooltip-inner">i</div>
+                    </div>
+                    <div class="choices-item-header"><span>Протирка подоконников</span>
+                      <div class="choices-item-price choices-item-price--mobile"><span class="choices-item-price-value" data-watch-price-of="#order-form-choice-5">90</span><span>₽</span></div>
+                    </div>
+                    <div class="choices-item-footer">
+                      <div class="choices-item-price"><span class="choices-item-price-value" data-watch-price-of="#order-form-choice-5">90</span><span>₽</span></div>
+                      <div class="choices-item-counter">
+                                    <div class="counter">
+                                      <div class="counter-item">
+                                        <div class="counter-item-decrement" data-decrement-on="#order-form-choice-5"><span>-</span></div>
+                                        <input class="counter-item-count" type="number" value="7" data-updates-by="#order-form-choice-5">
+                                        <div class="counter-item-increment" data-increment-on="#order-form-choice-5"><span>+</span></div>
+                                      </div>
+                                    </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section class="make-order-section" data-show-on-order>
+              <h2>Шаг 4. Оформление заказа</h2>
+              <section class="your-order" data-show-on-order>
+                <h3>Ваш заказ:</h3>
+                <div class="container-separator"></div>
+                <div class="your-order-list">
+                                <div class="your-order-item your-order-item--main your-order-item--border" data-tippy="Lorem ipsum dolor." data-tippy-trigger="click" data-updates-by="#order-form-type-general">
+                                  <div class="your-order-item-delete">
+                                                  <svg class="your-order-item-delete__icon">
+                                                    <use xlink:href="svg/sprite.svg#svg--cancel"></use>
+                                                  </svg>
+                                  </div>
+                                  <div class="your-order-item-header"><span>Генеральная уборка</span></div>
+                                  <div class="your-order-item-price"><span>600</span><span> ₽</span></div>
+                                </div>
+                                <div class="your-order-item your-order-item--main your-order-item--border" data-tippy="Lorem ipsum dolor." data-tippy-trigger="click" data-updates-by="#order-form-type-supporting">
+                                  <div class="your-order-item-delete">
+                                                  <svg class="your-order-item-delete__icon">
+                                                    <use xlink:href="svg/sprite.svg#svg--cancel"></use>
+                                                  </svg>
+                                  </div>
+                                  <div class="your-order-item-header"><span>Поддерживающая уборка</span></div>
+                                  <div class="your-order-item-price"><span>600</span><span> ₽</span></div>
+                                </div>
+                                <div class="your-order-item your-order-item--main your-order-item--border" data-tippy="Lorem ipsum dolor." data-tippy-trigger="click" data-updates-by="#order-form-type-repairs">
+                                  <div class="your-order-item-delete">
+                                                  <svg class="your-order-item-delete__icon">
+                                                    <use xlink:href="svg/sprite.svg#svg--cancel"></use>
+                                                  </svg>
+                                  </div>
+                                  <div class="your-order-item-header"><span>Уборка после ремонта</span></div>
+                                  <div class="your-order-item-price"><span>600</span><span> ₽</span></div>
+                                </div>
+                                <div class="your-order-item your-order-item--shadow" data-tippy="Lorem ipsum dolor." data-tippy-trigger="click" data-updates-by="#order-form-choice-1">
+                                  <div class="your-order-item-delete">
+                                                  <svg class="your-order-item-delete__icon">
+                                                    <use xlink:href="svg/sprite.svg#svg--cancel"></use>
+                                                  </svg>
+                                  </div>
+                                  <div class="your-order-item-header"><span>Протирка дверей и дверных ручек</span></div>
+                                  <div class="your-order-item-price"><span data-watch-price-of="#order-form-choice-1">40</span><span> ₽</span></div>
+                                </div>
+                                <div class="your-order-item your-order-item--shadow" data-tippy="Lorem ipsum dolor." data-tippy-trigger="click" data-updates-by="#order-form-choice-2">
+                                  <div class="your-order-item-delete">
+                                                  <svg class="your-order-item-delete__icon">
+                                                    <use xlink:href="svg/sprite.svg#svg--cancel"></use>
+                                                  </svg>
+                                  </div>
+                                  <div class="your-order-item-header"><span>Удаление жировых отложений на поверхностях кухонной мебели</span></div>
+                                  <div class="your-order-item-price"><span data-watch-price-of="#order-form-choice-2">90</span><span> ₽</span></div>
+                                </div>
+                                <div class="your-order-item your-order-item--shadow" data-tippy="Lorem ipsum dolor." data-tippy-trigger="click" data-updates-by="#order-form-choice-3">
+                                  <div class="your-order-item-delete">
+                                                  <svg class="your-order-item-delete__icon">
+                                                    <use xlink:href="svg/sprite.svg#svg--cancel"></use>
+                                                  </svg>
+                                  </div>
+                                  <div class="your-order-item-header"><span>Лёгкая уборка за питомцами</span></div>
+                                  <div class="your-order-item-price"><span data-watch-price-of="#order-form-choice-3">140</span><span> ₽</span></div>
+                                </div>
+                                <div class="your-order-item your-order-item--shadow" data-tippy="Lorem ipsum dolor." data-tippy-trigger="click" data-updates-by="#order-form-choice-4">
+                                  <div class="your-order-item-delete">
+                                                  <svg class="your-order-item-delete__icon">
+                                                    <use xlink:href="svg/sprite.svg#svg--cancel"></use>
+                                                  </svg>
+                                  </div>
+                                  <div class="your-order-item-header"><span>Полная уборка санузла</span></div>
+                                  <div class="your-order-item-price"><span data-watch-price-of="#order-form-choice-4">600</span><span> ₽</span></div>
+                                </div>
+                                <div class="your-order-item your-order-item--shadow" data-tippy="Lorem ipsum dolor." data-tippy-trigger="click" data-updates-by="#order-form-choice-5">
+                                  <div class="your-order-item-delete">
+                                                  <svg class="your-order-item-delete__icon">
+                                                    <use xlink:href="svg/sprite.svg#svg--cancel"></use>
+                                                  </svg>
+                                  </div>
+                                  <div class="your-order-item-header"><span>Протирка подоконников</span></div>
+                                  <div class="your-order-item-price"><span data-watch-price-of="#order-form-choice-5">90</span><span> ₽</span></div>
+                                </div>
+                                <div class="your-order-item your-order-item--shadow" data-tippy="Lorem ipsum dolor." data-tippy-trigger="click" data-updates-by="#order-form-choice-6">
+                                  <div class="your-order-item-delete">
+                                                  <svg class="your-order-item-delete__icon">
+                                                    <use xlink:href="svg/sprite.svg#svg--cancel"></use>
+                                                  </svg>
+                                  </div>
+                                  <div class="your-order-item-header"><span>Мытье одной партии посуды</span></div>
+                                  <div class="your-order-item-price"><span data-watch-price-of="#order-form-choice-6">360</span><span> ₽</span></div>
+                                </div>
+                                <div class="your-order-item your-order-item--shadow" data-tippy="Lorem ipsum dolor." data-tippy-trigger="click" data-updates-by="#order-form-choice-7">
+                                  <div class="your-order-item-delete">
+                                                  <svg class="your-order-item-delete__icon">
+                                                    <use xlink:href="svg/sprite.svg#svg--cancel"></use>
+                                                  </svg>
+                                  </div>
+                                  <div class="your-order-item-header"><span>Полная уборка санузла</span></div>
+                                  <div class="your-order-item-price"><span data-watch-price-of="#order-form-choice-7">600</span><span> ₽</span></div>
+                                </div>
+                                <div class="your-order-item your-order-item--shadow" data-tippy="Lorem ipsum dolor." data-tippy-trigger="click" data-updates-by="#order-form-choice-8">
+                                  <div class="your-order-item-delete">
+                                                  <svg class="your-order-item-delete__icon">
+                                                    <use xlink:href="svg/sprite.svg#svg--cancel"></use>
+                                                  </svg>
+                                  </div>
+                                  <div class="your-order-item-header"><span>Полная очистка интерьера от всех видов загрязнений</span></div>
+                                  <div class="your-order-item-price"><span data-watch-price-of="#order-form-choice-8">790</span><span> ₽</span></div>
+                                </div>
+                                <div class="your-order-item your-order-item--shadow" data-tippy="Lorem ipsum dolor." data-tippy-trigger="click" data-updates-by="#order-form-choice-9">
+                                  <div class="your-order-item-delete">
+                                                  <svg class="your-order-item-delete__icon">
+                                                    <use xlink:href="svg/sprite.svg#svg--cancel"></use>
+                                                  </svg>
+                                  </div>
+                                  <div class="your-order-item-header"><span>Уборка всех открытых полок</span></div>
+                                  <div class="your-order-item-price"><span data-watch-price-of="#order-form-choice-9">20</span><span> ₽</span></div>
+                                </div>
+                                <div class="your-order-item your-order-item--shadow" data-tippy="Lorem ipsum dolor." data-tippy-trigger="click" data-updates-by="#order-form-choice-10">
+                                  <div class="your-order-item-delete">
+                                                  <svg class="your-order-item-delete__icon">
+                                                    <use xlink:href="svg/sprite.svg#svg--cancel"></use>
+                                                  </svg>
+                                  </div>
+                                  <div class="your-order-item-header"><span>Нанесение защитной полероли на деревянной мебели</span></div>
+                                  <div class="your-order-item-price"><span data-watch-price-of="#order-form-choice-10">790</span><span> ₽</span></div>
+                                </div>
+                                <div class="your-order-item your-order-item--shadow" data-tippy="Lorem ipsum dolor." data-tippy-trigger="click" data-updates-by="#order-form-choice-11">
+                                  <div class="your-order-item-delete">
+                                                  <svg class="your-order-item-delete__icon">
+                                                    <use xlink:href="svg/sprite.svg#svg--cancel"></use>
+                                                  </svg>
+                                  </div>
+                                  <div class="your-order-item-header"><span>Уход за кожанной мебелью спец.средствами</span></div>
+                                  <div class="your-order-item-price"><span data-watch-price-of="#order-form-choice-11">55</span><span> ₽</span></div>
+                                </div>
+                                <div class="your-order-item your-order-item--shadow" data-tippy="Lorem ipsum dolor." data-tippy-trigger="click" data-updates-by="#order-form-choice-12">
+                                  <div class="your-order-item-delete">
+                                                  <svg class="your-order-item-delete__icon">
+                                                    <use xlink:href="svg/sprite.svg#svg--cancel"></use>
+                                                  </svg>
+                                  </div>
+                                  <div class="your-order-item-header"><span>Уборка балкона, лоджии</span></div>
+                                  <div class="your-order-item-price"><span data-watch-price-of="#order-form-choice-12">360</span><span> ₽</span></div>
+                                </div>
+                                <div class="your-order-item your-order-item--shadow" data-tippy="Lorem ipsum dolor." data-tippy-trigger="click" data-updates-by="#order-form-choice-13">
+                                  <div class="your-order-item-delete">
+                                                  <svg class="your-order-item-delete__icon">
+                                                    <use xlink:href="svg/sprite.svg#svg--cancel"></use>
+                                                  </svg>
+                                  </div>
+                                  <div class="your-order-item-header"><span>Ручная стирка штор</span></div>
+                                  <div class="your-order-item-price"><span data-watch-price-of="#order-form-choice-13">200</span><span> ₽</span></div>
+                                </div>
+                                <div class="your-order-item your-order-item--shadow" data-tippy="Lorem ipsum dolor." data-tippy-trigger="click" data-updates-by="#order-form-choice-14">
+                                  <div class="your-order-item-delete">
+                                                  <svg class="your-order-item-delete__icon">
+                                                    <use xlink:href="svg/sprite.svg#svg--cancel"></use>
+                                                  </svg>
+                                  </div>
+                                  <div class="your-order-item-header"><span>Уход за кожанной мебелью спец.средствами</span></div>
+                                  <div class="your-order-item-price"><span data-watch-price-of="#order-form-choice-14">15</span><span> ₽</span></div>
+                                </div>
+                                <div class="your-order-item your-order-item--shadow" data-tippy="Lorem ipsum dolor." data-tippy-trigger="click" data-updates-by="#order-form-choice-15">
+                                  <div class="your-order-item-delete">
+                                                  <svg class="your-order-item-delete__icon">
+                                                    <use xlink:href="svg/sprite.svg#svg--cancel"></use>
+                                                  </svg>
+                                  </div>
+                                  <div class="your-order-item-header"><span>Сортировка и раскладка вещей</span></div>
+                                  <div class="your-order-item-price"><span data-watch-price-of="#order-form-choice-15">60</span><span> ₽</span></div>
+                                </div>
+                </div>
+              </section>
+              <div class="make-order">
+                <div class="make-order-header">
+                  <h3>Подробности</h3>
+                </div>
+                <div class="make-order-inputs">
+                  <div class="make-order-inputs-left">
+                    <div class="ps-input">
+                      <div class="ps-input-header"><span>Дата уборки</span></div>
+                      <label class="make-order-date-container">
+                        <div class="make-order-date">
+                          <input class="native-input" type="text" name="date" form="order-form" readonly data-datepicker>
+                          <div class="make-order-date-day"><span>31</span></div>
+                          <div class="make-order-date-month"><span>Декабря</span></div>
+                          <div class="make-order-date-year"><span>2019</span></div>
+                        </div>
+                        <div class="make-order-calendar">
+                                        <svg class="make-order-calendar__icon">
+                                          <use xlink:href="svg/sprite.svg#svg--calendar"></use>
+                                        </svg>
+                        </div>
+                      </label>
+                    </div>
+                    <div class="ps-input">
+                      <div class="ps-input-header"><span>Время уборки</span></div>
+                      <div class="make-order-time">
+                        <input class="make-order-time-hours" name="hours" type="number" placeholder="17" min="0" max="24" required form="order-form"><span class="make-order-time-separator">:</span>
+                        <input class="make-order-time-minutes" name="minutes" type="number" placeholder="30" min="0" max="60" required form="order-form">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="make-order-inputs-right">
+                    <div class="ps-input">
+                      <div class="ps-input-header"><span>Адрес</span></div>
+                      <input class="input" type="customerAddress" placeholder="Ваш адрес" form="order-form" required>
+                    </div>
+                    <div class="ps-input">
+                      <div class="ps-input-header"><span>Ваше имя</span></div>
+                      <input class="input" name="customerName" type="text" placeholder="Введите ваше имя" form="order-form" required>
+                    </div>
+                    <div class="ps-input">
+                      <div class="ps-input-header"><span>Ваш телефон</span></div>
+                      <input class="input input--phone" name="phone" type="text" placeholder="8 (___) ___ __ __" required form="order-form">
+                    </div>
+                  </div>
+                </div>
+                <div class="make-order-inputs make-order-inputs--counters">
+                              <div class="counter">
+                                <div class="counter-title"><span>Комнаты</span></div>
+                                <div class="counter-item">
+                                  <div class="counter-item-decrement" data-decrement-on="#order-form-rooms"><span>-</span></div>
+                                  <input class="counter-item-count" type="number" value="0" data-updates-by="#order-form-rooms">
+                                  <div class="counter-item-increment" data-increment-on="#order-form-rooms"><span>+</span></div>
+                                </div>
+                              </div>
+                              <div class="counter">
+                                <div class="counter-title"><span>Санузел</span></div>
+                                <div class="counter-item">
+                                  <div class="counter-item-decrement" data-decrement-on="#order-form-bathrooms"><span>-</span></div>
+                                  <input class="counter-item-count" type="number" value="0" data-updates-by="#order-form-bathrooms">
+                                  <div class="counter-item-increment" data-increment-on="#order-form-bathrooms"><span>+</span></div>
+                                </div>
+                              </div>
+                </div>
+                <div class="make-order-textarea">
+                  <div class="ps-input-header"><span>Комментарий к заказу</span></div>
+                  <textarea class="ps-textarea" placeholder="Нужно хорошо убрать" form="order-form"></textarea>
+                </div>
+                <div class="make-order-footer">
+                  <div class="status-bar-total"><span class="status-bar-total__text">Итого:</span><span class="status-bar-total__price" data-watch-price>1390</span><span class="status-bar-total__currency">₽</span></div>
+                  <div class="status-bar-submit active"> 
+                                <label class="button button--primary button--shadow">
+                                  <input class="button-native-submit" type="submit" value="" form="order-form"><span>Оформить заказ</span>
+                                </label>
+                    <div class="status-bar-message">Выберите тип уборки!</div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
           <section class="faq">
             <h2>Что? Где? Когда?</h2>
             <div class="spoilers">
