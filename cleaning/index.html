@@ -175,12 +175,12 @@
         <div class="container">
           <form action="" method="post" id="order-form">
             <!-- Cleaning type-->
-            <input type="radio" name="type" value="general-cleaning" data-base-price="600" id="order-form-type-general">
-            <input type="radio" name="type" value="supporting-cleaning" data-base-price="600" id="order-form-type-supporting">
-            <input type="radio" name="type" value="repairs-cleaning" data-base-price="600" id="order-form-type-repairs">
+            <input type="radio" name="type" value="general-cleaning" data-base-price="600" data-room-price="1000" data-bathroom-price="1000" id="order-form-type-general">
+            <input type="radio" name="type" value="supporting-cleaning" data-base-price="600" data-room-price="1500" data-bathroom-price="1500" id="order-form-type-supporting">
+            <input type="radio" name="type" value="repairs-cleaning" data-base-price="600" data-room-price="1800" data-bathroom-price="1800" id="order-form-type-repairs">
             <!-- Main params-->
-            <input type="number" name="rooms" data-base-price="1500" value="1" min="1" id="order-form-rooms">
-            <input type="number" name="bathrooms" data-base-price="1000" value="1" min="1" id="order-form-bathrooms">
+            <input type="number" name="rooms" value="1" min="1" id="order-form-rooms">
+            <input type="number" name="bathrooms" value="1" min="1" id="order-form-bathrooms">
             <!-- Choices-->
             <!-- Протирка дверей и дверных ручек-->
             <input type="number" name="choice1" data-base-price="0" value="0" min="0" id="order-form-choice-1">
@@ -1112,7 +1112,7 @@
                   <textarea class="ps-textarea" placeholder="Нужно хорошо убрать" form="order-form"></textarea>
                 </div>
                 <div class="make-order-footer">
-                  <div class="status-bar-total"><span class="status-bar-total__text">Итого:</span><span class="status-bar-total__price" data-watch-price>1390</span><span class="status-bar-total__currency">₽</span></div>
+                  <div class="status-bar-total"><span class="status-bar-total__text">Итого:</span><span class="status-bar-total__price" data-watch-price>0</span><span class="status-bar-total__currency">₽</span></div>
                   <div class="status-bar-submit active"> 
                                 <label class="button button--primary button--shadow">
                                   <input class="button-native-submit" type="submit" value="" form="order-form"><span>Оформить заказ</span>
