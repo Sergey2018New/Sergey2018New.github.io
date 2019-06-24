@@ -72,16 +72,12 @@ $(document).ready(function() {
 			nav:false,
 			loop: false,
 			mouseDrag:false,
-			
 			margin: 15,
 			responsive:{
 				576:{
 					items: 2,
 					nav:true,
 					navText: [arrow, arrow]
-				},
-				768:{
-					//items: 1
 				}
 			}
 		});
