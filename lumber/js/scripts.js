@@ -40,15 +40,7 @@ $(document).ready(function() {
 		});
 	}
 	 
-   // плагин jquery ui spinner
-	 $( ".spinner" ).each(function(){
-		 var $this = $(this);
-		 $(this).spinner({
-			 numberFormat: "n",
-			 min: $this.attr("data-min"),
-			 max: $this.attr("data-max")
-		 });
-	 });
+
 	 
 	 // плагин Fancybox
 	 
@@ -279,5 +271,197 @@ $(document).ready(function() {
 	$('.spinner').on("input", function (e){
 		$(this).val($(this).val().replace(/[-\.;":'a-zA-Zа-яА-Я]/, '')); 
 	}); 
+	
+	/* Калькулятор итоговой цены*/
+	
+	// Общие переменные
+	var $orderMaterial = $("#order-material"),
+		 $orderSpecies = $("#order-species"),
+		 $orderVolume = $("#order-volume"),
+		 $orderWidth = $("#order-width"),
+		 $orderThickness = $("#order-thickness"),
+		 $orderTotal = $("#order-total");
+		 
+	var $formSpecies = $(".calculation__parameters-species"),
+		 $formGrade = $(".calculation__parameters-grade"),
+		 $formSize = $(".calculation__parameters-size");
+	
+	// Обработка клика при выборе материала
+	$('.material-item__btn-select').on("click", function (e){
+		var $materialItem = $(this).closest(".material-item"),
+			 materialName = $materialItem.attr("data-material"),
+			 materialTitle = $materialItem.find(".material-item__title").text(),
+			 materialImageSrc = $materialItem.find(".material-item__img img").attr("src");
+		
+		$materialItem.siblings().removeClass("active");
+		$materialItem.addClass("active");
+		
+		$(".calculation__product-title").html(materialTitle);
+		$orderMaterial.text(materialTitle);
+		$(".calculation__product-img img").attr("src", materialImageSrc);
+		
+		$("html, body").animate({scrollTop: $(".calculation__step--2").offset().top - 100}, 600);
+		getDataCalc(materialName);
+	}); 
+	
+	 // плагин jquery ui spinner
+	 $( ".spinner" ).each(function(){
+		 var $this = $(this);
+		 $this.spinner({
+			 numberFormat: "n",
+			 min: $this.attr("data-min"),
+			 max: $this.attr("data-max")
+		 });
+		 $this.on("change", function(){
+			 if ($(this).val() < $this.attr("data-min")){
+				 $(this).val($this.attr("data-min"));
+			 }
+			 if ($(this).val() > $this.attr("data-max")){
+				 $(this).val($this.attr("data-max"));
+			 }
+		 });
+	 });
+	 
+	 $( ".spinner" ).on("spinstop", function( event, ui ) {
+		 calc();
+		 $orderVolume.text(event.currentTarget.value);
+	 });
+
+	 // Расчет при изменении типа покраски
+	 $('input[name="painting"]').on("change", function(){
+		 calc();
+	 });
+	 
+	// 
+	getDataCalc();
+	
+	function getDataCalc(currentMaterialName = "lining"){ 
+		$.getJSON('data.json', function(data) {
+			var $formOrder = $(".calculation__form");
+			
+			if (data[currentMaterialName]){
+				$formOrder.removeClass("not-calc");
+				
+				
+				var resultSpecies = "",
+					 resultGrade = "",
+					 resultSize = "";
+
+				printSpecies();
+				printGrade();
+				printSize();
+				
+				selectricSpecies();
+				selectricGrade();
+				selectricSize();
+				
+				function printSpecies(){
+					resultSpecies = '<select>';
+					for (var i=0; i<data[currentMaterialName].length; i++){
+						resultSpecies += '<option>' + data[currentMaterialName][i].name + '</option>';
+					}
+					resultSpecies += '</select>';
+					$formSpecies.html(resultSpecies);
+				}
+				
+				function printGrade(indexSpecies = 0){
+					resultGrade = '<select>';
+					for (var i=0; i<data[currentMaterialName][indexSpecies].grade.length; i++){
+						resultGrade += '<option>' + data[currentMaterialName][indexSpecies].grade[i].name + '</option>';
+					}
+					resultGrade += '</select>';
+					$formGrade.html(resultGrade);
+				}
+				
+				function printSize(indexSpecies = 0, indexGrade = 0){
+					resultSize = '<select>';
+					
+					var currentThickness,
+						 currentWidth;
+						 
+					for (var i=0; i<data[currentMaterialName][indexSpecies].grade[indexGrade].options.length; i++){
+						currentThickness = data[currentMaterialName][indexSpecies].grade[indexGrade].options[i].thickness;
+						currentWidth = data[currentMaterialName][indexSpecies].grade[indexGrade].options[i].width;
+						
+						resultSize += '<option value="' + data[currentMaterialName][indexSpecies].grade[indexGrade].options[i].price +
+						'" data-thickness = "' + currentThickness + '" data-width="' + currentWidth + '">' 
+						+ currentThickness + 'x' + currentWidth +
+						'</option>';
+					}
+					resultSize += '</select>';
+					$formSize.html(resultSize);
+				}
+				
+				function selectricSpecies(){
+					$formSpecies.find("select").selectric({ 
+						 onChange: function(element) {
+							var index = $(element).find("option:selected").index();
+							printGrade(index);
+							printSize(index);
+							
+							selectricGrade();
+							selectricSize();
+							
+							calc();
+						 }
+					}); 
+				}
+				
+				function selectricGrade(){
+					$formGrade.find("select").selectric({ 
+						 onChange: function(element) {
+							var index1 = $formSpecies.find("option:selected").index(),
+								 index2 = $formGrade.find("option:selected").index();
+							
+							printSize(index1, index2);
+							selectricSize();
+							calc();
+						 }
+					}); 
+				}
+				
+				function selectricSize(){
+					$formSize.find("select").selectric({ 
+						 onChange: function(element) {
+							calc();
+						 }
+					}); 
+				}
+				
+				
+			}
+			else{
+				$formOrder.addClass("not-calc");
+			}
+			calc();
+		
+			
+      });
+	}
+	
+	
+	// Функция расчета
+	function calc(){
+		var $selectSize = $(".calculation__parameters-size select"),
+			 $volumeInput = $('input[name="volume"]'), 
+			 $paintingCheckbox = $('input[name="painting"]:checked'), 
+			 volumeValue = $volumeInput.val(), 
+			 total = 0;
+			 
+		total += ($selectSize.find("option:selected").val() * volumeValue);
+		total += ($paintingCheckbox.attr("data-value") * volumeValue);
+		
+		if (!$(".calculation__form.not-calc").length){
+			$orderTotal.html('от <span>' + total + '</span> рублей');
+		}
+		else{
+			$orderTotal.html('по запросу'); 
+		}
+		
+		 $orderSpecies.text($formSpecies.find("option:selected").val());
+		 $orderWidth.text($formSize.find("option:selected").attr("data-width"));
+		 $orderThickness.text($formSize.find("option:selected").attr("data-thickness"));
+		 
+	}
 	
 });

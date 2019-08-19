@@ -2920,6 +2920,27 @@ textarea.form-control {
   display: flex;
   padding-top: 14px;
 }
+.calculation__form .checkbox + label {
+  cursor: pointer;
+}
+.calculation__form.not-calc .selectric-wrapper {
+  cursor: default;
+}
+.calculation__form.not-calc .form-box--select {
+  opacity: 0.5;
+}
+.calculation__form.not-calc .selectric {
+  pointer-events: none;
+}
+.calculation__form.not-calc .selectric .label {
+  opacity: 0;
+}
+.calculation__form.not-calc .calculation__order-species {
+  display: none;
+}
+.calculation__form.not-calc .calculation__order-sizes {
+  display: none;
+}
 .calculation__parameters {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
@@ -2970,6 +2991,12 @@ textarea.form-control {
   color: #ffffff;
   letter-spacing: 0.02em;
 }
+.calculation__order-info span {
+  text-transform: lowercase;
+}
+.calculation__order-info .nowrap {
+  white-space: nowrap;
+}
 .calculation__order-price {
   padding-bottom: 33px;
   color: #ffffff;
@@ -2979,6 +3006,9 @@ textarea.form-control {
   font-size: 18px;
   font-weight: 600;
   color: #4aab58;
+}
+.calculation__order-price--without {
+  display: none;
 }
 .calculation__product {
   padding-top: 6px;
@@ -3183,6 +3213,12 @@ textarea.form-control {
 }
 .material-item:hover .material-item__btn-select {
   opacity: 1;
+}
+.material-item.active .material-item__img:after {
+  border-color: #67b946;
+}
+.material-item.active .material-item__btn-select {
+  display: none;
 }
 .color-item {
   margin: 0 20px 20px 0;

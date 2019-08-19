@@ -1,0 +1,836 @@
+{
+	"lining": [
+		{
+			"name": "Лиственница",
+			"grade": [
+				{
+					"name": "Экстра",
+					"options": [
+						{
+							"thickness": 14,
+							"width": 170,
+							"price": 1200
+						},
+						{
+							"thickness": 14,
+							"width": 140,
+							"price": 1150
+						},
+						{
+							"thickness": 14,
+							"width": 120,
+							"price": 1150
+						},
+						{
+							"thickness": 14,
+							"width": 96,
+							"price": 900
+						}
+					]
+				},
+				{
+					"name": "Прима",
+					"options": [
+						{
+							"thickness": 14,
+							"width": 170,
+							"price": 950
+						},
+						{
+							"thickness": 14,
+							"width": 140,
+							"price": 900
+						},
+						{
+							"thickness": 14,
+							"width": 120,
+							"price": 850
+						},
+						{
+							"thickness": 14,
+							"width": 96,
+							"price": 700
+						}
+					]
+				},
+				{
+					"name": "AB",
+					"options": [
+						{
+							"thickness": 14,
+							"width": 170,
+							"price": 750
+						},
+						{
+							"thickness": 14,
+							"width": 140,
+							"price": 700
+						},
+						{
+							"thickness": 14,
+							"width": 120,
+							"price": 650
+						},
+						{
+							"thickness": 14,
+							"width": 96,
+							"price": 530
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Ангарская сосна",
+			"grade": [
+				{
+					"name": "Экстра",
+					"options": [
+						{
+							"thickness": 14,
+							"width": 140,
+							"price": 1150
+						},
+						{
+							"thickness": 14,
+							"width": 120,
+							"price": 900
+						},
+						{
+							"thickness": 14,
+							"width": 96,
+							"price": 800
+						}
+					]
+				},
+				{
+					"name": "Прима",
+					"options": [
+						{
+							"thickness": 14,
+							"width": 140,
+							"price": 800
+						},
+						{
+							"thickness": 14,
+							"width": 120,
+							"price": 700
+						},
+						{
+							"thickness": 14,
+							"width": 96,
+							"price": 650
+						}
+					]
+				},
+				{
+					"name": "AB",
+					"options": [
+						{
+							"thickness": 14,
+							"width": 96,
+							"price": 500
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Ель/сосна",
+			"grade": [
+				{
+					"name": "AB",
+					"options": [
+						{
+							"thickness": 12.5,
+							"width": 105,
+							"price": 330
+						},
+						{
+							"thickness": 15,
+							"width": 130,
+							"price": 370
+						},
+						{
+							"thickness": 12.5,
+							"width": 110,
+							"price": 330
+						},
+						{
+							"thickness": 14,
+							"width": 140,
+							"price": 350
+						}
+					]
+				}
+			]
+		}
+	],
+	"imitation": [
+		{
+			"name": "Лиственница",
+			"grade": [
+				{
+					"name": "Экстра",
+					"options": [
+						{
+							"thickness": 14,
+							"width": 195,
+							"price": 1550
+						},
+						{
+							"thickness": 14,
+							"width": 170,
+							"price": 1500
+						},
+						{
+							"thickness": 14,
+							"width": 140,
+							"price": 1450
+						}
+					]
+				},
+				{
+					"name": "Прима",
+					"options": [
+						{
+							"thickness": 14,
+							"width": 195,
+							"price": 1300
+						},
+						{
+							"thickness": 14,
+							"width": 170,
+							"price": 1250
+						},
+						{
+							"thickness": 14,
+							"width": 140,
+							"price": 1200
+						}
+					]
+				},
+				{
+					"name": "AB",
+					"options": [
+						{
+							"thickness": 14,
+							"width": 195,
+							"price": 850
+						},
+						{
+							"thickness": 14,
+							"width": 170,
+							"price": 850
+						},
+						{
+							"thickness": 14,
+							"width": 140,
+							"price": 850
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Ангарская сосна",
+			"grade": [
+				{
+					"name": "Экстра",
+					"options": [
+						{
+							"thickness": 21,
+							"width": 140,
+							"price": 1230
+						}
+					]
+				},
+				{
+					"name": "Прима",
+					"options": [
+						{
+							"thickness": 21,
+							"width": 140,
+							"price": 1030
+						}
+					]
+				},
+				{
+					"name": "AB",
+					"options": [
+						{
+							"thickness": 21,
+							"width": 140,
+							"price": 800
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Ель/сосна",
+			"grade": [
+				{
+					"name": "AB",
+					"options": [
+						{
+							"thickness": 16,
+							"width": 140,
+							"price": 400
+						},
+						{
+							"thickness": 20,
+							"width": 185,
+							"price": 450
+						},
+						{
+							"thickness": 21,
+							"width": 135,
+							"price": 430
+						},
+						{
+							"thickness": 21,
+							"width": 170,
+							"price": 430
+						},
+						{
+							"thickness": 21,
+							"width": 190,
+							"price": 430
+						},
+						{
+							"thickness": 27,
+							"width": 185,
+							"price": 570
+						}
+					]
+				}
+			]
+		}
+	],
+	"planken_sloping": [
+		{
+			"name": "Лиственница",
+			"grade": [
+				{
+					"name": "Экстра",
+					"options": [
+						{
+							"thickness": 20,
+							"width": 190,
+							"price": 1550
+						},
+						{
+							"thickness": 20,
+							"width": 170,
+							"price": 1450
+						},
+						{
+							"thickness": 20,
+							"width": 140,
+							"price": 1350
+						},
+						{
+							"thickness": 20,
+							"width": 120,
+							"price": 1350
+						},
+						{
+							"thickness": 20,
+							"width": 90,
+							"price": 1350
+						}
+					]
+				},
+				{
+					"name": "Прима",
+					"options": [
+						{
+							"thickness": 20,
+							"width": 190,
+							"price": 1300
+						},
+						{
+							"thickness": 20,
+							"width": 170,
+							"price": 1200
+						},
+						{
+							"thickness": 20,
+							"width": 140,
+							"price": 1100
+						},
+						{
+							"thickness": 20,
+							"width": 120,
+							"price": 1100
+						},
+						{
+							"thickness": 20,
+							"width": 90,
+							"price": 1100
+						}
+					]
+				},
+				{
+					"name": "AB",
+					"options": [
+						{
+							"thickness": 20,
+							"width": 190,
+							"price": 850
+						},
+						{
+							"thickness": 20,
+							"width": 170,
+							"price": 800
+						},
+						{
+							"thickness": 20,
+							"width": 140,
+							"price": 750
+						},
+						{
+							"thickness": 20,
+							"width": 120,
+							"price": 750
+						},
+						{
+							"thickness": 20,
+							"width": 90,
+							"price": 750
+						}
+					]
+				},
+				{
+					"name": "BC",
+					"options": [
+						{
+							"thickness": 20,
+							"width": 190,
+							"price": 650
+						},
+						{
+							"thickness": 20,
+							"width": 170,
+							"price": 600
+						},
+						{
+							"thickness": 20,
+							"width": 140,
+							"price": 550
+						},
+						{
+							"thickness": 20,
+							"width": 120,
+							"price": 550
+						},
+						{
+							"thickness": 20,
+							"width": 90,
+							"price": 550
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Ель/сосна",
+			"grade": [
+				{
+					"name": "AB",
+					"options": [
+						{
+							"thickness": 20,
+							"width": 120,
+							"price": 500
+						}
+					]
+				}
+			]
+		}
+	],
+	"planken": [
+		{
+			"name": "Ель/сосна",
+			"grade": [
+				{
+					"name": "AB",
+					"options": [
+						{
+							"thickness": 20,
+							"width": 95,
+							"price": 450
+						}
+					]
+				}
+			]
+		}
+	],
+	"terrace": [
+		{
+			"name": "Лиственница",
+			"grade": [
+				{
+					"name": "Экстра",
+					"options": [
+						{
+							"thickness": 45,
+							"width": 190,
+							"price": 3300
+						},
+						{
+							"thickness": 45,
+							"width": 142,
+							"price": 3300
+						},
+						{
+							"thickness": 35,
+							"width": 142,
+							"price": 2800
+						},
+						{
+							"thickness": 28,
+							"width": 142,
+							"price": 1800
+						},
+						{
+							"thickness": 28,
+							"width": 110,
+							"price": 1800
+						},
+						{
+							"thickness": 28,
+							"width": 96,
+							"price": 1800
+						}
+					]
+				},
+				{
+					"name": "Прима",
+					"options": [
+						{
+							"thickness": 45,
+							"width": 190,
+							"price": 2700
+						},
+						{
+							"thickness": 45,
+							"width": 142,
+							"price": 2700
+						},
+						{
+							"thickness": 35,
+							"width": 142,
+							"price": 2200
+						},
+						{
+							"thickness": 28,
+							"width": 142,
+							"price": 1400
+						},
+						{
+							"thickness": 28,
+							"width": 110,
+							"price": 1400
+						},
+						{
+							"thickness": 28,
+							"width": 96,
+							"price": 1400
+						}
+					]
+				},
+				{
+					"name": "AB",
+					"options": [
+						{
+							"thickness": 45,
+							"width": 190,
+							"price": 1950
+						},
+						{
+							"thickness": 45,
+							"width": 142,
+							"price": 1950
+						},
+						{
+							"thickness": 35,
+							"width": 142,
+							"price": 1300
+						},
+						{
+							"thickness": 28,
+							"width": 142,
+							"price": 950
+						},
+						{
+							"thickness": 28,
+							"width": 110,
+							"price": 950
+						},
+						{
+							"thickness": 28,
+							"width": 96,
+							"price": 950
+						}
+					]
+				},
+				{
+					"name": "BC",
+					"options": [
+						{
+							"thickness": 45,
+							"width": 190,
+							"price": 1450
+						},
+						{
+							"thickness": 45,
+							"width": 142,
+							"price": 1450
+						},
+						{
+							"thickness": 35,
+							"width": 142,
+							"price": 1080
+						},
+						{
+							"thickness": 28,
+							"width": 142,
+							"price": 750
+						},
+						{
+							"thickness": 28,
+							"width": 110,
+							"price": 750
+						},
+						{
+							"thickness": 28,
+							"width": 96,
+							"price": 750
+						}
+					]
+				}
+			]
+		}
+	],
+	"parquet": [
+		{
+			"name": "Лиственница",
+			"grade": [
+				{
+					"name": "Селект",
+					"options": [
+						{
+							"thickness": 28,
+							"width": 80,
+							"price": 1800
+						},
+						{
+							"thickness": 20,
+							"width": 140,
+							"price": 1500
+						}
+					]
+				},
+				{
+					"name": "Натур",
+					"options": [
+						{
+							"thickness": 28,
+							"width": 80,
+							"price": 1400
+						},
+						{
+							"thickness": 20,
+							"width": 140,
+							"price": 1200
+						}
+					]
+				},
+				{
+					"name": "Рустик",
+					"options": [
+						{
+							"thickness": 28,
+							"width": 80,
+							"price": 900
+						},
+						{
+							"thickness": 20,
+							"width": 140,
+							"price": 900
+						}
+					]
+				},
+				{
+					"name": "Эконом",
+					"options": [
+						{
+							"thickness": 20,
+							"width": 140,
+							"price": 650
+						}
+					]
+				}
+			]
+		}
+	],
+	"floor_board": [
+		{
+			"name": "Лиственница",
+			"grade": [
+				{
+					"name": "Экстра",
+					"options": [
+						{
+							"thickness": 40,
+							"width": 96,
+							"price": 2700
+						},
+						{
+							"thickness": 40,
+							"width": 110,
+							"price": 2700
+						},
+						{
+							"thickness": 40,
+							"width": 140,
+							"price": 2700
+						},
+						{
+							"thickness": 35,
+							"width": 110,
+							"price": 2350
+						},
+						{
+							"thickness": 35,
+							"width": 140,
+							"price": 2350
+						},
+						{
+							"thickness": 28,
+							"width": 96,
+							"price": 1800
+						},
+						{
+							"thickness": 28,
+							"width": 110,
+							"price": 1800
+						},
+						{
+							"thickness": 28,
+							"width": 140,
+							"price": 1800
+						},
+						{
+							"thickness": 20,
+							"width": 140,
+							"price": 1400
+						}
+					]
+				},
+				{
+					"name": "Прима",
+					"options": [
+						{
+							"thickness": 40,
+							"width": 96,
+							"price": 2350
+						},
+						{
+							"thickness": 40,
+							"width": 110,
+							"price": 2350
+						},
+						{
+							"thickness": 40,
+							"width": 140,
+							"price": 2350
+						},
+						{
+							"thickness": 35,
+							"width": 110,
+							"price": 2050
+						},
+						{
+							"thickness": 35,
+							"width": 140,
+							"price": 2050
+						},
+						{
+							"thickness": 28,
+							"width": 96,
+							"price": 1400
+						},
+						{
+							"thickness": 28,
+							"width": 110,
+							"price": 1400
+						},
+						{
+							"thickness": 28,
+							"width": 140,
+							"price": 1400
+						},
+						{
+							"thickness": 20,
+							"width": 140,
+							"price": 1100
+						}
+					]
+				},
+				{
+					"name": "AB",
+					"options": [
+						{
+							"thickness": 40,
+							"width": 96,
+							"price": 1850
+						},
+						{
+							"thickness": 40,
+							"width": 110,
+							"price": 1850
+						},
+						{
+							"thickness": 40,
+							"width": 140,
+							"price": 1850
+						},
+						{
+							"thickness": 35,
+							"width": 110,
+							"price": 1600
+						},
+						{
+							"thickness": 35,
+							"width": 140,
+							"price": 1600
+						},
+						{
+							"thickness": 28,
+							"width": 96,
+							"price": 950
+						},
+						{
+							"thickness": 28,
+							"width": 110,
+							"price": 950
+						},
+						{
+							"thickness": 28,
+							"width": 140,
+							"price": 950
+						},
+						{
+							"thickness": 20,
+							"width": 140,
+							"price": 850
+						}
+					]
+				}
+			]
+		}
+	]
+}

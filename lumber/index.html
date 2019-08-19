@@ -313,14 +313,14 @@
             <svg class="icon icon-phone"><use xlink:href="img/icons.svg#icon-phone"/></svg>
             <span>Заказать звонок</span>
           </a>
-          <div class="calculation__step">
+          <div class="calculation__step calculation__step--1">
 
             <div class="calculation__step-count">
               <span>1</span>
             </div>
             <h3 class="calculation__step-title">Шаг 1: Выберите пиломатериал</h3>
             <div class="calculation__materials">
-              <div class="material-item">
+              <div class="material-item active" data-material="lining">
                 <div class="material-item__img">
                   <img src="img/material/1.jpg" alt="">
                   <button class="material-item__btn-select">Выбрать</button>
@@ -335,7 +335,7 @@
                   <span>д. от 2м до 6м;</span>
                 </div>
               </div>
-              <div class="material-item">
+              <div class="material-item" data-material="imitation">
                 <div class="material-item__img">
                   <img src="img/material/2.jpg" alt="">
                   <button class="material-item__btn-select">Выбрать</button>
@@ -350,7 +350,7 @@
                   <span>д. от 2м до 6м;</span>
                 </div>
               </div>
-              <div class="material-item">
+              <div class="material-item" data-material="planken_sloping">
                 <div class="material-item__img">
                   <img src="img/material/3.jpg" alt="">
                   <button class="material-item__btn-select">Выбрать</button>
@@ -365,7 +365,22 @@
                   <span>д. от 2м до 6м;</span>
                 </div>
               </div>
-              <div class="material-item">
+              <div class="material-item" data-material="planken">
+                <div class="material-item__img">
+                  <img src="img/material/3.jpg" alt="">
+                  <button class="material-item__btn-select">Выбрать</button>
+                </div>
+                <div class="material-item__title">
+                  Окрашенный планкен (прямой)
+                </div>
+                <div class="material-item__text">
+                  Размеры:
+                  <span>ш. 90мм - 145мм;</span>
+                  <span>толщ. 12мм - 15мм;</span>
+                  <span>д. от 2м до 6м;</span>
+                </div>
+              </div>
+              <div class="material-item" data-material="terrace">
                 <div class="material-item__img">
                   <img src="img/material/4.jpg" alt="">
                   <button class="material-item__btn-select">Выбрать</button>
@@ -380,7 +395,7 @@
                   <span>д. от 2м до 6м;</span>
                 </div>
               </div>
-              <div class="material-item">
+              <div class="material-item" data-material="decorative">
                 <div class="material-item__img">
                   <img src="img/material/5.jpg" alt="">
                   <button class="material-item__btn-select">Выбрать</button>
@@ -395,13 +410,13 @@
                   <span>д. от 2м до 6м;</span>
                 </div>
               </div>
-              <div class="material-item">
+              <div class="material-item" data-material="parquet">
                 <div class="material-item__img">
                   <img src="img/material/6.jpg" alt="">
                   <button class="material-item__btn-select">Выбрать</button>
                 </div>
                 <div class="material-item__title">
-                  Уголки окрашенные
+                  Паркетная доска
                 </div>
                 <div class="material-item__text">
                   Размеры:
@@ -410,29 +425,13 @@
                   <span>д. от 2м до 6м;</span>
                 </div>
               </div>
-              <div class="material-item">
+              <div class="material-item" data-material="floor_board">
                 <div class="material-item__img">
                   <img src="img/material/7.jpg" alt="">
                   <button class="material-item__btn-select">Выбрать</button>
                 </div>
                 <div class="material-item__title">
-                  Окрашенный планкен (скошенный)
-                </div>
-                <div class="material-item__text">
-                  Размеры:
-                  <span>ш. 90мм - 145мм;</span>
-                  <span>толщ. 12мм - 15мм;</span>
-                  <span>д. от 2м до 6м;</span>
-                </div>
-              </div>
-              <div class="material-item">
-                <div class="material-item__img">
-                  <img src="img/material/8.jpg" alt="">
-                  <button class="material-item__btn-select">Выбрать</button>
-                </div>
-                <div class="material-item__title">
-                  Окрашенная террасная
-                  доска (палубная доска)
+                  Доска пола
                 </div>
                 <div class="material-item__text">
                   Размеры:
@@ -443,7 +442,7 @@
               </div>
             </div>
           </div>
-          <div class="calculation__step">
+          <div class="calculation__step calculation__step--2">
             <div class="calculation__step-count">
               <span>2</span>
             </div>
@@ -460,51 +459,56 @@
                         <img src="img/material/1.jpg" alt="">
                       </div>
                       <div class="calculation__product-title">
-                        Окрашенный планкен (скошенный)
+                        Окрашенная вагонка штиль
                       </div>
                     </div>
                   </div>
                   <div class="calculation__parameters-column">
-                    <div class="form-box">
+                    <div class="form-box form-box--select">
                       <div class="form-box__title">
                         Выберите породу:
                       </div>
 
                       <div class="form-box__content">
-                        <select class="select">
-                          <option>Ель\Сосна</option>
-                          <option>Ель\Сосна 2</option>
-                          <option>Ель\Сосна 3</option>
-                          <option>Ель\Сосна 4</option>
-                        </select>
+                        <div class="calculation__parameters-species">
+                          <select class="select">
+                            <option>Лиственница</option>
+                            <option>Ангарская сосна</option>
+                            <option>Ель\Сосна</option>
+                          </select>
+                        </div>
+
                       </div>
                     </div>
-                    <div class="form-box">
+                    <div class="form-box form-box--select">
                       <div class="form-box__title">
                         Выберите сорт:
                       </div>
-
                       <div class="form-box__content">
-                        <select class="select">
-                          <option>Прима</option>
-                          <option>Прима 2</option>
-                          <option>Прима 3</option>
-                          <option>Прима 4</option>
-                        </select>
+
+                        <div class="calculation__parameters-grade">
+                          <select class="select">
+                            <option>Экстра</option>
+                            <option>Прима</option>
+                            <option>AB</option>
+                          </select>
+                        </div>
                       </div>
                     </div>
-                    <div class="form-box">
+                    <div class="form-box form-box--select">
                       <div class="form-box__title">
                         Выберите размер:
                       </div>
-
                       <div class="form-box__content">
-                        <select class="select">
-                          <option>90x12</option>
-                          <option>90x13</option>
-                          <option>90x14</option>
-                          <option>90x15</option>
-                        </select>
+
+                        <div class="calculation__parameters-size">
+                          <select class="select">
+                            <option value="1200">14x170</option>
+                            <option value="1150">14x140</option>
+                            <option value="1150">14x120</option>
+                            <option value="900">14x96</option>
+                          </select>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -514,7 +518,7 @@
                         Укажите объемы:
                       </div>
                       <div class="form-box__content">
-                        <input class="form-control spinner" value="25" data-min="1" data-max="100">
+                        <input class="form-control spinner" value="1" data-min="1" data-max="100" name="volume" readonly>
                         <span>м/кв</span>
                       </div>
                     </div>
@@ -523,14 +527,14 @@
                         Выберите тип покраски:
                       </div>
                       <div class="form-box__content">
-                        <input type="checkbox" id="painting_1" class="checkbox">
-                        <label for="painting_1">Декоративная</label>
-                        <input type="checkbox" id="painting_2" class="checkbox">
-                        <label for="painting_2"> С брашированием</label>
-                        <input type="checkbox" id="painting_3" class="checkbox">
-                        <label for="painting_3">Креативная</label>
-                        <input type="checkbox" id="painting_4" class="checkbox">
-                        <label for="painting_4"> Без покраски</label>
+                        <input type="radio" name="painting" id="painting_decorative" data-value="500" class="checkbox" checked>
+                        <label for="painting_decorative">Декоративная</label>
+                        <input type="radio" name="painting" id="painting_brushing" data-value="600" class="checkbox">
+                        <label for="painting_brushing"> С брашированием</label>
+                        <input type="radio" name="painting" id="painting_creative" data-value="1200" class="checkbox">
+                        <label for="painting_creative">Креативная</label>
+                        <input type="radio" name="painting" id="painting_without" data-value="0" class="checkbox">
+                        <label for="painting_without">Без покраски</label>
                         <a href="#" class="form-box__link">Подробнее о типах покраски</a>
                       </div>
                     </div>
@@ -543,18 +547,25 @@
                   Ваш заказ:
                 </div>
                 <div class="calculation__order-info">
-                  Пиломатериал: окрашенный
-                  планкен, порода: сосна,
-                  объем: 25 м/кв.
+                  Пиломатериал: <span id="order-material">окрашенная вагонка штиль</span>,
+                  <span class="calculation__order-species">порода: <span id="order-species">лиственница</span>,</span>
+                  объем: <span id="order-volume">1</span>&nbsp;<span class="nowrap">м/кв.</span>
                   <br>
-                  Ширина: 90, толщина: 12
+                  <span class="calculation__order-sizes">
+                     Ширина: <span id="order-width">14</span>, толщина: <span id="order-thickness">170</span>
+                  </span>
+
                 </div>
                 <div class="calculation__order-title">
                   Итоговая цена:
                 </div>
                 <div class="calculation__order-price">
-                  от <span>300</span> рублей
+                  <div id="order-total">
+                    от <span>300</span> рублей
+                  </div>
+
                 </div>
+
                 <button class="btn btn--block calculation__order-btn"><span>Оформить заказ</span></button>
               </div>
             </div>
