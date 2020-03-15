@@ -76,7 +76,11 @@ $(document).ready(function() {
 	/* Аккордион */
 	
 	$(document).on("click", '.faq-item__header', function(){
-		$(this).closest(".faq-item").toggleClass('active')
+		
+		$(".faq-item").not($(this).closest(".faq-item")).removeClass('active').find(".faq-item__content").slideUp();
+		
+		$(this).closest(".faq-item").toggleClass('active');
+		
 		$(this).next().slideToggle();
 	});  
 	
