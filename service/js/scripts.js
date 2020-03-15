@@ -97,15 +97,12 @@ $(document).ready(function() {
 	
 	$(document).on("click", 'a[data-page-nav]', function(e){
 		e.preventDefault();
-		var href = $(this).attr("href");  
-		if ($(href).length){
-			var position = $(href).offset().top;
-			if ($(this).closest(".header__menu, .footer__menu").length){
-				position -= $(".header").innerHeight(); 
-			}
-			
-			$("html, body").animate({scrollTop: position}, 600); 
-		}
+		var href = $(this).attr("href"),
+			 position = $(href).offset().top;
+			 
+		position -= $(".header").innerHeight(); 
+		
+		$("html, body").animate({scrollTop: position}, 600); 
 		
 	});
 	
