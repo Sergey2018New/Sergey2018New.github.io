@@ -152,6 +152,19 @@ $(document).ready(function() {
 			format: 'DHM'
 		});
 	});
+
+	
+	/* Parallax */
+	var parallax1 = document.getElementById('parallax-1');
+	
+	var parallaxInstance1 = new Parallax(parallax1, {
+	  //relativeInput: true
+	}); 
+	
+	$('.animation').viewportChecker({
+		classToAdd: 'visible animated',
+		offset: 70
+	});
 	
 	// click document
 	/*
