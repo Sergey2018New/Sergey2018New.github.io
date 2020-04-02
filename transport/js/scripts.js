@@ -116,13 +116,40 @@ $(document).ready(function() {
 		$(this).addClass("active");
 		
 	}); 
-	  
+	   
 	 
 	/* Выбор radio button */
 	$(".calc__select-img img").on("click", function(){
 		$(this).closest(".calc__select-item").find('input[type="radio"]').prop("checked", true);
 	});
 	
+	/* UI slider */
+	 $(".slider").each(function(){
+		 var $this = $(this),
+			  handle = $this.find(".ui-slider-handle"),
+			  valueCurrent = parseInt($this.attr("data-value")),
+			  valueMin = parseInt($this.attr("data-value-min")),
+			  valueMax = parseInt($this.attr("data-value-max")); 
+		 
+		 $(this).slider({
+			range: "min",
+			value: valueCurrent, 
+			min: valueMin,
+			max: valueMax, 
+			create: function() {
+				handle.html('<span>До ' + $( this ).slider( "value" ) + ' тонн</span>');
+			},
+			slide: function( event, ui ) {
+			  handle.html('<span>До ' + ui.value + ' тонн</span>');
+			} 
+		 });
+		 //$this.val( "$" + $( "#slider-range-min" ).slider( "value" ) );
+	 });
+	 
+	 
+	 $('input[type="file"]').change(function(e){
+		$(this).closest('.form-attach').find('span').text(e.target.files[0].name);
+	}); 
 	
 	
 	// фильтрация ввода в полях ввода
