@@ -28,69 +28,19 @@ $(document).ready(function() {
 
 
 	// window scroll
-	/*
+	
 	$(window).on("load scroll", function(){
 		var windowScroll = $(window).scrollTop(),
-			blockOffset = $(".header__block").offset().top;
+			blockOffset = $(".wrapper").offset().top + $(".header").innerHeight() + 100;
 			
 		if (windowScroll >= blockOffset){
-			$(".nav").addClass("fixed");
-		}
+			$(".header").addClass("fixed");
+		} 
 		else{
-			$(".nav").removeClass("fixed");
+			$(".header").removeClass("fixed");
 		}
 	});
-	*/
 	
-	// Открытие / закрытие меню
-	/* 
-	$('.btn-toggle').on('click', function() {
-		$("body").toggleClass("open-menu");
-	});
-	*/
-	
-	// Аккордион
-	/*
-	$('.accordion__header').click(function(){
-		$('.accordion__content').slideUp();
-		$('.accordion__header').removeClass('active');
-		   if ($(this).next().is(":visible")){
-			   $(this).next().slideUp();
-			   $(this).removeClass('active');
-		   } else {
-		   $(this).next().slideToggle();
-		   $(this).toggleClass('active');
-		   }
-		  return false;
-	});
-	*/
-
-	// клик по кнопке "вверх"
-	/*
-	$("#scrollup").click(function() {
-	   $("html, body").animate({scrollTop: 0}, 800);
-	})
-	*/
-	
-	// click document
-	/*
-	$(document).on('click', function(e) {
-	
-		var menu = '.menu',
-			 menuBtnToggle = '.btn-toggle';
-
-		if (!$(menu).is(e.target)
-		&& $(e.target).closest(menu).length === 0 
-		&& !$(menuBtnToggle).is(e.target)
-		&& $(e.target).closest(menuBtnToggle).length === 0){
-			$("body").removeClass("menu-open");
-			$(menu).slideUp(300, function(){
-				if($(menu).css('display') === 'none') menu.removeAttr("style");
-			});
-		}
-		
-	}); 
-	*/
 	
 	
 	
@@ -147,22 +97,10 @@ $(document).ready(function() {
 	 });
 	 
 	 
-	 $('input[type="file"]').change(function(e){
+	/* Прикрепить файл */
+	 
+	$('input[type="file"]').change(function(e){
 		$(this).closest('.form-attach').find('span').text(e.target.files[0].name);
 	}); 
-	
-	
-	// фильтрация ввода в полях ввода
-	/*
-	$('.input-count').keypress(function(event){
-		var key, keyChar;
-		if(!event) var event = window.event;	
-		if (event.keyCode) key = event.keyCode;
-		else if(event.which) key = event.which;
-		if(key==null || key==0 || key==8 || key==13 || key==9 || key==46 || key==37 || key==39 ) return true;
-		keyChar=String.fromCharCode(key);
-		if(!/\d/.test(keyChar))	return false;
-	});
-	*/
 	
 });
