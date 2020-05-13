@@ -13,6 +13,9 @@
       <div class="container">
         <div class="header__row">
           <div class="header__left">
+            <button class="header__btn-menu">
+              <svg class="icon icon-menu"><use xlink:href="img/icons.svg#icon-menu"/></svg>
+            </button>
             <div class="header__logo">
               <a href="#" class="logo"><img class="logo__img" src="img/logo.svg" width="112" height="23" alt=""></a>
             </div>
@@ -80,7 +83,7 @@
           </div>
           <div class="header__right">
             <div class="header__login">
-              <a href="#" class="header__login-btn">
+              <a href="#modal-auth" class="header__login-btn" data-fancybox>
                 <svg class="icon icon-user"><use xlink:href="img/icons.svg#icon-user"/></svg>
               </a>
             </div>
@@ -88,6 +91,32 @@
         </div>
       </div>
     </header>
+    <nav class="mobile-nav">
+      <div class="mobile-nav__header">
+        <button class="mobile-nav__btn mobile-nav__btn--back">
+          <svg class="icon icon-arrow-2"><use xlink:href="img/icons.svg#icon-arrow-2"/></svg>
+          <span>Назад</span>
+        </button>
+        <button class="mobile-nav__btn mobile-nav__btn--close">
+          <svg class="icon icon-close"><use xlink:href="img/icons.svg#icon-close"/></svg>
+          <span>Закрыть</span>
+        </button>
+      </div>
+      <div class="mobile-nav__content">
+        <div class="mobile-nav__catalog">
+          <button class="btn mobile-nav__catalog-btn">
+            <span>Все направления</span>
+            <svg class="icon icon-arrow-2"><use xlink:href="img/icons.svg#icon-arrow-2"/></svg>
+          </button>
+          <div class="mobile-nav__catalog-content">
+            <!-- Сюда копируется меню "Все направления" -->
+          </div>
+        </div>
+        <div class="mobile-nav__menu">
+          <!-- Сюда копируется основное меню -->
+        </div>
+      </div>
+    </nav>
     <div class="nav-basket">
       <button type="button" class="nav-basket__btn">
         <span class="nav-basket__btn-text">
@@ -101,23 +130,29 @@
     <div class="basket">
 
     </div>
-    <div class="ticker">
-      <div class="div">
-        Спецпредложение этой весны. 4 урок в подарок! Успей приобрести по супер цене
+    <div class="ticker" data-number="10">
+      <div class="ticker__content">
+        <div class="ticker__text">
+          Спецпредложение этой весны. 4 урок в подарок! Успей приобрести по супер цене
+        </div>
       </div>
+
     </div>
     <div class="home">
       <div class="container">
         <div class="home__row">
           <div class="home__content">
             <div class="home__title">
-              <img src="img/teach-store.svg" alt="">
+              <div>
+                Тича <br>
+                Store
+              </div>
             </div>
             <div class="home__subtitle">
               Лови момент с нами!
             </div>
             <div class="home__text">
-              Обучающая платформа для начинающих  и&nbsp;продвинутых фотографов
+              Обучающая платформа для начинающих и&nbsp;продвинутых фотографов
             </div>
             <div class="home__button">
               <a href="#" class="btn"><span>Как это работает?</span></a>
@@ -493,7 +528,7 @@
     </div>
     <div class="subscription">
       <div class="container">
-        <div class="subscription__content" style="background-image: url('img/bg/bg-subscription.jpg')">
+        <div class="subscription__content">
           <div class="subscription__title">
             Подпишись и получи всё
           </div>
@@ -515,7 +550,7 @@
         <div class="heading">
           <div class="heading__title">
             Спецпредложения <br>
-            от <strong class="heading__title-logo"><span>ТИЧА</span> STORE</strong>
+            от <strong class="heading__title-logo"><span>Тича</span>&nbsp;Store</strong>
           </div>
         </div>
         <div class="tabs">
@@ -530,7 +565,7 @@
           <div class="tab-content">
             <div class="tab-pane active" id="tab-1">
               <div class="owl-carousel carousel-lessons">
-                <div class="lesson-item" style="background-image: url('img/lessons/img-4.jpg')">
+                <div class="lesson-item lesson-item--discount" style="background-image: url('img/lessons/img-4.jpg')">
                   <div class="lesson-item__content">
                     <div class="lesson-item__top">
                       <div class="lesson-item__category">
@@ -550,10 +585,10 @@
                     </div>
                     <div class="lesson-item__control">
                       <button type="button" class="btn-add lesson-item__btn-add">
-                <span class="btn-add__state">
-                  <span>+</span>
-                  <svg class="icon icon-check"><use xlink:href="img/icons.svg#icon-check"/></svg>
-                </span>
+                        <span class="btn-add__state">
+                          <span>+</span>
+                          <svg class="icon icon-check"><use xlink:href="img/icons.svg#icon-check"/></svg>
+                        </span>
                         <span class="btn-add__text">Добавить</span>
                       </button>
                       <a href="#" class="lesson-item__btn-more">
@@ -563,7 +598,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="lesson-item" style="background-image: url('img/lessons/img-5.jpg')">
+                <div class="lesson-item lesson-item--discount" style="background-image: url('img/lessons/img-5.jpg')">
                   <div class="lesson-item__content">
                     <div class="lesson-item__top">
                       <div class="lesson-item__category">
@@ -595,7 +630,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="lesson-item" style="background-image: url('img/lessons/img-6.jpg')">
+                <div class="lesson-item lesson-item--discount" style="background-image: url('img/lessons/img-6.jpg')">
                   <div class="lesson-item__content">
                     <div class="lesson-item__top">
                       <div class="lesson-item__category">
@@ -630,7 +665,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="lesson-item" style="background-image: url('img/lessons/img-4.jpg')">
+                <div class="lesson-item lesson-item--discount" style="background-image: url('img/lessons/img-4.jpg')">
                   <div class="lesson-item__content">
                     <div class="lesson-item__top">
                       <div class="lesson-item__category">
@@ -663,7 +698,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="lesson-item" style="background-image: url('img/lessons/img-5.jpg')">
+                <div class="lesson-item lesson-item--discount" style="background-image: url('img/lessons/img-5.jpg')">
                   <div class="lesson-item__content">
                     <div class="lesson-item__top">
                       <div class="lesson-item__category">
@@ -695,7 +730,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="lesson-item" style="background-image: url('img/lessons/img-6.jpg')">
+                <div class="lesson-item lesson-item--discount" style="background-image: url('img/lessons/img-6.jpg')">
                   <div class="lesson-item__content">
                     <div class="lesson-item__top">
                       <div class="lesson-item__category">
@@ -734,17 +769,15 @@
             </div>
             <div class="tab-pane" id="tab-2">
               <div class="owl-carousel carousel-collections">
-                <div class="lesson-item lesson-item--collection" style="background-image: url('img/collections/img-1.jpg')">
+                <div class="lesson-item lesson-item--collection lesson-item--discount" style="background-image: url('img/collections/img-1.jpg')">
                   <div class="lesson-item__content">
                     <div class="lesson-item__top">
                       <div class="lesson-item__category">
                         Вспышки
                       </div>
-                      <!--
                       <div class="lesson-item__quantity">
                         4 урока
                       </div>
-                      -->
                       <div class="lesson-item__discount">
                         <div>
                           <span>-30</span>%
@@ -774,17 +807,15 @@
                     </div>
                   </div>
                 </div>
-                <div class="lesson-item lesson-item--collection" style="background-image: url('img/collections/img-2.jpg')">
+                <div class="lesson-item lesson-item--collection lesson-item--discount" style="background-image: url('img/collections/img-2.jpg')">
                   <div class="lesson-item__content">
                     <div class="lesson-item__top">
                       <div class="lesson-item__category">
                         Вспышки
                       </div>
-                      <!--
                       <div class="lesson-item__quantity">
                         6 уроков
                       </div>
-                      -->
                       <div class="lesson-item__discount">
                         <div>
                           <span>-30</span>%
@@ -813,17 +844,15 @@
                     </div>
                   </div>
                 </div>
-                <div class="lesson-item lesson-item--collection" style="background-image: url('img/collections/img-1.jpg')">
+                <div class="lesson-item lesson-item--collection lesson-item--discount" style="background-image: url('img/collections/img-1.jpg')">
                   <div class="lesson-item__content">
                     <div class="lesson-item__top">
                       <div class="lesson-item__category">
                         Вспышки
                       </div>
-                      <!--
                       <div class="lesson-item__quantity">
                         4 урока
                       </div>
-                      -->
                       <div class="lesson-item__discount">
                         <div>
                           <span>-30</span>%
@@ -853,17 +882,15 @@
                     </div>
                   </div>
                 </div>
-                <div class="lesson-item lesson-item--collection" style="background-image: url('img/collections/img-2.jpg')">
+                <div class="lesson-item lesson-item--collection lesson-item--discount" style="background-image: url('img/collections/img-2.jpg')">
                   <div class="lesson-item__content">
                     <div class="lesson-item__top">
                       <div class="lesson-item__category">
                         Вспышки
                       </div>
-                      <!--
                       <div class="lesson-item__quantity">
                         6 уроков
                       </div>
-                      -->
                       <div class="lesson-item__discount">
                         <div>
                           <span>-30</span>%
@@ -907,18 +934,22 @@
               <strong>кадров</strong>
             </div>
             <div class="heading__text">
-              Всем привет, я Максим Добрый,  и я расскажу как я сделал кадр
+              Всем привет, я Максим Добрый, и я расскажу как я сделал кадр
             </div>
           </div>
           <div class="parsing__items">
             <div class="article-item">
               <div class="article-item__img">
-                <a href="#">
-                  <span class="article-item__img-bg" style="background-image: url('img/articles/img-1.jpg')"></span>
-                  <div class="article-item__category">
-                    Видео
-                  </div>
-                </a>
+                <span class="article-item__img-bg" style="background-image: url('img/articles/img-1.jpg')"></span>
+                <div class="article-item__category">
+                  Видео
+                </div>
+                <div class="article-item__more">
+                  <a href="#" class="btn btn--more-border article-item__more-btn">
+                    <span>Подробнее</span>
+                    <span class="btn__icon"><svg class="icon icon-arrow-3"><use xlink:href="img/icons.svg#icon-arrow-3"/></svg></span>
+                  </a>
+                </div>
               </div>
               <div class="article-item__title">
                 <a href="#">Как сделать отличный кадр с уличным освещением без вспышки</a>
@@ -936,12 +967,16 @@
             </div>
             <div class="article-item">
               <div class="article-item__img">
-                <a href="#">
-                  <span class="article-item__img-bg" style="background-image: url('img/articles/img-2.jpg')"></span>
-                  <div class="article-item__category">
-                    Видео
-                  </div>
-                </a>
+                <span class="article-item__img-bg" style="background-image: url('img/articles/img-2.jpg')"></span>
+                <div class="article-item__category">
+                  Видео
+                </div>
+                <div class="article-item__more">
+                  <a href="#" class="btn btn--more-border article-item__more-btn">
+                    <span>Подробнее</span>
+                    <span class="btn__icon"><svg class="icon icon-arrow-3"><use xlink:href="img/icons.svg#icon-arrow-3"/></svg></span>
+                  </a>
+                </div>
               </div>
               <div class="article-item__title">
                 <a href="#">Как сделать отличный кадр с уличным освещением без вспышки</a>
@@ -959,12 +994,16 @@
             </div>
             <div class="article-item">
               <div class="article-item__img">
-                <a href="#">
-                  <span class="article-item__img-bg" style="background-image: url('img/articles/img-3.jpg')"></span>
-                  <div class="article-item__category">
-                    Статья
-                  </div>
-                </a>
+                <span class="article-item__img-bg" style="background-image: url('img/articles/img-3.jpg')"></span>
+                <div class="article-item__category">
+                  Статья
+                </div>
+                <div class="article-item__more">
+                  <a href="#" class="btn btn--more-border article-item__more-btn">
+                    <span>Подробнее</span>
+                    <span class="btn__icon"><svg class="icon icon-arrow-3"><use xlink:href="img/icons.svg#icon-arrow-3"/></svg></span>
+                  </a>
+                </div>
               </div>
               <div class="article-item__title">
                 <a href="#">Как сделать отличный кадр с уличным освещением без вспышки</a>
@@ -1143,11 +1182,11 @@
               <div class="heading heading--light">
                 <div class="heading__title">
                   О платформе <br>
-                  <strong class="heading__title-logo"><span>ТИЧА</span> STORE</strong>
+                  <strong class="heading__title-logo"><span>Тича</span>&nbsp;Store</strong>
                 </div>
               </div>
               <div class="about__text">
-                <p>Мы - платформа, которая поможет тебе стать лучше в своём деле.  Цифры говорят за себя.</p>
+                <p>Мы - платформа, которая поможет тебе стать лучше в своём деле. Цифры говорят за себя.</p>
               </div>
               <div class="about__statistics">
                 <div class="statistics-item">
@@ -1182,9 +1221,10 @@
                 </div>
               </div>
               <div class="about__button">
-                <a href="#" class="btn about__btn">
+                <a href="#" class="btn btn--more about__btn">
                   <span>Результаты учеников</span>
-                  <svg class="icon icon-arrow-2"><use xlink:href="img/icons.svg#icon-arrow-2"/></svg>
+                  <span class="btn__icon"><svg class="icon icon-arrow-3"><use xlink:href="img/icons.svg#icon-arrow-3"/></svg></span>
+                  
                 </a>
               </div>
               <div class="about__side-text">About teach store</div>
@@ -1205,7 +1245,7 @@
             <div class="feedback__title">
               Не можешь определиться какие уроки будут полезными для тебя?
             </div>
-            <div class="feedback__subtitle">
+            <div class="feedback__text">
               Мы сделаем индивидуальную подборку бесплатно!
             </div>
             <form action="#" class="feedback__form">
@@ -1236,7 +1276,6 @@
         </div>
       </div>
     </div>
-
     <footer class="footer">
       <div class="container">
         <div class="footer__top">
@@ -1283,6 +1322,65 @@
       </div> 
     </footer>
   </div>
+
+  <!-- Модальное окно авторизации -->
+  <div id="modal-auth" class="modal modal-auth" style="display: none">
+    <div class="modal__content">
+      <a href="#modal-login" class="btn open-modal-login">
+        <span>Войти в личный кабинет</span>
+      </a>
+      <a href="#" class="btn btn--dark" data-fancybox="">
+        <span>Зарегистрироваться</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Модальное окно входа -->
+  <div id="modal-login" class="modal modal-login" style="display: none">
+    <div class="modal__title">
+      Войти в личный кабинет
+    </div>
+    <div class="modal__content">
+      <form action="#" class="modal-login__form">
+        <div class="form-group">
+          <div class="form-box">
+            <label for="login_email" class="form-box__label"><span>Введите email:</span></label>
+            <input type="email" class="form-control form-box__input" value="alexander.nov@gmail.com" id="login_email" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="form-box">
+            <label for="login_password" class="form-box__label"><span>Введите пароль:</span></label>
+            <input type="password" class="form-control form-box__input" value="password" id="login_password" required>
+          </div>
+        </div>
+        <div class="form-group form-button">
+          <button type="submit" class="btn btn--full btn-submit">
+            <span>Войти</span>
+          </button>
+        </div>
+      </form>
+      <div class="block-social modal-login__social">
+        <div class="block-social__text">
+          Войти с помощью:
+        </div>
+        <ul class="block-social__list">
+          <li class="block-social__item block-social__item--vk">
+            <a href="#"><svg class="icon icon-vk"><use xlink:href="img/icons.svg#icon-vk"/></svg></a>
+          </li>
+          <li class="block-social__item block-social__item--inst">
+            <a href="#"><svg class="icon icon-inst"><use xlink:href="img/icons.svg#icon-inst"/></svg></a>
+          </li>
+          <li class="block-social__item block-social__item--facebook">
+            <a href="#"><svg class="icon icon-facebook"><use xlink:href="img/icons.svg#icon-facebook"/></svg></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Модальное окно регистрации -->
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 	<script src="js/libs.min.js"></script>
