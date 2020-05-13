@@ -37,11 +37,11 @@ $(document).ready(function() {
 		 
 	}); 
 	
-	/* Кнопка открытия модального окна "Вход в личный кабинет" */
-	$(".open-modal-login").on("click", function(e){
+	/* Открытие модальных окон "Вход в личный кабинет" и "Регистрация" */
+	$(".open-modal-login, .open-modal-register").on("click", function(e){
 		var $this = $(this);
 		$.fancybox.close();
-		setTimeout(function(){
+		setTimeout(function(){ 
 			$.fancybox.open({
 				src  : $this.attr("href"),
 				type : 'inline',
@@ -57,7 +57,6 @@ $(document).ready(function() {
 		}, 350);
 	});
 	
-	/* Кнопка открытия входа в личный кабинет */
 	
 	
 	/* Инициализация карусели "Топ уроки" (плагин Owl Carousel) */
@@ -247,8 +246,9 @@ $(document).ready(function() {
 	}); 
 	*/
 	
-	/* инициализация маски телефона (плагин maskedinput) */
+	/* Инициализация масок (плагин maskedinput) */
   $('.mask-phone').mask('+7 (999) 999-99-99');
+  $('.mask-date').mask('99/99/9999');
 	 
 	// фильтрация ввода в полях ввода
 	/*
@@ -262,6 +262,7 @@ $(document).ready(function() {
 		if(!/\d/.test(keyChar))	return false;
 	});
 	*/
+	
 	
 	/* Планшетное/мобильное меню */
 	
@@ -292,7 +293,9 @@ $(document).ready(function() {
 		$(this).next().slideToggle();
 	})
 	
+	
 	/* "Бегущая строка" */
+	
 	var ticker = $(".ticker"),
 		 tickerContent = $(".ticker__content"),
 		 tickerText = $(".ticker__text");
@@ -306,9 +309,28 @@ $(document).ready(function() {
 	
 	
 	/* Кнопка "Добавить" */
+	
 	$(document).on('click', ".btn-add", function() {
 		$(this).addClass("btn-add--added");
 		$(this).find(".btn-add__text").text("Добавлено");
+	}); 
+	
+	
+	/* Показать пароль */
+	
+	$(document).on('click', ".form-box__icon", function() {
+		if ($(this).closest(".form-box--password").length){
+			var $formBox = $(this).closest(".form-box--password");
+			
+			if ($formBox.hasClass("show")){
+				 $formBox.find(".form-box__input").attr("type", "password");
+			}
+			else{
+				 $formBox.find(".form-box__input").attr("type", "text"); 
+			}
+			
+			$formBox.toggleClass("show");
+		}
 	}); 
 	
 });

@@ -1266,7 +1266,7 @@
                   <button type="submit" class="btn feedback__form-submit"><span>Оставить заявку</span></button>
                 </div>
               </div>
-              <div class="feedback__form-agreement">
+              <div class="form-agreement feedback__form-agreement">
                 <svg class="icon icon-lock"><use xlink:href="img/icons.svg#icon-lock"/></svg>
                 Нажимаю на кнопку “Оставить заявку” я даю согласие на обработку персональных данных в соответствии с политикой конфиденциальности
               </div>
@@ -1329,7 +1329,7 @@
       <a href="#modal-login" class="btn open-modal-login">
         <span>Войти в личный кабинет</span>
       </a>
-      <a href="#" class="btn btn--dark" data-fancybox="">
+      <a href="#modal-register" class="btn btn--dark open-modal-register">
         <span>Зарегистрироваться</span>
       </a>
     </div>
@@ -1381,6 +1381,131 @@
   </div>
 
   <!-- Модальное окно регистрации -->
+  <div id="modal-register" class="modal modal-register" style="display: none">
+    <div class="modal__title">
+      Регистрация нового пользователя
+    </div>
+    <div class="modal__content">
+      <form action="#" class="modal-register__form">
+        <div class="form-row">
+          <div class="form-column">
+            <div class="form-group">
+              <div class="form-box">
+                <label for="register_name" class="form-box__label"><span>Введите ваше имя:</span></label>
+                <input type="text" class="form-control form-box__input" value="Александр" id="register_name" required>
+              </div>
+            </div>
+          </div>
+          <div class="form-column">
+            <div class="form-group">
+              <div class="form-box">
+                <label for="register_surname" class="form-box__label"><span>Ваша фамилия:</span></label>
+                <input type="text" class="form-control form-box__input" value="Новосельцев" id="register_surname" required>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="form-box">
+            <label for="register_phone" class="form-box__label"><span>Номер телефона:</span></label>
+            <input type="text" class="form-control form-box__input mask-phone" placeholder="+7 (___) ___-__-__" id="register_phone" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="form-box">
+            <label for="register_email" class="form-box__label"><span>Номер email:</span></label>
+            <input type="email" class="form-control form-box__input" value="alexander.nov@gmail.com" id="register_email" required>
+          </div>
+        </div>
+        <div class="form-group form-gender">
+          <div>Ваш пол:</div>
+          <div class="form-radio">
+            <input type="radio" name="register_gender" id="register_gender_1" class="radio" checked>
+            <label for="register_gender_1">Мужской</label>
+          </div>
+          <div class="form-radio">
+            <input type="radio" name="register_gender" id="register_gender_2" class="radio">
+            <label for="register_gender_2">Женский</label>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-column">
+            <div class="form-group">
+              <div class="form-box">
+                <label for="register_date_birthday" class="form-box__label"><span>Дата рождения:</span></label>
+                <input type="text" class="form-control form-box__input mask-date" placeholder="19/08/1992" id="register_date_birthday" required>
+              </div>
+            </div>
+          </div>
+          <div class="form-column">
+            <div class="form-group">
+              <div class="form-box">
+                <label for="register_age" class="form-box__label"><span>Возраст:</span></label>
+                <input type="text" class="form-control form-box__input" value="27" id="register_age" required>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="form-box">
+            <label for="register_city" class="form-box__label"><span>Город:</span></label>
+            <input type="text" class="form-control form-box__input" id="register_city" value="Нижний Новгород" required>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-column">
+            <div class="form-group">
+              <div class="form-box form-box--icon form-box--password">
+                <label for="register_password" class="form-box__label"><span>Придумайте пароль:</span></label>
+                <input type="password" class="form-control form-box__input" value="password" id="register_password" required>
+                <div class="form-box__icon">
+                  <svg class="icon icon-eye"><use xlink:href="img/icons.svg#icon-eye"/></svg>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="form-column">
+            <div class="form-group">
+              <div class="form-box form-box--icon form-box--password">
+                <label for="register_repeat_password" class="form-box__label"><span>Повторите пароль:</span></label>
+                <input type="password" class="form-control form-box__input" value="password" id="register_repeat_password" required>
+                <div class="form-box__icon">
+                  <svg class="icon icon-eye"><use xlink:href="img/icons.svg#icon-eye"/></svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="form-group form-agreement">
+          <svg class="icon icon-lock"><use xlink:href="img/icons.svg#icon-lock"/></svg>
+          Нажимаю на кнопку “Зарегистироваться” я даю согласие на обработку персональных данных в соответствии с политикой конфиденциальности
+        </div>
+
+        <div class="form-group form-button">
+          <button type="submit" class="btn btn--full btn-submit">
+            <span>Зарегистироваться</span>
+          </button>
+        </div>
+      </form>
+      <div class="block-social modal-register__social">
+        <div class="block-social__text">
+          Быстрая регистрация через соц.сети:
+        </div>
+        <ul class="block-social__list">
+          <li class="block-social__item block-social__item--vk">
+            <a href="#"><svg class="icon icon-vk"><use xlink:href="img/icons.svg#icon-vk"/></svg></a>
+          </li>
+          <li class="block-social__item block-social__item--inst">
+            <a href="#"><svg class="icon icon-inst"><use xlink:href="img/icons.svg#icon-inst"/></svg></a>
+          </li>
+          <li class="block-social__item block-social__item--facebook">
+            <a href="#"><svg class="icon icon-facebook"><use xlink:href="img/icons.svg#icon-facebook"/></svg></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 	<script src="js/libs.min.js"></script>
