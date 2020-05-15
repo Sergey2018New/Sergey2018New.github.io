@@ -117,19 +117,6 @@
         </div>
       </div>
     </nav>
-    <div class="nav-basket">
-      <button type="button" class="nav-basket__btn">
-        <span class="nav-basket__btn-text">
-          Багаж знаний
-        </span>
-        <span class="nav-basket__btn-icon">
-          <svg class="icon icon-suitcase"><use xlink:href="img/icons.svg#icon-suitcase"/></svg>
-        </span>
-      </button>
-    </div>
-    <div class="basket">
-
-    </div>
     <div class="ticker" data-number="10">
       <div class="ticker__content">
         <div class="ticker__text">
@@ -206,13 +193,13 @@
                 </div>
                 <div class="lesson-item__control">
                   <button type="button" class="btn-add lesson-item__btn-add">
-                <span class="btn-add__state">
-                  <span>+</span>
-                  <svg class="icon icon-check"><use xlink:href="img/icons.svg#icon-check"/></svg>
-                </span>
+                    <span class="btn-add__state">
+                      <span>+</span>
+                      <svg class="icon icon-check"><use xlink:href="img/icons.svg#icon-check"/></svg>
+                    </span>
                     <span class="btn-add__text">Добавить</span>
                   </button>
-                  <a href="#" class="lesson-item__btn-more">
+                  <a href="#modal-lesson" class="lesson-item__btn-more" data-fancybox="">
                     <span>Подробнее</span>
                     <svg class="icon icon-arrow-2"><use xlink:href="img/icons.svg#icon-arrow-2"/></svg>
                   </a>
@@ -239,7 +226,7 @@
                 </span>
                     <span class="btn-add__text">Добавить</span>
                   </button>
-                  <a href="#" class="lesson-item__btn-more">
+                  <a href="#modal-lesson" class="lesson-item__btn-more" data-fancybox="">
                     <span>Подробнее</span>
                     <svg class="icon icon-arrow-2"><use xlink:href="img/icons.svg#icon-arrow-2"/></svg>
                   </a>
@@ -269,7 +256,7 @@
                 </span>
                     <span class="btn-add__text">Добавить</span>
                   </button>
-                  <a href="#" class="lesson-item__btn-more">
+                  <a href="#modal-lesson" class="lesson-item__btn-more" data-fancybox="">
                     <span>Подробнее</span>
                     <svg class="icon icon-arrow-2"><use xlink:href="img/icons.svg#icon-arrow-2"/></svg>
                   </a>
@@ -299,7 +286,7 @@
                 </span>
                     <span class="btn-add__text">Добавить</span>
                   </button>
-                  <a href="#" class="lesson-item__btn-more">
+                  <a href="#modal-lesson" class="lesson-item__btn-more" data-fancybox="">
                     <span>Подробнее</span>
                     <svg class="icon icon-arrow-2"><use xlink:href="img/icons.svg#icon-arrow-2"/></svg>
                   </a>
@@ -326,7 +313,7 @@
                 </span>
                     <span class="btn-add__text">Добавить</span>
                   </button>
-                  <a href="#" class="lesson-item__btn-more">
+                  <a href="#modal-lesson" class="lesson-item__btn-more" data-fancybox="">
                     <span>Подробнее</span>
                     <svg class="icon icon-arrow-2"><use xlink:href="img/icons.svg#icon-arrow-2"/></svg>
                   </a>
@@ -356,7 +343,7 @@
                 </span>
                     <span class="btn-add__text">Добавить</span>
                   </button>
-                  <a href="#" class="lesson-item__btn-more">
+                  <a href="#modal-lesson" class="lesson-item__btn-more" data-fancybox="">
                     <span>Подробнее</span>
                     <svg class="icon icon-arrow-2"><use xlink:href="img/icons.svg#icon-arrow-2"/></svg>
                   </a>
@@ -555,15 +542,15 @@
         </div>
         <div class="tabs">
           <ul class="tab-nav" data-tabs-nav="">
-            <li data-tab-id="tab-1" class="active">
+            <li data-tab-id="tab-lessons" class="active">
               <span>Уроки</span>
             </li>
-            <li data-tab-id="tab-2">
+            <li data-tab-id="tab-collections">
               <span>Подборки уроков</span>
             </li>
           </ul>
           <div class="tab-content">
-            <div class="tab-pane active" id="tab-1">
+            <div class="tab-pane active" id="tab-lessons">
               <div class="owl-carousel carousel-lessons">
                 <div class="lesson-item lesson-item--discount" style="background-image: url('img/lessons/img-4.jpg')">
                   <div class="lesson-item__content">
@@ -591,7 +578,7 @@
                         </span>
                         <span class="btn-add__text">Добавить</span>
                       </button>
-                      <a href="#" class="lesson-item__btn-more">
+                      <a href="#modal-lesson" class="lesson-item__btn-more" data-fancybox="">
                         <span>Подробнее</span>
                         <svg class="icon icon-arrow-2"><use xlink:href="img/icons.svg#icon-arrow-2"/></svg>
                       </a>
@@ -623,7 +610,7 @@
                 </span>
                         <span class="btn-add__text">Добавить</span>
                       </button>
-                      <a href="#" class="lesson-item__btn-more">
+                      <a href="#modal-lesson" class="lesson-item__btn-more" data-fancybox="">
                         <span>Подробнее</span>
                         <svg class="icon icon-arrow-2"><use xlink:href="img/icons.svg#icon-arrow-2"/></svg>
                       </a>
@@ -658,7 +645,7 @@
                 </span>
                         <span class="btn-add__text">Добавить</span>
                       </button>
-                      <a href="#" class="lesson-item__btn-more">
+                      <a href="#modal-lesson" class="lesson-item__btn-more" data-fancybox="">
                         <span>Подробнее</span>
                         <svg class="icon icon-arrow-2"><use xlink:href="img/icons.svg#icon-arrow-2"/></svg>
                       </a>
@@ -691,7 +678,7 @@
                 </span>
                         <span class="btn-add__text">Добавить</span>
                       </button>
-                      <a href="#" class="lesson-item__btn-more">
+                      <a href="#modal-lesson" class="lesson-item__btn-more" data-fancybox="">
                         <span>Подробнее</span>
                         <svg class="icon icon-arrow-2"><use xlink:href="img/icons.svg#icon-arrow-2"/></svg>
                       </a>
@@ -723,7 +710,7 @@
                 </span>
                         <span class="btn-add__text">Добавить</span>
                       </button>
-                      <a href="#" class="lesson-item__btn-more">
+                      <a href="#modal-lesson" class="lesson-item__btn-more" data-fancybox="">
                         <span>Подробнее</span>
                         <svg class="icon icon-arrow-2"><use xlink:href="img/icons.svg#icon-arrow-2"/></svg>
                       </a>
@@ -758,7 +745,7 @@
                 </span>
                         <span class="btn-add__text">Добавить</span>
                       </button>
-                      <a href="#" class="lesson-item__btn-more">
+                      <a href="#modal-lesson" class="lesson-item__btn-more" data-fancybox="">
                         <span>Подробнее</span>
                         <svg class="icon icon-arrow-2"><use xlink:href="img/icons.svg#icon-arrow-2"/></svg>
                       </a>
@@ -767,7 +754,7 @@
                 </div>
               </div>
             </div>
-            <div class="tab-pane" id="tab-2">
+            <div class="tab-pane" id="tab-collections">
               <div class="owl-carousel carousel-collections">
                 <div class="lesson-item lesson-item--collection lesson-item--discount" style="background-image: url('img/collections/img-1.jpg')">
                   <div class="lesson-item__content">
@@ -831,10 +818,10 @@
                     </div>
                     <div class="lesson-item__control">
                       <button type="button" class="btn-add lesson-item__btn-add">
-                <span class="btn-add__state">
-                  <span>+</span>
-                  <svg class="icon icon-check"><use xlink:href="img/icons.svg#icon-check"/></svg>
-                </span>
+                        <span class="btn-add__state">
+                            <span>+</span>
+                          <svg class="icon icon-check"><use xlink:href="img/icons.svg#icon-check"/></svg>
+                        </span>
                         <span class="btn-add__text">Добавить</span>
                       </button>
                       <a href="#" class="lesson-item__btn-more">
@@ -869,10 +856,10 @@
                     </div>
                     <div class="lesson-item__control">
                       <button type="button" class="btn-add lesson-item__btn-add">
-                <span class="btn-add__state">
-                  <span>+</span>
-                  <svg class="icon icon-check"><use xlink:href="img/icons.svg#icon-check"/></svg>
-                </span>
+                        <span class="btn-add__state">
+                          <span>+</span>
+                          <svg class="icon icon-check"><use xlink:href="img/icons.svg#icon-check"/></svg>
+                        </span>
                         <span class="btn-add__text">Добавить</span>
                       </button>
                       <a href="#" class="lesson-item__btn-more">
@@ -906,10 +893,10 @@
                     </div>
                     <div class="lesson-item__control">
                       <button type="button" class="btn-add lesson-item__btn-add">
-                <span class="btn-add__state">
-                  <span>+</span>
-                  <svg class="icon icon-check"><use xlink:href="img/icons.svg#icon-check"/></svg>
-                </span>
+                        <span class="btn-add__state">
+                          <span>+</span>
+                          <svg class="icon icon-check"><use xlink:href="img/icons.svg#icon-check"/></svg>
+                        </span>
                         <span class="btn-add__text">Добавить</span>
                       </button>
                       <a href="#" class="lesson-item__btn-more">
@@ -1044,7 +1031,7 @@
         <div class="owl-carousel carousel-reviews">
           <div class="review-item">
             <div class="review-item__preview">
-              <a href="#">
+              <a data-fancybox href="https://www.youtube.com/watch?v=_sI_Ps7JSEk">
                 <img class="review-item__preview-img" src="img/reviews/img-1.png" alt="">
                 <span class="review-item__preview-play">
                   <svg class="icon icon-play"><use xlink:href="img/icons.svg#icon-play"/></svg>
@@ -1060,7 +1047,7 @@
           </div>
           <div class="review-item">
             <div class="review-item__preview">
-              <a href="#">
+              <a data-fancybox href="https://www.youtube.com/watch?v=_sI_Ps7JSEk">
                 <img class="review-item__preview-img" src="img/reviews/img-2.png" alt="">
                 <span class="review-item__preview-play">
                   <svg class="icon icon-play"><use xlink:href="img/icons.svg#icon-play"/></svg>
@@ -1076,7 +1063,7 @@
           </div>
           <div class="review-item">
             <div class="review-item__preview">
-              <a href="#">
+              <a  data-fancybox href="https://www.youtube.com/watch?v=_sI_Ps7JSEk">
                 <img class="review-item__preview-img" src="img/reviews/img-3.png" alt="">
                 <span class="review-item__preview-play">
                   <svg class="icon icon-play"><use xlink:href="img/icons.svg#icon-play"/></svg>
@@ -1092,7 +1079,7 @@
           </div>
           <div class="review-item">
             <div class="review-item__preview">
-              <a href="#">
+              <a data-fancybox href="https://www.youtube.com/watch?v=_sI_Ps7JSEk">
                 <img class="review-item__preview-img" src="img/reviews/img-4.png" alt="">
                 <span class="review-item__preview-play">
                   <svg class="icon icon-play"><use xlink:href="img/icons.svg#icon-play"/></svg>
@@ -1108,7 +1095,7 @@
           </div>
           <div class="review-item">
             <div class="review-item__preview">
-              <a href="#">
+              <a data-fancybox href="https://www.youtube.com/watch?v=_sI_Ps7JSEk">
                 <img class="review-item__preview-img" src="img/reviews/img-1.png" alt="">
                 <span class="review-item__preview-play">
                   <svg class="icon icon-play"><use xlink:href="img/icons.svg#icon-play"/></svg>
@@ -1124,7 +1111,7 @@
           </div>
           <div class="review-item">
             <div class="review-item__preview">
-              <a href="#">
+              <a data-fancybox href="https://www.youtube.com/watch?v=_sI_Ps7JSEk">
                 <img class="review-item__preview-img" src="img/reviews/img-2.png" alt="">
                 <span class="review-item__preview-play">
                   <svg class="icon icon-play"><use xlink:href="img/icons.svg#icon-play"/></svg>
@@ -1140,7 +1127,7 @@
           </div>
           <div class="review-item">
             <div class="review-item__preview">
-              <a href="#">
+              <a data-fancybox href="https://www.youtube.com/watch?v=_sI_Ps7JSEk">
                 <img class="review-item__preview-img" src="img/reviews/img-3.png" alt="">
                 <span class="review-item__preview-play">
                   <svg class="icon icon-play"><use xlink:href="img/icons.svg#icon-play"/></svg>
@@ -1156,7 +1143,7 @@
           </div>
           <div class="review-item">
             <div class="review-item__preview">
-              <a href="#">
+              <a data-fancybox href="https://www.youtube.com/watch?v=_sI_Ps7JSEk">
                 <img class="review-item__preview-img" src="img/reviews/img-4.png" alt="">
                 <span class="review-item__preview-play">
                   <svg class="icon icon-play"><use xlink:href="img/icons.svg#icon-play"/></svg>
@@ -1170,7 +1157,7 @@
               14 Апреля 2020
             </div>
           </div>
-        </div>
+        </div> 
       </div>
     </div>
     <div class="about">
@@ -1321,6 +1308,261 @@
         </div>
       </div> 
     </footer>
+  </div>
+
+  <!-- Кнопка "Багаж знаний" -->
+  <div class="nav-cart">
+    <button class="nav-cart__btn" data-fancybox-cart="" data-src="#modal-cart">
+        <span class="nav-cart__btn-text">
+          Багаж знаний
+        </span>
+      <span class="nav-cart__btn-icon">
+          <svg class="icon icon-suitcase"><use xlink:href="img/icons.svg#icon-suitcase"/></svg>
+        </span>
+    </button>
+  </div>
+
+  <!-- Модальное окно корзины -->
+  <div id="modal-cart" class="modal modal-cart" style="display: none">
+    <div class="modal__title">
+      Твой багаж
+    </div>
+    <div class="modal__content">
+      <div class="cart">
+        <div class="cart__products">
+          <div class="cart__products-title">
+            уроки
+          </div>
+          <div class="cart__products-items">
+            <div class="scrollbar cart__products-scroll">
+              <div class="cart-product">
+                <div class="cart-product__img">
+                  <a href="#"><img src="img/cart/img-1.png" alt=""></a>
+                </div>
+                <div class="cart-product__content">
+                  <div class="cart-product__category">
+                    <div>естественный свет</div>
+                  </div>
+                  <div class="cart-product__title">
+                    <a href="#">Заголовок урока добавленного в багаж знаний</a>
+                  </div>
+                </div>
+
+                <div class="cart-product__cost">
+                  <div>
+                    <div class="cart-product__cost-text">Стоимость:</div>
+                    <div class="cart-product__price">
+                      <span>359</span> руб.
+                    </div>
+                  </div>
+                </div>
+                <div class="cart-product__remove">
+                  <svg class="icon icon-basket"><use xlink:href="img/icons.svg#icon-basket"/></svg>
+                </div>
+              </div>
+              <div class="cart-product">
+                <div class="cart-product__img">
+                  <a href="#"><img src="img/cart/img-2.png" alt=""></a>
+                </div>
+                <div class="cart-product__content">
+                  <div class="cart-product__category">
+                    <div>естественный свет</div>
+                  </div>
+                  <div class="cart-product__title">
+                    <a href="#">Заголовок урока добавленного в багаж знаний</a>
+                  </div>
+                </div>
+
+                <div class="cart-product__cost">
+                  <div>
+                    <div class="cart-product__cost-text">Стоимость:</div>
+                    <div class="cart-product__price cart-product__price--old">
+                      <span>359</span> руб.
+                    </div>
+                    <div class="cart-product__price">
+                      <span>359</span> руб.
+                    </div>
+                  </div>
+                </div>
+                <div class="cart-product__remove">
+                  <svg class="icon icon-basket"><use xlink:href="img/icons.svg#icon-basket"/></svg>
+                </div>
+              </div>
+              <div class="cart-product cart-product--free">
+                <div class="cart-product__img">
+                  <a href="#"><span>+</span></a>
+                </div>
+                <div class="cart-product__content">
+                  <div class="cart-product__text-free">
+                    <div>Бесплатно</div>
+                  </div>
+                  <div class="cart-product__title">
+                    Добавьте еще 1 урок
+                  </div>
+                  <div class="cart-product__text">
+                    Дарим каждый пятый урок!
+                  </div>
+                </div>
+
+                <div class="cart-product__button">
+                  <a href="#" class="btn btn--more-border cart-product__btn-select">
+                    <span>Выбрать урок</span>
+                    <span class="btn__icon"><svg class="icon icon-arrow-3"><use xlink:href="img/icons.svg#icon-arrow-3"/></svg></span>
+                  </a>
+                </div>
+              </div>
+              <div class="cart-product">
+                <div class="cart-product__img">
+                  <a href="#"><img src="img/cart/img-1.png" alt=""></a>
+                </div>
+                <div class="cart-product__content">
+                  <div class="cart-product__category">
+                    <div>естественный свет</div>
+                  </div>
+                  <div class="cart-product__title">
+                    <a href="#">Заголовок урока добавленного в багаж знаний</a>
+                  </div>
+                </div>
+
+                <div class="cart-product__cost">
+                  <div>
+                    <div class="cart-product__cost-text">Стоимость:</div>
+                    <div class="cart-product__price">
+                      <span>359</span> руб.
+                    </div>
+                  </div>
+                </div>
+                <div class="cart-product__remove">
+                  <svg class="icon icon-basket"><use xlink:href="img/icons.svg#icon-basket"/></svg>
+                </div>
+              </div>
+              <div class="cart-product">
+                <div class="cart-product__img">
+                  <a href="#"><img src="img/cart/img-2.png" alt=""></a>
+                </div>
+                <div class="cart-product__content">
+                  <div class="cart-product__category">
+                    <div>естественный свет</div>
+                  </div>
+                  <div class="cart-product__title">
+                    <a href="#">Заголовок урока добавленного в багаж знаний</a>
+                  </div>
+                </div>
+
+                <div class="cart-product__cost">
+                  <div>
+                    <div class="cart-product__cost-text">Стоимость:</div>
+                    <div class="cart-product__price cart-product__price--old">
+                      <span>359</span> руб.
+                    </div>
+                    <div class="cart-product__price">
+                      <span>359</span> руб.
+                    </div>
+                  </div>
+                </div>
+                <div class="cart-product__remove">
+                  <svg class="icon icon-basket"><use xlink:href="img/icons.svg#icon-basket"/></svg>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+        <div class="cart__products">
+          <div class="cart__products-title">
+            подборки
+          </div>
+          <div class="cart__products-items">
+            <div class="scrollbar cart__products-scroll">
+              <div class="cart-product">
+                <div class="cart-product__img">
+                  <img src="img/cart/img-3.png" alt="">
+                </div>
+                <div class="cart-product__content">
+                  <div class="cart-product__category">
+                    <div>естественный свет</div>
+                  </div>
+                  <div class="cart-product__title">
+                    Заголовок урока добавленного в багаж знаний
+                  </div>
+                </div>
+
+                <div class="cart-product__cost">
+                  <div>
+                    <div class="cart-product__cost-text">Стоимость:</div>
+                    <div class="cart-product__price">
+                      <span>359</span> руб.
+                    </div>
+                  </div>
+                </div>
+                <div class="cart-product__remove">
+                  <svg class="icon icon-basket"><use xlink:href="img/icons.svg#icon-basket"/></svg>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="cart__bottom">
+          <div class="cart__bottom-row">
+            <div class="cart__bottom-column">
+              <div class="cart__promotional">
+
+                <div class="cart__promotional-head">
+                  <div class="cart__promotional-title">
+                    Промокоды
+                  </div>
+                </div>
+                <div class="cart__promotional-box">
+                  <div class="form-box">
+                    <label for="promotional_code" class="form-box__label"><span>Введите промокод:</span></label>
+                    <input type="text" class="form-control form-box__input" value="SUMMER2020" id="promotional_code">
+                  </div>
+                  <button class="btn btn--dark cart__promotional-btn" type="button">
+                    <span>Применить</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="cart__bottom-column">
+              <div class="cart__promotional">
+                <div class="cart__promotional-head">
+                  <div class="cart__promotional-title">
+                    Доступно кэшбэк:
+                  </div>
+                  <div class="cart__promotional-price">
+                    <span>1032</span> руб.
+                  </div>
+                </div>
+                <div class="cart__promotional-box">
+                  <div class="form-box">
+                    <label for="cashback" class="form-box__label"><span>Введите сумму:</span></label>
+                    <input type="text" class="form-control form-box__input" value="753 руб." id="cashback">
+                  </div>
+                  <button class="btn btn--dark cart__promotional-btn" type="button">
+                    <span>Применить</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="cart__total">
+            <div class="cart__total-text">Итого:</div>
+            <div class="cart__total-sum">
+              <span>3 000</span> руб.
+            </div>
+
+          </div>
+          <div class="cart__buy">
+            <a href="#" class="btn cart__buy-btn">
+              <span>Купить</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </div>
 
   <!-- Модальное окно авторизации -->
@@ -1502,6 +1744,116 @@
             <a href="#"><svg class="icon icon-facebook"><use xlink:href="img/icons.svg#icon-facebook"/></svg></a>
           </li>
         </ul>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Модальное окно карточки урока -->
+  <div id="modal-lesson" class="modal modal-lesson" style="display: none">
+    <div class="modal__title">
+      Как круто снять кольца с одной вспышкой
+    </div>
+    <div class="modal__content">
+      <div class="card-lesson">
+        <div class="card-lesson__description">
+          <div class="card-lesson__text">
+            <p>История, конечно прям ЦЕНЗУРА! Если у тебя слабенькое сердце, то не стоит читать ЭТУ ИСТОРИЮ! Мы просто, тогда были юные)))) и не понимали, зачем продвижение, и что такое маркетинг и реклама!!!</p>
+          </div>
+          <div class="card-lesson__what-need">
+            <div class="card-lesson__what-need-title">
+              Что нужно для такого кадра?
+            </div>
+            <div class="card-lesson__what-need-items">
+              <div class="what-need-item">
+                <div class="what-need-item__icon">
+                  <svg class="icon icon-flash"><use xlink:href="img/icons.svg#icon-flash"/></svg>
+                </div>
+                <div class="what-need-item__text">
+                  Всего одна вспышка, и все!
+                </div>
+              </div>
+              <div class="what-need-item">
+                <div class="what-need-item__icon">
+                  <svg class="icon icon-dog"><use xlink:href="img/icons.svg#icon-dog"/></svg>
+                </div>
+                <div class="what-need-item__text">
+                  Далее нужен объект для съемки: муж, собака либо кукла (обычная кукла)
+                </div>
+              </div>
+              <div class="what-need-item">
+                <div class="what-need-item__icon">
+                  <svg class="icon icon-candles"><use xlink:href="img/icons.svg#icon-candles"/></svg>
+                </div>
+                <div class="what-need-item__text">
+                  Внимание! Синхронизатор для этого урока нужен! и ТЕМНОТА!
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="card-lesson__result">
+          <div class="card-lesson__result-title">
+            Результат, который мы получим в итоге:
+          </div>
+          <div class="card-lesson__result-img">
+            <img src="img/lesson-result.jpg" alt="">
+          </div>
+        </div>
+        <div class="card-lesson__bottom">
+          <div class="card-lesson__cost">
+
+            <div class="card-lesson__cost-text">
+              Стоимость урока:
+            </div>
+            <div class="card-lesson__cost-row">
+              <div class="card-lesson__price">
+                <span>299</span> руб.
+              </div>
+              <div class="card-lesson__price card-lesson__price--old">
+                <span>299</span> руб.
+              </div>
+            </div>
+          </div>
+          <div class="card-lesson__cost">
+
+            <div class="card-lesson__cost-text">
+              <span>Стоимость по подписке:</span>
+              <a href="javascript:void(0)" class="btn-help" data-tooltip-trigger="click" data-tooltip="" data-tooltip-html='Урок доступен бесплатно если у Вас есть подписка. <br> <a href="#">Подробнее о подписке</a>'>?</a>
+
+            </div>
+            <div class="card-lesson__cost-row">
+              <div class="card-lesson__price card-lesson__price--subscription">
+                Бесплатно
+              </div>
+            </div>
+          </div>
+          <div class="card-lesson__button">
+            <a href="#" class="btn btn-add card-lesson__btn-add">
+              <svg class="icon icon-check"><use xlink:href="img/icons.svg#icon-check"/></svg>
+              <span class="btn-add__text">Добавить</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Модальное окно Добавлено -->
+  <div id="modal-added" class="modal modal-added" style="display: none">
+    <div class="modal__title">
+      Урок “Заголовок добавленного урока или подборки” добавлен!
+    </div>
+    <div class="modal__content">
+      <div class="modal-added__buttons">
+        <a href="#modal-cart" class="btn" data-fancybox-cart="">
+          <span>перейти в багаж заний</span>
+        </a>
+        <a href="javascript:void(0)" class="btn btn--border" data-fancybox-close="">
+          <span>вернуться в магазин</span>
+        </a>
       </div>
     </div>
 

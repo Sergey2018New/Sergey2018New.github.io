@@ -1,18 +1,31 @@
 $(document).ready(function() {
 
-	// инициализация подержки SVG в IE (плагин svg4everybody)
+	/* инициализация подержки SVG в IE (плагин svg4everybody) */
 	svg4everybody();
 	
-	// Добавление классов устройства и браузера в документе (плагин Detect.js)
+	/* Добавление классов устройства и браузера в документе (плагин Detect.js) */
 	var user = detect.parse(navigator.userAgent);
 	$("html").addClass(user.browser.family)
 			 .addClass(user.os.family)
 			 .addClass(user.device.type);
 	
-	/* Путь до файла иконок */
+	/* Путь до файла иконок 
 	var srcIcons = 'img/icons.svg';
+	*/
 	
-	/* Инициализация плагина fancybox */
+	/* Инициализация скроллбара (плагин jScrollPane) */
+	if ($('.scroll-pane').length){
+		//$('.scroll-pane').jScrollPane();
+	}
+	
+	 
+	 
+	 if ($(".scrollbar").length){
+		 var scrollbar = Scrollbar.init(document.querySelector('.scrollbar'));
+	 }
+	
+	
+	/* Инициализация модальных окон (плагин fancybox) */
 	
 	$.fancybox.defaults.closeExisting = true;
 	$.fancybox.defaults.animationEffect = "fade";
@@ -23,11 +36,17 @@ $(document).ready(function() {
 		$(".header, .nav-basket").addClass("compensate-for-scrollbar");
 	}
 	
+	function afterShowFancybox (){
+		/* Инициализация скроллбара (плагин jScrollPane) */
+		$('.scroll-pane').jScrollPane();
+	}
+	
 	function afterCloseFancybox (){
 		$(".header, .nav-basket").removeClass("compensate-for-scrollbar");
 	}
 	
 	$("[data-fancybox]").fancybox({
+		//s backFocus: false,
 		beforeShow : function( instance, current ) {
 			beforeShowFancybox();
 		},
@@ -37,25 +56,65 @@ $(document).ready(function() {
 		 
 	}); 
 	
-	/* Открытие модальных окон "Вход в личный кабинет" и "Регистрация" */
-	$(".open-modal-login, .open-modal-register").on("click", function(e){
-		var $this = $(this);
-		$.fancybox.close();
-		setTimeout(function(){ 
-			$.fancybox.open({
-				src  : $this.attr("href"),
-				type : 'inline',
-				opts : {
-					 beforeShow : function( instance, current ) {
-						beforeShowFancybox();
-					},
-					 afterClose : function( instance, current ) {
-						afterCloseFancybox();
-					}
-				}
-			});
-		}, 350);
+	$('[data-fancybox-cart]').fancybox({
+		baseClass: "fancybox-cart",
+		 transitionDuration: 400,
+		animationEffect: "slide-right", 
+		beforeShow : function( instance, current ) {
+			beforeShowFancybox();
+		},
+		afterShow : function( instance, current ) {
+			scrollbar.update();
+		},
+		 afterClose : function( instance, current ) {
+			afterCloseFancybox();
+		}
 	});
+	
+	
+	/* Инициализация всплывающих подсказкок (плагин Tooltipster) */
+	
+	$('[data-tooltip]').each(function(){
+		var $this = $(this),
+			 dataTheme = $this.attr("data-tooltip-theme"),
+			 dataHTML = $this.attr("data-tooltip-html"),
+			 dataTrigger = $this.attr("data-tooltip-trigger");
+			 
+		
+		if (dataTheme == undefined){
+			dataTheme = "";
+		}
+		
+		if (dataTrigger == undefined){
+			dataTrigger = "hover";
+		}
+		
+		if (dataHTML != undefined){
+			$this.tooltipster({
+				trigger: dataTrigger,
+				theme: dataTheme,
+				maxWidth: 192,
+				content: dataHTML,
+				contentAsHTML: true,
+				side: ['top', 'bottom', 'right', 'left']
+			});
+		}
+		else{
+			$this.tooltipster({
+				trigger: dataTrigger,
+				theme: dataTheme,
+				maxWidth: 192,
+				side: ['top', 'bottom', 'right', 'left']
+			}); 
+		}
+		 
+	});
+	
+	
+	/* Инициализация масок (плагин maskedinput) */
+   $('.mask-phone').mask('+7 (999) 999-99-99');
+   $('.mask-date').mask('99/99/9999');
+	
 	
 	
 	
@@ -135,6 +194,7 @@ $(document).ready(function() {
 			}
 		});
 	}
+	
 
 	// window resize
 	function windowSize(){
@@ -246,9 +306,7 @@ $(document).ready(function() {
 	}); 
 	*/
 	
-	/* Инициализация масок (плагин maskedinput) */
-  $('.mask-phone').mask('+7 (999) 999-99-99');
-  $('.mask-date').mask('99/99/9999');
+
 	 
 	// фильтрация ввода в полях ввода
 	/*
@@ -313,6 +371,21 @@ $(document).ready(function() {
 	$(document).on('click', ".btn-add", function() {
 		$(this).addClass("btn-add--added");
 		$(this).find(".btn-add__text").text("Добавлено");
+		setTimeout(function(){
+			$.fancybox.open({
+				src  : '#modal-added',
+				type : 'inline',
+				opts : {
+					beforeShow : function( instance, current ) {
+						beforeShowFancybox();
+					},
+					 afterClose : function( instance, current ) {
+						afterCloseFancybox();
+					}
+				}
+			});
+		}, 300);
+		
 	}); 
 	
 	
@@ -331,6 +404,29 @@ $(document).ready(function() {
 			
 			$formBox.toggleClass("show");
 		}
-	}); 
+	});
+
+	
+	/* Открытие модальных окон "Вход в личный кабинет" и "Регистрация" */
+	
+	$(".open-modal-login, .open-modal-register").on("click", function(e){
+		var $this = $(this);
+		$.fancybox.close();
+		setTimeout(function(){ 
+			$.fancybox.open({
+				src  : $this.attr("href"),
+				type : 'inline',
+				opts : {
+					 beforeShow : function( instance, current ) {
+						beforeShowFancybox();
+					},
+					 afterClose : function( instance, current ) {
+						afterCloseFancybox();
+					}
+				}
+			}); 
+		}, 350);
+	});
+	
 	
 });
