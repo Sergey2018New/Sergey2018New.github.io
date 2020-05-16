@@ -33,7 +33,7 @@ $(document).ready(function() {
 	$.fancybox.defaults.touch = false;
 	
 	function beforeShowFancybox (){
-		$(".header, .nav-basket").addClass("compensate-for-scrollbar");
+		$(".header, .nav-cart").addClass("compensate-for-scrollbar");
 	}
 	
 	function afterShowFancybox (){
@@ -42,7 +42,7 @@ $(document).ready(function() {
 	}
 	
 	function afterCloseFancybox (){
-		$(".header, .nav-basket").removeClass("compensate-for-scrollbar");
+		$(".header, .nav-cart").removeClass("compensate-for-scrollbar");
 	}
 	
 	$("[data-fancybox]").fancybox({
@@ -113,7 +113,7 @@ $(document).ready(function() {
 	
 	/* Инициализация масок (плагин maskedinput) */
    $('.mask-phone').mask('+7 (999) 999-99-99');
-   $('.mask-date').mask('99/99/9999');
+   $('.mask-date').mask('99/99/9999',{autoclear: false});
 	
 	
 	
@@ -427,6 +427,51 @@ $(document).ready(function() {
 			}); 
 		}, 350);
 	});
+	
+	
+	/* Анимация чисел  */
+	
+	if ($(".about__statistics").length){
+		//animationNumbers();
+		var countbox = ".about__statistics"; 
+		$('.about__statistics').viewportChecker({
+			classToAdd: 'visible animated',
+			//offset: 70,
+			callbackFunction: function(elem, action){
+				 $(countbox).find('.statistics-item__number').spincrement({
+					 thousandSeparator: "",
+					 duration: 4500
+				});
+			},
+		});
+	}
+	/*
+	function animationNumbers(){
+		
+		var show = true;
+		var countbox = ".about__statistics";
+		$(window).on("scroll load resize", function () {
+		  if (!show) return false; // Отменяем показ анимации, если она уже была выполнена
+		  var w_top = $(window).scrollTop(); // Количество пикселей на которое была прокручена страница
+		  var e_top = $(countbox).offset().top; // Расстояние от блока со счетчиками до верха всего документа
+		  var w_height = $(window).height(); // Высота окна браузера
+		  var d_height = $(document).height(); // Высота всего документа
+		  var e_height = $(countbox).outerHeight(); // Полная высота блока со счетчиками
+		  if (w_top + 500 >= e_top || w_height + w_top == d_height || e_height + e_top < w_height) {
+				$(countbox).find(".statistics-item__number").css('opacity', '1');
+				$(countbox).find('.statistics-item__number').spincrement({
+					 thousandSeparator: "",
+					 duration: 1500,
+				});
+				 
+				show = false;
+		  }
+		});
+	}
+	
+	*/
+	
+	
 	
 	
 });

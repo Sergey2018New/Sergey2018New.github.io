@@ -1851,7 +1851,7 @@ button:focus {
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 0 35px;
+  padding: 1px 35px 0;
   height: 50px;
   min-width: 180px;
   font-family: "MuseoSans", sans-serif;
@@ -1913,14 +1913,16 @@ button:focus {
   width: 15px;
   height: 8px;
   overflow: hidden;
+  -webkit-transition: 0.25s -webkit-transform linear;
+  transition: 0.25s -webkit-transform linear;
+  -o-transition: 0.25s transform linear;
+  transition: 0.25s transform linear;
+  transition: 0.25s transform linear, 0.25s -webkit-transform linear;
 }
 .btn__icon .icon {
   display: block;
   left: -6px;
   position: relative;
-  -webkit-transition: 0.25s left linear;
-  -o-transition: 0.25s left linear;
-  transition: 0.25s left linear;
 }
 .btn--full {
   width: 100%;
@@ -1947,8 +1949,10 @@ button:focus {
 .btn--more .icon {
   fill: #000;
 }
-.btn--more:hover .icon {
-  left: 0;
+.btn--more:hover .btn__icon {
+  -webkit-transform: translate(5px, 0);
+      -ms-transform: translate(5px, 0);
+          transform: translate(5px, 0);
 }
 .btn--more-border {
   padding: 0 15px 0 25px;
@@ -1978,8 +1982,10 @@ button:focus {
   color: #ffffff;
   background: rgba(255, 255, 255, 0.1);
 }
-.btn--more-border:hover .icon {
-  left: 0;
+.btn--more-border:hover .btn__icon {
+  -webkit-transform: translate(5px, 0);
+      -ms-transform: translate(5px, 0);
+          transform: translate(5px, 0);
 }
 .btn--border {
   background: #ffffff;
@@ -2448,9 +2454,6 @@ textarea.form-control {
   opacity: 1;
 }
 /* Плагин модального окна - Fancybox */
-.fancybox-active {
-  overflow: hidden;
-}
 .fancybox-slide--html .fancybox-close-small {
   width: 34px;
   height: 34px;
@@ -2506,6 +2509,9 @@ textarea.form-control {
   -webkit-transform: translateX(0);
       -ms-transform: translateX(0);
           transform: translateX(0);
+}
+.fancybox-slide--video .fancybox-content {
+  max-width: none;
 }
 /* Плагин всплывающих окон - Tooltipster */
 .tooltipster-content {
@@ -2800,8 +2806,7 @@ textarea.form-control {
   position: relative;
   z-index: 2;
   height: 42px;
-  padding-left: 20px;
-  padding-right: 25px;
+  padding: 0 25px 0 20px;
   min-width: 0;
   -webkit-box-shadow: none;
           box-shadow: none;
@@ -2882,6 +2887,8 @@ textarea.form-control {
           flex-grow: 1;
 }
 .header__login-btn {
+  position: relative;
+  z-index: 3;
   width: 44px;
   height: 44px;
   display: -webkit-box;
@@ -2896,6 +2903,7 @@ textarea.form-control {
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
+  cursor: pointer;
   background: #FFFFFF;
   border: 1px solid #E9E9E9;
   border-radius: 50%;
@@ -2903,8 +2911,35 @@ textarea.form-control {
   -o-transition: 0.25s border-color;
   transition: 0.25s border-color;
 }
-.header__login-btn:hover {
+.header__login-block {
+  position: absolute;
+  z-index: 2;
+  right: -15px;
+  top: 0;
+  max-width: 366px;
+  padding: 70px 15px 25px;
+  pointer-events: none;
+  -webkit-box-shadow: 0 12px 19px rgba(0, 0, 0, 0.17);
+          box-shadow: 0 12px 19px rgba(0, 0, 0, 0.17);
+  border-radius: 2px;
+  opacity: 0;
+  background: #ffffff;
+  -webkit-transition: 0.25s opacity;
+  -o-transition: 0.25s opacity;
+  transition: 0.25s opacity;
+}
+.header__login-block .btn {
+  margin-bottom: 15px;
+}
+.header__login-block .btn:last-child {
+  margin-bottom: 0;
+}
+.header__login:hover .header__login-btn {
   border-color: #85898B;
+}
+.header__login:hover .header__login-block {
+  opacity: 1;
+  pointer-events: auto;
 }
 .header__btn-menu {
   display: none;
@@ -3138,7 +3173,9 @@ textarea.form-control {
   color: #253365;
 }
 .block-more__link:hover .block-more__icon {
-  width: 15px;
+  -webkit-transform: translate(5px, 0);
+      -ms-transform: translate(5px, 0);
+          transform: translate(5px, 0);
 }
 .block-more__icon {
   position: absolute;
@@ -3149,9 +3186,11 @@ textarea.form-control {
   height: 8px;
   margin-top: -4px;
   overflow: hidden;
-  -webkit-transition: 0.25s width linear;
-  -o-transition: 0.25s width linear;
-  transition: 0.25s width linear;
+  -webkit-transition: 0.25s -webkit-transform linear;
+  transition: 0.25s -webkit-transform linear;
+  -o-transition: 0.25s transform linear;
+  transition: 0.25s transform linear;
+  transition: 0.25s transform linear, 0.25s -webkit-transform linear;
 }
 .block-more__icon .icon {
   position: absolute;
@@ -3201,10 +3240,20 @@ textarea.form-control {
   position: relative;
 }
 .tab-pane {
-  display: none;
+  opacity: 0;
+  overflow: hidden;
+  height: 0;
+  -webkit-transition: 0.4s opacity;
+  -o-transition: 0.4s opacity;
+  transition: 0.4s opacity;
+  -webkit-transition-delay: 0.2s;
+       -o-transition-delay: 0.2s;
+          transition-delay: 0.2s;
 }
 .tab-pane.active {
-  display: block;
+  opacity: 1;
+  overflow: visible;
+  height: auto;
 }
 /* Скроллбар */
 .scrollbar {
@@ -3439,6 +3488,10 @@ textarea.form-control {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
@@ -3574,7 +3627,7 @@ textarea.form-control {
       -ms-flex-direction: column;
           flex-direction: column;
   padding-top: 5px;
-  background: rgba(30, 33, 45, 0.9);
+  background: rgba(8, 11, 21, 0.9);
   border-radius: 4px;
   opacity: 0;
   -webkit-transition: 0.25s opacity;
@@ -4131,6 +4184,7 @@ textarea.form-control {
   -webkit-text-fill-color: transparent;
   text-shadow: 0px 8px 15px rgba(253, 202, 0, 0.1);
   color: #FDCA00;
+  opacity: 0;
 }
 .statistics-item__text {
   max-width: 176px;
@@ -4984,8 +5038,7 @@ textarea.form-control {
   right: 0;
   min-width: 0;
   width: 94px;
-  padding-left: 5px;
-  padding-right: 5px;
+  padding: 0 5px;
   font-size: 12px;
   text-transform: none;
   border-radius: 0 4px 4px 0;
@@ -5035,6 +5088,7 @@ textarea.form-control {
   min-width: 170px;
   height: 40px;
   font-size: 12px;
+  padding-top: 0;
 }
 .fancybox-cart .fancybox-slide {
   padding: 0;
@@ -5049,6 +5103,7 @@ textarea.form-control {
 }
 .modal-cart {
   max-width: 608px;
+  min-height: 100%;
   -webkit-box-shadow: -16px 0px 30px rgba(0, 0, 0, 0.18);
           box-shadow: -16px 0px 30px rgba(0, 0, 0, 0.18);
   border-radius: 0;
@@ -6194,6 +6249,9 @@ textarea.form-control {
 }
 html.Desktop .lesson-item:hover .lesson-item__control {
   opacity: 1;
+}
+html:not(.Desktop) .fancybox-active {
+  overflow: hidden;
 }
 html:not(.Desktop) .lesson-item__btn-more {
   position: absolute;
