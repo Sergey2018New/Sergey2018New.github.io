@@ -739,7 +739,7 @@ textarea.form-control {
   content: '';
   position: absolute;
   left: 50%;
-  top: -32.77777778vh;
+  top: -33vh;
   width: 155.52083333vw;
   height: 74.16666667vh;
   background: url('../img/wave-desktop.svg') 0 0 no-repeat;
