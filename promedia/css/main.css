@@ -770,3 +770,12 @@ textarea.form-control {
 }
 /* Футер */
 /* Медиа запросы */
+@media screen and (device-aspect-ratio: 1.6) {
+  .home__title {
+    margin-bottom: 5vh;
+    min-height: 40vh;
+  }
+  .home__content:before {
+    height: 47vh;
+  }
+}
