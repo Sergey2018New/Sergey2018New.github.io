@@ -1,5 +1,5 @@
 $(document).ready(function() {
-console.log($("body").height());
+console.log($("body").width());
 	// инициализация подержки SVG в IE (плагин svg4everybody)
 	svg4everybody();
 	
@@ -74,6 +74,25 @@ console.log($("body").height());
 	});
 	$('.mobile-menu__btn-close').on('click', function() {
 		$("body").removeClass("active-menu");
+	});
+	
+	
+	/* Открытие / закрытие меню */
+	
+	function changeWidth (){
+		var heightContent = $(".content").height();
+			widthContent = heightContent * 16/9;
+		$('.content').width(widthContent);
+	
+	}
+	
+	changeWidth();
+	$(window).on("resize", function(){
+		changeWidth();
+	});
+	$(window).on("load resize", function(){
+		var heightBg = $(".customers__bg").height();
+		$(".customers__bg").width(heightBg * 2986/801);
 	});
 	
 });
