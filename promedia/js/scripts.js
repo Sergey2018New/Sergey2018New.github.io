@@ -83,7 +83,10 @@ console.log($("body").width());
 		var heightContent = $(".content").height();
 			widthContent = heightContent * 16/9;
 		$('.content').width(widthContent);
-	
+		
+		//console.log();
+		$(".menu").css("font-size", (heightContent * 0.023).toFixed(2) + "px");
+		$(".home__title h1").css("font-size", (heightContent * 0.092).toFixed(2) + "px");
 	}
 	
 	changeWidth();
@@ -93,6 +96,7 @@ console.log($("body").width());
 	$(window).on("load resize", function(){
 		var heightBg = $(".customers__bg").height();
 		$(".customers__bg").width(heightBg * 2986/801);
+		
 	});
 	
 });
