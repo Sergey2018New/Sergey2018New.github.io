@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>ТичаStore</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/main.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+  <link rel="manifest" href="favicon/site.webmanifest">
+  <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+</head>
+<body>
+  <div class="wrapper">
+    <div class="page-content">
+      <div class="container">
+        <p><a href="#modal-lesson" data-fancybox data-touch="false">Открыть модальное окно урока (с подпиской)</a></p>
+        <p><a href="#modal-lesson-bought" data-fancybox data-touch="false">Открыть модальное окно купленного и добавленного урока</a></p>
+        <p><a href="#modal-register" data-fancybox data-touch="false">Открыть модальное окно регистрации (перед покупкой)</a></p>
+        <p><a href="#modal-success" data-fancybox data-touch="false">Открыть модальное окно успеха</a></p>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Модальное окно регистрации -->
+  <div id="modal-register" class="modal modal-register" style="display: none">
+    <div class="modal__title">
+      Зарегистрируйтесь, чтобы получать купленные уроки в свой личный кабинет
+    </div>
+    <div class="modal__text">
+      После регистрации, вы получите доступ к личному кабинету, в котором найдете все Ваши купленные уроки и подборки.
+    </div>
+    <div class="modal__content">
+      <form action="#" class="modal-register__form">
+        <div class="form-row">
+          <div class="form-column">
+            <div class="form-group">
+              <div class="form-box">
+                <label for="register_name" class="form-box__label"><span>Введите ваше имя:</span></label>
+                <input type="text" class="form-control form-box__input" value="" id="register_name" required>
+              </div>
+            </div>
+          </div>
+          <div class="form-column">
+            <div class="form-group">
+              <div class="form-box">
+                <label for="register_surname" class="form-box__label"><span>Ваша фамилия:</span></label>
+                <input type="text" class="form-control form-box__input" value="" id="register_surname" required>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="form-box form-box--phone">
+            <label for="register_phone" class="form-box__label"><span>Номер телефона:</span></label>
+            <input type="tel" class="form-control form-box__input mask-number" placeholder="" id="register_phone" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="form-box">
+            <label for="register_email" class="form-box__label"><span>Введите email:</span></label>
+            <input type="email" class="form-control form-box__input" value="" id="register_email" required>
+          </div>
+        </div>
+        <div class="form-group form-gender">
+          <div>Ваш пол:</div>
+          <div class="form-radio">
+            <input type="radio" name="register_gender" id="register_gender_1" class="radio" checked>
+            <label for="register_gender_1">Мужской</label>
+          </div>
+          <div class="form-radio">
+            <input type="radio" name="register_gender" id="register_gender_2" class="radio">
+            <label for="register_gender_2">Женский</label>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-column">
+            <div class="form-group">
+              <div class="form-box">
+                <label for="register_date_birthday" class="form-box__label"><span>Дата рождения:</span></label>
+                <input type="text" class="form-control form-box__input mask-date" placeholder="__/__/____" id="register_date_birthday" required>
+              </div>
+            </div>
+          </div>
+          <div class="form-column">
+            <div class="form-group">
+              <div class="form-box">
+                <label for="register_age" class="form-box__label"><span>Возраст:</span></label>
+                <input type="text" class="form-control form-box__input input-number" value="" id="register_age" required>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="form-box">
+            <label for="register_city" class="form-box__label"><span>Город:</span></label>
+            <input type="text" class="form-control form-box__input" id="register_city" value="" required>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-column">
+            <div class="form-group">
+              <div class="form-box form-box--icon form-box--password">
+                <label for="register_password" class="form-box__label"><span>Придумайте пароль:</span></label>
+                <input type="password" class="form-control form-box__input" value="" id="register_password" required>
+                <div class="form-box__icon">
+                  <svg class="icon icon-eye"><use xlink:href="img/icons.svg#icon-eye"/></svg>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="form-column">
+            <div class="form-group">
+              <div class="form-box form-box--icon form-box--password">
+                <label for="register_repeat_password" class="form-box__label"><span>Повторите пароль:</span></label>
+                <input type="password" class="form-control form-box__input" value="" id="register_repeat_password" required>
+                <div class="form-box__icon">
+                  <svg class="icon icon-eye"><use xlink:href="img/icons.svg#icon-eye"/></svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="form-group form-agreement">
+          <svg class="icon icon-lock"><use xlink:href="img/icons.svg#icon-lock"/></svg>
+          Нажимаю на кнопку “Зарегистироваться” я даю согласие на обработку персональных данных в соответствии с политикой конфиденциальности
+        </div>
+
+        <div class="form-group form-button">
+          <button type="submit" class="btn btn--full btn-submit">
+            <span>Зарегистироваться</span>
+          </button>
+        </div>
+      </form>
+      <div class="block-social modal-register__social">
+        <div class="block-social__text">
+          Быстрая регистрация через соц.сети:
+        </div>
+        <ul class="block-social__list">
+          <li class="block-social__item block-social__item--vk">
+            <a href="#"><svg class="icon icon-vk"><use xlink:href="img/icons.svg#icon-vk"/></svg></a>
+          </li>
+          <li class="block-social__item block-social__item--inst">
+            <a href="#"><svg class="icon icon-inst"><use xlink:href="img/icons.svg#icon-inst"/></svg></a>
+          </li>
+          <li class="block-social__item block-social__item--facebook">
+            <a href="#"><svg class="icon icon-facebook"><use xlink:href="img/icons.svg#icon-facebook"/></svg></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Модальное окно карточки урока с оформленной подпиской -->
+  <div id="modal-lesson" class="modal modal-lesson" style="display: none">
+    <div class="modal__title">
+      Как круто снять кольца с одной вспышкой
+    </div>
+    <div class="modal__content">
+      <div class="card-lesson card-lesson--subscription">
+        <div class="card-lesson__description">
+          <div class="card-lesson__text">
+            <p>История, конечно прям ЦЕНЗУРА! Если у тебя слабенькое сердце, то не стоит читать ЭТУ ИСТОРИЮ! Мы просто, тогда были юные)))) и не понимали, зачем продвижение, и что такое маркетинг и реклама!!!</p>
+          </div>
+          <div class="card-lesson__what-need-wrap">
+
+            <div class="scrollbar card-lesson__what-need-scroll">
+              <div class="card-lesson__what-need-items">
+                <div class="what-need-item">
+                  <div class="what-need-item__icon">
+                    <img src="img/what-need/img-1.svg" alt="">
+                  </div>
+                  <div class="what-need-item__text">
+                    Всего одна вспышка, и все!
+                  </div>
+                </div>
+                <div class="what-need-item">
+                  <div class="what-need-item__icon">
+                    <img src="img/what-need/img-2.svg" alt="">
+                  </div>
+                  <div class="what-need-item__text">
+                    Далее нужен объект для съемки: муж, собака либо кукла (обычная кукла)
+                  </div>
+                </div>
+                <div class="what-need-item">
+                  <div class="what-need-item__icon">
+                    <img src="img/what-need/img-3.svg" alt="">
+                  </div>
+                  <div class="what-need-item__text">
+                    Внимание! Синхронизатор для этого урока нужен! и ТЕМНОТА!
+                  </div>
+                </div>
+                <div class="what-need-item">
+                  <div class="what-need-item__icon">
+                    <img src="img/what-need/img-1.svg" alt="">
+                  </div>
+                  <div class="what-need-item__text">
+                    Всего одна вспышка, и все!
+                  </div>
+                </div>
+                <div class="what-need-item">
+                  <div class="what-need-item__icon">
+                    <img src="img/what-need/img-2.svg" alt="">
+                  </div>
+                  <div class="what-need-item__text">
+                    Далее нужен объект для съемки: муж, собака либо кукла (обычная кукла)
+                  </div>
+                </div>
+                <div class="what-need-item">
+                  <div class="what-need-item__icon">
+                    <img src="img/what-need/img-3.svg" alt="">
+                  </div>
+                  <div class="what-need-item__text">
+                    Внимание! Синхронизатор для этого урока нужен! и ТЕМНОТА!
+                  </div>
+                </div>
+                <div class="what-need-item">
+                  <div class="what-need-item__icon">
+                    <img src="img/what-need/img-1.svg" alt="">
+                  </div>
+                  <div class="what-need-item__text">
+                    Всего одна вспышка, и все!
+                  </div>
+                </div>
+                <div class="what-need-item">
+                  <div class="what-need-item__icon">
+                    <img src="img/what-need/img-2.svg" alt="">
+                  </div>
+                  <div class="what-need-item__text">
+                    Далее нужен объект для съемки: муж, собака либо кукла (обычная кукла)
+                  </div>
+                </div>
+                <div class="what-need-item">
+                  <div class="what-need-item__icon">
+                    <img src="img/what-need/img-3.svg" alt="">
+                  </div>
+                  <div class="what-need-item__text">
+                    Внимание! Синхронизатор для этого урока нужен! и ТЕМНОТА!
+                  </div>
+                </div>
+                <div class="what-need-item">
+                  <div class="what-need-item__icon">
+                    <img src="img/what-need/img-1.svg" alt="">
+                  </div>
+                  <div class="what-need-item__text">
+                    Всего одна вспышка, и все!
+                  </div>
+                </div>
+                <div class="what-need-item">
+                  <div class="what-need-item__icon">
+                    <img src="img/what-need/img-2.svg" alt="">
+                  </div>
+                  <div class="what-need-item__text">
+                    Далее нужен объект для съемки: муж, собака либо кукла (обычная кукла)
+                  </div>
+                </div>
+                <div class="what-need-item">
+                  <div class="what-need-item__icon">
+                    <img src="img/what-need/img-3.svg" alt="">
+                  </div>
+                  <div class="what-need-item__text">
+                    Внимание! Синхронизатор для этого урока нужен! и ТЕМНОТА!
+                  </div>
+                </div>
+                <div class="what-need-item">
+                  <div class="what-need-item__icon">
+                    <img src="img/what-need/img-1.svg" alt="">
+                  </div>
+                  <div class="what-need-item__text">
+                    Всего одна вспышка, и все!
+                  </div>
+                </div>
+                <div class="what-need-item">
+                  <div class="what-need-item__icon">
+                    <img src="img/what-need/img-2.svg" alt="">
+                  </div>
+                  <div class="what-need-item__text">
+                    Далее нужен объект для съемки: муж, собака либо кукла (обычная кукла)
+                  </div>
+                </div>
+                <div class="what-need-item">
+                  <div class="what-need-item__icon">
+                    <img src="img/what-need/img-3.svg" alt="">
+                  </div>
+                  <div class="what-need-item__text">
+                    Внимание! Синхронизатор для этого урока нужен! и ТЕМНОТА!
+                  </div>
+                </div>
+                <div class="what-need-item">
+                  <div class="what-need-item__icon">
+                    <img src="img/what-need/img-1.svg" alt="">
+                  </div>
+                  <div class="what-need-item__text">
+                    Всего одна вспышка, и все!
+                  </div>
+                </div>
+                <div class="what-need-item">
+                  <div class="what-need-item__icon">
+                    <img src="img/what-need/img-2.svg" alt="">
+                  </div>
+                  <div class="what-need-item__text">
+                    Далее нужен объект для съемки: муж, собака либо кукла (обычная кукла)
+                  </div>
+                </div>
+                <div class="what-need-item">
+                  <div class="what-need-item__icon">
+                    <img src="img/what-need/img-3.svg" alt="">
+                  </div>
+                  <div class="what-need-item__text">
+                    Внимание! Синхронизатор для этого урока нужен! и ТЕМНОТА!
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-lesson__result">
+          <div class="card-lesson__result-title">
+            Результат, который мы получим в итоге:
+          </div>
+          <div class="card-lesson__gallery card-gallery">
+            <div class="card-gallery__carousel owl-carousel" data-carousel-id="card-gallery" data-carousel-thumb="card-gallery-thumbnails">
+              <div class="card-gallery__carousel-item" data-slide="0">
+                <img src="img/gallery/images/img-01.jpg" alt="">
+              </div>
+              <div class="card-gallery__carousel-item" data-slide="1">
+                <img src="img/gallery/images/img-02.jpg" alt="">
+              </div>
+              <div class="card-gallery__carousel-item" data-slide="2">
+                <img src="img/gallery/images/img-03.jpg" alt="">
+              </div>
+              <div class="card-gallery__carousel-item" data-slide="3">
+                <img src="img/gallery/images/img-04.jpg" alt="">
+              </div>
+              <div class="card-gallery__carousel-item" data-slide="4">
+                <img src="img/gallery/images/img-05.jpg" alt="">
+              </div>
+              <div class="card-gallery__carousel-item" data-slide="5">
+                <img src="img/gallery/images/img-01.jpg" alt="">
+              </div>
+              <div class="card-gallery__carousel-item" data-slide="6">
+                <img src="img/gallery/images/img-02.jpg" alt="">
+              </div>
+              <div class="card-gallery__carousel-item" data-slide="7">
+                <img src="img/gallery/images/img-03.jpg" alt="">
+              </div>
+              <div class="card-gallery__carousel-item" data-slide="8">
+                <img src="img/gallery/images/img-04.jpg" alt="">
+              </div>
+              <div class="card-gallery__carousel-item" data-slide="9">
+                <img src="img/gallery/images/img-05.jpg" alt="">
+              </div>
+            </div>
+            <div class="card-gallery__thumbnails owl-carousel" data-thumb-id="card-gallery-thumbnails" data-carousel="card-gallery">
+              <div class="card-gallery__thumbnails-item active" data-slide="0">
+                <img src="img/gallery/thumbnails/img-01.jpg" alt="">
+              </div>
+              <div class="card-gallery__thumbnails-item" data-slide="1">
+                <img src="img/gallery/thumbnails/img-02.jpg" alt="">
+              </div>
+              <div class="card-gallery__thumbnails-item" data-slide="2">
+                <img src="img/gallery/thumbnails/img-03.jpg" alt="">
+              </div>
+              <div class="card-gallery__thumbnails-item" data-slide="3">
+                <img src="img/gallery/thumbnails/img-04.jpg" alt="">
+              </div>
+              <div class="card-gallery__thumbnails-item" data-slide="4">
+                <img src="img/gallery/thumbnails/img-05.jpg" alt="">
+              </div>
+              <div class="card-gallery__thumbnails-item" data-slide="5">
+                <img src="img/gallery/thumbnails/img-01.jpg" alt="">
+              </div>
+              <div class="card-gallery__thumbnails-item" data-slide="6">
+                <img src="img/gallery/thumbnails/img-02.jpg" alt="">
+              </div>
+              <div class="card-gallery__thumbnails-item" data-slide="7">
+                <img src="img/gallery/thumbnails/img-03.jpg" alt="">
+              </div>
+              <div class="card-gallery__thumbnails-item" data-slide="8">
+                <img src="img/gallery/thumbnails/img-04.jpg" alt="">
+              </div>
+              <div class="card-gallery__thumbnails-item" data-slide="9">
+                <img src="img/gallery/thumbnails/img-05.jpg" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-lesson__bottom">
+          <div class="card-lesson__add">
+            <div class="card-lesson__add-text">
+              Добавьте урок себе в коллекцию:
+            </div>
+            <div class="card-lesson__button">
+              <a href="#" class="btn btn-add card-lesson__btn-add">
+                <svg class="icon icon-check"><use xlink:href="img/icons.svg#icon-check"/></svg>
+                <span class="btn-add__text">Добавить</span>
+              </a>
+            </div>
+          </div>
+          <div class="card-lesson__subscription">
+            Подписка оформлена! Все уроки и подборки бесплатны для Вас!
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Модальное окно карточки урока (урок куплен и добавлен) -->
+  <div id="modal-lesson-bought" class="modal modal-lesson" style="display: none">
+    <div class="modal__title">
+      Как круто снять кольца с одной вспышкой
+    </div>
+    <div class="modal__content">
+      <div class="card-lesson card-lesson--bought">
+        <div class="card-lesson__description">
+          <div class="card-lesson__text">
+            <p>История, конечно прям ЦЕНЗУРА! Если у тебя слабенькое сердце, то не стоит читать ЭТУ ИСТОРИЮ! Мы просто, тогда были юные)))) и не понимали, зачем продвижение, и что такое маркетинг и реклама!!!</p>
+          </div>
+          <div class="card-lesson__what-need">
+            <div class="card-lesson__what-need-title">
+              Что нужно для такого кадра?
+            </div>
+            <div class="card-lesson__what-need-wrap">
+              <div class="scrollbar card-lesson__what-need-scroll">
+                <div class="card-lesson__what-need-items">
+                  <div class="what-need-item">
+                    <div class="what-need-item__icon">
+                      <img src="img/what-need/img-1.svg" alt="">
+                    </div>
+                    <div class="what-need-item__text">
+                      Всего одна вспышка, и все!
+                    </div>
+                  </div>
+                  <div class="what-need-item">
+                    <div class="what-need-item__icon">
+                      <img src="img/what-need/img-2.svg" alt="">
+                    </div>
+                    <div class="what-need-item__text">
+                      Далее нужен объект для съемки: муж, собака либо кукла (обычная кукла)
+                    </div>
+                  </div>
+                  <div class="what-need-item">
+                    <div class="what-need-item__icon">
+                      <img src="img/what-need/img-3.svg" alt="">
+                    </div>
+                    <div class="what-need-item__text">
+                      Внимание! Синхронизатор для этого урока нужен! и ТЕМНОТА!
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+
+
+          </div>
+        </div>
+        <div class="card-lesson__result">
+          <div class="card-lesson__result-title">
+            Результат, который мы получим в итоге:
+          </div>
+          <div class="card-lesson__result-img">
+            <img src="img/lesson-result.jpg" alt="">
+          </div>
+        </div>
+        <div class="card-lesson__bottom">
+          <div class="card-lesson__bought">
+            <div class="card-lesson__bought-text">
+              Подборка уже куплена и находится в вашем кабинете. Хотите перейти к ней:
+            </div>
+            <div class="card-lesson__bought-button">
+              <a href="#" class="btn card-lesson__bought-btn-more">
+                <span>Перейти к подборке</span>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Модальное окно Добавлено -->
+  <div id="modal-added" class="modal modal-added" style="display: none">
+    <div class="modal__title">
+      Урок “Заголовок добавленного урока или подборки” добавлен!
+    </div>
+    <div class="modal__content">
+      <div class="modal-added__buttons">
+        <a href="#modal-cart" class="btn" data-fancybox-cart="">
+          <span>перейти в багаж заний</span>
+        </a>
+        <a href="javascript:void(0)" class="btn btn--border" data-fancybox-close="">
+          <span>вернуться в магазин</span>
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Модальное окно Успешной регистрации -->
+  <div id="modal-success" class="modal modal-success" style="display: none">
+    <div class="modal__icon">
+      <svg class="icon icon-check-2"><use xlink:href="img/icons.svg#icon-check-2"/></svg>
+    </div>
+    <div class="modal__title">
+      Поздравляем!
+    </div>
+    <div class="modal__subtitle">
+      Вы успешно зарегистрированы!
+    </div>
+    <div class="modal__text">
+      Вы успешно зарегистрированы. На Ваш Email указанный при регистрации (<strong>examplemail@gmail.com</strong>) отправлено письмо с дальнейшими инструкциями. Следуйте им, чтобы закончить регистрацию на сайте
+    </div>
+    <div class="modal__button">
+      <a href="index.html" class="btn btn--return">
+        <svg class="icon icon-arrow-2"><use xlink:href="img/icons.svg#icon-arrow-2"/></svg>
+        <span>На главную</span>
+      </a>
+    </div>
+
+  </div>
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+	<script src="js/libs.min.js"></script>
+	<script src="js/scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,1197 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>ТичаStore</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <div class="wrapper page-subscription">
+    <div class="page-content">
+      <!-- Стандартная шапка START -->
+      <header class="header">
+        <div class="container">
+          <div class="header__row">
+            <div class="header__left">
+              <button class="header__btn-menu">
+                <svg class="icon icon-menu"><use xlink:href="img/icons.svg#icon-menu"/></svg>
+              </button>
+              <div class="header__logo">
+                <a href="#" class="logo"><img class="logo__img" src="img/logo.svg" width="112" height="23" alt=""></a>
+              </div>
+            </div>
+            <div class="header__center">
+              <div class="header__catalog">
+                <button type="button" class="btn header__catalog-btn">
+                  <svg class="icon icon-menu"><use xlink:href="img/icons.svg#icon-menu"/></svg>
+                  <span>Все направления</span>
+                </button>
+                <div class="header__catalog-content">
+                  <div class="catalog-menu">
+                    <div class="catalog-menu__title">
+                      Уроки
+                    </div>
+                    <ul class="catalog-menu__list">
+                      <li><a href="#">Естественный свет <span>(1)</span></a></li>
+                      <li><a href="#">Композиция <span>(1)</span></a></li>
+                      <li><a href="#">Вспышки <span>(6)</span></a></li>
+                      <li><a href="#">Фонари и постоянный свет <span>(12)</span></a></li>
+                      <li><a href="#">Маркетинг для фотографов <span>(65)</span></a></li>
+                      <li><a href="#">Работа с Парой <span>(3)</span></a></li>
+                      <li><a href="#">Основы фотографии <span>(7)</span></a></li>
+                      <li><a href="#">Создание эффектов <span>(5)</span></a></li>
+                      <li><a href="#">Обильная фотография <span>(1)</span></a></li>
+                      <li><a href="#">Обработка <span>(55)</span></a></li>
+                    </ul>
+                    <div class="catalog-menu__title">
+                      Подборки
+                    </div>
+                    <ul class="catalog-menu__list">
+                      <li><a href="#">Естественный свет <span>(1)</span></a></li>
+                      <li><a href="#">Композиция <span>(1)</span></a></li>
+                      <li><a href="#">Вспышки <span>(6)</span></a></li>
+                      <li><a href="#">Фонари и постоянный свет <span>(12)</span></a></li>
+                      <li><a href="#">Маркетинг для фотографов <span>(65)</span></a></li>
+                      <li><a href="#">Работа с Парой <span>(3)</span></a></li>
+                      <li><a href="#">Основы фотографии <span>(7)</span></a></li>
+                      <li><a href="#">Создание эффектов <span>(5)</span></a></li>
+                      <li><a href="#">Обильная фотография <span>(1)</span></a></li>
+                      <li><a href="#">Обработка <span>(55)</span></a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="header__menu">
+                <ul class="menu">
+                  <li>
+                    <a href="#">Уроки</a>
+                  </li>
+                  <li>
+                    <a href="#">Подборки</a>
+                  </li>
+                  <li>
+                    <a href="#">Как я сделал кадр</a>
+                  </li>
+                  <li>
+                    <a href="#">Подписка</a>
+                  </li>
+                  <li>
+                    <a href="#">Работы учеников</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="header__right">
+              <div class="header__login">
+                <div class="header__login-btn" >
+                  <svg class="icon icon-user"><use xlink:href="img/icons.svg#icon-user"/></svg>
+                </div>
+                <div class="header__login-block">
+                  <a href="#modal-login" class="btn open-modal-login" data-fancybox="" data-touch="false">
+                    <span>Войти в личный кабинет</span>
+                  </a>
+                  <a href="#modal-register" class="btn btn--dark open-modal-register" data-fancybox="" data-touch="false">
+                    <span>Зарегистрироваться</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <nav class="mobile-nav mobile-nav--default">
+        <div class="mobile-nav__header">
+          <button class="mobile-nav__btn mobile-nav__btn--back">
+            <svg class="icon icon-arrow-2"><use xlink:href="img/icons.svg#icon-arrow-2"/></svg>
+            <span>Назад</span>
+          </button>
+          <button class="mobile-nav__btn mobile-nav__btn--close">
+            <svg class="icon icon-close"><use xlink:href="img/icons.svg#icon-close"/></svg>
+            <span>Закрыть</span>
+          </button>
+        </div>
+        <div class="mobile-nav__content">
+          <div class="mobile-nav__catalog">
+            <button class="btn mobile-nav__catalog-btn">
+              <span>Все направления</span>
+              <svg class="icon icon-arrow-2"><use xlink:href="img/icons.svg#icon-arrow-2"/></svg>
+            </button>
+            <div class="mobile-nav__catalog-content">
+              <!-- Сюда копируется меню "Все направления" -->
+            </div>
+          </div>
+          <div class="mobile-nav__menu">
+            <!-- Сюда копируется основное меню -->
+          </div>
+        </div>
+      </nav>
+      <!-- Стандартная шапка END -->
+
+      <div class="main-header main-header--collection" style="background-image: url('img/card-collection/bg-header.jpg')">
+        <div class="container">
+          <div class="main-header__head">
+            <div class="main-header__return">
+              <a href="#" class="btn btn--return main-header__return-btn">
+                <svg class="icon icon-arrow-2"><use xlink:href="img/icons.svg#icon-arrow-2"/></svg>
+                <span>Вернуться в каталог</span>
+              </a>
+            </div>
+            <div class="main-header__category">
+              Естественный свет
+            </div>
+          </div>
+
+          <div class="main-header__logo">
+            <div>
+              <div class="main-header__logo-icon"><img src="img/lightning.svg" alt=""></div>
+              <div class="main-header__logo-text">Подборка</div>
+            </div>
+          </div>
+          <div class="main-header__number-lessons">
+            10 эксклюзивных уроков
+          </div>
+          <div class="main-header__title">
+            <h1>Выставление света и вспышки</h1>
+          </div>
+
+          <div class="main-header__homework">
+            <div class="main-header__homework-title">
+              Разберем домашнее задание
+            </div>
+            <div class="main-header__homework-text">
+              Таким образом постоянный количественный рост и сфера нашей активности в значительной степени обуславливает создание системы обучения кадров.
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="lesson-description">
+        <div class="container">
+          <div class="lesson-description__content">
+            <h2>О подборке</h2>
+            <div class="lesson-description__text">
+              <p>История, конечно прям ЦЕНЗУРА! Если у тебя слабенькое сердце, то не стоит читать ЭТУ ИСТОРИЮ! Мы просто, тогда были юные)))) и не понимали, зачем продвижение, и что такое маркетинг и реклама!!!</p>
+              <p>Дамы и господа, рад приветствовать вас на мааааленькоммм самолете Boing 300RU на таких МЫ ЕЩЁ НЕ ЛЕТАЛИ! Такой информации ещё никто от меня не слышал! НИКТО!</p>
+              <p>Куда летим???</p>
+              <p>Летим в мир продвижения! 2 лекции по 2 часа два дня!! Все о продвижении для фотографа! За 300!!!</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="what-included">
+        <div class="container">
+          <h2>Что входит в подборку?</h2>
+          <div class="what-included__items">
+            <div class="what-included-item">
+              <ul class="what-included-item__list">
+                <li>Как получать заказы? 40-70 съемок в год</li>
+                <li>Маркетинговая КОЛБАСА для фотографа</li>
+                <li>Упаковка</li>
+                <li>Секретные инструменты (упаковки)</li>
+                <li>Почему у вас нет заказов?</li>
+              </ul>
+            </div>
+            <div class="what-included-item">
+              <ul class="what-included-item__list">
+                <li>Как получать заказы? 40-70 съемок в год</li>
+                <li>Маркетинговая КОЛБАСА для фотографа</li>
+                <li>Упаковка</li>
+                <li>Секретные инструменты (упаковки)</li>
+                <li>Почему у вас нет заказов?</li>
+              </ul>
+            </div>
+            <div class="what-included-item">
+              <ul class="what-included-item__list">
+                <li>Как получать заказы? 40-70 съемок в год</li>
+                <li>Маркетинговая КОЛБАСА для фотографа</li>
+                <li>Упаковка</li>
+                <li>Секретные инструменты (упаковки)</li>
+                <li>Почему у вас нет заказов?</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="lesson-list">
+        <div class="container">
+          <h2>Список уроков в подборке</h2>
+          <div class="accordions lesson-list__accordions">
+            <div class="accordion">
+              <div class="accordion__header">
+                <div class="accordion__number">1</div>
+                <div class="accordion__title"><span>Урок номер 1 - Свет и его выставление в темном помещении</span></div>
+                <div class="accordion__icon">
+                  <svg class="icon icon-arrow-down"><use xlink:href="img/icons.svg#icon-arrow-down"/></svg>
+                </div>
+              </div>
+              <div class="accordion__content">
+                <div class="accordion__inner">
+                  <div class="lesson-list__description">
+                    <p>Доставай свою пыльную вспышку! Пришло время топить! где топить?? Да хоть где! варианты исполнения мест:  Дома, в подвале, на улице, на столе, в кладовке где хочешь! ТАМ И ТОПИ!))</p>
+                  </div>
+                  <div class="lesson-list__what-need">
+                    <h3>Что нужно для такого кадра?</h3>
+                    <div class="lesson-list__what-need-items">
+                      <div class="what-need-item">
+                        <div class="what-need-item__icon">
+                          <img src="img/what-need/img-1.svg" alt="">
+                        </div>
+                        <div class="what-need-item__text">
+                          Всего одна вспышка, и все!
+                        </div>
+                      </div>
+                      <div class="what-need-item">
+                        <div class="what-need-item__icon">
+                          <img src="img/what-need/img-2.svg" alt="">
+                        </div>
+                        <div class="what-need-item__text">
+                          Далее нужен объект для съемки: муж, собака либо кукла (обычная кукла)
+                        </div>
+                      </div>
+                      <div class="what-need-item">
+                        <div class="what-need-item__icon">
+                          <img src="img/what-need/img-3.svg" alt="">
+                        </div>
+                        <div class="what-need-item__text">
+                          Внимание! Синхронизатор для этого урока нужен! и ТЕМНОТА!
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="lesson-list__result">
+                    <h3>Результат в конце урока</h3>
+                    <div class="owl-carousel carousel-result">
+                      <div class="carousel-result__item">
+                        <a href="img/result/img-1.jpg" class="carousel-result__link" data-fancybox="gallery_3" style="background-image: url('img/result/img-1.jpg')"></a>
+                      </div>
+                      <div class="carousel-result__item">
+                        <a href="img/result/img-2.jpg" class="carousel-result__link" data-fancybox="gallery_3" style="background-image: url('img/result/img-2.jpg')"></a>
+                      </div>
+                      <div class="carousel-result__item">
+                        <a href="img/result/img-3.jpg" class="carousel-result__link" data-fancybox="gallery_3" style="background-image: url('img/result/img-3.jpg')"></a>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="accordion">
+              <div class="accordion__header">
+                <div class="accordion__number">2</div>
+                <div class="accordion__title"><span>Урок номер 2 - Свет и его выставление в темном помещении</span></div>
+                <div class="accordion__icon">
+                  <svg class="icon icon-arrow-down"><use xlink:href="img/icons.svg#icon-arrow-down"/></svg>
+                </div>
+              </div>
+              <div class="accordion__content">
+                <div class="accordion__inner">
+                  <div class="lesson-list__description">
+                    <p>Доставай свою пыльную вспышку! Пришло время топить! где топить?? Да хоть где! варианты исполнения мест:  Дома, в подвале, на улице, на столе, в кладовке где хочешь! ТАМ И ТОПИ!))</p>
+                  </div>
+                  <div class="lesson-list__what-need">
+                    <h3>Что нужно для такого кадра?</h3>
+                    <div class="lesson-list__what-need-items">
+                      <div class="what-need-item">
+                        <div class="what-need-item__icon">
+                          <img src="img/what-need/img-1.svg" alt="">
+                        </div>
+                        <div class="what-need-item__text">
+                          Всего одна вспышка, и все!
+                        </div>
+                      </div>
+                      <div class="what-need-item">
+                        <div class="what-need-item__icon">
+                          <img src="img/what-need/img-2.svg" alt="">
+                        </div>
+                        <div class="what-need-item__text">
+                          Далее нужен объект для съемки: муж, собака либо кукла (обычная кукла)
+                        </div>
+                      </div>
+                      <div class="what-need-item">
+                        <div class="what-need-item__icon">
+                          <img src="img/what-need/img-3.svg" alt="">
+                        </div>
+                        <div class="what-need-item__text">
+                          Внимание! Синхронизатор для этого урока нужен! и ТЕМНОТА!
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="lesson-list__result">
+                    <h3>Результат в конце урока</h3>
+                    <div class="owl-carousel carousel-result">
+                      <div class="carousel-result__item">
+                        <a href="img/result/img-1.jpg" class="carousel-result__link" data-fancybox="gallery_3" style="background-image: url('img/result/img-1.jpg')"></a>
+                      </div>
+                      <div class="carousel-result__item">
+                        <a href="img/result/img-2.jpg" class="carousel-result__link" data-fancybox="gallery_3" style="background-image: url('img/result/img-2.jpg')"></a>
+                      </div>
+                      <div class="carousel-result__item">
+                        <a href="img/result/img-3.jpg" class="carousel-result__link" data-fancybox="gallery_3" style="background-image: url('img/result/img-3.jpg')"></a>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="accordion">
+              <div class="accordion__header">
+                <div class="accordion__number">3</div>
+                <div class="accordion__title"><span>Урок номер 3 - Свет и его выставление в темном помещении без специального оборудования</span></div>
+                <div class="accordion__icon">
+                  <svg class="icon icon-arrow-down"><use xlink:href="img/icons.svg#icon-arrow-down"/></svg>
+                </div>
+              </div>
+              <div class="accordion__content">
+                <div class="accordion__inner">
+                  <div class="lesson-list__description">
+                    <p>Доставай свою пыльную вспышку! Пришло время топить! где топить?? Да хоть где! варианты исполнения мест:  Дома, в подвале, на улице, на столе, в кладовке где хочешь! ТАМ И ТОПИ!))</p>
+                  </div>
+                  <div class="lesson-list__what-need">
+                    <h3>Что нужно для такого кадра?</h3>
+                    <div class="lesson-list__what-need-items">
+                      <div class="what-need-item">
+                        <div class="what-need-item__icon">
+                          <img src="img/what-need/img-1.svg" alt="">
+                        </div>
+                        <div class="what-need-item__text">
+                          Всего одна вспышка, и все!
+                        </div>
+                      </div>
+                      <div class="what-need-item">
+                        <div class="what-need-item__icon">
+                          <img src="img/what-need/img-2.svg" alt="">
+                        </div>
+                        <div class="what-need-item__text">
+                          Далее нужен объект для съемки: муж, собака либо кукла (обычная кукла)
+                        </div>
+                      </div>
+                      <div class="what-need-item">
+                        <div class="what-need-item__icon">
+                          <img src="img/what-need/img-3.svg" alt="">
+                        </div>
+                        <div class="what-need-item__text">
+                          Внимание! Синхронизатор для этого урока нужен! и ТЕМНОТА!
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="lesson-list__result">
+                    <h3>Результат в конце урока</h3>
+                    <div class="owl-carousel carousel-result">
+                      <div class="carousel-result__item">
+                        <a href="img/result/img-1.jpg" class="carousel-result__link" data-fancybox="gallery_3" style="background-image: url('img/result/img-1.jpg')"></a>
+                      </div>
+                      <div class="carousel-result__item">
+                        <a href="img/result/img-2.jpg" class="carousel-result__link" data-fancybox="gallery_3" style="background-image: url('img/result/img-2.jpg')"></a>
+                      </div>
+                      <div class="carousel-result__item">
+                        <a href="img/result/img-3.jpg" class="carousel-result__link" data-fancybox="gallery_3" style="background-image: url('img/result/img-3.jpg')"></a>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="trailer">
+        <div class="container">
+          <div class="trailer__row">
+            <div class="trailer__content">
+              <h2><strong>Трейлер к&nbsp;подборке</strong></h2>
+              <div class="trailer__text">
+                Так же вы можете найти демо уроков и подборок, а так же многое другое на моём YouTube канале
+              </div>
+            </div>
+            <div class="trailer__video">
+              <div class="trailer__video-frame">
+                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/YE7VzlLtp-4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card-control card-control--bought">
+        <div class="container">
+          <div class="card-control__row">
+            <div class="card-control__text">
+              Подборка уже куплена и находится в вашем кабинете. Хотите перейти к ней:
+            </div>
+            <div class="card-control__button">
+              <a href="#" class="btn card-control__btn-more">
+                <span>Перейти к подборке</span>
+              </a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__top">
+          <div class="footer__logo">
+            <a href="#" class="logo"><img class="logo__img" src="img/logo-light.svg" width="112" height="23" alt=""></a>
+          </div>
+          <ul class="footer__menu">
+            <li>
+              <a href="#">Уроки</a>
+            </li>
+            <li>
+              <a href="#">Подборки</a>
+            </li>
+            <li>
+              <a href="#">Как я сделал кадр</a>
+            </li>
+            <li>
+              <a href="#">Подписка</a>
+            </li>
+            <li>
+              <a href="#">Работы учеников</a>
+            </li>
+            <li>
+              <a href="#">Личный кабинет</a>
+            </li>
+            <li>
+              <a href="#">О нас</a>
+            </li>
+          </ul>
+          <ul class="footer__social">
+            <li><a href="#"><svg class="icon icon-vk"><use xlink:href="img/icons.svg#icon-vk"/></svg></a></li>
+            <li><a href="#"><svg class="icon icon-inst"><use xlink:href="img/icons.svg#icon-inst"/></svg></a></li>
+            <li><a href="#"><svg class="icon icon-facebook"><use xlink:href="img/icons.svg#icon-facebook"/></svg></a></li>
+          </ul>
+        </div>
+        <div class="footer__bottom">
+          <div class="footer__links">
+            <a href="#modal-politic" data-fancybox data-touch="false">Политика конфиденциальности</a>
+          </div>
+          <div class="footer__copy">
+            Copyright 2020 - TeachStore
+          </div>
+        </div>
+      </div> 
+    </footer>
+  </div>
+
+  <!-- Кнопка "Багаж знаний" -->
+  <div class="nav-cart">
+    <button class="nav-cart__btn" data-fancybox-cart="" data-src="#modal-cart">
+        <span class="nav-cart__btn-text">
+          Багаж знаний
+        </span>
+      <span class="nav-cart__btn-icon">
+          <svg class="icon icon-suitcase"><use xlink:href="img/icons.svg#icon-suitcase"/></svg>
+        </span>
+    </button>
+  </div>
+
+  <!-- Модальное окно корзины -->
+  <div id="modal-cart" class="modal modal-cart" style="display: none">
+    <div class="modal__title">
+      Твой багаж
+    </div>
+    <div class="modal__content">
+      <div class="cart">
+        <div class="cart__products">
+          <div class="cart__products-title">
+            уроки
+          </div>
+          <div class="cart__products-items">
+            <div class="scrollbar cart__products-scroll">
+              <div class="cart-product">
+                <div class="cart-product__img">
+                  <a href="#"><img src="img/cart/img-1.png" alt=""></a>
+                </div>
+                <div class="cart-product__content">
+                  <div class="cart-product__category">
+                    <div>естественный свет</div>
+                  </div>
+                  <div class="cart-product__title">
+                    <a href="#">Заголовок урока добавленного в багаж знаний</a>
+                  </div>
+                </div>
+
+                <div class="cart-product__cost">
+                  <div>
+                    <div class="cart-product__cost-text">Стоимость:</div>
+                    <div class="cart-product__price">
+                      <span>359</span> руб.
+                    </div>
+                  </div>
+                </div>
+                <div class="cart-product__remove">
+                  <svg class="icon icon-basket"><use xlink:href="img/icons.svg#icon-basket"/></svg>
+                </div>
+              </div>
+              <div class="cart-product">
+                <div class="cart-product__img">
+                  <a href="#"><img src="img/cart/img-2.png" alt=""></a>
+                </div>
+                <div class="cart-product__content">
+                  <div class="cart-product__category">
+                    <div>естественный свет</div>
+                  </div>
+                  <div class="cart-product__title">
+                    <a href="#">Заголовок урока добавленного в багаж знаний</a>
+                  </div>
+                </div>
+
+                <div class="cart-product__cost">
+                  <div>
+                    <div class="cart-product__cost-text">Стоимость:</div>
+                    <div class="cart-product__price cart-product__price--old">
+                      <span>359</span> руб.
+                    </div>
+                    <div class="cart-product__price">
+                      <span>359</span> руб.
+                    </div>
+                  </div>
+                </div>
+                <div class="cart-product__remove">
+                  <svg class="icon icon-basket"><use xlink:href="img/icons.svg#icon-basket"/></svg>
+                </div>
+              </div>
+              <div class="cart-product cart-product--free">
+                <div class="cart-product__img">
+                  <a href="#"><span>+</span></a>
+                </div>
+                <div class="cart-product__content">
+                  <div class="cart-product__text-free">
+                    <div>Бесплатно</div>
+                  </div>
+                  <div class="cart-product__title">
+                    Добавьте еще 1 урок
+                  </div>
+                  <div class="cart-product__text">
+                    Дарим каждый пятый урок!
+                  </div>
+                </div>
+
+                <div class="cart-product__button">
+                  <a href="#" class="btn btn--more-border cart-product__btn-select">
+                    <span>Выбрать урок</span>
+                    <span class="btn__icon"><svg class="icon icon-arrow-3"><use xlink:href="img/icons.svg#icon-arrow-3"/></svg></span>
+                  </a>
+                </div>
+              </div>
+              <div class="cart-product">
+                <div class="cart-product__img">
+                  <a href="#"><img src="img/cart/img-1.png" alt=""></a>
+                </div>
+                <div class="cart-product__content">
+                  <div class="cart-product__category">
+                    <div>естественный свет</div>
+                  </div>
+                  <div class="cart-product__title">
+                    <a href="#">Заголовок урока добавленного в багаж знаний</a>
+                  </div>
+                </div>
+
+                <div class="cart-product__cost">
+                  <div>
+                    <div class="cart-product__cost-text">Стоимость:</div>
+                    <div class="cart-product__price">
+                      <span>359</span> руб.
+                    </div>
+                  </div>
+                </div>
+                <div class="cart-product__remove">
+                  <svg class="icon icon-basket"><use xlink:href="img/icons.svg#icon-basket"/></svg>
+                </div>
+              </div>
+              <div class="cart-product">
+                <div class="cart-product__img">
+                  <a href="#"><img src="img/cart/img-2.png" alt=""></a>
+                </div>
+                <div class="cart-product__content">
+                  <div class="cart-product__category">
+                    <div>естественный свет</div>
+                  </div>
+                  <div class="cart-product__title">
+                    <a href="#">Заголовок урока добавленного в багаж знаний</a>
+                  </div>
+                </div>
+
+                <div class="cart-product__cost">
+                  <div>
+                    <div class="cart-product__cost-text">Стоимость:</div>
+                    <div class="cart-product__price cart-product__price--old">
+                      <span>359</span> руб.
+                    </div>
+                    <div class="cart-product__price">
+                      <span>359</span> руб.
+                    </div>
+                  </div>
+                </div>
+                <div class="cart-product__remove">
+                  <svg class="icon icon-basket"><use xlink:href="img/icons.svg#icon-basket"/></svg>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+        <div class="cart__products">
+          <div class="cart__products-title">
+            подборки
+          </div>
+          <div class="cart__products-items">
+            <div class="scrollbar cart__products-scroll">
+              <div class="cart-product">
+                <div class="cart-product__img">
+                  <img src="img/cart/img-3.png" alt="">
+                </div>
+                <div class="cart-product__content">
+                  <div class="cart-product__category">
+                    <div>естественный свет</div>
+                  </div>
+                  <div class="cart-product__title">
+                    Заголовок урока добавленного в багаж знаний
+                  </div>
+                </div>
+
+                <div class="cart-product__cost">
+                  <div>
+                    <div class="cart-product__cost-text">Стоимость:</div>
+                    <div class="cart-product__price">
+                      <span>359</span> руб.
+                    </div>
+                  </div>
+                </div>
+                <div class="cart-product__remove">
+                  <svg class="icon icon-basket"><use xlink:href="img/icons.svg#icon-basket"/></svg>
+                </div>
+              </div>
+              <div class="cart-product">
+                <div class="cart-product__img">
+                  <img src="img/cart/img-3.png" alt="">
+                </div>
+                <div class="cart-product__content">
+                  <div class="cart-product__category">
+                    <div>естественный свет</div>
+                  </div>
+                  <div class="cart-product__title">
+                    Заголовок урока добавленного в багаж знаний
+                  </div>
+                </div>
+
+                <div class="cart-product__cost">
+                  <div>
+                    <div class="cart-product__cost-text">Стоимость:</div>
+                    <div class="cart-product__price">
+                      <span>359</span> руб.
+                    </div>
+                  </div>
+                </div>
+                <div class="cart-product__remove">
+                  <svg class="icon icon-basket"><use xlink:href="img/icons.svg#icon-basket"/></svg>
+                </div>
+              </div>
+              <div class="cart-product">
+                <div class="cart-product__img">
+                  <img src="img/cart/img-3.png" alt="">
+                </div>
+                <div class="cart-product__content">
+                  <div class="cart-product__category">
+                    <div>естественный свет</div>
+                  </div>
+                  <div class="cart-product__title">
+                    Заголовок урока добавленного в багаж знаний
+                  </div>
+                </div>
+
+                <div class="cart-product__cost">
+                  <div>
+                    <div class="cart-product__cost-text">Стоимость:</div>
+                    <div class="cart-product__price">
+                      <span>359</span> руб.
+                    </div>
+                  </div>
+                </div>
+                <div class="cart-product__remove">
+                  <svg class="icon icon-basket"><use xlink:href="img/icons.svg#icon-basket"/></svg>
+                </div>
+              </div>
+              <div class="cart-product">
+                <div class="cart-product__img">
+                  <img src="img/cart/img-3.png" alt="">
+                </div>
+                <div class="cart-product__content">
+                  <div class="cart-product__category">
+                    <div>естественный свет</div>
+                  </div>
+                  <div class="cart-product__title">
+                    Заголовок урока добавленного в багаж знаний
+                  </div>
+                </div>
+
+                <div class="cart-product__cost">
+                  <div>
+                    <div class="cart-product__cost-text">Стоимость:</div>
+                    <div class="cart-product__price">
+                      <span>359</span> руб.
+                    </div>
+                  </div>
+                </div>
+                <div class="cart-product__remove">
+                  <svg class="icon icon-basket"><use xlink:href="img/icons.svg#icon-basket"/></svg>
+                </div>
+              </div>
+              <div class="cart-product">
+                <div class="cart-product__img">
+                  <img src="img/cart/img-3.png" alt="">
+                </div>
+                <div class="cart-product__content">
+                  <div class="cart-product__category">
+                    <div>естественный свет</div>
+                  </div>
+                  <div class="cart-product__title">
+                    Заголовок урока добавленного в багаж знаний
+                  </div>
+                </div>
+
+                <div class="cart-product__cost">
+                  <div>
+                    <div class="cart-product__cost-text">Стоимость:</div>
+                    <div class="cart-product__price">
+                      <span>359</span> руб.
+                    </div>
+                  </div>
+                </div>
+                <div class="cart-product__remove">
+                  <svg class="icon icon-basket"><use xlink:href="img/icons.svg#icon-basket"/></svg>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="cart__bottom">
+          <div class="cart__bottom-row">
+            <div class="cart__bottom-column">
+              <div class="cart__promotional">
+
+                <div class="cart__promotional-head">
+                  <div class="cart__promotional-title">
+                    Промокоды
+                  </div>
+                </div>
+                <div class="cart__promotional-box">
+                  <div class="form-box">
+                    <label for="promotional_code" class="form-box__label"><span>Введите промокод:</span></label>
+                    <input type="text" class="form-control form-box__input" value="SUMMER2020" id="promotional_code">
+                  </div>
+                  <button class="btn btn--dark cart__promotional-btn" type="button">
+                    <span>Применить</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="cart__bottom-column">
+              <div class="cart__promotional">
+                <div class="cart__promotional-head">
+                  <div class="cart__promotional-title">
+                    Доступно кэшбэк:
+                  </div>
+                  <div class="cart__promotional-price">
+                    <span>1032</span> руб.
+                  </div>
+                </div>
+                <div class="cart__promotional-box">
+                  <div class="form-box">
+                    <label for="cashback" class="form-box__label"><span>Введите сумму:</span></label>
+                    <input type="text" class="form-control form-box__input" value="753 руб." id="cashback">
+                  </div>
+                  <button class="btn btn--dark cart__promotional-btn" type="button">
+                    <span>Применить</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="cart__total">
+            <div class="cart__total-text">Итого:</div>
+            <div class="cart__total-sum">
+              <span>3 000</span> руб.
+            </div>
+
+          </div>
+          <div class="cart__buy">
+            <a href="#" class="btn cart__buy-btn">
+              <span>Купить</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Модальное окно входа -->
+  <div id="modal-login" class="modal modal-login" style="display: none">
+    <div class="modal__title">
+      Войти в личный кабинет
+    </div>
+    <div class="modal__content">
+      <form action="#" class="modal-login__form" id="form_login">
+        <div class="form-group">
+          <div class="form-box">
+            <label for="login_email" class="form-box__label"><span>Введите email:</span></label>
+            <input type="email" name="email" class="form-control form-box__input" value="" id="login_email" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="form-box">
+            <label for="login_password" class="form-box__label"><span>Введите пароль:</span></label>
+            <input type="password" name="password" class="form-control form-box__input" value="" id="login_password" required>
+          </div>
+        </div>
+        <div class="form-group form-button">
+          <button type="submit" class="btn btn--full btn-submit">
+            <span>Войти</span>
+          </button>
+        </div>
+        <div class="form-group form-links">
+          <div>
+            <a href="#modal-recovery-password" data-fancybox data-touch="false">Восстановить пароль</a>
+          </div>
+        </div>
+      </form>
+      <div class="block-social modal-login__social">
+        <div class="block-social__text">
+          Войти с помощью:
+        </div>
+        <ul class="block-social__list">
+          <li class="block-social__item block-social__item--vk">
+            <a href="#"><svg class="icon icon-vk"><use xlink:href="img/icons.svg#icon-vk"/></svg></a>
+          </li>
+          <li class="block-social__item block-social__item--inst">
+            <a href="#"><svg class="icon icon-inst"><use xlink:href="img/icons.svg#icon-inst"/></svg></a>
+          </li>
+          <li class="block-social__item block-social__item--facebook">
+            <a href="#"><svg class="icon icon-facebook"><use xlink:href="img/icons.svg#icon-facebook"/></svg></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Модальное окно восстановления пароля -->
+  <div id="modal-recovery-password" class="modal modal-recovery-password" style="display: none">
+    <div class="modal__title">
+      Восстановление пароля
+    </div>
+    <div class="modal__content">
+      <form action="#" class="modal-recovery-password__form" id="form_recovery_password">
+        <div class="modal-recovery-password__phone">
+          <div class="form-group">
+            <div class="form-box">
+              <label for="restore_phone" class="form-box__label"><span>Номер телефона:</span></label>
+              <input type="text" name="phone" class="form-control form-box__input" id="restore_phone" required>
+            </div>
+          </div>
+          <div class="form-group form-button">
+            <button type="button" class="btn btn--full btn-submit" id="btn_recovery_send">
+              <span>Отправить код</span>
+            </button>
+          </div>
+        </div>
+        <div class="modal-recovery-password__code" style="display: none">
+          <div class="form-group">
+            <div class="form-box">
+              <label for="restore_phone_code" class="form-box__label"><span>Код из СМС:</span></label>
+              <input type="text" name="phone_code" class="form-control form-box__input" id="restore_phone_code" required>
+            </div>
+          </div>
+          <div class="form-group form-button">
+            <button type="submit" class="btn btn--full btn-submit" id="btn_recovery_submit">
+              <span>Продолжить</span>
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+
+  </div>
+
+  <!-- Модальное окно регистрации -->
+  <div id="modal-register" class="modal modal-register" style="display: none">
+    <div class="modal__title">
+      Регистрация нового пользователя
+    </div>
+    <div class="modal__content">
+      <form action="#" class="modal-register__form" id="form_registration">
+        <div class="form-row">
+          <div class="form-column">
+            <div class="form-group">
+              <div class="form-box">
+                <label for="register_name" class="form-box__label"><span>Введите ваше имя:</span></label>
+                <input type="text" name="name" class="form-control form-box__input" value="" id="register_name" required>
+              </div>
+            </div>
+          </div>
+          <div class="form-column">
+            <div class="form-group">
+              <div class="form-box">
+                <label for="register_surname" class="form-box__label"><span>Ваша фамилия:</span></label>
+                <input type="text" name="surname" class="form-control form-box__input" value="" id="register_surname" required>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="form-box">
+            <label for="register_phone" class="form-box__label"><span>Номер телефона:</span></label>
+            <input type="text" name="phone" class="form-control form-box__input mask-phone" placeholder="" id="register_phone" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="form-box">
+            <label for="register_email" class="form-box__label"><span>Введите email:</span></label>
+            <input type="email" name="email" class="form-control form-box__input" value="" id="register_email" required>
+          </div>
+        </div>
+        <div class="form-group form-gender">
+          <div>Ваш пол:</div>
+          <div class="form-radio">
+            <input type="radio" name="register_gender" id="register_gender_1" class="radio" checked>
+            <label for="register_gender_1">Мужской</label>
+          </div>
+          <div class="form-radio">
+            <input type="radio" name="register_gender" id="register_gender_2" class="radio">
+            <label for="register_gender_2">Женский</label>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-column">
+            <div class="form-group">
+              <div class="form-box">
+                <label for="register_date_birthday" class="form-box__label"><span>Дата рождения:</span></label>
+                <input type="text" name="date_birthday" class="form-control form-box__input mask-date" placeholder="__/__/____" id="register_date_birthday">
+              </div>
+            </div>
+          </div>
+          <div class="form-column">
+            <div class="form-group">
+              <div class="form-box">
+                <label for="register_age" class="form-box__label"><span>Возраст:</span></label>
+                <input type="text" name="age" class="form-control form-box__input input-number" value="" id="register_age">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="form-box">
+            <label for="register_city" class="form-box__label"><span>Город:</span></label>
+            <input type="text" name="city" class="form-control form-box__input" id="register_city">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-column">
+            <div class="form-group">
+              <div class="form-box form-box--icon form-box--password">
+                <label for="register_password" class="form-box__label"><span>Придумайте пароль:</span></label>
+                <input type="password" name="password" class="form-control form-box__input" value="" id="register_password" required>
+                <div class="form-box__icon">
+                  <svg class="icon icon-eye"><use xlink:href="img/icons.svg#icon-eye"/></svg>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="form-column">
+            <div class="form-group">
+              <div class="form-box form-box--icon form-box--password">
+                <label for="register_repeat_password" class="form-box__label"><span>Повторите пароль:</span></label>
+                <input type="password" name="repeat_password" class="form-control form-box__input" value="" id="register_repeat_password" required>
+                <div class="form-box__icon">
+                  <svg class="icon icon-eye"><use xlink:href="img/icons.svg#icon-eye"/></svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="form-group form-agreement">
+          <svg class="icon icon-lock"><use xlink:href="img/icons.svg#icon-lock"/></svg>
+          Нажимаю на кнопку “Зарегистироваться” я даю согласие на обработку персональных данных в соответствии с политикой конфиденциальности
+        </div>
+        <div class="form-group form-button">
+          <button type="submit" class="btn btn--full btn-submit">
+            <span>Зарегистироваться</span>
+          </button>
+        </div>
+      </form>
+      <div class="block-social modal-register__social">
+        <div class="block-social__text">
+          Быстрая регистрация через соц.сети:
+        </div>
+        <ul class="block-social__list">
+          <li class="block-social__item block-social__item--vk">
+            <a href="#"><svg class="icon icon-vk"><use xlink:href="img/icons.svg#icon-vk"/></svg></a>
+          </li>
+          <li class="block-social__item block-social__item--inst">
+            <a href="#"><svg class="icon icon-inst"><use xlink:href="img/icons.svg#icon-inst"/></svg></a>
+          </li>
+          <li class="block-social__item block-social__item--facebook">
+            <a href="#"><svg class="icon icon-facebook"><use xlink:href="img/icons.svg#icon-facebook"/></svg></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Модальное окно карточки урока -->
+  <div id="modal-lesson" class="modal modal-lesson" style="display: none">
+    <div class="modal__title">
+      Как круто снять кольца с одной вспышкой
+    </div>
+    <div class="modal__content">
+      <div class="card-lesson">
+        <div class="card-lesson__description">
+          <div class="card-lesson__text">
+            <p>История, конечно прям ЦЕНЗУРА! Если у тебя слабенькое сердце, то не стоит читать ЭТУ ИСТОРИЮ! Мы просто, тогда были юные)))) и не понимали, зачем продвижение, и что такое маркетинг и реклама!!!</p>
+          </div>
+          <div class="card-lesson__what-need">
+            <div class="card-lesson__what-need-title">
+              Что нужно для такого кадра?
+            </div>
+            <div class="card-lesson__what-need-wrap">
+              <div class="scrollbar card-lesson__what-need-scroll">
+                <div class="card-lesson__what-need-items">
+                  <div class="what-need-item">
+                    <div class="what-need-item__icon">
+                      <img src="img/what-need/img-1.svg" alt="">
+                    </div>
+                    <div class="what-need-item__text">
+                      Всего одна вспышка, и все!
+                    </div>
+                  </div>
+                  <div class="what-need-item">
+                    <div class="what-need-item__icon">
+                      <img src="img/what-need/img-2.svg" alt="">
+                    </div>
+                    <div class="what-need-item__text">
+                      Далее нужен объект для съемки: муж, собака либо кукла (обычная кукла)
+                    </div>
+                  </div>
+                  <div class="what-need-item">
+                    <div class="what-need-item__icon">
+                      <img src="img/what-need/img-3.svg" alt="">
+                    </div>
+                    <div class="what-need-item__text">
+                      Внимание! Синхронизатор для этого урока нужен! и ТЕМНОТА!
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+
+
+          </div>
+        </div>
+        <div class="card-lesson__result">
+          <div class="card-lesson__result-title">
+            Результат, который мы получим в итоге:
+          </div>
+          <div class="card-lesson__result-img">
+            <img src="img/lesson-result.jpg" alt="">
+          </div>
+        </div>
+        <div class="card-lesson__bottom">
+          <div class="card-lesson__cost">
+
+            <div class="card-lesson__cost-text">
+              Стоимость урока:
+            </div>
+            <div class="card-lesson__cost-row">
+              <div class="card-lesson__price">
+                <span>299</span> руб.
+              </div>
+              <div class="card-lesson__price card-lesson__price--old">
+                <span>299</span> руб.
+              </div>
+            </div>
+          </div>
+          <div class="card-lesson__cost">
+
+            <div class="card-lesson__cost-text">
+              <span>Стоимость по подписке:</span>
+              <a href="javascript:void(0)" class="btn-help" data-tooltip-trigger="click" data-tooltip="" data-tooltip-html='Урок доступен бесплатно если у Вас есть подписка. <br> <a href="#">Подробнее о подписке</a>'>?</a>
+
+            </div>
+            <div class="card-lesson__cost-row">
+              <div class="card-lesson__price card-lesson__price--subscription">
+                Бесплатно
+              </div>
+            </div>
+          </div>
+          <div class="card-lesson__button">
+            <a href="#" class="btn btn-add card-lesson__btn-add">
+              <svg class="icon icon-check"><use xlink:href="img/icons.svg#icon-check"/></svg>
+              <span class="btn-add__text">Добавить</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Модальное окно Добавлено -->
+  <div id="modal-added" class="modal modal-added" style="display: none">
+    <div class="modal__title">
+      Урок “Заголовок добавленного урока или подборки” добавлен!
+    </div>
+    <div class="modal__content">
+      <div class="modal-added__buttons">
+        <a href="#modal-cart" class="btn" data-fancybox-cart="">
+          <span>перейти в багаж заний</span>
+        </a>
+        <a href="javascript:void(0)" class="btn btn--border" data-fancybox-close="">
+          <span>вернуться в магазин</span>
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Модальное окно политики конфиденциальности -->
+  <div id="modal-politic" class="modal modal-politic" style="display: none">
+    <div class="modal__title">
+      Политика конфиденциальности
+    </div>
+    <div class="modal__content">
+      <div class="modal__text">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores culpa eos explicabo fuga incidunt ipsa minima quam qui sint tempore? Assumenda at aut eaque error est explicabo illo laborum, mollitia necessitatibus nobis non omnis praesentium, provident quia tempora ut vitae. Cum deleniti officiis quam quidem voluptas! Culpa itaque labore nemo!</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores culpa eos explicabo fuga incidunt ipsa minima quam qui sint tempore? Assumenda at aut eaque error est explicabo illo laborum, mollitia necessitatibus nobis non omnis praesentium, provident quia tempora ut vitae. Cum deleniti officiis quam quidem voluptas! Culpa itaque labore nemo!</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores culpa eos explicabo fuga incidunt ipsa minima quam qui sint tempore? Assumenda at aut eaque error est explicabo illo laborum, mollitia necessitatibus nobis non omnis praesentium, provident quia tempora ut vitae. Cum deleniti officiis quam quidem voluptas! Culpa itaque labore nemo!</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores culpa eos explicabo fuga incidunt ipsa minima quam qui sint tempore? Assumenda at aut eaque error est explicabo illo laborum, mollitia necessitatibus nobis non omnis praesentium, provident quia tempora ut vitae. Cum deleniti officiis quam quidem voluptas! Culpa itaque labore nemo!</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores culpa eos explicabo fuga incidunt ipsa minima quam qui sint tempore? Assumenda at aut eaque error est explicabo illo laborum, mollitia necessitatibus nobis non omnis praesentium, provident quia tempora ut vitae. Cum deleniti officiis quam quidem voluptas! Culpa itaque labore nemo!</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores culpa eos explicabo fuga incidunt ipsa minima quam qui sint tempore? Assumenda at aut eaque error est explicabo illo laborum, mollitia necessitatibus nobis non omnis praesentium, provident quia tempora ut vitae. Cum deleniti officiis quam quidem voluptas! Culpa itaque labore nemo!</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores culpa eos explicabo fuga incidunt ipsa minima quam qui sint tempore? Assumenda at aut eaque error est explicabo illo laborum, mollitia necessitatibus nobis non omnis praesentium, provident quia tempora ut vitae. Cum deleniti officiis quam quidem voluptas! Culpa itaque labore nemo!</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores culpa eos explicabo fuga incidunt ipsa minima quam qui sint tempore? Assumenda at aut eaque error est explicabo illo laborum, mollitia necessitatibus nobis non omnis praesentium, provident quia tempora ut vitae. Cum deleniti officiis quam quidem voluptas! Culpa itaque labore nemo!</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores culpa eos explicabo fuga incidunt ipsa minima quam qui sint tempore? Assumenda at aut eaque error est explicabo illo laborum, mollitia necessitatibus nobis non omnis praesentium, provident quia tempora ut vitae. Cum deleniti officiis quam quidem voluptas! Culpa itaque labore nemo!</p>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+	<script src="js/libs.min.js"></script>
+	<script src="js/scripts.js"></script>
+	<script src="js/validation.js"></script>
+</body>
+</html>
