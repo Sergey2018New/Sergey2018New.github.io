@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Media</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/main.css">
+  <script src="js/lozad.min.js"></script>
+</head>
+
+<body>
+  <script type="text/javascript">
+    if (getInternetExplorerVersion() !== -1) {
+      var script = document.createElement("script");
+      script.src = "js/intersection-observer.js";
+      script.type = "text/javascript";
+      document.getElementsByTagName('head')[0].appendChild(script);
+
+      var scriptPolifill = document.createElement("script");
+      scriptPolifill.src = "js/IE-polifill.js";
+      scriptPolifill.type = "text/javascript";
+      document.getElementsByTagName('head')[0].appendChild(scriptPolifill);
+    } else {
+      document.addEventListener("DOMContentLoaded", function() {
+        var observer = lozad('.lazy');
+        observer.observe();
+      });
+    }
+
+    function getInternetExplorerVersion() {
+      var rv = -1;
+      if (navigator.appName == 'Microsoft Internet Explorer') {
+        var ua = navigator.userAgent;
+        var re = new RegExp("MSIE ([0-9]{1,}[\.0-9]{0,})");
+        if (re.exec(ua) != null)
+          rv = parseFloat(RegExp.$1);
+      } else if (navigator.appName == 'Netscape') {
+        var ua = navigator.userAgent;
+        var re = new RegExp("Trident/.*rv:([0-9]{1,}[\.0-9]{0,})");
+        if (re.exec(ua) != null)
+          rv = parseFloat(RegExp.$1);
+      }
+      return rv;
+    }
+  </script>
+
+  <div class="wrapper">
+
+    <div class="header-wrapper">
+      <header class="header header--fixed">
+        <div class="header__inner">
+          <div class="container">
+            <div class="header__row row align-center justify-between">
+              <div class="header__toggle-menu">
+                <span></span>
+              </div>
+              <div class="header__logo">
+                <a href="#" class="logo">
+                  <img class="logo__img" src="img/logo.svg" width="229" height="40" alt="">
+                </a>
+              </div>
+              <div class="header__menu">
+                <ul class="menu">
+                  <li class="menu__item menu__item--active"><a href="#" class="menu__link">
+                      <svg class="icon icon-arrow-more">
+                        <use xlink:href="img/icons.svg#icon-arrow-more" />
+                      </svg>
+                      <span>Home</span>
+                    </a></li>
+                  <li class="menu__item menu__item--dropdown">
+                    <a href="#" class="menu__link"><svg class="icon icon-arrow-more">
+                        <use xlink:href="img/icons.svg#icon-arrow-more" />
+                      </svg><span>Services</span><svg class="icon icon-arrow">
+                        <use xlink:href="img/icons.svg#icon-arrow" />
+                      </svg><svg class="icon icon-arrow-more-3">
+                        <use xlink:href="img/icons.svg#icon-arrow-more-3" />
+                      </svg></a>
+                    <ul class="menu__submenu">
+                      <li><a href="#"><svg class="icon icon-arrow-more">
+                            <use xlink:href="img/icons.svg#icon-arrow-more" />
+                          </svg><span>Ship chartering</span></a></li>
+                      <li><a href="#"><svg class="icon icon-arrow-more">
+                            <use xlink:href="img/icons.svg#icon-arrow-more" />
+                          </svg><span>Transshipment management</span></a></li>
+                      <li><a href="#"><svg class="icon icon-arrow-more">
+                            <use xlink:href="img/icons.svg#icon-arrow-more" />
+                          </svg><span>Barge transport</span></a></li>
+                      <li><a href="#"><svg class="icon icon-arrow-more">
+                            <use xlink:href="img/icons.svg#icon-arrow-more" />
+                          </svg><span>Logistic solutions</span></a></li>
+                      <li><a href="#"><svg class="icon icon-arrow-more">
+                            <use xlink:href="img/icons.svg#icon-arrow-more" />
+                          </svg><span>Shipping intelligence</span></a></li>
+                    </ul>
+                  </li>
+                  <li class="menu__item"><a href="#" class="menu__link"><svg class="icon icon-arrow-more">
+                        <use xlink:href="img/icons.svg#icon-arrow-more" />
+                      </svg><span>About Us</span></a></li>
+                  <li class="menu__item"><a href="#" class="menu__link"><svg class="icon icon-arrow-more">
+                        <use xlink:href="img/icons.svg#icon-arrow-more" />
+                      </svg><span>News</span></a></li>
+                  <li class="menu__item"><a href="#" class="menu__link"><svg class="icon icon-arrow-more">
+                        <use xlink:href="img/icons.svg#icon-arrow-more" />
+                      </svg><span>Media</span></a></li>
+                  <li class="menu__item"><a href="#" class="menu__link"><svg class="icon icon-arrow-more">
+                        <use xlink:href="img/icons.svg#icon-arrow-more" />
+                      </svg><span>Contacts</span></a></li>
+                </ul>
+              </div>
+              <div class="header__contacts header-contacts row">
+                <div class="header-contacts__item header-contacts__item--email">
+                  <div class="header-contacts__icon">
+                    <svg class="icon icon-email">
+                      <use xlink:href="img/icons.svg#icon-email" />
+                    </svg>
+                  </div>
+                  <div class="header-contacts__block">
+                    <div>
+                      <a href="mailto:info@arctic-heavylift.com">info@arctic-heavylift.com</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="header-contacts__item header-contacts__item--phone">
+                  <div class="header-contacts__icon">
+                    <svg class="icon icon-phone">
+                      <use xlink:href="img/icons.svg#icon-phone" />
+                    </svg>
+                  </div>
+                  <div class="header-contacts__block">
+                    <div><a href="tel:+35725030206">+357 25 030206</a></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="nav-mobile">
+        <div class="nav-mobile__header">
+          <div class="nav-mobile__language language">
+            <div class="language__label">Select language:</div>
+            <a href="javascript:void(0)" class="language__item">RU</a>
+            <a href="javascript:void(0)" class="language__item language__item--active">EN</a>
+          </div>
+          <div class="nav-mobile__back">
+            <div>
+              <svg class="icon icon-arrow-more-3">
+                <use xlink:href="img/icons.svg#icon-arrow-more-3" />
+              </svg>
+              <span>Back</span>
+            </div>
+          </div>
+        </div>
+        <div class="nav-mobile__content">
+          <div class="nav-mobile__menu"></div>
+        </div>
+        <div class="nav-mobile__close"><span>Закрыть</span></div>
+      </div>
+    </div>
+
+
+    <div class="wrapper-content">
+      <div class="content">
+        <div class="container">
+          <ul class="breadcrumb">
+            <li><a href="#">ArcticHeavylift</a></li>
+            <li class="active">Media</li>
+          </ul>
+          <div class="heading">
+            <h1>Media</h1>
+          </div>
+          <div class="filters">
+            <div class="filters__label">Show posts:</div>
+            <ul class="filters__list">
+              <li class="filters__item">All</li>
+              <li class="filters__item is_active">Last week</li>
+              <li class="filters__item">For this month</li>
+            </ul>
+          </div>
+          <div class="media-articles">
+            <div class="media-articles__items">
+              <div class="article-item">
+                <div class="article-item__image lazy" data-background-image="img/media/image-1.jpg" data-background-image-set="url('img/media/image-1@2x.jpg') 2x">
+                  <a href="#">
+                    <div class="article-item__title">Lorem ipsum dolor sit amet, consectetur adipiscing elit in augue faucibus</div>
+                    <div class="article-item__play">
+                      <svg class="icon icon-play">
+                        <use xlink:href="img/icons.svg#icon-play" />
+                      </svg>
+                    </div>
+                  </a>
+                </div>
+                <div class="article-item__content">
+                  <div class="article-item__date">October 15, 2020</div>
+                  <div class="article-item__text">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean in augue faucibus dolor consectetur porta. Morbi vitae dui fringilla, bibendum diam eget, lacinia leo. Quisque rutrum lorem eu dolor sagittis tristique id et mauris. Maecenas non mauris tellus.</p>
+                    <p>Aliquam ante ligula, pellentesque quis ipsum vitae, euismod ultrices nisl. Aliquam fermentum metus at neque imperdiet laoreet. Proin id nulla vel leo consectetur lobortis.</p>
+                  </div>
+                  <div class="article-item__more">
+                    <a href="#" class="article-item__more-link link-more">
+                      <span>Show full text</span>
+                      <svg class="icon icon-arrow-more-3">
+                        <use xlink:href="img/icons.svg#icon-arrow-more-3" />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="article-item">
+                <div class="article-item__image lazy" data-background-image="img/media/image-2.jpg" data-background-image-set="url('img/media/image-2@2x.jpg') 2x">
+                  <a href="#">
+                    <div class="article-item__title">Lorem ipsum dolor sit amet, consectetur adipiscing elit in augue faucibus, consectetur adipiscing elit in augue faucibus</div>
+                  </a>
+                </div>
+                <div class="article-item__content">
+                  <div class="article-item__date">October 15, 2020</div>
+                  <div class="article-item__text">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean in augue faucibus dolor consectetur porta. Morbi vitae dui fringilla, bibendum diam eget, lacinia leo.</p>
+                  </div>
+                  <div class="article-item__more">
+                    <a href="#" class="article-item__more-link link-more">
+                      <span>Show full text</span>
+                      <svg class="icon icon-arrow-more-3">
+                        <use xlink:href="img/icons.svg#icon-arrow-more-3" />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="article-item">
+                <div class="article-item__image lazy" data-background-image="img/media/image-3.jpg" data-background-image-set="url('img/media/image-3@2x.jpg') 2x">
+                  <a href="#">
+                    <div class="article-item__title">Lorem ipsum dolor sit amet, consectetur adipiscing elit in augue faucibus, consectetur</div>
+                  </a>
+                </div>
+                <div class="article-item__content">
+                  <div class="article-item__date">October 15, 2020</div>
+                  <div class="article-item__text">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <p>Aenean in augue faucibus dolor consectetur porta. Morbi vitae dui fringilla, bibendum diam eget, lacinia leo. Quisque rutrum lorem eu dolor sagittis tristique id et mauris. Maecenas non mauris tellus. Aliquam ante ligula, pellentesque quis ipsum vitae, euismod ultrices nisl. </p>
+                  </div>
+                  <div class="article-item__more">
+                    <a href="#" class="article-item__more-link link-more">
+                      <span>Show full text</span>
+                      <svg class="icon icon-arrow-more-3">
+                        <use xlink:href="img/icons.svg#icon-arrow-more-3" />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="article-item">
+                <div class="article-item__image lazy" data-background-image="img/media/image-4.jpg" data-background-image-set="url('img/media/image-4@2x.jpg') 2x">
+                  <a href="#">
+                    <div class="article-item__title">Lorem ipsum dolor sit amet, consectetur adipiscing</div>
+                  </a>
+                </div>
+                <div class="article-item__content">
+                  <div class="article-item__date">October 15, 2020</div>
+                  <div class="article-item__text">
+                    <p>Aliquam ante ligula, pellentesque quis ipsum vitae, euismod ultrices nisl. Aliquam fermentum metus at neque imperdiet laoreet. Proin id nulla vel leo consectetur lobortis. </p>
+                  </div>
+                  <div class="article-item__more">
+                    <a href="#" class="article-item__more-link link-more">
+                      <span>Show full text</span>
+                      <svg class="icon icon-arrow-more-3">
+                        <use xlink:href="img/icons.svg#icon-arrow-more-3" />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="article-item">
+                <div class="article-item__image lazy" data-background-image="img/media/image-5.jpg" data-background-image-set="url('img/media/image-5@2x.jpg') 2x">
+                  <a href="#">
+                    <div class="article-item__title">Lorem ipsum dolor sit amet, consectetur adipiscing</div>
+                    <div class="article-item__play">
+                      <svg class="icon icon-play">
+                        <use xlink:href="img/icons.svg#icon-play" />
+                      </svg>
+                    </div>
+                  </a>
+                </div>
+                <div class="article-item__content">
+                  <div class="article-item__date">October 15, 2020</div>
+                  <div class="article-item__text">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                  </div>
+                  <div class="article-item__more">
+                    <a href="#" class="article-item__more-link link-more">
+                      <span>Show full text</span>
+                      <svg class="icon icon-arrow-more-3">
+                        <use xlink:href="img/icons.svg#icon-arrow-more-3" />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="article-item">
+                <div class="article-item__image lazy" data-background-image="img/media/image-6.jpg" data-background-image-set="url('img/media/image-5@2x.jpg') 2x">
+                  <a href="#">
+                    <div class="article-item__title">Lorem ipsum dolor sit amet, consectetur adipiscing elit in augue faucibus</div>
+                  </a>
+                </div>
+                <div class="article-item__content">
+                  <div class="article-item__date">October 15, 2020</div>
+                  <div class="article-item__text">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean in augue faucibus dolor consectetur porta. Morbi vitae dui fringilla, bibendum diam eget</p>
+                  </div>
+                  <div class="article-item__more">
+                    <a href="#" class="article-item__more-link link-more">
+                      <span>Show full text</span>
+                      <svg class="icon icon-arrow-more-3">
+                        <use xlink:href="img/icons.svg#icon-arrow-more-3" />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="article-item">
+                <div class="article-item__image lazy" data-background-image="img/media/image-1.jpg" data-background-image-set="url('img/media/image-1@2x.jpg') 2x">
+                  <a href="#">
+                    <div class="article-item__title">Lorem ipsum dolor sit amet, consectetur adipiscing elit in augue faucibus</div>
+                    <div class="article-item__play">
+                      <svg class="icon icon-play">
+                        <use xlink:href="img/icons.svg#icon-play" />
+                      </svg>
+                    </div>
+                  </a>
+                </div>
+                <div class="article-item__content">
+                  <div class="article-item__date">October 15, 2020</div>
+                  <div class="article-item__text">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean in augue faucibus dolor consectetur porta. Morbi vitae dui fringilla, bibendum diam eget, lacinia leo. Quisque rutrum lorem eu dolor sagittis tristique id et mauris. Maecenas non mauris tellus.</p>
+                    <p>Aliquam ante ligula, pellentesque quis ipsum vitae, euismod ultrices nisl. Aliquam fermentum metus at neque imperdiet laoreet. Proin id nulla vel leo consectetur lobortis.</p>
+                  </div>
+                  <div class="article-item__more">
+                    <a href="#" class="article-item__more-link link-more">
+                      <span>Show full text</span>
+                      <svg class="icon icon-arrow-more-3">
+                        <use xlink:href="img/icons.svg#icon-arrow-more-3" />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="article-item">
+                <div class="article-item__image lazy" data-background-image="img/media/image-2.jpg" data-background-image-set="url('img/media/image-2@2x.jpg') 2x">
+                  <a href="#">
+                    <div class="article-item__title">Lorem ipsum dolor sit amet, consectetur adipiscing elit in augue faucibus, consectetur adipiscing elit in augue faucibus</div>
+                  </a>
+                </div>
+                <div class="article-item__content">
+                  <div class="article-item__date">October 15, 2020</div>
+                  <div class="article-item__text">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean in augue faucibus dolor consectetur porta. Morbi vitae dui fringilla, bibendum diam eget, lacinia leo.</p>
+                  </div>
+                  <div class="article-item__more">
+                    <a href="#" class="article-item__more-link link-more">
+                      <span>Show full text</span>
+                      <svg class="icon icon-arrow-more-3">
+                        <use xlink:href="img/icons.svg#icon-arrow-more-3" />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="article-item">
+                <div class="article-item__image lazy" data-background-image="img/media/image-3.jpg" data-background-image-set="url('img/media/image-3@2x.jpg') 2x">
+                  <a href="#">
+                    <div class="article-item__title">Lorem ipsum dolor sit amet, consectetur adipiscing elit in augue faucibus, consectetur</div>
+                  </a>
+                </div>
+                <div class="article-item__content">
+                  <div class="article-item__date">October 15, 2020</div>
+                  <div class="article-item__text">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <p>Aenean in augue faucibus dolor consectetur porta. Morbi vitae dui fringilla, bibendum diam eget, lacinia leo. Quisque rutrum lorem eu dolor sagittis tristique id et mauris. Maecenas non mauris tellus. Aliquam ante ligula, pellentesque quis ipsum vitae, euismod ultrices nisl. </p>
+                  </div>
+                  <div class="article-item__more">
+                    <a href="#" class="article-item__more-link link-more">
+                      <span>Show full text</span>
+                      <svg class="icon icon-arrow-more-3">
+                        <use xlink:href="img/icons.svg#icon-arrow-more-3" />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="article-item">
+                <div class="article-item__image lazy" data-background-image="img/media/image-4.jpg" data-background-image-set="url('img/media/image-4@2x.jpg') 2x">
+                  <a href="#">
+                    <div class="article-item__title">Lorem ipsum dolor sit amet, consectetur adipiscing</div>
+                  </a>
+                </div>
+                <div class="article-item__content">
+                  <div class="article-item__date">October 15, 2020</div>
+                  <div class="article-item__text">
+                    <p>Aliquam ante ligula, pellentesque quis ipsum vitae, euismod ultrices nisl. Aliquam fermentum metus at neque imperdiet laoreet. Proin id nulla vel leo consectetur lobortis. </p>
+                  </div>
+                  <div class="article-item__more">
+                    <a href="#" class="article-item__more-link link-more">
+                      <span>Show full text</span>
+                      <svg class="icon icon-arrow-more-3">
+                        <use xlink:href="img/icons.svg#icon-arrow-more-3" />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="article-item">
+                <div class="article-item__image lazy" data-background-image="img/media/image-5.jpg" data-background-image-set="url('img/media/image-5@2x.jpg') 2x">
+                  <a href="#">
+                    <div class="article-item__title">Lorem ipsum dolor sit amet, consectetur adipiscing</div>
+                    <div class="article-item__play">
+                      <svg class="icon icon-play">
+                        <use xlink:href="img/icons.svg#icon-play" />
+                      </svg>
+                    </div>
+                  </a>
+                </div>
+                <div class="article-item__content">
+                  <div class="article-item__date">October 15, 2020</div>
+                  <div class="article-item__text">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                  </div>
+                  <div class="article-item__more">
+                    <a href="#" class="article-item__more-link link-more">
+                      <span>Show full text</span>
+                      <svg class="icon icon-arrow-more-3">
+                        <use xlink:href="img/icons.svg#icon-arrow-more-3" />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="article-item">
+                <div class="article-item__image lazy" data-background-image="img/media/image-6.jpg" data-background-image-set="url('img/media/image-5@2x.jpg') 2x">
+                  <a href="#">
+                    <div class="article-item__title">Lorem ipsum dolor sit amet, consectetur adipiscing elit in augue faucibus</div>
+                  </a>
+                </div>
+                <div class="article-item__content">
+                  <div class="article-item__date">October 15, 2020</div>
+                  <div class="article-item__text">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean in augue faucibus dolor consectetur porta. Morbi vitae dui fringilla, bibendum diam eget</p>
+                  </div>
+                  <div class="article-item__more">
+                    <a href="#" class="article-item__more-link link-more">
+                      <span>Show full text</span>
+                      <svg class="icon icon-arrow-more-3">
+                        <use xlink:href="img/icons.svg#icon-arrow-more-3" />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="media-articles__load">
+              <a href="javascript:void(0)" class="media-articles__load-more btn btn--border btn--more">
+                <span>Load more</span>
+                <svg class="icon icon-load">
+                  <use xlink:href="img/icons.svg#icon-load" />
+                </svg>
+              </a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="footer__primary">
+        <div class="container">
+          <div class="footer__row row">
+            <div class="footer__column footer__column--info">
+              <div class="footer__logo">
+                <a href="#" class="logo"><img class="logo__img" src="img/logo-light.svg" width="229" height="40" alt=""></a>
+              </div>
+              <div class="footer__description">
+                ARCTIC HEAVYLIFT LTD.<br>
+                ultimate solutions for project cargo transport to remote destinations
+              </div>
+            </div>
+            <div class="footer__column footer__column--menu">
+              <div class="footer__title"><span>Company</span> <svg class="icon icon-arrow">
+                  <use xlink:href="img/icons.svg#icon-arrow" />
+                </svg></div>
+              <div class="footer__block">
+                <ul class="footer__menu">
+                  <li><a href="#">Home</a></li>
+                  <li><a href="#">About Us</a></li>
+                  <li><a href="#">News</a></li>
+                  <li><a href="#">Media</a></li>
+                  <li><a href="#">Contacts</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="footer__column footer__column--services">
+              <div class="footer__title"><span>Services</span> <svg class="icon icon-arrow">
+                  <use xlink:href="img/icons.svg#icon-arrow" />
+                </svg></div>
+              <div class="footer__block">
+                <ul class="footer__menu">
+                  <li><a href="#">Ship chartering</a></li>
+                  <li><a href="#">Transshipment management</a></li>
+                  <li><a href="#">Barge transport</a></li>
+                  <li><a href="#">Logistics solutions</a></li>
+                  <li><a href="#">Shipping Intelligence</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="footer__column footer__column--contacts">
+              <div class="footer__title"><span>Our contacts</span></div>
+              <div class="footer__contacts">
+                <div class="footer__contacts-address">
+                  <svg class="icon icon-pointer">
+                    <use xlink:href="img/icons.svg#icon-pointer" />
+                  </svg>
+                  <span>205, Archbishop Makarios Avenue</span>
+                </div>
+                <div class="footer__contacts-phone">
+
+                  <a href="tel:+35725030206"><svg class="icon icon-phone">
+                      <use xlink:href="img/icons.svg#icon-phone" />
+                    </svg><span>+357 25 030206</span></a>
+                </div>
+                <div class="footer__contacts-email">
+
+                  <a href="mailto:info@arctic-heavylift.com"><svg class="icon icon-email">
+                      <use xlink:href="img/icons.svg#icon-email" />
+                    </svg><span>info@arctic-heavylift.com</span></a>
+                </div>
+              </div>
+              <ul class="footer__socials socials">
+                <li class="socials__item socials__item--facebook"><a target="_blank" class="socials__link" href="#"><svg class="icon icon-facebook">
+                      <use xlink:href="img/icons.svg#icon-facebook" />
+                    </svg></a></li>
+                <li class="socials__item socials__item--youtube"><a target="_blank" class="socials__link" href="#"><svg class="icon icon-youtube">
+                      <use xlink:href="img/icons.svg#icon-youtube" />
+                    </svg></a></li>
+                <li class="socials__item socials__item--instagram"><a class="socials__link" href="#"><svg class="icon icon-instagram">
+                      <use xlink:href="img/icons.svg#icon-instagram" />
+                    </svg></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer__secondary">
+        <div class="container">
+          <div class="footer__row footer__row--secondary row justify-between">
+            <div class="footer__created">
+              <span>Created by</span>
+              <a href="https://rusodot.ru/" target="_blank"><img src="img/ruso.svg" alt=""></a>
+            </div>
+            <div class="footer__copyright">
+              Copyright © Arctic Heavylift Ltd. <span>All Rights Reserved</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+  <div class="site-overlay"></div>
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/libs.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/validation.js"></script>
+
+</body>
+
+</html>

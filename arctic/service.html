@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Barge transport</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/main.css">
+  <script src="js/lozad.min.js"></script>
+</head>
+
+<body>
+  <script type="text/javascript">
+    if (getInternetExplorerVersion() !== -1) {
+      var script = document.createElement("script");
+      script.src = "js/intersection-observer.js";
+      script.type = "text/javascript";
+      document.getElementsByTagName('head')[0].appendChild(script);
+
+      var scriptPolifill = document.createElement("script");
+      scriptPolifill.src = "js/IE-polifill.js";
+      scriptPolifill.type = "text/javascript";
+      document.getElementsByTagName('head')[0].appendChild(scriptPolifill);
+    } else {
+      document.addEventListener("DOMContentLoaded", function() {
+        var observer = lozad('.lazy');
+        observer.observe();
+      });
+    }
+
+    function getInternetExplorerVersion() {
+      var rv = -1;
+      if (navigator.appName == 'Microsoft Internet Explorer') {
+        var ua = navigator.userAgent;
+        var re = new RegExp("MSIE ([0-9]{1,}[\.0-9]{0,})");
+        if (re.exec(ua) != null)
+          rv = parseFloat(RegExp.$1);
+      } else if (navigator.appName == 'Netscape') {
+        var ua = navigator.userAgent;
+        var re = new RegExp("Trident/.*rv:([0-9]{1,}[\.0-9]{0,})");
+        if (re.exec(ua) != null)
+          rv = parseFloat(RegExp.$1);
+      }
+      return rv;
+    }
+  </script>
+
+  <div class="wrapper">
+
+    <div class="header-wrapper">
+      <header class="header header--fixed">
+        <div class="header__inner">
+          <div class="container">
+            <div class="header__row row align-center justify-between">
+              <div class="header__toggle-menu">
+                <span></span>
+              </div>
+              <div class="header__logo">
+                <a href="#" class="logo">
+                  <img class="logo__img" src="img/logo.svg" width="229" height="40" alt="">
+                </a>
+              </div>
+              <div class="header__menu">
+                <ul class="menu">
+                  <li class="menu__item menu__item--active"><a href="#" class="menu__link">
+                      <svg class="icon icon-arrow-more">
+                        <use xlink:href="img/icons.svg#icon-arrow-more" />
+                      </svg>
+                      <span>Home</span>
+                    </a></li>
+                  <li class="menu__item menu__item--dropdown">
+                    <a href="#" class="menu__link"><svg class="icon icon-arrow-more">
+                        <use xlink:href="img/icons.svg#icon-arrow-more" />
+                      </svg><span>Services</span><svg class="icon icon-arrow">
+                        <use xlink:href="img/icons.svg#icon-arrow" />
+                      </svg><svg class="icon icon-arrow-more-3">
+                        <use xlink:href="img/icons.svg#icon-arrow-more-3" />
+                      </svg></a>
+                    <ul class="menu__submenu">
+                      <li><a href="#"><svg class="icon icon-arrow-more">
+                            <use xlink:href="img/icons.svg#icon-arrow-more" />
+                          </svg><span>Ship chartering</span></a></li>
+                      <li><a href="#"><svg class="icon icon-arrow-more">
+                            <use xlink:href="img/icons.svg#icon-arrow-more" />
+                          </svg><span>Transshipment management</span></a></li>
+                      <li><a href="#"><svg class="icon icon-arrow-more">
+                            <use xlink:href="img/icons.svg#icon-arrow-more" />
+                          </svg><span>Barge transport</span></a></li>
+                      <li><a href="#"><svg class="icon icon-arrow-more">
+                            <use xlink:href="img/icons.svg#icon-arrow-more" />
+                          </svg><span>Logistic solutions</span></a></li>
+                      <li><a href="#"><svg class="icon icon-arrow-more">
+                            <use xlink:href="img/icons.svg#icon-arrow-more" />
+                          </svg><span>Shipping intelligence</span></a></li>
+                    </ul>
+                  </li>
+                  <li class="menu__item"><a href="#" class="menu__link"><svg class="icon icon-arrow-more">
+                        <use xlink:href="img/icons.svg#icon-arrow-more" />
+                      </svg><span>About Us</span></a></li>
+                  <li class="menu__item"><a href="#" class="menu__link"><svg class="icon icon-arrow-more">
+                        <use xlink:href="img/icons.svg#icon-arrow-more" />
+                      </svg><span>News</span></a></li>
+                  <li class="menu__item"><a href="#" class="menu__link"><svg class="icon icon-arrow-more">
+                        <use xlink:href="img/icons.svg#icon-arrow-more" />
+                      </svg><span>Media</span></a></li>
+                  <li class="menu__item"><a href="#" class="menu__link"><svg class="icon icon-arrow-more">
+                        <use xlink:href="img/icons.svg#icon-arrow-more" />
+                      </svg><span>Contacts</span></a></li>
+                </ul>
+              </div>
+              <div class="header__contacts header-contacts row">
+                <div class="header-contacts__item header-contacts__item--email">
+                  <div class="header-contacts__icon">
+                    <svg class="icon icon-email">
+                      <use xlink:href="img/icons.svg#icon-email" />
+                    </svg>
+                  </div>
+                  <div class="header-contacts__block">
+                    <div>
+                      <a href="mailto:info@arctic-heavylift.com">info@arctic-heavylift.com</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="header-contacts__item header-contacts__item--phone">
+                  <div class="header-contacts__icon">
+                    <svg class="icon icon-phone">
+                      <use xlink:href="img/icons.svg#icon-phone" />
+                    </svg>
+                  </div>
+                  <div class="header-contacts__block">
+                    <div><a href="tel:+35725030206">+357 25 030206</a></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="nav-mobile">
+        <div class="nav-mobile__header">
+          <div class="nav-mobile__language language">
+            <div class="language__label">Select language:</div>
+            <a href="javascript:void(0)" class="language__item">RU</a>
+            <a href="javascript:void(0)" class="language__item language__item--active">EN</a>
+          </div>
+          <div class="nav-mobile__back">
+            <div>
+              <svg class="icon icon-arrow-more-3">
+                <use xlink:href="img/icons.svg#icon-arrow-more-3" />
+              </svg>
+              <span>Back</span>
+            </div>
+          </div>
+        </div>
+        <div class="nav-mobile__content">
+          <div class="nav-mobile__menu"></div>
+        </div>
+        <div class="nav-mobile__close"><span>Закрыть</span></div>
+      </div>
+    </div>
+
+
+    <div class="wrapper-content">
+      <div class="content">
+        <div class="container">
+          <ul class="breadcrumb">
+            <li><a href="#">ArcticHeavylift</a></li>
+            <li class="active">Barge transport</li>
+          </ul>
+          <div class="heading">
+            <h1>Barge transport</h1>
+          </div>
+        </div>
+        <div class="card-service">
+          <div class="container">
+            <div class="card-service__image">
+              <img data-src="img/service-image.jpg" class="lazy" alt="">
+            </div>
+            <div class="card-service__contact">
+              <a href="#" class="btn btn--arrow card-service__btn">
+                <span>Contact Us</span>
+                <svg class="icon icon-arrow-more-2">
+                  <use xlink:href="img/icons.svg#icon-arrow-more-2" />
+                </svg>
+              </a>
+            </div>
+            <div class="card-service__info row">
+              <div class="card-service__info-logo">
+                <img class="lazy" data-src="img/logo.svg" alt="">
+              </div>
+              <div class="card-service__info-text">
+                <div>
+                  <p>Arctic Heavylift Ltd. is well experienced with project cargo transportation on the barges across Russian inland waterways.</p>
+                </div>
+              </div>
+            </div>
+            <div class="card-service__description row flex-wrap">
+              <div class="card-service__description-column">
+                <div class="card-service__description-text">
+                  <p>We are in touch with all barge carriers, operating on Russian rivers and know all aspects of working with them. By order of the client we can arrange mobilisation of the barges of all the types (including ice-classed barges) from other regions by tugs, heavy-lift or semi-submersible vessels.</p>
+                </div>
+              </div>
+              <div class="card-service__description-column">
+                <div class="card-service__description-text">
+                  <p>Arctic Heavylift Ltd. is the agent of leading marine design bureaus in Russia and can arrange barge transportation projects development and approval in the Register of Shipping.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card-service__routes">
+            <div class="container">
+              <h2>Our routes</h2>
+            </div>
+            <div class="card-service__routes-img">
+              <img class="lazy" data-src="img/routes.jpg" data-srcset="img/routes@2x.jpg 2x" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="services services--others">
+        <div class="container">
+          <h2><span>Other services</span></h2>
+          <div class="services__carousel owl-carousel">
+            <div class="service-item">
+              <div class="service-item__background lazy" data-background-image="img/services/service-1/image.jpg"></div>
+              <div class="service-item__content">
+                <div class="service-item__icon">
+                  <div class="service-item__icon-bg">
+                    <img data-src="img/services/service-1/icon-background.svg" alt="" class="lazy">
+                  </div>
+                  <div class="service-item__icon-default">
+                    <img data-src="img/services/service-1/icon.svg" alt="" class="lazy">
+                  </div>
+                  <div class="service-item__icon-hover">
+                    <img data-src="img/services/service-1/icon-hover.svg" alt="" class="lazy">
+                  </div>
+                </div>
+                <div class="service-item__title">
+                  <span>Ship chartering</span>
+                </div>
+                <div class="service-item__text">
+                  Arctic Heavylift Ltd. is working directly with all major...
+                </div>
+
+              </div>
+              <div class="service-item__more">
+                <a href="#" class="service-item__more-link link-more">
+                  <span>More about the service</span>
+                  <svg class="icon icon-arrow-more-3">
+                    <use xlink:href="img/icons.svg#icon-arrow-more-3" />
+                  </svg>
+                </a>
+              </div>
+
+
+            </div>
+            <div class="service-item">
+              <div class="service-item__background lazy" data-background-image="img/services/service-2/image.jpg"></div>
+              <div class="service-item__content">
+                <div class="service-item__icon">
+                  <div class="service-item__icon-bg">
+                    <img data-src="img/services/service-2/icon-background.svg" alt="" class="lazy">
+                  </div>
+                  <div class="service-item__icon-default">
+                    <img data-src="img/services/service-2/icon.svg" alt="" class="lazy">
+                  </div>
+                  <div class="service-item__icon-hover">
+                    <img data-src="img/services/service-2/icon-hover.svg" alt="" class="lazy">
+                  </div>
+                </div>
+                <div class="service-item__title">
+                  <span>Transshipment management</span>
+                </div>
+                <div class="service-item__text">
+                  Arctic Heavylift Ltd. can arrange project cargo transshipment...
+                </div>
+
+              </div>
+              <div class="service-item__more">
+                <a href="#" class="service-item__more-link link-more">
+                  <span>More about the service</span>
+                  <svg class="icon icon-arrow-more-3">
+                    <use xlink:href="img/icons.svg#icon-arrow-more-3" />
+                  </svg>
+                </a>
+              </div>
+
+
+            </div>
+            <div class="service-item">
+              <div class="service-item__background lazy" data-background-image="img/services/service-4/image.jpg"></div>
+              <div class="service-item__content">
+                <div class="service-item__icon">
+                  <div class="service-item__icon-bg">
+                    <img data-src="img/services/service-4/icon-background.svg" alt="" class="lazy">
+                  </div>
+                  <div class="service-item__icon-default">
+                    <img data-src="img/services/service-4/icon.svg" alt="" class="lazy">
+                  </div>
+                  <div class="service-item__icon-hover">
+                    <img data-src="img/services/service-4/icon-hover.svg" alt="" class="lazy">
+                  </div>
+                </div>
+                <div class="service-item__title">
+                  <span>Logistics solutions</span>
+                </div>
+                <div class="service-item__text">
+                  Arctic Heavylift Ltd. is at your disposal to develop ultimate...
+                </div>
+              </div>
+              <div class="service-item__more">
+                <a href="#" class="service-item__more-link link-more">
+                  <span>More about the service</span>
+                  <svg class="icon icon-arrow-more-3">
+                    <use xlink:href="img/icons.svg#icon-arrow-more-3" />
+                  </svg>
+                </a>
+              </div>
+
+
+            </div>
+            <div class="service-item">
+              <div class="service-item__background lazy" data-background-image="img/services/service-5/image.jpg"></div>
+              <div class="service-item__content">
+                <div class="service-item__icon">
+                  <div class="service-item__icon-bg">
+                    <img data-src="img/services/service-5/icon-background.svg" alt="" class="lazy">
+                  </div>
+                  <div class="service-item__icon-default">
+                    <img data-src="img/services/service-5/icon.svg" alt="" class="lazy">
+                  </div>
+                  <div class="service-item__icon-hover">
+                    <img data-src="img/services/service-5/icon-hover.svg" alt="" class="lazy">
+                  </div>
+                </div>
+                <div class="service-item__title">
+                  <span>Shipping Intelligence</span>
+                </div>
+                <div class="service-item__text">
+                  Arctic Heavylift Ltd. can arrange project cargo transshipment...
+                </div>
+              </div>
+              <div class="service-item__more">
+                <a href="#" class="service-item__more-link link-more">
+                  <span>More about the service</span>
+                  <svg class="icon icon-arrow-more-3">
+                    <use xlink:href="img/icons.svg#icon-arrow-more-3" />
+                  </svg>
+                </a>
+              </div>
+
+
+            </div>
+          </div>
+          <div class="services__touch"><img class="lazy" data-src="img/touch.svg" alt=""></div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="footer__primary">
+        <div class="container">
+          <div class="footer__row row">
+            <div class="footer__column footer__column--info">
+              <div class="footer__logo">
+                <a href="#" class="logo"><img class="logo__img" src="img/logo-light.svg" width="229" height="40" alt=""></a>
+              </div>
+              <div class="footer__description">
+                ARCTIC HEAVYLIFT LTD.<br>
+                ultimate solutions for project cargo transport to remote destinations
+              </div>
+            </div>
+            <div class="footer__column footer__column--menu">
+              <div class="footer__title"><span>Company</span> <svg class="icon icon-arrow">
+                  <use xlink:href="img/icons.svg#icon-arrow" />
+                </svg></div>
+              <div class="footer__block">
+                <ul class="footer__menu">
+                  <li><a href="#">Home</a></li>
+                  <li><a href="#">About Us</a></li>
+                  <li><a href="#">News</a></li>
+                  <li><a href="#">Media</a></li>
+                  <li><a href="#">Contacts</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="footer__column footer__column--services">
+              <div class="footer__title"><span>Services</span> <svg class="icon icon-arrow">
+                  <use xlink:href="img/icons.svg#icon-arrow" />
+                </svg></div>
+              <div class="footer__block">
+                <ul class="footer__menu">
+                  <li><a href="#">Ship chartering</a></li>
+                  <li><a href="#">Transshipment management</a></li>
+                  <li><a href="#">Barge transport</a></li>
+                  <li><a href="#">Logistics solutions</a></li>
+                  <li><a href="#">Shipping Intelligence</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="footer__column footer__column--contacts">
+              <div class="footer__title"><span>Our contacts</span></div>
+              <div class="footer__contacts">
+                <div class="footer__contacts-address">
+                  <svg class="icon icon-pointer">
+                    <use xlink:href="img/icons.svg#icon-pointer" />
+                  </svg>
+                  <span>205, Archbishop Makarios Avenue</span>
+                </div>
+                <div class="footer__contacts-phone">
+
+                  <a href="tel:+35725030206"><svg class="icon icon-phone">
+                      <use xlink:href="img/icons.svg#icon-phone" />
+                    </svg><span>+357 25 030206</span></a>
+                </div>
+                <div class="footer__contacts-email">
+
+                  <a href="mailto:info@arctic-heavylift.com"><svg class="icon icon-email">
+                      <use xlink:href="img/icons.svg#icon-email" />
+                    </svg><span>info@arctic-heavylift.com</span></a>
+                </div>
+              </div>
+              <ul class="footer__socials socials">
+                <li class="socials__item socials__item--facebook"><a target="_blank" class="socials__link" href="#"><svg class="icon icon-facebook">
+                      <use xlink:href="img/icons.svg#icon-facebook" />
+                    </svg></a></li>
+                <li class="socials__item socials__item--youtube"><a target="_blank" class="socials__link" href="#"><svg class="icon icon-youtube">
+                      <use xlink:href="img/icons.svg#icon-youtube" />
+                    </svg></a></li>
+                <li class="socials__item socials__item--instagram"><a class="socials__link" href="#"><svg class="icon icon-instagram">
+                      <use xlink:href="img/icons.svg#icon-instagram" />
+                    </svg></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer__secondary">
+        <div class="container">
+          <div class="footer__row footer__row--secondary row justify-between">
+            <div class="footer__created">
+              <span>Created by</span>
+              <a href="https://rusodot.ru/" target="_blank"><img src="img/ruso.svg" alt=""></a>
+            </div>
+            <div class="footer__copyright">
+              Copyright © Arctic Heavylift Ltd. <span>All Rights Reserved</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+  <div class="site-overlay"></div>
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/libs.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/validation.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Media Full</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/main.css">
+  <script src="js/lozad.min.js"></script>
+</head>
+
+<body>
+  <script type="text/javascript">
+    if (getInternetExplorerVersion() !== -1) {
+      var script = document.createElement("script");
+      script.src = "js/intersection-observer.js";
+      script.type = "text/javascript";
+      document.getElementsByTagName('head')[0].appendChild(script);
+
+      var scriptPolifill = document.createElement("script");
+      scriptPolifill.src = "js/IE-polifill.js";
+      scriptPolifill.type = "text/javascript";
+      document.getElementsByTagName('head')[0].appendChild(scriptPolifill);
+    } else {
+      document.addEventListener("DOMContentLoaded", function() {
+        var observer = lozad('.lazy');
+        observer.observe();
+      });
+    }
+
+    function getInternetExplorerVersion() {
+      var rv = -1;
+      if (navigator.appName == 'Microsoft Internet Explorer') {
+        var ua = navigator.userAgent;
+        var re = new RegExp("MSIE ([0-9]{1,}[\.0-9]{0,})");
+        if (re.exec(ua) != null)
+          rv = parseFloat(RegExp.$1);
+      } else if (navigator.appName == 'Netscape') {
+        var ua = navigator.userAgent;
+        var re = new RegExp("Trident/.*rv:([0-9]{1,}[\.0-9]{0,})");
+        if (re.exec(ua) != null)
+          rv = parseFloat(RegExp.$1);
+      }
+      return rv;
+    }
+  </script>
+
+  <div class="wrapper">
+
+    <div class="header-wrapper">
+      <header class="header header--fixed">
+        <div class="header__inner">
+          <div class="container">
+            <div class="header__row row align-center justify-between">
+              <div class="header__toggle-menu">
+                <span></span>
+              </div>
+              <div class="header__logo">
+                <a href="#" class="logo">
+                  <img class="logo__img" src="img/logo.svg" width="229" height="40" alt="">
+                </a>
+              </div>
+              <div class="header__menu">
+                <ul class="menu">
+                  <li class="menu__item menu__item--active"><a href="#" class="menu__link">
+                      <svg class="icon icon-arrow-more">
+                        <use xlink:href="img/icons.svg#icon-arrow-more" />
+                      </svg>
+                      <span>Home</span>
+                    </a></li>
+                  <li class="menu__item menu__item--dropdown">
+                    <a href="#" class="menu__link"><svg class="icon icon-arrow-more">
+                        <use xlink:href="img/icons.svg#icon-arrow-more" />
+                      </svg><span>Services</span><svg class="icon icon-arrow">
+                        <use xlink:href="img/icons.svg#icon-arrow" />
+                      </svg><svg class="icon icon-arrow-more-3">
+                        <use xlink:href="img/icons.svg#icon-arrow-more-3" />
+                      </svg></a>
+                    <ul class="menu__submenu">
+                      <li><a href="#"><svg class="icon icon-arrow-more">
+                            <use xlink:href="img/icons.svg#icon-arrow-more" />
+                          </svg><span>Ship chartering</span></a></li>
+                      <li><a href="#"><svg class="icon icon-arrow-more">
+                            <use xlink:href="img/icons.svg#icon-arrow-more" />
+                          </svg><span>Transshipment management</span></a></li>
+                      <li><a href="#"><svg class="icon icon-arrow-more">
+                            <use xlink:href="img/icons.svg#icon-arrow-more" />
+                          </svg><span>Barge transport</span></a></li>
+                      <li><a href="#"><svg class="icon icon-arrow-more">
+                            <use xlink:href="img/icons.svg#icon-arrow-more" />
+                          </svg><span>Logistic solutions</span></a></li>
+                      <li><a href="#"><svg class="icon icon-arrow-more">
+                            <use xlink:href="img/icons.svg#icon-arrow-more" />
+                          </svg><span>Shipping intelligence</span></a></li>
+                    </ul>
+                  </li>
+                  <li class="menu__item"><a href="#" class="menu__link"><svg class="icon icon-arrow-more">
+                        <use xlink:href="img/icons.svg#icon-arrow-more" />
+                      </svg><span>About Us</span></a></li>
+                  <li class="menu__item"><a href="#" class="menu__link"><svg class="icon icon-arrow-more">
+                        <use xlink:href="img/icons.svg#icon-arrow-more" />
+                      </svg><span>News</span></a></li>
+                  <li class="menu__item"><a href="#" class="menu__link"><svg class="icon icon-arrow-more">
+                        <use xlink:href="img/icons.svg#icon-arrow-more" />
+                      </svg><span>Media</span></a></li>
+                  <li class="menu__item"><a href="#" class="menu__link"><svg class="icon icon-arrow-more">
+                        <use xlink:href="img/icons.svg#icon-arrow-more" />
+                      </svg><span>Contacts</span></a></li>
+                </ul>
+              </div>
+              <div class="header__contacts header-contacts row">
+                <div class="header-contacts__item header-contacts__item--email">
+                  <div class="header-contacts__icon">
+                    <svg class="icon icon-email">
+                      <use xlink:href="img/icons.svg#icon-email" />
+                    </svg>
+                  </div>
+                  <div class="header-contacts__block">
+                    <div>
+                      <a href="mailto:info@arctic-heavylift.com">info@arctic-heavylift.com</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="header-contacts__item header-contacts__item--phone">
+                  <div class="header-contacts__icon">
+                    <svg class="icon icon-phone">
+                      <use xlink:href="img/icons.svg#icon-phone" />
+                    </svg>
+                  </div>
+                  <div class="header-contacts__block">
+                    <div><a href="tel:+35725030206">+357 25 030206</a></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="nav-mobile">
+        <div class="nav-mobile__header">
+          <div class="nav-mobile__language language">
+            <div class="language__label">Select language:</div>
+            <a href="javascript:void(0)" class="language__item">RU</a>
+            <a href="javascript:void(0)" class="language__item language__item--active">EN</a>
+          </div>
+          <div class="nav-mobile__back">
+            <div>
+              <svg class="icon icon-arrow-more-3">
+                <use xlink:href="img/icons.svg#icon-arrow-more-3" />
+              </svg>
+              <span>Back</span>
+            </div>
+          </div>
+        </div>
+        <div class="nav-mobile__content">
+          <div class="nav-mobile__menu"></div>
+        </div>
+        <div class="nav-mobile__close"><span>Закрыть</span></div>
+      </div>
+    </div>
+
+
+    <div class="wrapper-content">
+      <div class="content">
+        <div class="container">
+          <ul class="breadcrumb">
+            <li><a href="#">ArcticHeavylift</a></li>
+            <li class="active">Media</li>
+          </ul>
+
+          <div class="card-article">
+            <div class="navigation-back">
+              <a href="#" class="btn btn--arrow btn--border navigation-back__btn">
+                <svg class="icon icon-arrow-more-3">
+                  <use xlink:href="img/icons.svg#icon-arrow-more-3" />
+                </svg>
+                <span>Back to all media</span>
+              </a>
+            </div>
+            <div class="card-article__head">
+              <div class="card-article__title">
+                <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit in augue faucibus</h1>
+              </div>
+              <div class="card-article__info article-info">
+                <div class="article-info__item article-info__item--date">
+                  <div class="article-info__title">
+                    Date
+                  </div>
+                  <div class="article-info__row">
+                    <div class="article-info__icon">
+                      <svg class="icon icon-clock">
+                        <use xlink:href="img/icons.svg#icon-clock" />
+                      </svg>
+                    </div>
+                    <div class="article-info__text">
+                      October 15, 2020
+                    </div>
+                  </div>
+                </div>
+                <div class="article-info__item article-info__item--views">
+                  <div class="article-info__title">
+                    Views
+                  </div>
+                  <div class="article-info__row">
+                    <div class="article-info__icon">
+                      <svg class="icon icon-eye">
+                        <use xlink:href="img/icons.svg#icon-eye" />
+                      </svg>
+                    </div>
+                    <div class="article-info__text">
+                      4 567
+                    </div>
+                  </div>
+                </div>
+                <div class="article-info__item article-info__item--video">
+                  <div class="article-info__title">
+                    Videofiles
+                  </div>
+                  <div class="article-info__row">
+                    <div class="article-info__icon">
+                      <svg class="icon icon-play">
+                        <use xlink:href="img/icons.svg#icon-play" />
+                      </svg>
+                    </div>
+                    <div class="article-info__text">
+                      2
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card-article__row row flex-wrap">
+              <div class="card-article__column">
+                <div class="card-article__box">
+                  <div class="card-article__text">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean in augue faucibus dolor consectetur porta. Morbi vitae dui fringilla, bibendum diam eget, lacinia leo. Quisque rutrum lorem eu dolor sagittis tristique id et mauris. Maecenas non mauris tellus. Aliquam ante ligula, pellentesque quis ipsum vitae, euismod ultrices nisl. </p>
+                  </div>
+                </div>
+
+              </div>
+              <div class="card-article__column">
+                <div class="card-article__text">
+                  <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean in augue faucibus dolor consectetur porta. Morbi vitae dui fringilla, bibendum diam eget, lacinia leo. Quisque rutrum lorem eu dolor sagittis tristique id et mauris.</p>
+                  <p>Maecenas non mauris tellus. Aliquam ante ligula, pellentesque quis ipsum vitae, euismod ultrices nisl. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vitae dui fringilla, bibendum diam eget, lacinia leo. Quisque rutrum lorem eu dolor sagittis tristique id et mauris. Maecenas non mauris tellus. Aliquam ante ligula, pellentesque quis ipsum vitae, euismod ultrices nisl.</p>
+                </div>
+              </div>
+            </div>
+            <div class="card-article__photos">
+              <h2>Last photos:</h2>
+              <div class="gallery">
+                <div class="gallery__carousel owl-carousel">
+                  <div class="gallery__item">
+                    <a href="img/gallery/photo-1.jpg" data-fancybox="photo-gallery"><img data-src="img/gallery/photo-small-1.jpg" data-srcset="img/gallery/photo-small-1@2x.jpg 2x" alt="" class="lazy"></a>
+                  </div>
+                  <div class="gallery__item">
+                    <a href="img/gallery/photo-2.jpg" data-fancybox="photo-gallery"><img data-src="img/gallery/photo-small-2.jpg" data-srcset="img/gallery/photo-small-2@2x.jpg 2x" alt="" class="lazy"></a>
+                  </div>
+                  <div class="gallery__item">
+                    <a href="img/gallery/photo-3.jpg" data-fancybox="photo-gallery"><img data-src="img/gallery/photo-small-3.jpg" data-srcset="img/gallery/photo-small-3@2x.jpg 2x" alt="" class="lazy"></a>
+                  </div>
+                  <div class="gallery__item">
+                    <a href="img/gallery/photo-4.jpg" data-fancybox="photo-gallery"><img data-src="img/gallery/photo-small-4.jpg" data-srcset="img/gallery/photo-small-4@2x.jpg 2x" alt="" class="lazy"></a>
+                  </div>
+                  <div class="gallery__item">
+                    <a href="img/gallery/photo-1.jpg" data-fancybox="photo-gallery"><img data-src="img/gallery/photo-small-1.jpg" data-srcset="img/gallery/photo-small-1@2x.jpg 2x" alt="" class="lazy"></a>
+                  </div>
+                  <div class="gallery__item">
+                    <a href="img/gallery/photo-2.jpg" data-fancybox="photo-gallery"><img data-src="img/gallery/photo-small-2.jpg" data-srcset="img/gallery/photo-small-2@2x.jpg 2x" alt="" class="lazy"></a>
+                  </div>
+                  <div class="gallery__item">
+                    <a href="img/gallery/photo-3.jpg" data-fancybox="photo-gallery"><img data-src="img/gallery/photo-small-3.jpg" data-srcset="img/gallery/photo-small-3@2x.jpg 2x" alt="" class="lazy"></a>
+                  </div>
+                  <div class="gallery__item">
+                    <a href="img/gallery/photo-4.jpg" data-fancybox="photo-gallery"><img data-src="img/gallery/photo-small-4.jpg" data-srcset="img/gallery/photo-small-4@2x.jpg 2x" alt="" class="lazy"></a>
+                  </div>
+                </div>
+
+              </div>
+              <div class="card-article__text">
+                <ul>
+                  <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                  <li>Aenean in augue faucibus dolor consectetur porta.</li>
+                  <li>Morbi vitae dui fringilla, bibendum diam eget, lacinia leo.</li>
+                  <li>Quisque rutrum lorem eu dolor sagittis tristique id et mauris.</li>
+                </ul>
+              </div>
+            </div>
+            <div class="card-article__description">
+              <h2>Description</h2>
+              <div class="card-article__text">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean in augue faucibus dolor consectetur porta. Morbi vitae dui fringilla, bibendum diam eget, lacinia leo. Quisque rutrum lorem eu dolor sagittis tristique id et mauris.</p>
+                <p>Maecenas non mauris tellus. Aliquam ante ligula, pellentesque quis ipsum vitae, euismod ultrices nisl. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vitae dui fringilla, bibendum diam eget, lacinia leo. Quisque rutrum lorem eu dolor sagittis tristique id et mauris. Maecenas non mauris tellus. Aliquam ante ligula, pellentesque quis ipsum vitae, euismod ultrices nisl.</p>
+              </div>
+            </div>
+            <div class="card-article__video">
+              <h2>Videofiles</h2>
+              <div class="video-gallery">
+                <div class="video-gallery__row">
+                  <div class="video-gallery__item lazy" data-background-image="img/video/image-1.jpg" data-background-image-set="url('img/video/image-1@2x.jpg') 2x">
+                    <a href="https://www.youtube.com/watch?v=hKRUPYrAQoE" data-fancybox="">
+                      <div class="video-gallery__head">
+                        <div class="video-gallery__head-icon">
+                          <svg class="icon icon-play">
+                            <use xlink:href="img/icons.svg#icon-play" />
+                          </svg>
+                        </div>
+                        <div class="video-gallery__head-title">Lorem ipsum dolor sit amet, consectetur adipiscing amet, consectetur adipiscing</div>
+                      </div>
+                      <div class="video-gallery__play">
+                        <div class="video-gallery__play-icon">
+                          <svg class="icon icon-play-now">
+                            <use xlink:href="img/icons.svg#icon-play-now" />
+                          </svg>
+                        </div>
+                        <div>
+                          <div class="video-gallery__play-title">Play now</div>
+                          <div class="video-gallery__play-time">3:43 min</div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="video-gallery__item lazy" data-background-image="img/video/image-2.jpg" data-background-image-set="url('img/video/image-2@2x.jpg') 2x">
+                    <a href="https://www.youtube.com/watch?v=izsjRpcgfmk" data-fancybox="">
+                      <div class="video-gallery__head">
+                        <div class="video-gallery__head-icon">
+                          <svg class="icon icon-play">
+                            <use xlink:href="img/icons.svg#icon-play" />
+                          </svg>
+                        </div>
+                        <div class="video-gallery__head-title">Lorem ipsum dolor sit amet, consectetur adipiscing amet, consectetur adipiscing</div>
+                      </div>
+                      <div class="video-gallery__play">
+                        <div class="video-gallery__play-icon">
+                          <svg class="icon icon-play-now">
+                            <use xlink:href="img/icons.svg#icon-play-now" />
+                          </svg>
+                        </div>
+                        <div>
+                          <div class="video-gallery__play-title">Play now</div>
+                          <div class="video-gallery__play-time">3:43 min</div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+
+              </div>
+              <div class="card-article__text">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean in augue faucibus dolor consectetur porta. Morbi vitae dui fringilla, bibendum diam eget, lacinia leo. Quisque rutrum lorem eu dolor sagittis tristique id et mauris.</p>
+                <p>Maecenas non mauris tellus. Aliquam ante ligula, pellentesque quis ipsum vitae, euismod ultrices nisl. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vitae dui fringilla, bibendum diam eget, lacinia leo. Quisque rutrum lorem eu dolor sagittis tristique id et mauris. Maecenas non mauris tellus. Aliquam ante ligula, pellentesque quis ipsum vitae, euismod ultrices nisl.</p>
+              </div>
+            </div>
+            <div class="navigation-back">
+              <a href="#" class="btn btn--arrow btn--border navigation-back__btn">
+                <svg class="icon icon-arrow-more-3">
+                  <use xlink:href="img/icons.svg#icon-arrow-more-3" />
+                </svg>
+                <span>Back to all media</span>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="footer__primary">
+        <div class="container">
+          <div class="footer__row row">
+            <div class="footer__column footer__column--info">
+              <div class="footer__logo">
+                <a href="#" class="logo"><img class="logo__img" src="img/logo-light.svg" width="229" height="40" alt=""></a>
+              </div>
+              <div class="footer__description">
+                ARCTIC HEAVYLIFT LTD.<br>
+                ultimate solutions for project cargo transport to remote destinations
+              </div>
+            </div>
+            <div class="footer__column footer__column--menu">
+              <div class="footer__title"><span>Company</span> <svg class="icon icon-arrow">
+                  <use xlink:href="img/icons.svg#icon-arrow" />
+                </svg></div>
+              <div class="footer__block">
+                <ul class="footer__menu">
+                  <li><a href="#">Home</a></li>
+                  <li><a href="#">About Us</a></li>
+                  <li><a href="#">News</a></li>
+                  <li><a href="#">Media</a></li>
+                  <li><a href="#">Contacts</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="footer__column footer__column--services">
+              <div class="footer__title"><span>Services</span> <svg class="icon icon-arrow">
+                  <use xlink:href="img/icons.svg#icon-arrow" />
+                </svg></div>
+              <div class="footer__block">
+                <ul class="footer__menu">
+                  <li><a href="#">Ship chartering</a></li>
+                  <li><a href="#">Transshipment management</a></li>
+                  <li><a href="#">Barge transport</a></li>
+                  <li><a href="#">Logistics solutions</a></li>
+                  <li><a href="#">Shipping Intelligence</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="footer__column footer__column--contacts">
+              <div class="footer__title"><span>Our contacts</span></div>
+              <div class="footer__contacts">
+                <div class="footer__contacts-address">
+                  <svg class="icon icon-pointer">
+                    <use xlink:href="img/icons.svg#icon-pointer" />
+                  </svg>
+                  <span>205, Archbishop Makarios Avenue</span>
+                </div>
+                <div class="footer__contacts-phone">
+
+                  <a href="tel:+35725030206"><svg class="icon icon-phone">
+                      <use xlink:href="img/icons.svg#icon-phone" />
+                    </svg><span>+357 25 030206</span></a>
+                </div>
+                <div class="footer__contacts-email">
+
+                  <a href="mailto:info@arctic-heavylift.com"><svg class="icon icon-email">
+                      <use xlink:href="img/icons.svg#icon-email" />
+                    </svg><span>info@arctic-heavylift.com</span></a>
+                </div>
+              </div>
+              <ul class="footer__socials socials">
+                <li class="socials__item socials__item--facebook"><a target="_blank" class="socials__link" href="#"><svg class="icon icon-facebook">
+                      <use xlink:href="img/icons.svg#icon-facebook" />
+                    </svg></a></li>
+                <li class="socials__item socials__item--youtube"><a target="_blank" class="socials__link" href="#"><svg class="icon icon-youtube">
+                      <use xlink:href="img/icons.svg#icon-youtube" />
+                    </svg></a></li>
+                <li class="socials__item socials__item--instagram"><a class="socials__link" href="#"><svg class="icon icon-instagram">
+                      <use xlink:href="img/icons.svg#icon-instagram" />
+                    </svg></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer__secondary">
+        <div class="container">
+          <div class="footer__row footer__row--secondary row justify-between">
+            <div class="footer__created">
+              <span>Created by</span>
+              <a href="https://rusodot.ru/" target="_blank"><img src="img/ruso.svg" alt=""></a>
+            </div>
+            <div class="footer__copyright">
+              Copyright © Arctic Heavylift Ltd. <span>All Rights Reserved</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+  <div class="site-overlay"></div>
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/libs.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/validation.js"></script>
+
+</body>
+
+</html>
