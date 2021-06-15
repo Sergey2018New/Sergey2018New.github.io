@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>LV &#124; Номинации</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="LV - description">
+  <link href="img/favicon.ico" rel="shortcut icon" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.min.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+
+  <div class="wrapper">
+
+    <div class="wrapper__content">
+
+      <header class="header authorized">
+        <div class="container">
+          <div class="header__wrapper">
+            <a href="/" class="header__logo">
+              <svg width="45" height="29">
+                <use xlink:href="img/sprite.svg#logo"></use>
+              </svg>
+            </a>
+            <nav class="header__nav">
+              <a href="#" class="header__nav-link">Фотографии</a>
+              <a href="nominations.html" class="header__nav-link">Номинации</a>
+              <a href="#" class="header__nav-link color">Party</a>
+              <a href="photographers.html" class="header__nav-link">Фотографы</a>
+            </nav>
+            <div class="header__content">
+              <a href="#modal-signin" class="header__signIn" data-modal><span>Войти</span></a>
+              <a href="#" class="header__notifications active">
+                <svg width="17" height="17">
+                  <use xlink:href="img/sprite.svg#notifications"></use>
+                </svg>
+                <span class="mark"></span>
+              </a>
+              <a href="#" class="header__user">
+                <svg width="22" height="22" class="header__user-icon">
+                  <use xlink:href="img/sprite.svg#user"></use>
+                </svg>
+                <img src="img/user.jpg" class="header__user-img" alt="">
+              </a>
+              <a href="#" class="header__search">
+                <svg width="15" height="15">
+                  <use xlink:href="img/sprite.svg#search"></use>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <div class="nomination-new">
+        <div class="container">
+          <p class="main_gallery__title">Номинации</p>
+          <div class="nomination-new__subtitle">Лучшие фотографии в разных категориях</div>
+          <div class="nomination-new__wrap">
+            <div class="main_gallery__content">
+              <a href="#" class="main_gallery__link"></a>
+              <img src="img/nom-ico1.png" alt="">
+              <div class="sticker_mark main_gallery__sticker_mark color-14">
+                <svg class="sticker_mark__bg">
+                  <use xlink:href="img/sprite.svg#sticker_mark"></use>
+                </svg>
+                <svg class="sticker_mark__lightning">
+                  <use xlink:href="img/sprite.svg#lightning"></use>
+                </svg>
+              </div>
+              <div class="main_gallery__info">
+                <div class="main_gallery__user">
+                  <p class="main_gallery__user-name">Волшебный Свет</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="main_gallery__content">
+              <a href="#" class="main_gallery__link"></a>
+              <img src="img/nom-ico2.png" alt="">
+              <div class="sticker_mark main_gallery__sticker_mark color-14">
+                <svg class="sticker_mark__bg">
+                  <use xlink:href="img/sprite.svg#sticker_mark"></use>
+                </svg>
+                <svg class="sticker_mark__lightning">
+                  <use xlink:href="img/sprite.svg#lightning"></use>
+                </svg>
+              </div>
+              <div class="main_gallery__info">
+                <div class="main_gallery__user">
+                  <p class="main_gallery__user-name">Лучшая композиция</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="main_gallery__content">
+              <a href="#" class="main_gallery__link"></a>
+              <img src="img/nom-ico3.png" alt="">
+              <div class="sticker_mark main_gallery__sticker_mark color-14">
+                <svg class="sticker_mark__bg">
+                  <use xlink:href="img/sprite.svg#sticker_mark"></use>
+                </svg>
+                <svg class="sticker_mark__lightning">
+                  <use xlink:href="img/sprite.svg#lightning"></use>
+                </svg>
+              </div>
+              <div class="main_gallery__info">
+                <div class="main_gallery__user">
+                  <p class="main_gallery__user-name">Лучший кадр</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="main_gallery__content">
+              <a href="#" class="main_gallery__link"></a>
+              <img src="img/nom-ico4.png" alt="">
+              <div class="sticker_mark main_gallery__sticker_mark color-14">
+                <svg class="sticker_mark__bg">
+                  <use xlink:href="img/sprite.svg#sticker_mark"></use>
+                </svg>
+                <svg class="sticker_mark__lightning">
+                  <use xlink:href="img/sprite.svg#lightning"></use>
+                </svg>
+              </div>
+              <div class="main_gallery__info">
+                <div class="main_gallery__user">
+                  <p class="main_gallery__user-name">Лучшее отражение</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="main_gallery__content">
+              <a href="#" class="main_gallery__link"></a>
+              <img src="img/nom-ico5.png" alt="">
+              <div class="sticker_mark main_gallery__sticker_mark color-14">
+                <svg class="sticker_mark__bg">
+                  <use xlink:href="img/sprite.svg#sticker_mark"></use>
+                </svg>
+                <svg class="sticker_mark__lightning">
+                  <use xlink:href="img/sprite.svg#lightning"></use>
+                </svg>
+              </div>
+              <div class="main_gallery__info">
+                <div class="main_gallery__user">
+                  <p class="main_gallery__user-name">Лучший кадр Банкета</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="main_gallery__content">
+              <a href="#" class="main_gallery__link"></a>
+              <img src="img/nom-ico5.png" alt="">
+              <div class="sticker_mark main_gallery__sticker_mark color-14">
+                <svg class="sticker_mark__bg">
+                  <use xlink:href="img/sprite.svg#sticker_mark"></use>
+                </svg>
+                <svg class="sticker_mark__lightning">
+                  <use xlink:href="img/sprite.svg#lightning"></use>
+                </svg>
+              </div>
+              <div class="main_gallery__info">
+                <div class="main_gallery__user">
+                  <p class="main_gallery__user-name">Лучший полёт</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="main_gallery__content">
+              <a href="#" class="main_gallery__link"></a>
+              <img src="img/nom-ico7.png" alt="">
+              <div class="sticker_mark main_gallery__sticker_mark color-14">
+                <svg class="sticker_mark__bg">
+                  <use xlink:href="img/sprite.svg#sticker_mark"></use>
+                </svg>
+                <svg class="sticker_mark__lightning">
+                  <use xlink:href="img/sprite.svg#lightning"></use>
+                </svg>
+              </div>
+              <div class="main_gallery__info">
+                <div class="main_gallery__user">
+                  <p class="main_gallery__user-name">Лучшее отражение</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="main_gallery__content">
+              <a href="#" class="main_gallery__link"></a>
+              <img src="img/nom-ico8.png" alt="">
+              <div class="sticker_mark main_gallery__sticker_mark color-14">
+                <svg class="sticker_mark__bg">
+                  <use xlink:href="img/sprite.svg#sticker_mark"></use>
+                </svg>
+                <svg class="sticker_mark__lightning">
+                  <use xlink:href="img/sprite.svg#lightning"></use>
+                </svg>
+              </div>
+              <div class="main_gallery__info">
+                <div class="main_gallery__user">
+                  <p class="main_gallery__user-name">Лучший Ночной Кадр</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="main_gallery__content">
+              <a href="#" class="main_gallery__link"></a>
+              <img src="img/nom-ico9.png" alt="">
+              <div class="sticker_mark main_gallery__sticker_mark color-14">
+                <svg class="sticker_mark__bg">
+                  <use xlink:href="img/sprite.svg#sticker_mark"></use>
+                </svg>
+                <svg class="sticker_mark__lightning">
+                  <use xlink:href="img/sprite.svg#lightning"></use>
+                </svg>
+              </div>
+              <div class="main_gallery__info">
+                <div class="main_gallery__user">
+                  <p class="main_gallery__user-name">Лучший портрет</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a href="#" class="nomination-new__btn-more">
+            <svg class="nomination-new__arr-down">
+              <use xlink:href="img/sprite.svg#arr-down"></use>
+            </svg>
+            Ещё номинации
+          </a>
+        </div>
+      </div>
+
+      <div class="collections">
+        <div class="container">
+          <p class="main_gallery__title">Подборки</p>
+          <div class="nomination-new__subtitle">Лучшие фотографии в разных подборках</div>
+          <div class="collections__wrap">
+            <a href="#" class="collections__item">
+              <div class="collections__img">
+                <img src="img/cl-ico1.png" alt="">
+              </div>
+              <div class="collections__descr">
+                <div class="collections__name">Подборка недели</div>
+                <div class="collections__foto">22 фото</div>
+              </div>
+            </a>
+
+            <a href="#" class="collections__item">
+              <div class="collections__img">
+                <img src="img/cl-ico2.png" alt="">
+              </div>
+              <div class="collections__descr">
+                <div class="collections__name">Лучшие фото месяца</div>
+                <div class="collections__foto">22 фото</div>
+              </div>
+            </a>
+
+            <a href="#" class="collections__item">
+              <div class="collections__img">
+                <img src="img/cl-ico3.png" alt="">
+              </div>
+              <div class="collections__descr">
+                <div class="collections__name">Лучшие фото сезона</div>
+                <div class="collections__foto">57 фото</div>
+              </div>
+            </a>
+
+            <a href="#" class="collections__item">
+              <div class="collections__img">
+                <img src="img/cl-ico4.png" alt="">
+              </div>
+              <div class="collections__descr">
+                <div class="collections__name">Подборка недели</div>
+                <div class="collections__foto">122 фото</div>
+              </div>
+            </a>
+
+            <a href="#" class="collections__item">
+              <div class="collections__img">
+                <img src="img/cl-ico5.png" alt="">
+              </div>
+              <div class="collections__descr">
+                <div class="collections__name">Лучшие фото месяца</div>
+                <div class="collections__foto">376 фото</div>
+              </div>
+            </a>
+
+            <a href="#" class="collections__item">
+              <div class="collections__img">
+                <img src="img/cl-ico6.png" alt="">
+              </div>
+              <div class="collections__descr">
+                <div class="collections__name">Лучшие фото сезона</div>
+                <div class="collections__foto">36 фото</div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="likes">
+        <div class="container">
+          <p class="main_gallery__title">Лайки фотографов</p>
+          <div class="nomination-new__subtitle">Посмотрите, что нравится лучшим</div>
+          <div class="likes__wrap">
+            <div class="likes__item">
+              <div class="likes__img">
+                <img src="img/best-img-4.png" alt="">
+              </div>
+              <div class="likes__rating">1 место в каталоге</div>
+              <div class="user_info__head">
+                <div class="user_info__name">
+                  <p class="user_info__name-text">Куницев Владимир</p>
+                  <span class="user_info__statuses"></span>
+                </div>
+              </div>
+              <a href="#" class="likes__btn">
+                <svg class="likes__arr-right">
+                  <use xlink:href="img/sprite.svg#arr-right"></use>
+                </svg>
+              </a>
+            </div>
+
+            <div class="likes__item">
+              <div class="likes__img">
+                <img src="img/best-img-7.png" alt="">
+              </div>
+              <div class="likes__rating">3 место в каталоге</div>
+              <div class="user_info__head">
+                <div class="user_info__name">
+                  <p class="user_info__name-text">Анна Кузьминых</p>
+                  <span class="user_info__statuses"></span>
+                </div>
+              </div>
+              <a href="#" class="likes__btn">
+                <svg class="likes__arr-right">
+                  <use xlink:href="img/sprite.svg#arr-right"></use>
+                </svg>
+              </a>
+            </div>
+
+            <div class="likes__item">
+              <div class="likes__img">
+                <img src="img/best-img-9.png" alt="">
+              </div>
+              <div class="likes__rating">6 место в каталоге</div>
+              <div class="user_info__head">
+                <div class="user_info__name">
+                  <p class="user_info__name-text">Алексей Окорков</p>
+                  <span class="user_info__statuses"></span>
+                </div>
+              </div>
+              <a href="#" class="likes__btn">
+                <svg class="likes__arr-right">
+                  <use xlink:href="img/sprite.svg#arr-right"></use>
+                </svg>
+              </a>
+            </div>
+
+            <div class="likes__item">
+              <div class="likes__img">
+                <img src="img/best-img-5.png" alt="">
+              </div>
+              <div class="likes__rating">2 место в каталоге</div>
+              <div class="user_info__head">
+                <div class="user_info__name">
+                  <p class="user_info__name-text">Анна Кузьминых</p>
+                  <span class="user_info__statuses"></span>
+                </div>
+              </div>
+              <a href="#" class="likes__btn">
+                <svg class="likes__arr-right">
+                  <use xlink:href="img/sprite.svg#arr-right"></use>
+                </svg>
+              </a>
+            </div>
+
+
+            <div class="likes__item">
+              <div class="likes__img">
+                <img src="img/best-img-1.png" alt="">
+              </div>
+              <div class="likes__rating">4 место в каталоге</div>
+              <div class="user_info__head">
+                <div class="user_info__name">
+                  <p class="user_info__name-text">Александр Яковлев</p>
+                  <span class="user_info__statuses"></span>
+                </div>
+              </div>
+              <a href="#" class="likes__btn">
+                <svg class="likes__arr-right">
+                  <use xlink:href="img/sprite.svg#arr-right"></use>
+                </svg>
+              </a>
+            </div>
+
+            <div class="likes__item">
+              <div class="likes__img">
+                <img src="img/best-img-2.png" alt="">
+              </div>
+              <div class="likes__rating">2 место в каталоге</div>
+              <div class="user_info__head">
+                <div class="user_info__name">
+                  <p class="user_info__name-text">ААлексей Окорков</p>
+                  <span class="user_info__statuses"></span>
+                </div>
+              </div>
+              <a href="#" class="likes__btn">
+                <svg class="likes__arr-right">
+                  <use xlink:href="img/sprite.svg#arr-right"></use>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <footer class="footer ">
+      <div class="footer__box">
+        <div class="container">
+          <div class="footer__box_wrap">
+            <div class="footer__block">
+              <p class="footer__block-title">Популярные теги:</p>
+              <div class="footer__tags">
+                <a href="#" class="footer__tags-link">#архитектура</a>
+                <a href="#" class="footer__tags-link">#традиции</a>
+                <a href="#" class="footer__tags-link">#свет</a>
+                <a href="#" class="footer__tags-link">#кольца</a>
+                <a href="#" class="footer__tags-link">#невеста</a>
+                <a href="#" class="footer__tags-link">#жених</a>
+                <a href="#" class="footer__tags-link">#свадьба</a>
+                <a href="#" class="footer__tags-link">#банкет</a>
+                <a href="#" class="footer__tags-link">#море</a>
+                <a href="#" class="footer__tags-link">#луна</a>
+                <a href="#" class="footer__tags-link">#традиции</a>
+                <a href="#" class="footer__tags-link">#свет</a>
+                <a href="#" class="footer__tags-link">#кольца</a>
+                <a href="#" class="footer__tags-link">#невеста</a>
+                <a href="#" class="footer__tags-link">#жених</a>
+              </div>
+            </div>
+            <div class="footer__block">
+              <p class="footer__block-title">Найди фотографа в своём городе:</p>
+              <div class="footer__cities">
+                <a href="#" class="footer__cities-link">Архангельск</a>
+                <a href="#" class="footer__cities-link">Астрахань</a>
+                <a href="#" class="footer__cities-link">Балашиха</a>
+                <a href="#" class="footer__cities-link">Барнаул</a>
+                <a href="#" class="footer__cities-link">Белгород</a>
+                <a href="#" class="footer__cities-link">Брянск</a>
+                <a href="#" class="footer__cities-link">Владивосток</a>
+                <a href="#" class="footer__cities-link">Владимир</a>
+                <a href="#" class="footer__cities-link">Волгоград</a>
+                <a href="#" class="footer__cities-link">Вологда</a>
+                <a href="#" class="footer__cities-link">Воронеж</a>
+                <a href="#" class="footer__cities-link">Екатеринбург</a>
+                <a href="#" class="footer__cities-link">Зеленоград</a>
+                <a href="#" class="footer__cities-link">Иваново</a>
+                <a href="#" class="footer__cities-link">Ижевск</a>
+                <a href="#" class="footer__cities-link">Иркутск</a>
+                <a href="#" class="footer__cities-link">Казань</a>
+                <a href="#" class="footer__cities-link">Калининград</a>
+                <a href="#" class="footer__cities-link">Калуга</a>
+                <a href="#" class="footer__cities-link">Кемерово</a>
+                <a href="#" class="footer__cities-link">Киров</a>
+                <a href="#" class="footer__cities-link">Коломна</a>
+                <a href="#" class="footer__cities-link">Краснодар</a>
+                <a href="#" class="footer__cities-link">Красноярск</a>
+                <a href="#" class="footer__cities-link">Курск</a>
+                <a href="#" class="footer__cities-link">Липецк</a>
+                <a href="#" class="footer__cities-link">Магнитогорск</a>
+                <a href="#" class="footer__cities-link">Махачкала</a>
+                <a href="#" class="footer__cities-link">Москва</a>
+                <a href="#" class="footer__cities-link">Набережные</a>
+                <a href="#" class="footer__cities-link">Челны</a>
+                <a href="#" class="footer__cities-link">Нижний</a>
+                <a href="#" class="footer__cities-link">Новгород</a>
+                <a href="#" class="footer__cities-link">Новокузнецк</a>
+                <a href="#" class="footer__cities-link">Новороссийск</a>
+                <a href="#" class="footer__cities-link">Новосибирск</a>
+                <a href="#" class="footer__cities-link">Омск</a>
+                <a href="#" class="footer__cities-link">Оренбург</a>
+                <a href="#" class="footer__cities-link">Орёл</a>
+                <a href="#" class="footer__cities-link">Пенза</a>
+                <a href="#" class="footer__cities-link">Пермь</a>
+                <a href="#" class="footer__cities-link">Подольск</a>
+                <a href="#" class="footer__cities-link">Пятигорск</a>
+                <a href="#" class="footer__cities-link">Ростов-на-Дону</a>
+                <a href="#" class="footer__cities-link">Рязань</a>
+                <a href="#" class="footer__cities-link">Самара</a>
+                <a href="#" class="footer__cities-link">Санкт-Петербург</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer__content">
+        <div class="container">
+          <div class="footer__content_wrap">
+            <div class="footer__left_part">
+              <a href="#" class="footer__logo">
+                <svg width="31" height="32">
+                  <use xlink:href="img/sprite.svg#logo-footer"></use>
+                </svg>
+              </a>
+              <nav class="footer__nav">
+                <div class="footer__nav_list">
+                  <a href="#" class="footer__nav-link">Фотографии</a>
+                  <a href="#" class="footer__nav-link">Номинации</a>
+                  <a href="#" class="footer__nav-link">О нас</a>
+                </div>
+                <div class="footer__nav_list">
+                  <a href="#" class="footer__nav-link">Фотографы</a>
+                  <a href="#" class="footer__nav-link">Party</a>
+                  <a href="#" class="footer__nav-link">Политика конфиденциальности</a>
+                </div>
+              </nav>
+            </div>
+            <div class="footer__right_part">
+              <div class="footer__socials">
+                <a href="#" class="footer__socials-link">
+                  <svg width="15" height="15">
+                    <use xlink:href="img/sprite.svg#socials-instagram"></use>
+                  </svg>
+                </a>
+                <a href="#" class="footer__socials-link">
+                  <svg width="14" height="8">
+                    <use xlink:href="img/sprite.svg#socials-vk"></use>
+                  </svg>
+                </a>
+                <a href="#" class="footer__socials-link">
+                  <svg width="15" height="10">
+                    <use xlink:href="img/sprite.svg#socials-youtube"></use>
+                  </svg>
+                </a>
+                <a href="#" class="footer__socials-link">
+                  <svg width="14" height="11">
+                    <use xlink:href="img/sprite.svg#socials-twitter"></use>
+                  </svg>
+                </a>
+              </div>
+              <p class="footer__copyright">© 2021 Платформа для креативных свадебных фотографов</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <div id="modal-signin" class="modal modal-signin">
+    <div class="modal-title">
+      Вход
+    </div>
+    <div class="form-signin">
+      <form action="">
+        <div class="form-group">
+          <input type="text" name="login" class="form-control" placeholder="Еmail или телефон" required>
+        </div>
+        <div class="form-group">
+          <input type="password" name="password" class="form-control" placeholder="Пароль" required>
+        </div>
+        <div class="form-group form-submit flex justify-center">
+          <button type="submit" class="btn btn-submit">Войти</button>
+        </div>
+        <div class="signin-social">
+          <div class="signin-social__title">Войти через соц. сети:</div>
+          <ul class="signin-social__list flex justify-center">
+            <li><a href="" class="google"><svg class="icon icon-google">
+                  <use xlink:href="img/icons.svg#google" />
+                </svg></a></li>
+            <li><a href="" class="facebook"><svg class="icon icon-facebook">
+                  <use xlink:href="img/icons.svg#facebook" />
+                </svg></a></li>
+            <li><a href="" class="vk"><svg class="icon icon-vk">
+                  <use xlink:href="img/icons.svg#vk" />
+                </svg></a></li>
+          </ul>
+        </div>
+        <div class="restore-password flex justify-center">
+          <a href="#modal-restore-password" class="restore-password__link" data-modal>Восстановить пароль</a>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div id="modal-restore-password" class="modal modal-restore">
+    <div class="modal-title">
+      Восстановить пароль
+    </div>
+    <div class="form-restore">
+      <form action="">
+        <div class="form-group form-text">
+          Укажите почту или телефон который использовался при регистрации
+        </div>
+        <div class="form-group">
+          <input type="text" name="login" class="form-control" placeholder="Еmail или телефон" required>
+        </div>
+        <div class="form-group form-submit flex justify-center">
+          <button type="button" class="btn btn--full btn-submit">Продолжить</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+  <script src="js/libs.min.js"></script>
+  <script src="js/script.js"></script>
+
+</body>
+
+</html>

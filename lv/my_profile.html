@@ -1,0 +1,930 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>LV &#124; Мой профиль</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="LV - description">
+  <link href="img/favicon.ico" rel="shortcut icon" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.min.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+
+  <div class="wrapper">
+
+    <div class="wrapper__content">
+
+      <header class="header authorized">
+        <div class="container">
+          <div class="header__wrapper">
+            <a href="/" class="header__logo">
+              <svg width="45" height="29">
+                <use xlink:href="img/sprite.svg#logo"></use>
+              </svg>
+            </a>
+            <nav class="header__nav">
+              <a href="#" class="header__nav-link">Фотографии</a>
+              <a href="nominations.html" class="header__nav-link">Номинации</a>
+              <a href="#" class="header__nav-link color">Party</a>
+              <a href="photographers.html" class="header__nav-link">Фотографы</a>
+            </nav>
+            <div class="header__content">
+              <a href="#modal-signin" class="header__signIn" data-modal><span>Войти</span></a>
+              <a href="#" class="header__notifications active">
+                <svg width="17" height="17">
+                  <use xlink:href="img/sprite.svg#notifications"></use>
+                </svg>
+                <span class="mark"></span>
+              </a>
+              <a href="#" class="header__user">
+                <svg width="22" height="22" class="header__user-icon">
+                  <use xlink:href="img/sprite.svg#user"></use>
+                </svg>
+                <img src="img/user.jpg" class="header__user-img" alt="">
+              </a>
+              <a href="#" class="header__search">
+                <svg width="15" height="15">
+                  <use xlink:href="img/sprite.svg#search"></use>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <div class="profile-menu">
+        <div class="container">
+          <ul class="profile-menu__list">
+            <li class="profile-menu__item active"><a href=""><span>Моя страница</span></a></li>
+            <li class="profile-menu__item"><a href=""><span>Сообщения</span><sup>3</sup></a></li>
+            <li class="profile-menu__item"><a href=""><span>Избранные</span></a></li>
+            <li class="profile-menu__item"><a href=""><span>PRO</span></a></li>
+            <li class="profile-menu__item"><a href=""><span>Настройки</span></a></li>
+            <li class="profile-menu__item profile-menu__item--logout"><a href=""><span>Выход</span></a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="photographer_page photographer_profile">
+        <div class="container">
+          <div class="photographer_page__wrap">
+            <div class="photographer_page__profile">
+              <div class="photographers__user photographer_page__user">
+                <div class="user_info verified pro">
+                  <div class="user_info__img">
+                    <img src="img/best-img-4.png" alt="">
+                    <a href="#modal-uploading-avatar" data-modal class="user_info__img-uploading">
+                      <svg class="icon icon-photo">
+                        <use xlink:href="img/icons.svg#photo" />
+                      </svg>
+                    </a>
+                  </div>
+                  <div class="user_info__content">
+                    <div class="user_info__head">
+                      <div class="user_info__name">
+                        <p class="user_info__name-text">Александр Яковлев</p>
+                        <span class="user_info__statuses"></span>
+                      </div>
+                    </div>
+                    <div class="user_info__position">
+                      <div class="user_info__position-item gold">
+                        <i>1</i>
+                        <p>Место в каталоге</p>
+                      </div>
+                      <div class="user_info__position-item">
+                        <i>12</i>
+                        <p>Санкт-Петербург</p>
+                      </div>
+                    </div>
+                    <div class="user_info__nominations photographer_page__nominations">
+                      <div class="user_info__nominations-list">
+                        <div class="user_info__nominations-item">
+                          <div class="sticker_mark user_info__nominations-sticker_mark color-2">
+                            <svg class="sticker_mark__bg">
+                              <use xlink:href="img/sprite.svg#sticker_mark"></use>
+                            </svg>
+                            <svg class="sticker_mark__lightning">
+                              <use xlink:href="img/sprite.svg#lightning"></use>
+                            </svg>
+                          </div>
+                          <p class="user_info__nominations-quantity">3</p>
+                        </div>
+                        <div class="user_info__nominations-item">
+                          <div class="sticker_mark user_info__nominations-sticker_mark color-9">
+                            <svg class="sticker_mark__bg">
+                              <use xlink:href="img/sprite.svg#sticker_mark"></use>
+                            </svg>
+                            <svg class="sticker_mark__lightning">
+                              <use xlink:href="img/sprite.svg#lightning"></use>
+                            </svg>
+                          </div>
+                          <p class="user_info__nominations-quantity">14</p>
+                        </div>
+                        <div class="user_info__nominations-item">
+                          <div class="sticker_mark user_info__nominations-sticker_mark color-5">
+                            <svg class="sticker_mark__bg">
+                              <use xlink:href="img/sprite.svg#sticker_mark"></use>
+                            </svg>
+                            <svg class="sticker_mark__lightning">
+                              <use xlink:href="img/sprite.svg#lightning"></use>
+                            </svg>
+                          </div>
+                          <p class="user_info__nominations-quantity">5</p>
+                        </div>
+                        <div class="user_info__nominations-item">
+                          <div class="sticker_mark user_info__nominations-sticker_mark color-12">
+                            <svg class="sticker_mark__bg">
+                              <use xlink:href="img/sprite.svg#sticker_mark"></use>
+                            </svg>
+                            <svg class="sticker_mark__lightning">
+                              <use xlink:href="img/sprite.svg#lightning"></use>
+                            </svg>
+                          </div>
+                          <p class="user_info__nominations-quantity">78</p>
+                        </div>
+                      </div>
+                      <a href="#" class="user_info__nominations-more">ещё номинации</a>
+                    </div>
+                    <div class="user_info__info">
+                      <a href="mailto:alexander-yakophoto.ru" class="user_info__email">alexander-yakophoto.ru</a>
+                      <p class="user_info__price">Цена работы за час: <span>7 500 ₽</span></p>
+                    </div>
+                    <div class="user_info__links">
+                      <a href="#" class="user_info__links-btn user_info__links-instagram">
+                        <svg class="icon icon-instagram" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M14.8999 0H6.10017C2.73652 0 0 2.73652 0 6.10017V14.8998C0 18.2635 2.73652 21 6.10017 21H14.8998C18.2635 21 21 18.2635 21 14.8999V6.10017C21 2.73652 18.2635 0 14.8999 0ZM19.3594 14.8998C19.3594 17.3588 17.3588 19.3594 14.8999 19.3594H6.10017C3.64116 19.3594 1.64062 17.3588 1.64062 14.8999V6.10017C1.64062 3.64116 3.64116 1.64062 6.10017 1.64062H14.8998C17.3588 1.64062 19.3594 3.64116 19.3594 6.10017V14.8998Z" fill="url(#paint0_linear)" />
+                          <path d="M10.5 4.83984C7.37896 4.83984 4.83984 7.37896 4.83984 10.5C4.83984 13.621 7.37896 16.1602 10.5 16.1602C13.621 16.1602 16.1602 13.621 16.1602 10.5C16.1602 7.37896 13.621 4.83984 10.5 4.83984ZM10.5 14.5195C8.28364 14.5195 6.48047 12.7164 6.48047 10.5C6.48047 8.28364 8.28364 6.48047 10.5 6.48047C12.7164 6.48047 14.5195 8.28364 14.5195 10.5C14.5195 12.7164 12.7164 14.5195 10.5 14.5195Z" fill="url(#paint1_linear)" />
+                          <path d="M16.2422 5.57812C16.6952 5.57812 17.0625 5.21086 17.0625 4.75781C17.0625 4.30477 16.6952 3.9375 16.2422 3.9375C15.7891 3.9375 15.4219 4.30477 15.4219 4.75781C15.4219 5.21086 15.7891 5.57812 16.2422 5.57812Z" fill="url(#paint2_linear)" />
+                          <defs>
+                            <linearGradient id="paint0_linear" x1="19" y1="1.5" x2="-1.16229e-06" y2="21" gradientUnits="userSpaceOnUse">
+                              <stop stop-color="#AF13A4" />
+                              <stop offset="0.302083" stop-color="#BF0985" />
+                              <stop offset="0.723958" stop-color="#F04815" />
+                              <stop offset="1" stop-color="#FED819" />
+                            </linearGradient>
+                            <linearGradient id="paint1_linear" x1="19" y1="1.5" x2="-1.16229e-06" y2="21" gradientUnits="userSpaceOnUse">
+                              <stop stop-color="#AF13A4" />
+                              <stop offset="0.302083" stop-color="#BF0985" />
+                              <stop offset="0.723958" stop-color="#F04815" />
+                              <stop offset="1" stop-color="#FED819" />
+                            </linearGradient>
+                            <linearGradient id="paint2_linear" x1="19" y1="1.5" x2="-1.16229e-06" y2="21" gradientUnits="userSpaceOnUse">
+                              <stop stop-color="#AF13A4" />
+                              <stop offset="0.302083" stop-color="#BF0985" />
+                              <stop offset="0.723958" stop-color="#F04815" />
+                              <stop offset="1" stop-color="#FED819" />
+                            </linearGradient>
+                          </defs>
+                        </svg>
+                        <span>@alex_yakovlev</span>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="user_info__pro">
+                    <div class="user_info__pro-flex">
+                      <div class="user_info__pro-progress">
+                        <div style="width: 100%"></div>
+                      </div>
+                      <div class="user_info__pro-help" title="Ты на финишной прямой.	&lt;br&gt;Продолжай в том же духе!" data-tooltip><span>?</span></div>
+                    </div>
+                    <a href="" class="user_info__pro-button btn">
+                      <svg>
+                        <use xlink:href="img/sprite.svg#lightning"></use>
+                      </svg>
+                      <span>Перейти на PRO</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="photographer_page__nav">
+              <a href="#" class="photographer_page__nav-item active">
+                <span>Все фотографии</span><sup class="color-1">+28</sup>
+              </a>
+              <a href="#" class="photographer_page__nav-item">
+                <span>Номинации</span><sup class="color-2">+2</sup>
+              </a>
+              <a href="#" class="photographer_page__nav-item">
+                <span>Контактная информация</span>
+              </a>
+              <label class="photographer_page__nav-uploading">
+                <svg class="icon icon-plus">
+                  <use xlink:href="img/icons.svg#plus" />
+                </svg>
+                <span>Загрузить фотографии</span>
+                <input type="file">
+              </label>
+            </div>
+            <div class="photographer_page__tabs">
+              <div class="photographer_page__tab">
+                <div class="main_gallery__blocks">
+                  <div class="main_gallery__block height-4">
+                    <div class="main_gallery__content">
+                      <a href="#" class="main_gallery__link"></a>
+                      <img src="img/img-11.jpg" alt="">
+                      <div class="sticker_mark main_gallery__sticker_mark color-1">
+                        <svg class="sticker_mark__bg">
+                          <use xlink:href="img/sprite.svg#sticker_mark"></use>
+                        </svg>
+                        <svg class="sticker_mark__lightning">
+                          <use xlink:href="img/sprite.svg#lightning"></use>
+                        </svg>
+                      </div>
+                      <div class="main_gallery__info">
+                        <div class="main_gallery__likes">
+                          <svg class="icon icon-like">
+                            <use xlink:href="img/icons.svg#like" />
+                          </svg>
+                          <span>34</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="main_gallery__block height-5">
+                    <div class="main_gallery__content">
+                      <a href="#" class="main_gallery__link"></a>
+                      <img src="img/img-12.jpg" alt="">
+                      <div class="sticker_mark main_gallery__sticker_mark color-1">
+                        <svg class="sticker_mark__bg">
+                          <use xlink:href="img/sprite.svg#sticker_mark"></use>
+                        </svg>
+                        <svg class="sticker_mark__lightning">
+                          <use xlink:href="img/sprite.svg#lightning"></use>
+                        </svg>
+                      </div>
+                      <div class="main_gallery__info">
+                        <div class="main_gallery__likes">
+                          <svg class="icon icon-like">
+                            <use xlink:href="img/icons.svg#like" />
+                          </svg>
+                          <span>34</span>
+                        </div>
+                      </div>
+                      <div class="main_gallery__comments">
+                        <div class="main_gallery__comments-count">+10</div>
+                        <div class="main_gallery__comments-text">Комментариев</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="main_gallery__block height-6">
+                    <div class="main_gallery__content">
+                      <a href="#" class="main_gallery__link"></a>
+                      <img src="img/img-13.jpg" alt="">
+                      <div class="sticker_mark main_gallery__sticker_mark color-1">
+                        <svg class="sticker_mark__bg">
+                          <use xlink:href="img/sprite.svg#sticker_mark"></use>
+                        </svg>
+                        <svg class="sticker_mark__lightning">
+                          <use xlink:href="img/sprite.svg#lightning"></use>
+                        </svg>
+                      </div>
+                      <div class="main_gallery__info">
+                        <div class="main_gallery__likes">
+                          <svg class="icon icon-like">
+                            <use xlink:href="img/icons.svg#like" />
+                          </svg>
+                          <span>34</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="main_gallery__block height-7">
+                    <div class="main_gallery__content">
+                      <a href="#" class="main_gallery__link"></a>
+                      <img src="img/img-14.jpg" alt="">
+                      <div class="sticker_mark main_gallery__sticker_mark color-1">
+                        <svg class="sticker_mark__bg">
+                          <use xlink:href="img/sprite.svg#sticker_mark"></use>
+                        </svg>
+                        <svg class="sticker_mark__lightning">
+                          <use xlink:href="img/sprite.svg#lightning"></use>
+                        </svg>
+                      </div>
+                      <div class="main_gallery__info">
+                        <div class="main_gallery__likes">
+                          <svg class="icon icon-like">
+                            <use xlink:href="img/icons.svg#like" />
+                          </svg>
+                          <span>34</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="main_gallery__block height-5">
+                    <div class="main_gallery__content">
+                      <a href="#" class="main_gallery__link"></a>
+                      <img src="img/img-15.jpg" alt="">
+                      <div class="sticker_mark main_gallery__sticker_mark color-1">
+                        <svg class="sticker_mark__bg">
+                          <use xlink:href="img/sprite.svg#sticker_mark"></use>
+                        </svg>
+                        <svg class="sticker_mark__lightning">
+                          <use xlink:href="img/sprite.svg#lightning"></use>
+                        </svg>
+                      </div>
+                      <div class="main_gallery__info">
+                        <div class="main_gallery__likes">
+                          <svg class="icon icon-like">
+                            <use xlink:href="img/icons.svg#like" />
+                          </svg>
+                          <span>34</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="main_gallery__block height-8">
+                    <div class="main_gallery__content">
+                      <a href="#" class="main_gallery__link"></a>
+                      <img src="img/img-16.jpg" alt="">
+                      <div class="sticker_mark main_gallery__sticker_mark color-1">
+                        <svg class="sticker_mark__bg">
+                          <use xlink:href="img/sprite.svg#sticker_mark"></use>
+                        </svg>
+                        <svg class="sticker_mark__lightning">
+                          <use xlink:href="img/sprite.svg#lightning"></use>
+                        </svg>
+                      </div>
+                      <div class="main_gallery__info">
+                        <div class="main_gallery__likes">
+                          <svg class="icon icon-like">
+                            <use xlink:href="img/icons.svg#like" />
+                          </svg>
+                          <span>34</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="main_gallery__block height-8">
+                    <div class="main_gallery__content">
+                      <a href="#" class="main_gallery__link"></a>
+                      <img src="img/img-17.jpg" alt="">
+                      <div class="sticker_mark main_gallery__sticker_mark color-1">
+                        <svg class="sticker_mark__bg">
+                          <use xlink:href="img/sprite.svg#sticker_mark"></use>
+                        </svg>
+                        <svg class="sticker_mark__lightning">
+                          <use xlink:href="img/sprite.svg#lightning"></use>
+                        </svg>
+                      </div>
+                      <div class="main_gallery__info">
+                        <div class="main_gallery__likes">
+                          <svg class="icon icon-like">
+                            <use xlink:href="img/icons.svg#like" />
+                          </svg>
+                          <span>34</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="main_gallery__block height-4">
+                    <div class="main_gallery__content">
+                      <a href="#" class="main_gallery__link"></a>
+                      <img src="img/img-18.jpg" alt="">
+                      <div class="sticker_mark main_gallery__sticker_mark color-1">
+                        <svg class="sticker_mark__bg">
+                          <use xlink:href="img/sprite.svg#sticker_mark"></use>
+                        </svg>
+                        <svg class="sticker_mark__lightning">
+                          <use xlink:href="img/sprite.svg#lightning"></use>
+                        </svg>
+                      </div>
+                      <div class="main_gallery__info">
+                        <div class="main_gallery__likes">
+                          <svg class="icon icon-like">
+                            <use xlink:href="img/icons.svg#like" />
+                          </svg>
+                          <span>34</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="main_gallery__block height-5">
+                    <div class="main_gallery__content">
+                      <a href="#" class="main_gallery__link"></a>
+                      <img src="img/img-19.jpg" alt="">
+                      <div class="sticker_mark main_gallery__sticker_mark color-1">
+                        <svg class="sticker_mark__bg">
+                          <use xlink:href="img/sprite.svg#sticker_mark"></use>
+                        </svg>
+                        <svg class="sticker_mark__lightning">
+                          <use xlink:href="img/sprite.svg#lightning"></use>
+                        </svg>
+                      </div>
+                      <div class="main_gallery__info">
+                        <div class="main_gallery__likes">
+                          <svg class="icon icon-like">
+                            <use xlink:href="img/icons.svg#like" />
+                          </svg>
+                          <span>34</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="main_gallery__block height-6">
+                    <div class="main_gallery__content">
+                      <a href="#" class="main_gallery__link"></a>
+                      <img src="img/img-20.jpg" alt="">
+                      <div class="sticker_mark main_gallery__sticker_mark color-1">
+                        <svg class="sticker_mark__bg">
+                          <use xlink:href="img/sprite.svg#sticker_mark"></use>
+                        </svg>
+                        <svg class="sticker_mark__lightning">
+                          <use xlink:href="img/sprite.svg#lightning"></use>
+                        </svg>
+                      </div>
+                      <div class="main_gallery__info">
+                        <div class="main_gallery__likes">
+                          <svg class="icon icon-like">
+                            <use xlink:href="img/icons.svg#like" />
+                          </svg>
+                          <span>34</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="main_gallery__block height-7">
+                    <div class="main_gallery__content">
+                      <a href="#" class="main_gallery__link"></a>
+                      <img src="img/img-21.jpg" alt="">
+                      <div class="sticker_mark main_gallery__sticker_mark color-1">
+                        <svg class="sticker_mark__bg">
+                          <use xlink:href="img/sprite.svg#sticker_mark"></use>
+                        </svg>
+                        <svg class="sticker_mark__lightning">
+                          <use xlink:href="img/sprite.svg#lightning"></use>
+                        </svg>
+                      </div>
+                      <div class="main_gallery__info">
+                        <div class="main_gallery__likes">
+                          <svg class="icon icon-like">
+                            <use xlink:href="img/icons.svg#like" />
+                          </svg>
+                          <span>34</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="main_gallery__block height-5">
+                    <div class="main_gallery__content">
+                      <a href="#" class="main_gallery__link"></a>
+                      <img src="img/img-22.jpg" alt="">
+                      <div class="sticker_mark main_gallery__sticker_mark color-1">
+                        <svg class="sticker_mark__bg">
+                          <use xlink:href="img/sprite.svg#sticker_mark"></use>
+                        </svg>
+                        <svg class="sticker_mark__lightning">
+                          <use xlink:href="img/sprite.svg#lightning"></use>
+                        </svg>
+                      </div>
+                      <div class="main_gallery__info">
+                        <div class="main_gallery__likes">
+                          <svg class="icon icon-like">
+                            <use xlink:href="img/icons.svg#like" />
+                          </svg>
+                          <span>34</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="main_gallery__block height-8">
+                    <div class="main_gallery__content">
+                      <a href="#" class="main_gallery__link"></a>
+                      <img src="img/img-23.jpg" alt="">
+                      <div class="sticker_mark main_gallery__sticker_mark color-1">
+                        <svg class="sticker_mark__bg">
+                          <use xlink:href="img/sprite.svg#sticker_mark"></use>
+                        </svg>
+                        <svg class="sticker_mark__lightning">
+                          <use xlink:href="img/sprite.svg#lightning"></use>
+                        </svg>
+                      </div>
+                      <div class="main_gallery__info">
+                        <div class="main_gallery__likes">
+                          <svg class="icon icon-like">
+                            <use xlink:href="img/icons.svg#like" />
+                          </svg>
+                          <span>34</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="main_gallery__block height-8">
+                    <div class="main_gallery__content">
+                      <a href="#" class="main_gallery__link"></a>
+                      <img src="img/img-24.jpg" alt="">
+                      <div class="sticker_mark main_gallery__sticker_mark color-1">
+                        <svg class="sticker_mark__bg">
+                          <use xlink:href="img/sprite.svg#sticker_mark"></use>
+                        </svg>
+                        <svg class="sticker_mark__lightning">
+                          <use xlink:href="img/sprite.svg#lightning"></use>
+                        </svg>
+                      </div>
+                      <div class="main_gallery__info">
+                        <div class="main_gallery__likes">
+                          <svg class="icon icon-like">
+                            <use xlink:href="img/icons.svg#like" />
+                          </svg>
+                          <span>34</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="photographer_page__tab">
+                <div class="main_gallery__blocks">
+                  <div class="main_gallery__block height-4">
+                    <div class="main_gallery__content">
+                      <a href="#" class="main_gallery__link"></a>
+                      <img src="img/img-11.jpg" alt="">
+                      <div class="sticker_mark main_gallery__sticker_mark color-1">
+                        <svg class="sticker_mark__bg">
+                          <use xlink:href="img/sprite.svg#sticker_mark"></use>
+                        </svg>
+                        <svg class="sticker_mark__lightning">
+                          <use xlink:href="img/sprite.svg#lightning"></use>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="main_gallery__block height-5">
+                    <div class="main_gallery__content">
+                      <a href="#" class="main_gallery__link"></a>
+                      <img src="img/img-12.jpg" alt="">
+                      <div class="sticker_mark main_gallery__sticker_mark color-1">
+                        <svg class="sticker_mark__bg">
+                          <use xlink:href="img/sprite.svg#sticker_mark"></use>
+                        </svg>
+                        <svg class="sticker_mark__lightning">
+                          <use xlink:href="img/sprite.svg#lightning"></use>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="main_gallery__block height-6">
+                    <div class="main_gallery__content">
+                      <a href="#" class="main_gallery__link"></a>
+                      <img src="img/img-13.jpg" alt="">
+                      <div class="sticker_mark main_gallery__sticker_mark color-1">
+                        <svg class="sticker_mark__bg">
+                          <use xlink:href="img/sprite.svg#sticker_mark"></use>
+                        </svg>
+                        <svg class="sticker_mark__lightning">
+                          <use xlink:href="img/sprite.svg#lightning"></use>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="main_gallery__block height-7">
+                    <div class="main_gallery__content">
+                      <a href="#" class="main_gallery__link"></a>
+                      <img src="img/img-14.jpg" alt="">
+                      <div class="sticker_mark main_gallery__sticker_mark color-1">
+                        <svg class="sticker_mark__bg">
+                          <use xlink:href="img/sprite.svg#sticker_mark"></use>
+                        </svg>
+                        <svg class="sticker_mark__lightning">
+                          <use xlink:href="img/sprite.svg#lightning"></use>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="main_gallery__block height-5">
+                    <div class="main_gallery__content">
+                      <a href="#" class="main_gallery__link"></a>
+                      <img src="img/img-15.jpg" alt="">
+                      <div class="sticker_mark main_gallery__sticker_mark color-1">
+                        <svg class="sticker_mark__bg">
+                          <use xlink:href="img/sprite.svg#sticker_mark"></use>
+                        </svg>
+                        <svg class="sticker_mark__lightning">
+                          <use xlink:href="img/sprite.svg#lightning"></use>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="main_gallery__block height-8">
+                    <div class="main_gallery__content">
+                      <a href="#" class="main_gallery__link"></a>
+                      <img src="img/img-16.jpg" alt="">
+                      <div class="sticker_mark main_gallery__sticker_mark color-1">
+                        <svg class="sticker_mark__bg">
+                          <use xlink:href="img/sprite.svg#sticker_mark"></use>
+                        </svg>
+                        <svg class="sticker_mark__lightning">
+                          <use xlink:href="img/sprite.svg#lightning"></use>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="main_gallery__block height-8">
+                    <div class="main_gallery__content">
+                      <a href="#" class="main_gallery__link"></a>
+                      <img src="img/img-17.jpg" alt="">
+                      <div class="sticker_mark main_gallery__sticker_mark color-1">
+                        <svg class="sticker_mark__bg">
+                          <use xlink:href="img/sprite.svg#sticker_mark"></use>
+                        </svg>
+                        <svg class="sticker_mark__lightning">
+                          <use xlink:href="img/sprite.svg#lightning"></use>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="main_gallery__block height-4">
+                    <div class="main_gallery__content">
+                      <a href="#" class="main_gallery__link"></a>
+                      <img src="img/img-18.jpg" alt="">
+                      <div class="sticker_mark main_gallery__sticker_mark color-1">
+                        <svg class="sticker_mark__bg">
+                          <use xlink:href="img/sprite.svg#sticker_mark"></use>
+                        </svg>
+                        <svg class="sticker_mark__lightning">
+                          <use xlink:href="img/sprite.svg#lightning"></use>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="photographer_page__tab">
+                <div class="photographer_page__contacts">
+                  <div class="photographer_page__contacts-item">
+                    <p class="photographer_page__contacts-title">Страна и город проживания:</p>
+                    <p class="photographer_page__contacts-address">Санкт-Петербург, Россия</p>
+                  </div>
+                  <div class="photographer_page__contacts-item">
+                    <p class="photographer_page__contacts-title">Контактный телефон:</p>
+                    <p class="photographer_page__contacts-phone">+7 468 998 47 **</p>
+                    <a href="#" class="photographer_page__contacts-show_phone">
+                      <svg class="icon icon-eye">
+                        <use xlink:href="img/icons.svg#eye" />
+                      </svg>
+                      <span>Показать номер телефона</span>
+                    </a>
+                  </div>
+                  <div class="photographer_page__contacts-item">
+                    <p class="photographer_page__contacts-title">Социальные сети:</p>
+                    <div class="photographer_page__contacts-socials">
+                      <a href="#" class="photographer_page__contacts-socials_link">
+                        <svg width="14" height="12">
+                          <use xlink:href="img/sprite.svg#socials-twitter"></use>
+                        </svg>
+                      </a>
+                      <a href="#" class="photographer_page__contacts-socials_link">
+                        <svg width="16" height="16">
+                          <use xlink:href="img/sprite.svg#socials-instagram"></use>
+                        </svg>
+                      </a>
+                      <a href="#" class="photographer_page__contacts-socials_link">
+                        <svg width="14" height="10">
+                          <use xlink:href="img/sprite.svg#socials-youtube"></use>
+                        </svg>
+                      </a>
+                      <a href="#" class="photographer_page__contacts-socials_link">
+                        <svg width="14" height="8">
+                          <use xlink:href="img/sprite.svg#socials-vk"></use>
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <footer class="footer ">
+      <div class="footer__box">
+        <div class="container">
+          <div class="footer__box_wrap">
+            <div class="footer__block">
+              <p class="footer__block-title">Популярные теги:</p>
+              <div class="footer__tags">
+                <a href="#" class="footer__tags-link">#архитектура</a>
+                <a href="#" class="footer__tags-link">#традиции</a>
+                <a href="#" class="footer__tags-link">#свет</a>
+                <a href="#" class="footer__tags-link">#кольца</a>
+                <a href="#" class="footer__tags-link">#невеста</a>
+                <a href="#" class="footer__tags-link">#жених</a>
+                <a href="#" class="footer__tags-link">#свадьба</a>
+                <a href="#" class="footer__tags-link">#банкет</a>
+                <a href="#" class="footer__tags-link">#море</a>
+                <a href="#" class="footer__tags-link">#луна</a>
+                <a href="#" class="footer__tags-link">#традиции</a>
+                <a href="#" class="footer__tags-link">#свет</a>
+                <a href="#" class="footer__tags-link">#кольца</a>
+                <a href="#" class="footer__tags-link">#невеста</a>
+                <a href="#" class="footer__tags-link">#жених</a>
+              </div>
+            </div>
+            <div class="footer__block">
+              <p class="footer__block-title">Найди фотографа в своём городе:</p>
+              <div class="footer__cities">
+                <a href="#" class="footer__cities-link">Архангельск</a>
+                <a href="#" class="footer__cities-link">Астрахань</a>
+                <a href="#" class="footer__cities-link">Балашиха</a>
+                <a href="#" class="footer__cities-link">Барнаул</a>
+                <a href="#" class="footer__cities-link">Белгород</a>
+                <a href="#" class="footer__cities-link">Брянск</a>
+                <a href="#" class="footer__cities-link">Владивосток</a>
+                <a href="#" class="footer__cities-link">Владимир</a>
+                <a href="#" class="footer__cities-link">Волгоград</a>
+                <a href="#" class="footer__cities-link">Вологда</a>
+                <a href="#" class="footer__cities-link">Воронеж</a>
+                <a href="#" class="footer__cities-link">Екатеринбург</a>
+                <a href="#" class="footer__cities-link">Зеленоград</a>
+                <a href="#" class="footer__cities-link">Иваново</a>
+                <a href="#" class="footer__cities-link">Ижевск</a>
+                <a href="#" class="footer__cities-link">Иркутск</a>
+                <a href="#" class="footer__cities-link">Казань</a>
+                <a href="#" class="footer__cities-link">Калининград</a>
+                <a href="#" class="footer__cities-link">Калуга</a>
+                <a href="#" class="footer__cities-link">Кемерово</a>
+                <a href="#" class="footer__cities-link">Киров</a>
+                <a href="#" class="footer__cities-link">Коломна</a>
+                <a href="#" class="footer__cities-link">Краснодар</a>
+                <a href="#" class="footer__cities-link">Красноярск</a>
+                <a href="#" class="footer__cities-link">Курск</a>
+                <a href="#" class="footer__cities-link">Липецк</a>
+                <a href="#" class="footer__cities-link">Магнитогорск</a>
+                <a href="#" class="footer__cities-link">Махачкала</a>
+                <a href="#" class="footer__cities-link">Москва</a>
+                <a href="#" class="footer__cities-link">Набережные</a>
+                <a href="#" class="footer__cities-link">Челны</a>
+                <a href="#" class="footer__cities-link">Нижний</a>
+                <a href="#" class="footer__cities-link">Новгород</a>
+                <a href="#" class="footer__cities-link">Новокузнецк</a>
+                <a href="#" class="footer__cities-link">Новороссийск</a>
+                <a href="#" class="footer__cities-link">Новосибирск</a>
+                <a href="#" class="footer__cities-link">Омск</a>
+                <a href="#" class="footer__cities-link">Оренбург</a>
+                <a href="#" class="footer__cities-link">Орёл</a>
+                <a href="#" class="footer__cities-link">Пенза</a>
+                <a href="#" class="footer__cities-link">Пермь</a>
+                <a href="#" class="footer__cities-link">Подольск</a>
+                <a href="#" class="footer__cities-link">Пятигорск</a>
+                <a href="#" class="footer__cities-link">Ростов-на-Дону</a>
+                <a href="#" class="footer__cities-link">Рязань</a>
+                <a href="#" class="footer__cities-link">Самара</a>
+                <a href="#" class="footer__cities-link">Санкт-Петербург</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer__content">
+        <div class="container">
+          <div class="footer__content_wrap">
+            <div class="footer__left_part">
+              <a href="#" class="footer__logo">
+                <svg width="31" height="32">
+                  <use xlink:href="img/sprite.svg#logo-footer"></use>
+                </svg>
+              </a>
+              <nav class="footer__nav">
+                <div class="footer__nav_list">
+                  <a href="#" class="footer__nav-link">Фотографии</a>
+                  <a href="#" class="footer__nav-link">Номинации</a>
+                  <a href="#" class="footer__nav-link">О нас</a>
+                </div>
+                <div class="footer__nav_list">
+                  <a href="#" class="footer__nav-link">Фотографы</a>
+                  <a href="#" class="footer__nav-link">Party</a>
+                  <a href="#" class="footer__nav-link">Политика конфиденциальности</a>
+                </div>
+              </nav>
+            </div>
+            <div class="footer__right_part">
+              <div class="footer__socials">
+                <a href="#" class="footer__socials-link">
+                  <svg width="15" height="15">
+                    <use xlink:href="img/sprite.svg#socials-instagram"></use>
+                  </svg>
+                </a>
+                <a href="#" class="footer__socials-link">
+                  <svg width="14" height="8">
+                    <use xlink:href="img/sprite.svg#socials-vk"></use>
+                  </svg>
+                </a>
+                <a href="#" class="footer__socials-link">
+                  <svg width="15" height="10">
+                    <use xlink:href="img/sprite.svg#socials-youtube"></use>
+                  </svg>
+                </a>
+                <a href="#" class="footer__socials-link">
+                  <svg width="14" height="11">
+                    <use xlink:href="img/sprite.svg#socials-twitter"></use>
+                  </svg>
+                </a>
+              </div>
+              <p class="footer__copyright">© 2021 Платформа для креативных свадебных фотографов</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <div id="modal-signin" class="modal modal-signin">
+    <div class="modal-title">
+      Вход
+    </div>
+    <div class="form-signin">
+      <form action="">
+        <div class="form-group">
+          <input type="text" name="login" class="form-control" placeholder="Еmail или телефон" required>
+        </div>
+        <div class="form-group">
+          <input type="password" name="password" class="form-control" placeholder="Пароль" required>
+        </div>
+        <div class="form-group form-submit flex justify-center">
+          <button type="submit" class="btn btn-submit">Войти</button>
+        </div>
+        <div class="signin-social">
+          <div class="signin-social__title">Войти через соц. сети:</div>
+          <ul class="signin-social__list flex justify-center">
+            <li><a href="" class="google"><svg class="icon icon-google">
+                  <use xlink:href="img/icons.svg#google" />
+                </svg></a></li>
+            <li><a href="" class="facebook"><svg class="icon icon-facebook">
+                  <use xlink:href="img/icons.svg#facebook" />
+                </svg></a></li>
+            <li><a href="" class="vk"><svg class="icon icon-vk">
+                  <use xlink:href="img/icons.svg#vk" />
+                </svg></a></li>
+          </ul>
+        </div>
+        <div class="restore-password flex justify-center">
+          <a href="#modal-restore-password" class="restore-password__link" data-modal>Восстановить пароль</a>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div id="modal-restore-password" class="modal modal-restore">
+    <div class="modal-title">
+      Восстановить пароль
+    </div>
+    <div class="form-restore">
+      <form action="">
+        <div class="form-group form-text">
+          Укажите почту или телефон который использовался при регистрации
+        </div>
+        <div class="form-group">
+          <input type="text" name="login" class="form-control" placeholder="Еmail или телефон" required>
+        </div>
+        <div class="form-group form-submit flex justify-center">
+          <button type="button" class="btn btn--full btn-submit">Продолжить</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div id="modal-uploading-avatar" class="modal modal-uploading-avatar">
+    <div class="modal-title">
+      Загрузка аватара
+    </div>
+    <div class="uploading-avatar">
+      <div class="uploading-avatar__photo">
+        <img src="img/best-img-4.png" alt="">
+      </div>
+      <div class="uploading-avatar__control">
+        <label class="uploading-avatar__uploading">
+          <svg class="icon icon-plus">
+            <use xlink:href="img/icons.svg#plus" />
+          </svg>
+          <span>Загрузить новое</span>
+          <input type="file">
+        </label>
+        <button type="button" class="uploading-avatar__remove">
+          <svg class="icon icon-basket">
+            <use xlink:href="img/icons.svg#basket" />
+          </svg>
+          <span>Удалить</span>
+
+        </button>
+      </div>
+      <div class="uploading-avatar__save">
+        <a href="javascript:" class="uploading-avatar__save-btn btn" rel="modal:close">Сохранить</a>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+  <script src="js/libs.min.js"></script>
+  <script src="js/script.js"></script>
+
+</body>
+
+</html>
