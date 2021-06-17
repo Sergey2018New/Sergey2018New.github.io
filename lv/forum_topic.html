@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>LV &#124; Форум</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="LV - description">
+  <link href="img/favicon.ico" rel="shortcut icon" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.min.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+
+  <div class="wrapper">
+
+    <div class="wrapper__content">
+
+      <header class="header authorized">
+        <div class="container">
+          <div class="header__wrapper">
+            <a href="/" class="header__logo">
+              <svg width="45" height="29">
+                <use xlink:href="img/sprite.svg#logo"></use>
+              </svg>
+            </a>
+            <nav class="header__nav">
+              <a href="#" class="header__nav-link">Фотографии</a>
+              <a href="nominations.html" class="header__nav-link">Номинации</a>
+              <a href="#" class="header__nav-link color">Party</a>
+              <a href="photographers.html" class="header__nav-link">Фотографы</a>
+            </nav>
+            <div class="header__content">
+              <a href="#modal-signin" class="header__signIn" data-modal><span>Войти</span></a>
+              <a href="#" class="header__notifications active">
+                <svg width="17" height="17">
+                  <use xlink:href="img/sprite.svg#notifications"></use>
+                </svg>
+                <span class="mark"></span>
+              </a>
+              <a href="#" class="header__user">
+                <svg width="22" height="22" class="header__user-icon">
+                  <use xlink:href="img/sprite.svg#user"></use>
+                </svg>
+                <img src="img/user.jpg" class="header__user-img" alt="">
+              </a>
+              <a href="#" class="header__search">
+                <svg width="15" height="15">
+                  <use xlink:href="img/sprite.svg#search"></use>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <div class="forum">
+        <div class="container">
+          <div class="forum__head">
+            <ul class="forum__head-menu">
+              <li><a href="#"><span>Все темы</span></a></li>
+              <li class="active"><a href="#"><span>Отслеживаемые</span></a></li>
+              <li><a href="#"><span>Новости от Ларисы</span></a></li>
+              <li><a href="#"><span>События</span></a></li>
+              <li><a href="#"><span>Мои темы <sup>2</sup></span></a></li>
+            </ul>
+            <a href="#" class="forum__head-create btn"><svg class="icon icon-plus">
+                <use xlink:href="img/icons.svg#plus" />
+              </svg><span>Создать тему</span></a>
+          </div>
+          <div class="forum__search">
+            <button class="forum__search-submit"><svg class="icon icon-search">
+                <use xlink:href="img/icons.svg#search" />
+              </svg></button>
+            <input type="text" class="forum__search-input" placeholder="Поиск по темам">
+          </div>
+          <div class="forum__flex flex">
+
+            <div class="forum__content">
+              <div class="forum__articles">
+                <div class="forum__articles-items">
+                  <div class="article-item">
+                    <div class="article-item__title">
+                      <a href="">Canon EOS R6</a>
+                    </div>
+                    <div class="article-item__text">
+                      <p>Обсуждение камеры. Спецификации, известные на 9 июля 2020: Canon EOS R6 Specifications: CMOS sensor with an effective pixel count of approximately 20.10 million pixels, which is customized...</p>
+                    </div>
+                    <div class="article-item__bottom">
+                      <div class="article-item__bottom-left">
+                        <div class="article-item__author">
+                          <div class="article-item__author-img">
+                            <img src="img/forum/photo-1.png" alt="">
+                          </div>
+                          <div class="article-item__author-name">Александр Яковлев</div>
+                        </div>
+                        <div class="article-item__comments">
+                          <svg class="icon icon-comment">
+                            <use xlink:href="img/icons.svg#comment" />
+                          </svg>
+                          <span>245</span>
+                        </div>
+                      </div>
+                      <div class="article-item__bottom-right">
+                        <a href="javascript:" class="article-item__track"><svg class="icon icon-favorite">
+                            <use xlink:href="img/icons.svg#favorite"></use>
+                          </svg><span>Отслеживать</span></a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="article-item">
+                    <div class="article-item__title">
+                      <a href="">Чем занимаетесь вне сезона свадеб?</a>
+                    </div>
+                    <div class="article-item__text">
+                      <p>Обсуждение камеры. Спецификации, известные на 9 июля 2020: Canon EOS R6 Specifications: CMOS sensor with an effective pixel count of approximately 20.10 million pixels, which is customized...</p>
+                    </div>
+                    <div class="article-item__bottom">
+                      <div class="article-item__bottom-left">
+                        <div class="article-item__author">
+                          <div class="article-item__author-img">
+                            <img src="img/forum/photo-2.png" alt="">
+                          </div>
+                          <div class="article-item__author-name">Александр Яковлев</div>
+                        </div>
+                        <div class="article-item__comments">
+                          <svg class="icon icon-comment">
+                            <use xlink:href="img/icons.svg#comment" />
+                          </svg>
+                          <span>245</span>
+                        </div>
+                      </div>
+                      <div class="article-item__bottom-right">
+                        <a href="javascript:" class="article-item__track"><svg class="icon icon-favorite">
+                            <use xlink:href="img/icons.svg#favorite"></use>
+                          </svg><span>Отслеживать</span></a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="article-item">
+                    <div class="article-item__title">
+                      <a href="">Делаете ретушь на всех фото? Или обходитесь без этого?</a>
+                    </div>
+                    <div class="article-item__text">
+                      <p>Обсуждение камеры. Спецификации, известные на 9 июля 2020: Canon EOS R6 Specifications.</p>
+                    </div>
+                    <div class="article-item__bottom">
+                      <div class="article-item__bottom-left">
+                        <div class="article-item__author">
+                          <div class="article-item__author-img">
+                            <img src="img/forum/photo-3.png" alt="">
+                          </div>
+                          <div class="article-item__author-name">Александр Яковлев</div>
+                        </div>
+                        <div class="article-item__comments">
+                          <svg class="icon icon-comment">
+                            <use xlink:href="img/icons.svg#comment" />
+                          </svg>
+                          <span>245</span>
+                        </div>
+                      </div>
+                      <div class="article-item__bottom-right">
+                        <a href="javascript:" class="article-item__track"><svg class="icon icon-favorite">
+                            <use xlink:href="img/icons.svg#favorite"></use>
+                          </svg><span>Отслеживать</span></a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="article-item">
+                    <div class="article-item__title">
+                      <a href="">Canon EOS R6</a>
+                    </div>
+                    <div class="article-item__text">
+                      <p>Обсуждение камеры. Спецификации, известные на 9 июля 2020: Canon EOS R6 Specifications: CMOS sensor with an effective pixel count of approximately 20.10 million pixels, which is customized...</p>
+                    </div>
+                    <div class="article-item__bottom">
+                      <div class="article-item__bottom-left">
+                        <div class="article-item__author">
+                          <div class="article-item__author-img">
+                            <img src="img/forum/photo-1.png" alt="">
+                          </div>
+                          <div class="article-item__author-name">Александр Яковлев</div>
+                        </div>
+                        <div class="article-item__comments">
+                          <svg class="icon icon-comment">
+                            <use xlink:href="img/icons.svg#comment" />
+                          </svg>
+                          <span>245</span>
+                        </div>
+                      </div>
+                      <div class="article-item__bottom-right">
+                        <a href="javascript:" class="article-item__track"><svg class="icon icon-favorite">
+                            <use xlink:href="img/icons.svg#favorite"></use>
+                          </svg><span>Отслеживать</span></a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="article-item">
+                    <div class="article-item__title">
+                      <a href="">Чем занимаетесь вне сезона свадеб?</a>
+                    </div>
+                    <div class="article-item__text">
+                      <p>Обсуждение камеры. Спецификации, известные на 9 июля 2020: Canon EOS R6 Specifications: CMOS sensor with an effective pixel count of approximately 20.10 million pixels, which is customized...</p>
+                    </div>
+                    <div class="article-item__bottom">
+                      <div class="article-item__bottom-left">
+                        <div class="article-item__author">
+                          <div class="article-item__author-img">
+                            <img src="img/forum/photo-2.png" alt="">
+                          </div>
+                          <div class="article-item__author-name">Александр Яковлев</div>
+                        </div>
+                        <div class="article-item__comments">
+                          <svg class="icon icon-comment">
+                            <use xlink:href="img/icons.svg#comment" />
+                          </svg>
+                          <span>245</span>
+                        </div>
+                      </div>
+                      <div class="article-item__bottom-right">
+                        <a href="javascript:" class="article-item__track"><svg class="icon icon-favorite">
+                            <use xlink:href="img/icons.svg#favorite"></use>
+                          </svg><span>Отслеживать</span></a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="article-item">
+                    <div class="article-item__title">
+                      <a href="">Делаете ретушь на всех фото? Или обходитесь без этого?</a>
+                    </div>
+                    <div class="article-item__text">
+                      <p>Обсуждение камеры. Спецификации, известные на 9 июля 2020: Canon EOS R6 Specifications.</p>
+                    </div>
+                    <div class="article-item__bottom">
+                      <div class="article-item__bottom-left">
+                        <div class="article-item__author">
+                          <div class="article-item__author-img">
+                            <img src="img/forum/photo-3.png" alt="">
+                          </div>
+                          <div class="article-item__author-name">Александр Яковлев</div>
+                        </div>
+                        <div class="article-item__comments">
+                          <svg class="icon icon-comment">
+                            <use xlink:href="img/icons.svg#comment" />
+                          </svg>
+                          <span>245</span>
+                        </div>
+                      </div>
+                      <div class="article-item__bottom-right">
+                        <a href="javascript:" class="article-item__track"><svg class="icon icon-favorite">
+                            <use xlink:href="img/icons.svg#favorite"></use>
+                          </svg><span>Отслеживать</span></a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="article-item">
+                    <div class="article-item__title">
+                      <a href="">Canon EOS R6</a>
+                    </div>
+                    <div class="article-item__text">
+                      <p>Обсуждение камеры. Спецификации, известные на 9 июля 2020: Canon EOS R6 Specifications: CMOS sensor with an effective pixel count of approximately 20.10 million pixels, which is customized...</p>
+                    </div>
+                    <div class="article-item__bottom">
+                      <div class="article-item__bottom-left">
+                        <div class="article-item__author">
+                          <div class="article-item__author-img">
+                            <img src="img/forum/photo-1.png" alt="">
+                          </div>
+                          <div class="article-item__author-name">Александр Яковлев</div>
+                        </div>
+                        <div class="article-item__comments">
+                          <svg class="icon icon-comment">
+                            <use xlink:href="img/icons.svg#comment" />
+                          </svg>
+                          <span>245</span>
+                        </div>
+                      </div>
+                      <div class="article-item__bottom-right">
+                        <a href="javascript:" class="article-item__track"><svg class="icon icon-favorite">
+                            <use xlink:href="img/icons.svg#favorite"></use>
+                          </svg><span>Отслеживать</span></a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="article-item">
+                    <div class="article-item__title">
+                      <a href="">Чем занимаетесь вне сезона свадеб?</a>
+                    </div>
+                    <div class="article-item__text">
+                      <p>Обсуждение камеры. Спецификации, известные на 9 июля 2020: Canon EOS R6 Specifications: CMOS sensor with an effective pixel count of approximately 20.10 million pixels, which is customized...</p>
+                    </div>
+                    <div class="article-item__bottom">
+                      <div class="article-item__bottom-left">
+                        <div class="article-item__author">
+                          <div class="article-item__author-img">
+                            <img src="img/forum/photo-2.png" alt="">
+                          </div>
+                          <div class="article-item__author-name">Александр Яковлев</div>
+                        </div>
+                        <div class="article-item__comments">
+                          <svg class="icon icon-comment">
+                            <use xlink:href="img/icons.svg#comment" />
+                          </svg>
+                          <span>245</span>
+                        </div>
+                      </div>
+                      <div class="article-item__bottom-right">
+                        <a href="javascript:" class="article-item__track"><svg class="icon icon-favorite">
+                            <use xlink:href="img/icons.svg#favorite"></use>
+                          </svg><span>Отслеживать</span></a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="article-item">
+                    <div class="article-item__title">
+                      <a href="">Делаете ретушь на всех фото? Или обходитесь без этого?</a>
+                    </div>
+                    <div class="article-item__text">
+                      <p>Обсуждение камеры. Спецификации, известные на 9 июля 2020: Canon EOS R6 Specifications.</p>
+                    </div>
+                    <div class="article-item__bottom">
+                      <div class="article-item__bottom-left">
+                        <div class="article-item__author">
+                          <div class="article-item__author-img">
+                            <img src="img/forum/photo-3.png" alt="">
+                          </div>
+                          <div class="article-item__author-name">Александр Яковлев</div>
+                        </div>
+                        <div class="article-item__comments">
+                          <svg class="icon icon-comment">
+                            <use xlink:href="img/icons.svg#comment" />
+                          </svg>
+                          <span>245</span>
+                        </div>
+                      </div>
+                      <div class="article-item__bottom-right">
+                        <a href="javascript:" class="article-item__track"><svg class="icon icon-favorite">
+                            <use xlink:href="img/icons.svg#favorite"></use>
+                          </svg><span>Отслеживать</span></a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="article-item">
+                    <div class="article-item__title">
+                      <a href="">Canon EOS R6</a>
+                    </div>
+                    <div class="article-item__text">
+                      <p>Обсуждение камеры. Спецификации, известные на 9 июля 2020: Canon EOS R6 Specifications: CMOS sensor with an effective pixel count of approximately 20.10 million pixels, which is customized...</p>
+                    </div>
+                    <div class="article-item__bottom">
+                      <div class="article-item__bottom-left">
+                        <div class="article-item__author">
+                          <div class="article-item__author-img">
+                            <img src="img/forum/photo-1.png" alt="">
+                          </div>
+                          <div class="article-item__author-name">Александр Яковлев</div>
+                        </div>
+                        <div class="article-item__comments">
+                          <svg class="icon icon-comment">
+                            <use xlink:href="img/icons.svg#comment" />
+                          </svg>
+                          <span>245</span>
+                        </div>
+                      </div>
+                      <div class="article-item__bottom-right">
+                        <a href="javascript:" class="article-item__track"><svg class="icon icon-favorite">
+                            <use xlink:href="img/icons.svg#favorite"></use>
+                          </svg><span>Отслеживать</span></a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="article-item">
+                    <div class="article-item__title">
+                      <a href="">Чем занимаетесь вне сезона свадеб?</a>
+                    </div>
+                    <div class="article-item__text">
+                      <p>Обсуждение камеры. Спецификации, известные на 9 июля 2020: Canon EOS R6 Specifications: CMOS sensor with an effective pixel count of approximately 20.10 million pixels, which is customized...</p>
+                    </div>
+                    <div class="article-item__bottom">
+                      <div class="article-item__bottom-left">
+                        <div class="article-item__author">
+                          <div class="article-item__author-img">
+                            <img src="img/forum/photo-2.png" alt="">
+                          </div>
+                          <div class="article-item__author-name">Александр Яковлев</div>
+                        </div>
+                        <div class="article-item__comments">
+                          <svg class="icon icon-comment">
+                            <use xlink:href="img/icons.svg#comment" />
+                          </svg>
+                          <span>245</span>
+                        </div>
+                      </div>
+                      <div class="article-item__bottom-right">
+                        <a href="javascript:" class="article-item__track"><svg class="icon icon-favorite">
+                            <use xlink:href="img/icons.svg#favorite"></use>
+                          </svg><span>Отслеживать</span></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="pagination">
+                  <a href="" class="pagination__nav pagination__nav--prev">
+
+                    <span>Предыдущая</span>
+                    <svg viewBox="0 0 19 8" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M18.3536 4.35355C18.5488 4.15829 18.5488 3.84171 18.3536 3.64645L15.1716 0.464467C14.9763 0.269205 14.6597 0.269205 14.4645 0.464467C14.2692 0.65973 14.2692 0.976312 14.4645 1.17157L17.2929 4L14.4645 6.82843C14.2692 7.02369 14.2692 7.34027 14.4645 7.53554C14.6597 7.7308 14.9763 7.7308 15.1716 7.53554L18.3536 4.35355ZM-4.37114e-08 4.5L18 4.5L18 3.5L4.37114e-08 3.5L-4.37114e-08 4.5Z" />
+                    </svg>
+                  </a>
+                  <ul class="pagination__list">
+                    <li><a href=""><span>1</span></a></li>
+                    <li class="active"><a href=""><span>2</span></a></li>
+                    <li><a href=""><span>3</span></a></li>
+                    <li><a href=""><span>...</span></a></li>
+                    <li><a href=""><span>256</span></a></li>
+                  </ul>
+                  <a href="" class="pagination__nav pagination__nav--next">
+
+                    <span>Следующая</span>
+                    <svg viewBox="0 0 19 8" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M18.3536 4.35355C18.5488 4.15829 18.5488 3.84171 18.3536 3.64645L15.1716 0.464467C14.9763 0.269205 14.6597 0.269205 14.4645 0.464467C14.2692 0.65973 14.2692 0.976312 14.4645 1.17157L17.2929 4L14.4645 6.82843C14.2692 7.02369 14.2692 7.34027 14.4645 7.53554C14.6597 7.7308 14.9763 7.7308 15.1716 7.53554L18.3536 4.35355ZM-4.37114e-08 4.5L18 4.5L18 3.5L4.37114e-08 3.5L-4.37114e-08 4.5Z" />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="forum__sidebar">
+              <div class="forum__categories">
+                <div class="forum__categories-title">Категории форума</div>
+                <ul class="forum__categories-menu">
+                  <li><a href=""><span>Сборы фотографов</span></a></li>
+                  <li><a href=""><span>Акции и скидки сервиса</span></a></li>
+                  <li><a href=""><span>Последние слухи от Ларисы</span></a></li>
+                  <li><a href=""><span>Правила</span></a></li>
+                  <li><a href=""><span>Раздел помощи</span></a></li>
+                </ul>
+              </div>
+              <div class="forum__event">
+                <div class="forum__event-content">
+                  <div class="forum__event-icon">
+                    <svg class="icon icon-lightning">
+                      <use xlink:href="img/icons.svg#lightning" />
+                    </svg>
+                  </div>
+                  <div class="forum__event-date">3 Сентября 2021</div>
+                  <div class="forum__event-title">Крупнейший слёт фотографов!</div>
+                  <div class="forum__event-text">Крупнейшее мероприятие для фотографов за всю историю.</div>
+                </div>
+
+                <div class="forum__event-location">
+                  <svg class="icon icon-location">
+                    <use xlink:href="img/icons.svg#location" />
+                  </svg>
+                  <a href="" class="forum__event-btn btn btn--secondary">Узнать где будет проходить</a>
+                </div>
+
+
+              </div>
+              <div class="forum__popular">
+                <div class="forum__popular-title">Популярные темы</div>
+
+                <div class="forum__popular-items">
+                  <div class="article-item">
+                    <div class="article-item__title">
+                      <a href="">Чем занимаетесь вне сезона свадеб?</a>
+                    </div>
+                    <div class="article-item__text">
+                      <p>Обсуждение камеры. Спецификации, известные на 9 июля 2020: Canon EOS R6 Specifications.</p>
+                    </div>
+                    <div class="article-item__bottom">
+                      <div class="article-item__bottom-left">
+                        <div class="article-item__author">
+                          <div class="article-item__author-img">
+                            <img src="img/forum/photo-2.png" alt="">
+                          </div>
+                          <div class="article-item__author-name">Александр Яковлев</div>
+                        </div>
+                        <div class="article-item__comments">
+                          <svg class="icon icon-comment">
+                            <use xlink:href="img/icons.svg#comment" />
+                          </svg>
+                          <span>245</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="article-item">
+                    <div class="article-item__title">
+                      <a href="">Делаете ретушь на всех фото? Или
+                        обходитесь без этого?</a>
+                    </div>
+                    <div class="article-item__text">
+                      <p>Обсуждение камеры. Спецификации, известные на 9 июля 2020: Canon EOS R6 Specifications.</p>
+                    </div>
+                    <div class="article-item__bottom">
+                      <div class="article-item__bottom-left">
+                        <div class="article-item__author">
+                          <div class="article-item__author-img">
+                            <img src="img/forum/photo-2.png" alt="">
+                          </div>
+                          <div class="article-item__author-name">Александр Яковлев</div>
+                        </div>
+                        <div class="article-item__comments">
+                          <svg class="icon icon-comment">
+                            <use xlink:href="img/icons.svg#comment" />
+                          </svg>
+                          <span>245</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="article-item">
+                    <div class="article-item__title">
+                      <a href="">Чем занимаетесь вне сезона свадеб?</a>
+                    </div>
+                    <div class="article-item__text">
+                      <p>Обсуждение камеры. Спецификации, известные на 9 июля 2020: Canon EOS R6 Specifications.</p>
+                    </div>
+                    <div class="article-item__bottom">
+                      <div class="article-item__bottom-left">
+                        <div class="article-item__author">
+                          <div class="article-item__author-img">
+                            <img src="img/forum/photo-2.png" alt="">
+                          </div>
+                          <div class="article-item__author-name">Александр Яковлев</div>
+                        </div>
+                        <div class="article-item__comments">
+                          <svg class="icon icon-comment">
+                            <use xlink:href="img/icons.svg#comment" />
+                          </svg>
+                          <span>245</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="article-item">
+                    <div class="article-item__title">
+                      <a href="">Делаете ретушь на всех фото? Или
+                        обходитесь без этого?</a>
+                    </div>
+                    <div class="article-item__text">
+                      <p>Обсуждение камеры. Спецификации, известные на 9 июля 2020: Canon EOS R6 Specifications.</p>
+                    </div>
+                    <div class="article-item__bottom">
+                      <div class="article-item__bottom-left">
+                        <div class="article-item__author">
+                          <div class="article-item__author-img">
+                            <img src="img/forum/photo-2.png" alt="">
+                          </div>
+                          <div class="article-item__author-name">Александр Яковлев</div>
+                        </div>
+                        <div class="article-item__comments">
+                          <svg class="icon icon-comment">
+                            <use xlink:href="img/icons.svg#comment" />
+                          </svg>
+                          <span>245</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer ">
+      <div class="footer__content">
+        <div class="container">
+          <div class="footer__content_wrap">
+            <div class="footer__left_part">
+              <a href="#" class="footer__logo">
+                <svg width="31" height="32">
+                  <use xlink:href="img/sprite.svg#logo-footer"></use>
+                </svg>
+              </a>
+              <nav class="footer__nav">
+                <div class="footer__nav_list">
+                  <a href="#" class="footer__nav-link">Фотографии</a>
+                  <a href="#" class="footer__nav-link">Номинации</a>
+                  <a href="#" class="footer__nav-link">О нас</a>
+                </div>
+                <div class="footer__nav_list">
+                  <a href="#" class="footer__nav-link">Фотографы</a>
+                  <a href="#" class="footer__nav-link">Party</a>
+                  <a href="#" class="footer__nav-link">Политика конфиденциальности</a>
+                </div>
+              </nav>
+            </div>
+            <div class="footer__right_part">
+              <div class="footer__socials">
+                <a href="#" class="footer__socials-link">
+                  <svg width="15" height="15">
+                    <use xlink:href="img/sprite.svg#socials-instagram"></use>
+                  </svg>
+                </a>
+                <a href="#" class="footer__socials-link">
+                  <svg width="14" height="8">
+                    <use xlink:href="img/sprite.svg#socials-vk"></use>
+                  </svg>
+                </a>
+                <a href="#" class="footer__socials-link">
+                  <svg width="15" height="10">
+                    <use xlink:href="img/sprite.svg#socials-youtube"></use>
+                  </svg>
+                </a>
+                <a href="#" class="footer__socials-link">
+                  <svg width="14" height="11">
+                    <use xlink:href="img/sprite.svg#socials-twitter"></use>
+                  </svg>
+                </a>
+              </div>
+              <p class="footer__copyright">© 2021 Платформа для креативных свадебных фотографов</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <div id="modal-signin" class="modal modal-signin">
+    <div class="modal-title">
+      Вход
+    </div>
+    <div class="form-signin">
+      <form action="">
+        <div class="form-group">
+          <input type="text" name="login" class="form-control" placeholder="Еmail или телефон" required>
+        </div>
+        <div class="form-group">
+          <input type="password" name="password" class="form-control" placeholder="Пароль" required>
+        </div>
+        <div class="form-group form-submit flex justify-center">
+          <button type="submit" class="btn btn-submit">Войти</button>
+        </div>
+        <div class="signin-social">
+          <div class="signin-social__title">Войти через соц. сети:</div>
+          <ul class="signin-social__list flex justify-center">
+            <li><a href="" class="google"><svg class="icon icon-google">
+                  <use xlink:href="img/icons.svg#google" />
+                </svg></a></li>
+            <li><a href="" class="facebook"><svg class="icon icon-facebook">
+                  <use xlink:href="img/icons.svg#facebook" />
+                </svg></a></li>
+            <li><a href="" class="vk"><svg class="icon icon-vk">
+                  <use xlink:href="img/icons.svg#vk" />
+                </svg></a></li>
+          </ul>
+        </div>
+        <div class="restore-password flex justify-center">
+          <a href="#modal-restore-password" class="restore-password__link" data-modal>Восстановить пароль</a>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div id="modal-restore-password" class="modal modal-restore">
+    <div class="modal-title">
+      Восстановить пароль
+    </div>
+    <div class="form-restore">
+      <form action="">
+        <div class="form-group form-text">
+          Укажите почту или телефон который использовался при регистрации
+        </div>
+        <div class="form-group">
+          <input type="text" name="login" class="form-control" placeholder="Еmail или телефон" required>
+        </div>
+        <div class="form-group form-submit flex justify-center">
+          <button type="button" class="btn btn--full btn-submit">Продолжить</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div id="modal-remove-message" class="modal modal-remove">
+    <div class="modal-title">
+      Удалить диалог с “Александра Олегова”
+    </div>
+    <div class="modal-remove__buttons flex">
+      <a href="javascript:" class="btn btn--blue btn-remove-message" rel="modal:close">Да</a>
+      <a href="javascript:" class="btn btn--simple" rel="modal:close">Нет</a>
+    </div>
+  </div>
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+  <script src="js/libs.min.js"></script>
+  <script src="js/script.js"></script>
+
+</body>
+
+</html>

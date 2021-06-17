@@ -8,7 +8,7 @@
   <meta name="description" content="LV - description">
   <link href="img/favicon.ico" rel="shortcut icon" type="image/x-icon">
   <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.min.css">
   <link rel="stylesheet" href="css/main.css">
 </head>
@@ -102,30 +102,30 @@
         </div>
         <div class="about_us__feedback">
           <div class="container">
-            <div class="about_us__feedback-flex">
+            <div class="about_us__feedback-flex flex">
               <div class="about_us__form">
                 <h2>Ответим на вопросы</h2>
                 <form action="">
                   <div class="form-group form-email">
-                    <input type="text" class="form-control" placeholder="Ваш е-mail">
+                    <input type="text" class="form-control" placeholder="Ваш е-mail" required>
                   </div>
                   <div class="form-group">
-                    <textarea rows="3" placeholder="Ваш вопрос"></textarea>
+                    <textarea rows="3" class="form-control form-textarea" placeholder="Ваш вопрос" required></textarea>
                   </div>
                   <div class="form-group form-submit">
                     <button type="submit" class="btn btn-submit">Отправить</button>
                   </div>
-                  <div class="form-agreement">
+                  <div class="form-group form-agreement">
                     Согласен с обработкой персональных данных в соответствии с Политикой конфеденциальности
                   </div>
                 </form>
               </div>
               <div class="about_us__social">
-                <div class="about_us__social-head">
+                <div class="about_us__social-head flex justify-between">
                   <div class="about_us__social-title">
                     <h2>Instagram</h2>
                   </div>
-                  <div class="about_us__social-user">
+                  <a href="#" class="about_us__social-user">
                     <svg class="icon icon-instagram" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M14.8999 0H6.10017C2.73652 0 0 2.73652 0 6.10017V14.8998C0 18.2635 2.73652 21 6.10017 21H14.8998C18.2635 21 21 18.2635 21 14.8999V6.10017C21 2.73652 18.2635 0 14.8999 0ZM19.3594 14.8998C19.3594 17.3588 17.3588 19.3594 14.8999 19.3594H6.10017C3.64116 19.3594 1.64062 17.3588 1.64062 14.8999V6.10017C1.64062 3.64116 3.64116 1.64062 6.10017 1.64062H14.8998C17.3588 1.64062 19.3594 3.64116 19.3594 6.10017V14.8998Z" fill="url(#paint0_linear)" />
                       <path d="M10.5 4.83984C7.37896 4.83984 4.83984 7.37896 4.83984 10.5C4.83984 13.621 7.37896 16.1602 10.5 16.1602C13.621 16.1602 16.1602 13.621 16.1602 10.5C16.1602 7.37896 13.621 4.83984 10.5 4.83984ZM10.5 14.5195C8.28364 14.5195 6.48047 12.7164 6.48047 10.5C6.48047 8.28364 8.28364 6.48047 10.5 6.48047C12.7164 6.48047 14.5195 8.28364 14.5195 10.5C14.5195 12.7164 12.7164 14.5195 10.5 14.5195Z" fill="url(#paint1_linear)" />
@@ -152,7 +152,7 @@
                       </defs>
                     </svg>
                     <span>@larisa_ivanovna</span>
-                  </div>
+                  </a>
                 </div>
                 <div class="about_us__social-widget">
 
@@ -164,33 +164,41 @@
         <div class="about_us__team">
           <div class="container">
             <h2>Наша команда</h2>
-            <div class="about_us__team-flex">
+            <div class="about_us__team-flex flex flex-wrap">
               <div class="team-item">
-                <div class="team-item__img">
-                  <img src="img/team/img-1.jpg" alt="">
-                </div>
-                <div class="team-item__title">Александра Архипова</div>
-                <div class="team-item__text">
-                  Также как экономическая повестка сегодняшнего дня обеспечивает широкому кругу участие в формировании
+                <div class="team-item__content">
+                  <div class="team-item__img">
+                    <img src="img/team/img-1.jpg" alt="">
+                  </div>
+                  <div class="team-item__title">Александра Архипова</div>
+                  <div class="team-item__text">
+                    Также как экономическая повестка сегодняшнего дня обеспечивает широкому кругу участие в формировании
+                  </div>
                 </div>
               </div>
               <div class="team-item">
-                <div class="team-item__img">
-                  <img src="img/team/img-2.jpg" alt="">
+                <div class="team-item__content">
+                  <div class="team-item__img">
+                    <img src="img/team/img-2.jpg" alt="">
+                  </div>
+                  <div class="team-item__title">Алексей Антонович</div>
+                  <div class="team-item__text">
+                    Также как экономическая повестка сегодняшнего дня обеспечивает широкому кругу участие
+                  </div>
                 </div>
-                <div class="team-item__title">Алексей Антонович</div>
-                <div class="team-item__text">
-                  Также как экономическая повестка сегодняшнего дня обеспечивает широкому кругу участие
-                </div>
+
               </div>
               <div class="team-item">
-                <div class="team-item__img">
-                  <img src="img/team/img-2.jpg" alt="">
+                <div class="team-item__content">
+                  <div class="team-item__img">
+                    <img src="img/team/img-2.jpg" alt="">
+                  </div>
+                  <div class="team-item__title">Алексей Антонович</div>
+                  <div class="team-item__text">
+                    Также как экономическая повестка сегодняшнего дня обеспечивает широкому кругу участие
+                  </div>
                 </div>
-                <div class="team-item__title">Алексей Антонович</div>
-                <div class="team-item__text">
-                  Также как экономическая повестка сегодняшнего дня обеспечивает широкому кругу участие
-                </div>
+
               </div>
             </div>
           </div>

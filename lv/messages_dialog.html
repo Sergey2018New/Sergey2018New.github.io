@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>LV &#124; Мои сообщения</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="LV - description">
+  <link href="img/favicon.ico" rel="shortcut icon" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.min.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+
+  <div class="wrapper">
+
+    <div class="wrapper__content">
+
+      <header class="header authorized">
+        <div class="container">
+          <div class="header__wrapper">
+            <a href="/" class="header__logo">
+              <svg width="45" height="29">
+                <use xlink:href="img/sprite.svg#logo"></use>
+              </svg>
+            </a>
+            <nav class="header__nav">
+              <a href="#" class="header__nav-link">Фотографии</a>
+              <a href="nominations.html" class="header__nav-link">Номинации</a>
+              <a href="#" class="header__nav-link color">Party</a>
+              <a href="photographers.html" class="header__nav-link">Фотографы</a>
+            </nav>
+            <div class="header__content">
+              <a href="#modal-signin" class="header__signIn" data-modal><span>Войти</span></a>
+              <a href="#" class="header__notifications active">
+                <svg width="17" height="17">
+                  <use xlink:href="img/sprite.svg#notifications"></use>
+                </svg>
+                <span class="mark"></span>
+              </a>
+              <a href="#" class="header__user">
+                <svg width="22" height="22" class="header__user-icon">
+                  <use xlink:href="img/sprite.svg#user"></use>
+                </svg>
+                <img src="img/user.jpg" class="header__user-img" alt="">
+              </a>
+              <a href="#" class="header__search">
+                <svg width="15" height="15">
+                  <use xlink:href="img/sprite.svg#search"></use>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <div class="messages">
+        <div class="container">
+          <div class="messages__title">
+            <h1>Александра Олегова</h1>
+          </div>
+          <div class="messages__flex flex">
+            <div class="messages__sidebar">
+              <ul class="messages__menu sidebar-menu">
+                <li><a href="profile_edit_personal.html">Все сообщения</a></li>
+                <li><a href="profile_edit_contacts.html">От пользователей</a></li>
+                <li class="active"><a href="profile_edit_password.html">От Редакции</a></li>
+              </ul>
+            </div>
+            <div class="messages__content">
+              <div class="messages__scroll">
+                <div class="messages__items messages__items--single">
+                  <div class="message-item">
+                    <div class="message-item__content">
+                      <div class="message-item__img">
+                        <img src="img/messages/img-1.png" alt="">
+                      </div>
+                      <div class="message-item__name">
+                        Александра Олегова
+                      </div>
+                      <div class="message-item__text">
+                        Задача организации, в особенности же укрепление и развитие структуры играет важную роль в Задача организации, в особенности же укрепление и развитие структуры играет важную роль в Задача организации, в особенности же укрепление и развитие структуры играет важную роль в
+                      </div>
+                      <div class="message-item__date">13 Марта 2021</div>
+                    </div>
+                  </div>
+                  <div class="messages__separate-date"><span>Вчера</span></div>
+                  <div class="message-item">
+                    <div class="message-item__content">
+                      <div class="message-item__img">
+                        <img src="img/messages/img-5.png" alt="">
+                      </div>
+                      <div class="message-item__name">
+                        Вы
+                      </div>
+                      <div class="message-item__text">
+                        Ваш ответ!
+                      </div>
+                      <div class="message-item__date">2 часа назад</div>
+                    </div>
+                  </div>
+                  <div class="message-item">
+                    <div class="message-item__content">
+                      <div class="message-item__img">
+                        <img src="img/messages/img-5.png" alt="">
+                      </div>
+                      <div class="message-item__name">
+                        Вы
+                      </div>
+                      <div class="message-item__text">
+                        Рад Вас слышать Александра!
+                      </div>
+                      <div class="message-item__date">2 часа назад</div>
+                    </div>
+                  </div>
+                  <div class="messages__separate-date messages__separate-date--new"><span>Новые сообщения</span></div>
+                  <div class="message-item">
+                    <div class="message-item__content">
+                      <div class="message-item__img">
+                        <img src="img/messages/img-1.png" alt="">
+                      </div>
+                      <div class="message-item__name">
+                        Александра Олегова
+                      </div>
+                      <div class="message-item__text">
+                        Задача организации, в особенности же укрепление и развитие структуры играет важную роль в Задача организации, в особенности же укрепление и развитие структуры играет важную роль в Задача организации, в особенности же укрепление и развитие структуры играет важную роль в
+                      </div>
+                      <div class="message-item__date">13 Марта 2021</div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+              <div class="messages__form">
+                <form action="">
+                  <div class="messages__form-box">
+                    <div class="messages__form-content">
+                      <textarea placeholder="Введите Ваше сообщение" class="messages__form-textarea textarea"></textarea>
+                    </div>
+                    <button class="messages__form-submit"><svg>
+                        <use xlink:href="img/sprite.svg#send"></use>
+                      </svg></button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer ">
+      <div class="footer__content">
+        <div class="container">
+          <div class="footer__content_wrap">
+            <div class="footer__left_part">
+              <a href="#" class="footer__logo">
+                <svg width="31" height="32">
+                  <use xlink:href="img/sprite.svg#logo-footer"></use>
+                </svg>
+              </a>
+              <nav class="footer__nav">
+                <div class="footer__nav_list">
+                  <a href="#" class="footer__nav-link">Фотографии</a>
+                  <a href="#" class="footer__nav-link">Номинации</a>
+                  <a href="#" class="footer__nav-link">О нас</a>
+                </div>
+                <div class="footer__nav_list">
+                  <a href="#" class="footer__nav-link">Фотографы</a>
+                  <a href="#" class="footer__nav-link">Party</a>
+                  <a href="#" class="footer__nav-link">Политика конфиденциальности</a>
+                </div>
+              </nav>
+            </div>
+            <div class="footer__right_part">
+              <div class="footer__socials">
+                <a href="#" class="footer__socials-link">
+                  <svg width="15" height="15">
+                    <use xlink:href="img/sprite.svg#socials-instagram"></use>
+                  </svg>
+                </a>
+                <a href="#" class="footer__socials-link">
+                  <svg width="14" height="8">
+                    <use xlink:href="img/sprite.svg#socials-vk"></use>
+                  </svg>
+                </a>
+                <a href="#" class="footer__socials-link">
+                  <svg width="15" height="10">
+                    <use xlink:href="img/sprite.svg#socials-youtube"></use>
+                  </svg>
+                </a>
+                <a href="#" class="footer__socials-link">
+                  <svg width="14" height="11">
+                    <use xlink:href="img/sprite.svg#socials-twitter"></use>
+                  </svg>
+                </a>
+              </div>
+              <p class="footer__copyright">© 2021 Платформа для креативных свадебных фотографов</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <div id="modal-signin" class="modal modal-signin">
+    <div class="modal-title">
+      Вход
+    </div>
+    <div class="form-signin">
+      <form action="">
+        <div class="form-group">
+          <input type="text" name="login" class="form-control" placeholder="Еmail или телефон" required>
+        </div>
+        <div class="form-group">
+          <input type="password" name="password" class="form-control" placeholder="Пароль" required>
+        </div>
+        <div class="form-group form-submit flex justify-center">
+          <button type="submit" class="btn btn-submit">Войти</button>
+        </div>
+        <div class="signin-social">
+          <div class="signin-social__title">Войти через соц. сети:</div>
+          <ul class="signin-social__list flex justify-center">
+            <li><a href="" class="google"><svg class="icon icon-google">
+                  <use xlink:href="img/icons.svg#google" />
+                </svg></a></li>
+            <li><a href="" class="facebook"><svg class="icon icon-facebook">
+                  <use xlink:href="img/icons.svg#facebook" />
+                </svg></a></li>
+            <li><a href="" class="vk"><svg class="icon icon-vk">
+                  <use xlink:href="img/icons.svg#vk" />
+                </svg></a></li>
+          </ul>
+        </div>
+        <div class="restore-password flex justify-center">
+          <a href="#modal-restore-password" class="restore-password__link" data-modal>Восстановить пароль</a>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div id="modal-restore-password" class="modal modal-restore">
+    <div class="modal-title">
+      Восстановить пароль
+    </div>
+    <div class="form-restore">
+      <form action="">
+        <div class="form-group form-text">
+          Укажите почту или телефон который использовался при регистрации
+        </div>
+        <div class="form-group">
+          <input type="text" name="login" class="form-control" placeholder="Еmail или телефон" required>
+        </div>
+        <div class="form-group form-submit flex justify-center">
+          <button type="button" class="btn btn--full btn-submit">Продолжить</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div id="modal-remove-message" class="modal modal-remove">
+    <div class="modal-title">
+      Удалить диалог с “Александра Олегова”
+    </div>
+    <div class="modal-remove__buttons flex">
+      <a href="javascript:" class="btn btn--blue btn-remove-message" rel="modal:close">Да</a>
+      <a href="javascript:" class="btn btn--simple" rel="modal:close">Нет</a>
+    </div>
+  </div>
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+  <script src="js/libs.min.js"></script>
+  <script src="js/script.js"></script>
+
+</body>
+
+</html>

@@ -93,6 +93,7 @@ $(document).ready(function () {
 		}
 	})
 
+
 	$('.photographer_page').each(function() {
 		let ths = $(this);
 		ths.find('.photographer_page__tab').not(':first').hide();
@@ -128,5 +129,37 @@ $(document).ready(function () {
 	});
 
 	$( ".ui-selectmenu" ).selectmenu();
+
+	// Показать/скрыть пароль
+	$(document).on('click', ".form-input-password__btn-visible", function(){
+		$(this).toggleClass("active");
+		if ($(this).hasClass("active")){
+			$(this).closest(".form-input-password").find(".form-input-box__input").attr("type", "text");
+		}
+		else{
+			$(this).closest(".form-input-password").find(".form-input-box__input").attr("type", "password");
+		}
+	}); 
+
+	// Круговая диаграмма 
+	var Circle = function(sel){
+		var circles = document.querySelectorAll(sel);
+		[].forEach.call(circles,function(el){
+			var valEl = parseFloat(el.innerHTML);
+			valEl = valEl*188/100;
+			el.innerHTML = '<svg width="68" height="68"><circle transform="rotate(-90)" r="30" cx="-34" cy="34" /><circle transform="rotate(-90)" style="stroke-dasharray:'+valEl+'px 188px;" r="30" cx="-34" cy="34" /></svg>';
+			
+		});
+	}; 
+	Circle('.circle-diagram'); 
+
+	// Удалить сообщение
+	$(document).on("click", ".message-item__remove", function() {
+		$("#modal-remove-message").modal({
+			closeText: iconClose,
+		});
+		return false;
+	});
+
 
 });
