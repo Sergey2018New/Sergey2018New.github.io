@@ -127,7 +127,7 @@ $(document).ready(function () {
 		let ths = $(this);
 		ths.find('.photographer_page__tab').not(':first').hide();
 		ths.find('.photographer_page__nav-item').click(function() {
-			$grid.masonry('layout');
+		//	$grid.masonry('reloadItems');
 
 
 			ths.find('.photographer_page__nav-item').removeClass('active').eq($(this).index()).addClass('active');
@@ -202,10 +202,20 @@ $(document).ready(function () {
 		$(this).closest(".sidebar-menu").toggleClass("active");  
 	});
 	$(document).on('click', function(e) {
-		var sidebarForm = ".sidebar-menu";
-		if (!$(sidebarForm).is(e.target)
-			&& $(e.target).closest(sidebarForm).length === 0){
-		  $(sidebarForm).removeClass("active");
+		var menu = ".sidebar-menu";
+		if (!$(menu).is(e.target)
+			&& $(e.target).closest(menu).length === 0){
+		  $(menu).removeClass("active");
+		}
+	});
+	$(".profile-menu__button").on("click", function() {
+		$(this).closest(".profile-menu").toggleClass("active");  
+	});
+	$(document).on('click', function(e) {
+		var menu = ".profile-menu"; 
+		if (!$(menu).is(e.target)
+			&& $(e.target).closest(menu).length === 0){
+		  $(menu).removeClass("active");
 		}
 	  });
 
