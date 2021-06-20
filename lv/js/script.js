@@ -42,7 +42,7 @@ $(document).ready(function () {
 				 distance: 6,
 				 trigger: trigger,
 				 contentAsHTML: true,
-				 side: ['top', 'bottom',  'right', 'left'],
+				 side: [ 'top', 'bottom',  'right', 'left'],
 				 functionPosition: function(instance, helper, position){
 				   //position.coord.left =  $(helper.origin).offset().left;
 				   return position;
@@ -56,6 +56,35 @@ $(document).ready(function () {
 	   }
    }
    initTooltip();
+
+    // Инициализация выпадающего списка (плагин Selectize) 
+	 if ($('.select').length){
+		 
+		$('.select').each(function(){
+			let nosearch = $(this).attr("data-no-search");
+			let dropdownClass = "";
+
+			if (nosearch != undefined){
+				dropdownClass = "dropdown-no-search"
+			}
+			$(this).select2({
+				language: "ru",
+				dropdownCssClass : dropdownClass
+			}); 
+		});
+		
+
+		
+		
+	}
+
+	// Menu Mobile
+	$(".header__btn-menu").on('click', function(){
+		$(".header__nav").toggleClass("active");
+	})
+	$(".header__nav-close").on('click', function(){ 
+		$(".header__nav").removeClass("active");
+	});
 
 
 	var $grid = $('.main_gallery__blocks').masonry({
@@ -128,8 +157,6 @@ $(document).ready(function () {
 		line.css("width", data + "%");
 	});
 
-	$( ".ui-selectmenu" ).selectmenu();
-
 	// Показать/скрыть пароль
 	$(document).on('click', ".form-input-password__btn-visible", function(){
 		$(this).toggleClass("active");
@@ -160,6 +187,27 @@ $(document).ready(function () {
 		});
 		return false;
 	});
+
+	// Tab Pro аккаунт
+	$(".about_pro__tariffs-tab").on("click", function() {
+		let tab = $(this).attr("data-tab-tariff");
+		$(this).siblings().removeClass("active");  
+		$(this).addClass("active");  
+		$(".about_pro__tariffs-block").removeClass("active"); 
+		$('.about_pro__tariffs-block[data-tariff="' + tab + '"]').addClass("active");
+	});
+
+	// Menu Profile
+	$(".sidebar-menu__button").on("click", function() {
+		$(this).closest(".sidebar-menu").toggleClass("active");  
+	});
+	$(document).on('click', function(e) {
+		var sidebarForm = ".sidebar-menu";
+		if (!$(sidebarForm).is(e.target)
+			&& $(e.target).closest(sidebarForm).length === 0){
+		  $(sidebarForm).removeClass("active");
+		}
+	  });
 
 
 });

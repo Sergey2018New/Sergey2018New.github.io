@@ -9,7 +9,7 @@
   <link href="img/favicon.ico" rel="shortcut icon" type="image/x-icon">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.min.css">
+  <!--<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.min.css">-->
   <link rel="stylesheet" href="css/main.css">
 </head>
 
@@ -19,43 +19,55 @@
 
     <div class="wrapper__content">
 
-      <header class="header ">
-        <div class="container">
-          <div class="header__wrapper">
-            <a href="/" class="header__logo">
-              <svg width="45" height="29">
-                <use xlink:href="img/sprite.svg#logo"></use>
-              </svg>
-            </a>
-            <nav class="header__nav">
-              <a href="#" class="header__nav-link">Фотографии</a>
-              <a href="nominations.html" class="header__nav-link">Номинации</a>
-              <a href="#" class="header__nav-link color">Party</a>
-              <a href="photographers.html" class="header__nav-link">Фотографы</a>
-            </nav>
-            <div class="header__content">
-              <a href="#modal-signin" class="header__signIn" data-modal><span>Войти</span></a>
-              <a href="#" class="header__notifications active">
-                <svg width="17" height="17">
-                  <use xlink:href="img/sprite.svg#notifications"></use>
-                </svg>
-                <span class="mark"></span>
-              </a>
-              <a href="#" class="header__user">
-                <svg width="22" height="22" class="header__user-icon">
-                  <use xlink:href="img/sprite.svg#user"></use>
-                </svg>
-                <img src="img/user.jpg" class="header__user-img" alt="">
-              </a>
-              <a href="#" class="header__search">
-                <svg width="15" height="15">
-                  <use xlink:href="img/sprite.svg#search"></use>
+      <div class="header-wrapper">
+        <header class="header ">
+          <div class="container">
+            <div class="header__wrapper">
+              <a href="home.html" class="header__logo">
+                <svg width="45" height="29">
+                  <use xlink:href="img/sprite.svg#logo"></use>
                 </svg>
               </a>
+              <nav class="header__nav">
+                <div class="header__nav-menu">
+                  <a href="nomination.html" class="header__nav-link">Фотографии</a>
+                  <a href="nominations.html" class="header__nav-link">Номинации</a>
+                  <a href="#" class="header__nav-link color">Party</a>
+                  <a href="photographers.html" class="header__nav-link">Фотографы</a>
+                </div>
+                <button class="header__nav-close"><svg viewBox="0 0 17 17" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10.0575 8.50013L16.6769 1.88033C17.1077 1.44974 17.1077 0.753533 16.6769 0.322943C16.2463 -0.107648 15.5501 -0.107648 15.1196 0.322943L8.4999 6.94274L1.88044 0.322943C1.44966 -0.107648 0.753669 -0.107648 0.323087 0.322943C-0.107696 0.753533 -0.107696 1.44974 0.323087 1.88033L6.94255 8.50013L0.323087 15.1199C-0.107696 15.5505 -0.107696 16.2467 0.323087 16.6773C0.537672 16.8921 0.819819 17 1.10176 17C1.38371 17 1.66565 16.8921 1.88044 16.6773L8.4999 10.0575L15.1196 16.6773C15.3343 16.8921 15.6163 17 15.8982 17C16.1802 17 16.4621 16.8921 16.6769 16.6773C17.1077 16.2467 17.1077 15.5505 16.6769 15.1199L10.0575 8.50013Z" />
+                  </svg>
+                </button>
+              </nav>
+              <div class="header__content">
+                <a href="my_profile.html" class="header__signIn"><span>Войти</span></a>
+                <!--<a href="#modal-signin" class="header__signIn" data-modal><span>Войти</span></a>-->
+                <a href="#" class="header__notifications active">
+                  <svg width="17" height="17">
+                    <use xlink:href="img/sprite.svg#notifications"></use>
+                  </svg>
+                  <span class="mark"></span>
+                </a>
+                <a href="#" class="header__user">
+                  <svg width="22" height="22" class="header__user-icon">
+                    <use xlink:href="img/sprite.svg#user"></use>
+                  </svg>
+                  <img src="img/user.jpg" class="header__user-img" alt="">
+                </a>
+                <a href="#" class="header__search">
+                  <svg width="15" height="15">
+                    <use xlink:href="img/sprite.svg#search"></use>
+                  </svg>
+                </a>
+                <button class="header__btn-menu"><svg class="icon icon-nav-menu">
+                    <use xlink:href="img/icons.svg#nav-menu" />
+                  </svg></button>
+              </div>
             </div>
           </div>
-        </div>
-      </header>
+        </header>
+      </div>
 
       <div class="photographers photographers_best">
         <div class="photographers__head">
@@ -75,13 +87,13 @@
                 <div class="photographers__user">
                   <div class="user_info verified pro">
                     <div class="user_info__img">
-                      <img src="img/best-img-1.png" alt="">
+                      <a href="photographer_page.html"><img src="img/best-img-1.png" alt=""></a>
                     </div>
                     <div class="user_info__content">
                       <div class="user_info__head">
                         <div class="user_info__name">
-                          <p class="user_info__name-text">Александр Яковлев</p>
-                          <span class="user_info__statuses"></span>
+                          <p class="user_info__name-text"><a href="photographer_page.html">Александр Яковлев</a></p>
+                          <span class="user_info__statuses"><i class="icon icon-verified" title="Пользователь верифицирован" data-tooltip=""></i></span>
                         </div>
                         <p class="user_info__address">Санкт-Петербург, Россия</p>
                       </div>
@@ -95,7 +107,7 @@
                         <p class="user_info__nominations-title">Номинации фотографа:</p>
                         <div class="user_info__nominations-list">
                           <div class="user_info__nominations-item">
-                            <div class="sticker_mark user_info__nominations-sticker_mark color-2">
+                            <div data-tooltip data-tooltip-theme="theme-dark" title="Волшебный свет" class="sticker_mark user_info__nominations-sticker_mark color-2">
                               <svg class="sticker_mark__bg">
                                 <use xlink:href="img/sprite.svg#sticker_mark"></use>
                               </svg>
@@ -106,7 +118,7 @@
                             <p class="user_info__nominations-quantity">3</p>
                           </div>
                           <div class="user_info__nominations-item">
-                            <div class="sticker_mark user_info__nominations-sticker_mark color-9">
+                            <div data-tooltip data-tooltip-theme="theme-dark" title="Волшебный свет" class="sticker_mark user_info__nominations-sticker_mark color-9">
                               <svg class="sticker_mark__bg">
                                 <use xlink:href="img/sprite.svg#sticker_mark"></use>
                               </svg>
@@ -117,7 +129,7 @@
                             <p class="user_info__nominations-quantity">14</p>
                           </div>
                           <div class="user_info__nominations-item">
-                            <div class="sticker_mark user_info__nominations-sticker_mark color-5">
+                            <div data-tooltip data-tooltip-theme="theme-dark" title="Волшебный свет" class="sticker_mark user_info__nominations-sticker_mark color-5">
                               <svg class="sticker_mark__bg">
                                 <use xlink:href="img/sprite.svg#sticker_mark"></use>
                               </svg>
@@ -128,7 +140,7 @@
                             <p class="user_info__nominations-quantity">5</p>
                           </div>
                           <div class="user_info__nominations-item">
-                            <div class="sticker_mark user_info__nominations-sticker_mark color-12">
+                            <div data-tooltip data-tooltip-theme="theme-dark" title="Волшебный свет" class="sticker_mark user_info__nominations-sticker_mark color-12">
                               <svg class="sticker_mark__bg">
                                 <use xlink:href="img/sprite.svg#sticker_mark"></use>
                               </svg>
@@ -148,7 +160,7 @@
                     <div class="photographers__photo">
                       <a href="#" class="photographers__photo-link"></a>
                       <img src="img/img-25.jpg" alt="">
-                      <div class="sticker_mark main_gallery__sticker_mark color-1">
+                      <div data-tooltip data-tooltip-theme="theme-dark" title="Волшебный свет" class="sticker_mark main_gallery__sticker_mark color-1">
                         <svg class="sticker_mark__bg">
                           <use xlink:href="img/sprite.svg#sticker_mark"></use>
                         </svg>
@@ -166,7 +178,7 @@
                     <div class="photographers__photo">
                       <a href="#" class="photographers__photo-link"></a>
                       <img src="img/img-26.jpg" alt="">
-                      <div class="sticker_mark main_gallery__sticker_mark color-1">
+                      <div data-tooltip data-tooltip-theme="theme-dark" title="Волшебный свет" class="sticker_mark main_gallery__sticker_mark color-1">
                         <svg class="sticker_mark__bg">
                           <use xlink:href="img/sprite.svg#sticker_mark"></use>
                         </svg>
@@ -184,7 +196,7 @@
                     <div class="photographers__photo">
                       <a href="#" class="photographers__photo-link"></a>
                       <img src="img/img-27.jpg" alt="">
-                      <div class="sticker_mark main_gallery__sticker_mark color-1">
+                      <div data-tooltip data-tooltip-theme="theme-dark" title="Волшебный свет" class="sticker_mark main_gallery__sticker_mark color-1">
                         <svg class="sticker_mark__bg">
                           <use xlink:href="img/sprite.svg#sticker_mark"></use>
                         </svg>
@@ -206,13 +218,13 @@
                 <div class="photographers__user">
                   <div class="user_info verified pro">
                     <div class="user_info__img">
-                      <img src="img/best-img-5.png" alt="">
+                      <a href="photographer_page.html"><img src="img/best-img-5.png" alt=""></a>
                     </div>
                     <div class="user_info__content">
                       <div class="user_info__head">
                         <div class="user_info__name">
-                          <p class="user_info__name-text">Иванченко Василий</p>
-                          <span class="user_info__statuses"></span>
+                          <p class="user_info__name-text"><a href="photographer_page.html">Иванченко Василий</a></p>
+                          <span class="user_info__statuses"><i class="icon icon-verified" title="Пользователь верифицирован" data-tooltip=""></i></span>
                         </div>
                         <p class="user_info__address">Краснодар, Россия</p>
                       </div>
@@ -226,7 +238,7 @@
                         <p class="user_info__nominations-title">Номинации фотографа:</p>
                         <div class="user_info__nominations-list">
                           <div class="user_info__nominations-item">
-                            <div class="sticker_mark user_info__nominations-sticker_mark color-2">
+                            <div data-tooltip data-tooltip-theme="theme-dark" title="Волшебный свет" class="sticker_mark user_info__nominations-sticker_mark color-2">
                               <svg class="sticker_mark__bg">
                                 <use xlink:href="img/sprite.svg#sticker_mark"></use>
                               </svg>
@@ -237,7 +249,7 @@
                             <p class="user_info__nominations-quantity">3</p>
                           </div>
                           <div class="user_info__nominations-item">
-                            <div class="sticker_mark user_info__nominations-sticker_mark color-9">
+                            <div data-tooltip data-tooltip-theme="theme-dark" title="Волшебный свет" class="sticker_mark user_info__nominations-sticker_mark color-9">
                               <svg class="sticker_mark__bg">
                                 <use xlink:href="img/sprite.svg#sticker_mark"></use>
                               </svg>
@@ -248,7 +260,7 @@
                             <p class="user_info__nominations-quantity">14</p>
                           </div>
                           <div class="user_info__nominations-item">
-                            <div class="sticker_mark user_info__nominations-sticker_mark color-5">
+                            <div data-tooltip data-tooltip-theme="theme-dark" title="Волшебный свет" class="sticker_mark user_info__nominations-sticker_mark color-5">
                               <svg class="sticker_mark__bg">
                                 <use xlink:href="img/sprite.svg#sticker_mark"></use>
                               </svg>
@@ -259,7 +271,7 @@
                             <p class="user_info__nominations-quantity">5</p>
                           </div>
                           <div class="user_info__nominations-item">
-                            <div class="sticker_mark user_info__nominations-sticker_mark color-12">
+                            <div data-tooltip data-tooltip-theme="theme-dark" title="Волшебный свет" class="sticker_mark user_info__nominations-sticker_mark color-12">
                               <svg class="sticker_mark__bg">
                                 <use xlink:href="img/sprite.svg#sticker_mark"></use>
                               </svg>
@@ -279,7 +291,7 @@
                     <div class="photographers__photo">
                       <a href="#" class="photographers__photo-link"></a>
                       <img src="img/img-28.jpg" alt="">
-                      <div class="sticker_mark main_gallery__sticker_mark color-2">
+                      <div data-tooltip data-tooltip-theme="theme-dark" title="Волшебный свет" class="sticker_mark main_gallery__sticker_mark color-2">
                         <svg class="sticker_mark__bg">
                           <use xlink:href="img/sprite.svg#sticker_mark"></use>
                         </svg>
@@ -297,7 +309,7 @@
                     <div class="photographers__photo">
                       <a href="#" class="photographers__photo-link"></a>
                       <img src="img/img-29.jpg" alt="">
-                      <div class="sticker_mark main_gallery__sticker_mark color-12">
+                      <div data-tooltip data-tooltip-theme="theme-dark" title="Волшебный свет" class="sticker_mark main_gallery__sticker_mark color-12">
                         <svg class="sticker_mark__bg">
                           <use xlink:href="img/sprite.svg#sticker_mark"></use>
                         </svg>
@@ -315,7 +327,7 @@
                     <div class="photographers__photo">
                       <a href="#" class="photographers__photo-link"></a>
                       <img src="img/img-30.jpg" alt="">
-                      <div class="sticker_mark main_gallery__sticker_mark color-5">
+                      <div data-tooltip data-tooltip-theme="theme-dark" title="Волшебный свет" class="sticker_mark main_gallery__sticker_mark color-5">
                         <svg class="sticker_mark__bg">
                           <use xlink:href="img/sprite.svg#sticker_mark"></use>
                         </svg>
@@ -337,13 +349,13 @@
                 <div class="photographers__user">
                   <div class="user_info verified pro">
                     <div class="user_info__img">
-                      <img src="img/best-img-8.png" alt="">
+                      <a href="photographer_page.html"><img src="img/best-img-8.png" alt=""></a>
                     </div>
                     <div class="user_info__content">
                       <div class="user_info__head">
                         <div class="user_info__name">
-                          <p class="user_info__name-text">Кузнецев Владимир</p>
-                          <span class="user_info__statuses"></span>
+                          <p class="user_info__name-text"><a href="photographer_page.html">Кузнецев Владимир</a></p>
+                          <span class="user_info__statuses"><i class="icon icon-verified" title="Пользователь верифицирован" data-tooltip=""></i></span>
                         </div>
                         <p class="user_info__address">Нижний Новгород, Россия</p>
                       </div>
@@ -357,7 +369,7 @@
                         <p class="user_info__nominations-title">Номинации фотографа:</p>
                         <div class="user_info__nominations-list">
                           <div class="user_info__nominations-item">
-                            <div class="sticker_mark user_info__nominations-sticker_mark color-2">
+                            <div data-tooltip data-tooltip-theme="theme-dark" title="Волшебный свет" class="sticker_mark user_info__nominations-sticker_mark color-2">
                               <svg class="sticker_mark__bg">
                                 <use xlink:href="img/sprite.svg#sticker_mark"></use>
                               </svg>
@@ -368,7 +380,7 @@
                             <p class="user_info__nominations-quantity">3</p>
                           </div>
                           <div class="user_info__nominations-item">
-                            <div class="sticker_mark user_info__nominations-sticker_mark color-9">
+                            <div data-tooltip data-tooltip-theme="theme-dark" title="Волшебный свет" class="sticker_mark user_info__nominations-sticker_mark color-9">
                               <svg class="sticker_mark__bg">
                                 <use xlink:href="img/sprite.svg#sticker_mark"></use>
                               </svg>
@@ -379,7 +391,7 @@
                             <p class="user_info__nominations-quantity">14</p>
                           </div>
                           <div class="user_info__nominations-item">
-                            <div class="sticker_mark user_info__nominations-sticker_mark color-5">
+                            <div data-tooltip data-tooltip-theme="theme-dark" title="Волшебный свет" class="sticker_mark user_info__nominations-sticker_mark color-5">
                               <svg class="sticker_mark__bg">
                                 <use xlink:href="img/sprite.svg#sticker_mark"></use>
                               </svg>
@@ -399,7 +411,7 @@
                     <div class="photographers__photo">
                       <a href="#" class="photographers__photo-link"></a>
                       <img src="img/img-31.jpg" alt="">
-                      <div class="sticker_mark main_gallery__sticker_mark color-8">
+                      <div data-tooltip data-tooltip-theme="theme-dark" title="Волшебный свет" class="sticker_mark main_gallery__sticker_mark color-8">
                         <svg class="sticker_mark__bg">
                           <use xlink:href="img/sprite.svg#sticker_mark"></use>
                         </svg>
@@ -417,7 +429,7 @@
                     <div class="photographers__photo">
                       <a href="#" class="photographers__photo-link"></a>
                       <img src="img/img-32.jpg" alt="">
-                      <div class="sticker_mark main_gallery__sticker_mark color-3">
+                      <div data-tooltip data-tooltip-theme="theme-dark" title="Волшебный свет" class="sticker_mark main_gallery__sticker_mark color-3">
                         <svg class="sticker_mark__bg">
                           <use xlink:href="img/sprite.svg#sticker_mark"></use>
                         </svg>
@@ -435,7 +447,7 @@
                     <div class="photographers__photo">
                       <a href="#" class="photographers__photo-link"></a>
                       <img src="img/img-33.jpg" alt="">
-                      <div class="sticker_mark main_gallery__sticker_mark color-1">
+                      <div data-tooltip data-tooltip-theme="theme-dark" title="Волшебный свет" class="sticker_mark main_gallery__sticker_mark color-1">
                         <svg class="sticker_mark__bg">
                           <use xlink:href="img/sprite.svg#sticker_mark"></use>
                         </svg>
@@ -457,13 +469,13 @@
                 <div class="photographers__user">
                   <div class="user_info verified pro">
                     <div class="user_info__img">
-                      <img src="img/best-img-7.png" alt="">
+                      <a href="photographer_page.html"><img src="img/best-img-7.png" alt=""></a>
                     </div>
                     <div class="user_info__content">
                       <div class="user_info__head">
                         <div class="user_info__name">
-                          <p class="user_info__name-text">Елена Семеренкова</p>
-                          <span class="user_info__statuses"></span>
+                          <p class="user_info__name-text"><a href="photographer_page.html">Елена Семеренкова</a></p>
+                          <span class="user_info__statuses"><i class="icon icon-verified" title="Пользователь верифицирован" data-tooltip=""></i></span>
                         </div>
                         <p class="user_info__address">Саранск, Россия</p>
                       </div>
@@ -477,7 +489,7 @@
                         <p class="user_info__nominations-title">Номинации фотографа:</p>
                         <div class="user_info__nominations-list">
                           <div class="user_info__nominations-item">
-                            <div class="sticker_mark user_info__nominations-sticker_mark color-2">
+                            <div data-tooltip data-tooltip-theme="theme-dark" title="Волшебный свет" class="sticker_mark user_info__nominations-sticker_mark color-2">
                               <svg class="sticker_mark__bg">
                                 <use xlink:href="img/sprite.svg#sticker_mark"></use>
                               </svg>
@@ -488,7 +500,7 @@
                             <p class="user_info__nominations-quantity">3</p>
                           </div>
                           <div class="user_info__nominations-item">
-                            <div class="sticker_mark user_info__nominations-sticker_mark color-9">
+                            <div data-tooltip data-tooltip-theme="theme-dark" title="Волшебный свет" class="sticker_mark user_info__nominations-sticker_mark color-9">
                               <svg class="sticker_mark__bg">
                                 <use xlink:href="img/sprite.svg#sticker_mark"></use>
                               </svg>
@@ -499,7 +511,7 @@
                             <p class="user_info__nominations-quantity">14</p>
                           </div>
                           <div class="user_info__nominations-item">
-                            <div class="sticker_mark user_info__nominations-sticker_mark color-5">
+                            <div data-tooltip data-tooltip-theme="theme-dark" title="Волшебный свет" class="sticker_mark user_info__nominations-sticker_mark color-5">
                               <svg class="sticker_mark__bg">
                                 <use xlink:href="img/sprite.svg#sticker_mark"></use>
                               </svg>
@@ -510,7 +522,7 @@
                             <p class="user_info__nominations-quantity">5</p>
                           </div>
                           <div class="user_info__nominations-item">
-                            <div class="sticker_mark user_info__nominations-sticker_mark color-12">
+                            <div data-tooltip data-tooltip-theme="theme-dark" title="Волшебный свет" class="sticker_mark user_info__nominations-sticker_mark color-12">
                               <svg class="sticker_mark__bg">
                                 <use xlink:href="img/sprite.svg#sticker_mark"></use>
                               </svg>
@@ -530,7 +542,7 @@
                     <div class="photographers__photo">
                       <a href="#" class="photographers__photo-link"></a>
                       <img src="img/img-34.jpg" alt="">
-                      <div class="sticker_mark main_gallery__sticker_mark color-2">
+                      <div data-tooltip data-tooltip-theme="theme-dark" title="Волшебный свет" class="sticker_mark main_gallery__sticker_mark color-2">
                         <svg class="sticker_mark__bg">
                           <use xlink:href="img/sprite.svg#sticker_mark"></use>
                         </svg>
@@ -548,7 +560,7 @@
                     <div class="photographers__photo">
                       <a href="#" class="photographers__photo-link"></a>
                       <img src="img/img-35.jpg" alt="">
-                      <div class="sticker_mark main_gallery__sticker_mark color-12">
+                      <div data-tooltip data-tooltip-theme="theme-dark" title="Волшебный свет" class="sticker_mark main_gallery__sticker_mark color-12">
                         <svg class="sticker_mark__bg">
                           <use xlink:href="img/sprite.svg#sticker_mark"></use>
                         </svg>
@@ -566,7 +578,7 @@
                     <div class="photographers__photo">
                       <a href="#" class="photographers__photo-link"></a>
                       <img src="img/img-36.jpg" alt="">
-                      <div class="sticker_mark main_gallery__sticker_mark color-5">
+                      <div data-tooltip data-tooltip-theme="theme-dark" title="Волшебный свет" class="sticker_mark main_gallery__sticker_mark color-5">
                         <svg class="sticker_mark__bg">
                           <use xlink:href="img/sprite.svg#sticker_mark"></use>
                         </svg>
@@ -588,13 +600,13 @@
                 <div class="photographers__user">
                   <div class="user_info verified pro">
                     <div class="user_info__img">
-                      <img src="img/best-img-9.png" alt="">
+                      <a href="photographer_page.html"><img src="img/best-img-9.png" alt=""></a>
                     </div>
                     <div class="user_info__content">
                       <div class="user_info__head">
                         <div class="user_info__name">
-                          <p class="user_info__name-text">Василий Васильев</p>
-                          <span class="user_info__statuses"></span>
+                          <p class="user_info__name-text"><a href="photographer_page.html">Василий Васильев</a></p>
+                          <span class="user_info__statuses"><i class="icon icon-verified" title="Пользователь верифицирован" data-tooltip=""></i></span>
                         </div>
                         <p class="user_info__address">Тюмень, Россия</p>
                       </div>
@@ -608,7 +620,7 @@
                         <p class="user_info__nominations-title">Номинации фотографа:</p>
                         <div class="user_info__nominations-list">
                           <div class="user_info__nominations-item">
-                            <div class="sticker_mark user_info__nominations-sticker_mark color-2">
+                            <div data-tooltip data-tooltip-theme="theme-dark" title="Волшебный свет" class="sticker_mark user_info__nominations-sticker_mark color-2">
                               <svg class="sticker_mark__bg">
                                 <use xlink:href="img/sprite.svg#sticker_mark"></use>
                               </svg>
@@ -619,7 +631,7 @@
                             <p class="user_info__nominations-quantity">3</p>
                           </div>
                           <div class="user_info__nominations-item">
-                            <div class="sticker_mark user_info__nominations-sticker_mark color-9">
+                            <div data-tooltip data-tooltip-theme="theme-dark" title="Волшебный свет" class="sticker_mark user_info__nominations-sticker_mark color-9">
                               <svg class="sticker_mark__bg">
                                 <use xlink:href="img/sprite.svg#sticker_mark"></use>
                               </svg>
@@ -630,7 +642,7 @@
                             <p class="user_info__nominations-quantity">14</p>
                           </div>
                           <div class="user_info__nominations-item">
-                            <div class="sticker_mark user_info__nominations-sticker_mark color-5">
+                            <div data-tooltip data-tooltip-theme="theme-dark" title="Волшебный свет" class="sticker_mark user_info__nominations-sticker_mark color-5">
                               <svg class="sticker_mark__bg">
                                 <use xlink:href="img/sprite.svg#sticker_mark"></use>
                               </svg>
@@ -641,7 +653,7 @@
                             <p class="user_info__nominations-quantity">5</p>
                           </div>
                           <div class="user_info__nominations-item">
-                            <div class="sticker_mark user_info__nominations-sticker_mark color-12">
+                            <div data-tooltip data-tooltip-theme="theme-dark" title="Волшебный свет" class="sticker_mark user_info__nominations-sticker_mark color-12">
                               <svg class="sticker_mark__bg">
                                 <use xlink:href="img/sprite.svg#sticker_mark"></use>
                               </svg>
@@ -661,7 +673,7 @@
                     <div class="photographers__photo">
                       <a href="#" class="photographers__photo-link"></a>
                       <img src="img/img-37.jpg" alt="">
-                      <div class="sticker_mark main_gallery__sticker_mark color-8">
+                      <div data-tooltip data-tooltip-theme="theme-dark" title="Волшебный свет" class="sticker_mark main_gallery__sticker_mark color-8">
                         <svg class="sticker_mark__bg">
                           <use xlink:href="img/sprite.svg#sticker_mark"></use>
                         </svg>
@@ -679,7 +691,7 @@
                     <div class="photographers__photo">
                       <a href="#" class="photographers__photo-link"></a>
                       <img src="img/img-38.jpg" alt="">
-                      <div class="sticker_mark main_gallery__sticker_mark color-3">
+                      <div data-tooltip data-tooltip-theme="theme-dark" title="Волшебный свет" class="sticker_mark main_gallery__sticker_mark color-3">
                         <svg class="sticker_mark__bg">
                           <use xlink:href="img/sprite.svg#sticker_mark"></use>
                         </svg>
@@ -697,7 +709,7 @@
                     <div class="photographers__photo">
                       <a href="#" class="photographers__photo-link"></a>
                       <img src="img/img-27.jpg" alt="">
-                      <div class="sticker_mark main_gallery__sticker_mark color-1">
+                      <div data-tooltip data-tooltip-theme="theme-dark" title="Волшебный свет" class="sticker_mark main_gallery__sticker_mark color-1">
                         <svg class="sticker_mark__bg">
                           <use xlink:href="img/sprite.svg#sticker_mark"></use>
                         </svg>
@@ -812,12 +824,12 @@
               </a>
               <nav class="footer__nav">
                 <div class="footer__nav_list">
-                  <a href="#" class="footer__nav-link">Фотографии</a>
-                  <a href="#" class="footer__nav-link">Номинации</a>
-                  <a href="#" class="footer__nav-link">О нас</a>
+                  <a href="nomination.html" class="footer__nav-link">Фотографии</a>
+                  <a href="nominations.html" class="footer__nav-link">Номинации</a>
+                  <a href="about_us.html" class="footer__nav-link">О нас</a>
                 </div>
                 <div class="footer__nav_list">
-                  <a href="#" class="footer__nav-link">Фотографы</a>
+                  <a href="photographers.html" class="footer__nav-link">Фотографы</a>
                   <a href="#" class="footer__nav-link">Party</a>
                   <a href="#" class="footer__nav-link">Политика конфиденциальности</a>
                 </div>

@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>LV &#124; Мой профиль</title>
+  <title>LV &#124; Форум</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="LV - description">
   <link href="img/favicon.ico" rel="shortcut icon" type="image/x-icon">
@@ -68,89 +68,137 @@
         </header>
       </div>
 
-      <div class="profile-personal">
+      <div class="forum edit-topic">
         <div class="container">
-          <div class="profile-personal__flex flex">
-            <div class="profile-personal__sidebar">
-              <div class="profile-personal__menu sidebar-menu">
-                <button class="sidebar-menu__button">Публичные данные</button>
-                <ul class="sidebar-menu__list">
-                  <li class="active"><a href="profile_edit_personal.html">Публичные данные</a></li>
-                  <li><a href="profile_edit_contacts.html">Контакты</a></li>
-                  <li><a href="profile_edit_password.html">Пароль</a></li>
-                  <li><a href="profile_edit_mailing.html">Уведомления</a></li>
-                </ul>
-              </div>
-            </div>
-            <div class="profile-personal__content">
-              <div class="profile-personal__form">
+          <div class="forum__flex flex">
+
+            <div class="forum__content">
+              <div class="edit-topic__form">
                 <form action="">
-                  <div class="profile-personal__form-content">
-
-                    <div class="form-group">
-                      <div class="form-box">
-                        <div class="form-box__label"><span>Имя и фамилия</span></div>
-                        <div class="form-box__content">
-                          <input type="text" class="form-control" placeholder="Ваше имя">
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="form-group">
-                      <div class="form-box">
-                        <div class="form-box__label"><span>Город проживания</span></div>
-                        <div class="form-box__content">
-                          <select class="select" data-placeholder="Выберите город">
-                            <option></option>
-                            <option value="1">Москва</option>
-                            <option value="2">Санкт-Петербург</option>
-                            <option value="3">Оренбург</option>
-                            <option value="4">Псков</option>
-                            <option value="5">Нижний-Новгород</option>
-                            <option value="6">Верхний Новгород</option>
-                            <option value="7">Москва</option>
-                            <option value="8">Санкт-Петербург</option>
-                            <option value="9">Оренбург</option>
-                            <option value="10">Псков</option>
-                            <option value="11">Нижний-Новгород</option>
-                            <option value="12">Верхний Новгород</option>
-                          </select>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="form-group">
-                      <div class="form-box">
-                        <div class="form-box__label"><span>Укажите ставку в час</span></div>
-                        <div class="form-box__content">
-                          <div class="form-input-box form-input-rate">
-                            <input type="text" class="form-control form-input-box__input" placeholder="8 500">
-                            <div class="form-input-box__unit">₽</div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="form-group">
-                      <div class="form-box">
-                        <div class="form-box__label"><span>Адрес личного сайта</span></div>
-                        <div class="form-box__content">
-                          <input type="text" class="form-control" placeholder="https://">
-                        </div>
-                      </div>
-                    </div>
-
+                  <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Введите название темы">
                   </div>
-                  <div class="profile-personal__form-button flex justify-center">
-                    <button type="submit" class="btn btn--secondary">Сохранить</button>
+                  <div class="form-group">
+                    <textarea class="form-control form-textarea" placeholder="Сообщение в теме"></textarea>
+                  </div>
+                  <div class="form-group">
+                    <label class="attach-files">
+                      <svg class="icon icon-picture">
+                        <use xlink:href="img/icons.svg#picture" />
+                      </svg>
+                      <span>Прикрепить изображения</span>
+                      <input type="file">
+                    </label>
+                  </div>
+                  <div class="edit-topic__form-buttons">
+                    <button type="submit" class="btn">Опубликовать тему</button>
                   </div>
                 </form>
               </div>
             </div>
+            <div class="forum__sidebar">
+              <div class="forum__regulations">
+                <div class="forum__regulations-icon">
+                  <svg class="icon icon-info">
+                    <use xlink:href="img/icons.svg#info" />
+                  </svg>
+                </div>
+                <div class="forum__regulations-title">
+                  Правила публикации
+                </div>
+                <div class="forum__regulations-text">
+                  <p>Задача организации, в особенности же постоянный количественный рост и сфера нашей активности требуют от нас анализа дальнейших направлений развития.</p>
+                  <p>Значимость этих проблем настолько очевидна, что укрепление.</p>
+                  <p>Развитие структуры влечет за собой процесс внедрения и модернизации систем массового участия.</p>
+                </div>
+              </div>
+
+            </div>
+
           </div>
         </div>
       </div>
     </div>
 
     <footer class="footer ">
+      <div class="footer__box">
+        <div class="container">
+          <div class="footer__box_wrap">
+            <div class="footer__block">
+              <p class="footer__block-title">Популярные теги:</p>
+              <div class="footer__tags">
+                <a href="#" class="footer__tags-link">#архитектура</a>
+                <a href="#" class="footer__tags-link">#традиции</a>
+                <a href="#" class="footer__tags-link">#свет</a>
+                <a href="#" class="footer__tags-link">#кольца</a>
+                <a href="#" class="footer__tags-link">#невеста</a>
+                <a href="#" class="footer__tags-link">#жених</a>
+                <a href="#" class="footer__tags-link">#свадьба</a>
+                <a href="#" class="footer__tags-link">#банкет</a>
+                <a href="#" class="footer__tags-link">#море</a>
+                <a href="#" class="footer__tags-link">#луна</a>
+                <a href="#" class="footer__tags-link">#традиции</a>
+                <a href="#" class="footer__tags-link">#свет</a>
+                <a href="#" class="footer__tags-link">#кольца</a>
+                <a href="#" class="footer__tags-link">#невеста</a>
+                <a href="#" class="footer__tags-link">#жених</a>
+              </div>
+            </div>
+            <div class="footer__block">
+              <p class="footer__block-title">Найди фотографа в своём городе:</p>
+              <div class="footer__cities">
+                <a href="#" class="footer__cities-link">Архангельск</a>
+                <a href="#" class="footer__cities-link">Астрахань</a>
+                <a href="#" class="footer__cities-link">Балашиха</a>
+                <a href="#" class="footer__cities-link">Барнаул</a>
+                <a href="#" class="footer__cities-link">Белгород</a>
+                <a href="#" class="footer__cities-link">Брянск</a>
+                <a href="#" class="footer__cities-link">Владивосток</a>
+                <a href="#" class="footer__cities-link">Владимир</a>
+                <a href="#" class="footer__cities-link">Волгоград</a>
+                <a href="#" class="footer__cities-link">Вологда</a>
+                <a href="#" class="footer__cities-link">Воронеж</a>
+                <a href="#" class="footer__cities-link">Екатеринбург</a>
+                <a href="#" class="footer__cities-link">Зеленоград</a>
+                <a href="#" class="footer__cities-link">Иваново</a>
+                <a href="#" class="footer__cities-link">Ижевск</a>
+                <a href="#" class="footer__cities-link">Иркутск</a>
+                <a href="#" class="footer__cities-link">Казань</a>
+                <a href="#" class="footer__cities-link">Калининград</a>
+                <a href="#" class="footer__cities-link">Калуга</a>
+                <a href="#" class="footer__cities-link">Кемерово</a>
+                <a href="#" class="footer__cities-link">Киров</a>
+                <a href="#" class="footer__cities-link">Коломна</a>
+                <a href="#" class="footer__cities-link">Краснодар</a>
+                <a href="#" class="footer__cities-link">Красноярск</a>
+                <a href="#" class="footer__cities-link">Курск</a>
+                <a href="#" class="footer__cities-link">Липецк</a>
+                <a href="#" class="footer__cities-link">Магнитогорск</a>
+                <a href="#" class="footer__cities-link">Махачкала</a>
+                <a href="#" class="footer__cities-link">Москва</a>
+                <a href="#" class="footer__cities-link">Набережные</a>
+                <a href="#" class="footer__cities-link">Челны</a>
+                <a href="#" class="footer__cities-link">Нижний</a>
+                <a href="#" class="footer__cities-link">Новгород</a>
+                <a href="#" class="footer__cities-link">Новокузнецк</a>
+                <a href="#" class="footer__cities-link">Новороссийск</a>
+                <a href="#" class="footer__cities-link">Новосибирск</a>
+                <a href="#" class="footer__cities-link">Омск</a>
+                <a href="#" class="footer__cities-link">Оренбург</a>
+                <a href="#" class="footer__cities-link">Орёл</a>
+                <a href="#" class="footer__cities-link">Пенза</a>
+                <a href="#" class="footer__cities-link">Пермь</a>
+                <a href="#" class="footer__cities-link">Подольск</a>
+                <a href="#" class="footer__cities-link">Пятигорск</a>
+                <a href="#" class="footer__cities-link">Ростов-на-Дону</a>
+                <a href="#" class="footer__cities-link">Рязань</a>
+                <a href="#" class="footer__cities-link">Самара</a>
+                <a href="#" class="footer__cities-link">Санкт-Петербург</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       <div class="footer__content">
         <div class="container">
           <div class="footer__content_wrap">
@@ -255,6 +303,15 @@
           <button type="button" class="btn btn--full btn-submit">Продолжить</button>
         </div>
       </form>
+    </div>
+  </div>
+  <div id="modal-remove-message" class="modal modal-remove">
+    <div class="modal-title">
+      Удалить диалог с “Александра Олегова”
+    </div>
+    <div class="modal-remove__buttons flex">
+      <a href="javascript:" class="btn btn--blue btn-remove-message" rel="modal:close">Да</a>
+      <a href="javascript:" class="btn btn--simple" rel="modal:close">Нет</a>
     </div>
   </div>
 

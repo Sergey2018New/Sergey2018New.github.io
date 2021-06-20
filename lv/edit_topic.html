@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>LV &#124; one_photo_page</title>
+  <title>LV &#124; Форум</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="LV - description">
   <link href="img/favicon.ico" rel="shortcut icon" type="image/x-icon">
@@ -20,7 +20,7 @@
     <div class="wrapper__content">
 
       <div class="header-wrapper">
-        <header class="header ">
+        <header class="header authorized">
           <div class="container">
             <div class="header__wrapper">
               <a href="home.html" class="header__logo">
@@ -41,8 +41,7 @@
                 </button>
               </nav>
               <div class="header__content">
-                <a href="my_profile.html" class="header__signIn"><span>Войти</span></a>
-                <!--<a href="#modal-signin" class="header__signIn" data-modal><span>Войти</span></a>-->
+                <a href="#modal-signin" class="header__signIn" data-modal><span>Войти</span></a>
                 <a href="#" class="header__notifications active">
                   <svg width="17" height="17">
                     <use xlink:href="img/sprite.svg#notifications"></use>
@@ -69,258 +68,75 @@
         </header>
       </div>
 
-      <div class="photo_page">
+      <div class="forum edit-topic">
         <div class="container">
-          <div class="photo_page__wrap">
-            <div class="photo_page__head">
-              <div class="photo_page__user verified pro">
-                <div class="photo_page__user-photo">
-                  <a href="photographer_page.html"><img src="img/best-img-4.png" alt=""></a>
+          <div class="forum__flex flex">
+
+            <div class="forum__content">
+              <div class="edit-topic__title"></div>
+              <div class="edit-topic__form">
+                <div class="form-group">
+                  <input type="text" class="form-control edit-topic__form-theme" placeholder="Введите название темы" value="Кто чем занимается вне сезона свадеб?">
                 </div>
-                <div class="photo_page__user-content">
-                  <div class="photo_page__user-title">
-                    <p class="photo_page__user-name"><a href="photographer_page.html">Александр Яковлев</a></p>
-                    <div class="photo_page__user-statuses"><i class="icon icon-verified" title="Пользователь верифицирован" data-tooltip=""></i></div>
+                <div class="form-group">
+                  <textarea class="form-control form-textarea edit-topic__form-description" placeholder="Сообщение в теме">Кто чем занимается вне сезона свадеб? Интересно узнать какие дополнительные средства заработка есть у вас? Я вне свадеб, подрабатываю в налогой службе РФ. Хотелось бы узнать сколько зарабатываете и официально ли устроены?</textarea>
+                </div>
+                <div class="edit-topic__materials">
+                  <div class="edit-topic__materials-title">
+                    Прикрепленные материалы:
+                  </div>
+                  <div class="edit-topic__materials-block">
+                    <div class="edit-topic__materials-photo">
+                      <div class="edit-topic__materials-image">
+                        <img src="img/materials/img-1.jpg" alt="">
+                      </div>
+                      <div class="edit-topic__materials-control">
+                        <button class="edit-topic__materials-button"><svg class="icon icon-menu">
+                            <use xlink:href="img/icons.svg#menu" />
+                          </svg></button>
+                        <button title="Удалить" class="edit-topic__materials-button"><svg class="icon icon-basket">
+                            <use xlink:href="img/icons.svg#basket" />
+                          </svg></button>
+                      </div>
+                    </div>
+                    <div class="edit-topic__materials-photo">
+                      <div class="edit-topic__materials-image">
+                        <img src="img/materials/img-2.jpg" alt="">
+                      </div>
+                      <div class="edit-topic__materials-control">
+                        <button class="edit-topic__materials-button"><svg class="icon icon-menu">
+                            <use xlink:href="img/icons.svg#menu" />
+                          </svg></button>
+                        <button title="Удалить" class="edit-topic__materials-button"><svg class="icon icon-basket">
+                            <use xlink:href="img/icons.svg#basket" />
+                          </svg></button>
+                      </div>
+                    </div>
                   </div>
 
-                  <div class="photo_page__user-info">
-                    <p class="photo_page__user-item"><a href="#">#65 в общем каталоге</a></p>
-                    <p class="photo_page__user-item"><a href="#">#2 Санкт-Петербург</a></p>
-                  </div>
                 </div>
-              </div>
-              <a href="nomination.html" class="photo_page__back"><i><svg class="icon icon-arrow-nav">
-                    <use xlink:href="img/icons.svg#arrow-nav" />
-                  </svg></i><span>Номинации</span></a>
-            </div>
-            <div class="photo_page__block">
-              <div class="photo_page__slider">
-                <div class="photo_page__slide">
-                  <img src="img/post-img-1.jpg" alt="">
-                  <div data-tooltip data-tooltip-theme="theme-dark" title="Волшебный свет" class="sticker_mark photo_page__mark color-13">
-                    <svg class="sticker_mark__bg">
-                      <use xlink:href="img/sprite.svg#sticker_mark"></use>
+                <div class="form-group">
+                  <label class="attach-files">
+                    <svg class="icon icon-picture">
+                      <use xlink:href="img/icons.svg#picture" />
                     </svg>
-                    <svg class="sticker_mark__lightning">
-                      <use xlink:href="img/sprite.svg#lightning"></use>
-                    </svg>
-                  </div>
+                    <span>Прикрепить изображения</span>
+                    <input type="file">
+                  </label>
                 </div>
-                <div class="photo_page__slide">
-                  <img src="img/post-img-1.jpg" alt="">
-                  <div data-tooltip data-tooltip-theme="theme-dark" title="Волшебный свет" class="sticker_mark photo_page__mark color-13">
-                    <svg class="sticker_mark__bg">
-                      <use xlink:href="img/sprite.svg#sticker_mark"></use>
-                    </svg>
-                    <svg class="sticker_mark__lightning">
-                      <use xlink:href="img/sprite.svg#lightning"></use>
-                    </svg>
-                  </div>
-                </div>
-              </div>
-              <div class="photo_page__block-bottom">
-                <div class="photo_page__tags">
-                  <a href="#" class="photo_page__tags-item">#архитектура</a>
-                  <a href="#" class="photo_page__tags-item">#традиции</a>
-                  <a href="#" class="photo_page__tags-item">#свет</a>
-                  <a href="#" class="photo_page__tags-item">#кольца</a>
-                  <a href="#" class="photo_page__tags-item">#невеста</a>
-                  <a href="#" class="photo_page__tags-item">#жених</a>
-                  <a href="#" class="photo_page__tags-item">#свадьба</a>
-                  <a href="#" class="photo_page__tags-item">#невеста</a>
-                  <a href="#" class="photo_page__tags-item">#архитектура</a>
-                  <a href="#" class="photo_page__tags-item">#жених</a>
-                  <a href="#" class="photo_page__tags-item">#свет</a>
-                  <a href="#" class="photo_page__tags-item">#свадьба</a>
-                </div>
-                <div class="photo_page__links">
-                  <a href="#" class="photo_page__links-item">
-                    <i><svg class="icon icon-favorite">
-                        <use xlink:href="img/icons.svg#favorite" />
-                      </svg></i><span>157</span>
-                  </a>
-                  <a href="#" class="photo_page__links-item">
-                    <i><svg class="icon icon-like">
-                        <use xlink:href="img/icons.svg#like" />
-                      </svg></i><span>34</span>
-                  </a>
-                </div>
+
               </div>
             </div>
-            <div class="photo_page__box">
-              <div class="photo_page__comments_box">
-                <div class="photo_page__title">
-                  <p class="photo_page__title-text">Комментарии</p>
-                  <sup class="photo_page__title-quantity">15</sup>
-                </div>
-                <div class="photo_page__authorization">
-                  <p class="photo_page__authorization-text">Чтобы оставить комментарий к фото, Вам нужно</p>
-                  <a href="#modal-signin" class="photo_page__authorization-link" data-modal>Войти</a>
-                  <p class="photo_page__authorization-text">в свой аккаунт, или</p>
-                  <a href="#" class="photo_page__authorization-link">Зарегистрироваться</a>
-                </div>
-                <div class="photo_page__comments">
-                  <div class="comment-item">
-                    <div class="comment-item__img">
-                      <span class="comment-item__letter color-1">И</span>
-                    </div>
-                    <div class="comment-item__content">
-                      <div class="comment-item__head">
-                        <div class="comment-item__title">
-                          <p class="comment-item__name">Иван Васильев</p>
-                        </div>
-                        <p class="comment-item__date">1 день назад</p>
-                      </div>
-                      <div class="comment-item__text">
-                        <p>И нет сомнений, что элементы политического процесса, инициированные исключительно синтетически, обнародованы. Сложно сказать, почему сделанные на базе интернет-аналитики выводы рассмотрены исключительно в разрезе маркетинговых и финансовых предпосылок.</p>
-                      </div>
-                      <a href="#" class="comment-item__reply">
-                        <svg class="icon icon-replay">
-                          <use xlink:href="img/icons.svg#replay" />
-                        </svg>
-                        <span>Ответить</span>
-                      </a>
-                    </div>
-                  </div>
-                  <div class="comment-item">
-                    <div class="comment-item__img">
-                      <span class="comment-item__letter color-2">Д</span>
-                    </div>
-                    <div class="comment-item__content">
-                      <div class="comment-item__head">
-                        <div class="comment-item__title">
-                          <p class="comment-item__name">Дмитрий Пинчук</p>
-                        </div>
-                        <p class="comment-item__date">1 день назад</p>
-                      </div>
-                      <div class="comment-item__text">
-                        <p>И нет сомнений, что элементы политического процесса, инициированные исключительно синтетически, обнародованы.</p>
-                      </div>
-                      <a href="#" class="comment-item__reply">
-                        <svg class="icon icon-replay">
-                          <use xlink:href="img/icons.svg#replay" />
-                        </svg>
-                        <span>Ответить</span>
-                      </a>
-                    </div>
-                    <div class="comment-item__answers">
-                      <div class="comment-item">
-                        <div class="comment-item__img">
-                          <img src="img/best-img-7.png" alt="">
-                        </div>
-                        <div class="comment-item__content">
-                          <div class="comment-item__head">
-                            <div class="comment-item__title">
-                              <p class="comment-item__name">Алёна Видлицкая</p>
-                              <p class="comment-item__whom">(ответ для Дмитрий Пинчук)</p>
-                            </div>
-                            <p class="comment-item__date">1 день назад</p>
-                          </div>
-                          <div class="comment-item__text">
-                            <p>И нет сомнений, что элементы политического процесса, инициированные исключительно синтетически, обнародованы.</p>
-                          </div>
-                          <a href="#" class="comment-item__reply">
-                            <svg class="icon icon-replay">
-                              <use xlink:href="img/icons.svg#replay" />
-                            </svg>
-                            <span>Ответить</span>
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="comment-item">
-                    <div class="comment-item__img">
-                      <img src="img/best-img-2.png" alt="">
-                    </div>
-                    <div class="comment-item__content">
-                      <div class="comment-item__head">
-                        <div class="comment-item__title">
-                          <p class="comment-item__name">Владимир Солнцев</p>
-                        </div>
-                        <p class="comment-item__date">1 день назад</p>
-                      </div>
-                      <div class="comment-item__text">
-                        <p>И нет сомнений, что элементы политического процесса, инициированные исключительно синтетически, обнародованы. Сложно сказать, почему сделанные на базе интернет-аналитики выводы рассмотрены исключительно в разрезе маркетинговых и финансовых предпосылок.</p>
-                      </div>
-                      <a href="#" class="comment-item__reply">
-                        <svg class="icon icon-replay">
-                          <use xlink:href="img/icons.svg#replay" />
-                        </svg>
-                        <span>Ответить</span>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <div class="photo_page__more">
-                  <a href="#" class="photo_page__more-link">
-                    <i>
-                      <svg width="24" height="6">
-                        <use xlink:href="img/sprite.svg#comments_more"></use>
-                      </svg>
-                    </i>
-                    <span>Загрузить еще 36 комментариев</span>
-                  </a>
-                </div>
-              </div>
-              <div class="photo_page__characteristics">
-                <div class="photo_page__characteristics-block">
-                  <i class="photo_page__characteristics-icon">
-                    <svg width="24" height="24">
-                      <use xlink:href="img/sprite.svg#characteristics-1"></use>
-                    </svg>
-                  </i>
-                  <div class="photo_page__characteristics-list">
-                    <p class="photo_page__characteristics-item"><a href="#">Sony Alpha a9</a></p>
-                  </div>
-                </div>
-                <div class="photo_page__characteristics-block">
-                  <i class="photo_page__characteristics-icon">
-                    <svg width="25" height="25">
-                      <use xlink:href="img/sprite.svg#characteristics-2"></use>
-                    </svg>
-                  </i>
-                  <div class="photo_page__characteristics-list">
-                    <p class="photo_page__characteristics-item">Distagon T* FE 35mm f/1.4 ZA</p>
-                  </div>
-                </div>
-                <div class="photo_page__characteristics-block">
-                  <i class="photo_page__characteristics-icon">
-                    <svg width="23" height="23">
-                      <use xlink:href="img/sprite.svg#characteristics-3"></use>
-                    </svg>
-                  </i>
-                  <div class="photo_page__characteristics-list">
-                    <p class="photo_page__characteristics-item">f/1.4</p>
-                    <p class="photo_page__characteristics-item">35 mm</p>
-                  </div>
-                </div>
-                <div class="photo_page__characteristics-block">
-                  <i class="photo_page__characteristics-icon">
-                    <svg width="18" height="21">
-                      <use xlink:href="img/sprite.svg#characteristics-4"></use>
-                    </svg>
-                  </i>
-                  <div class="photo_page__characteristics-list">
-                    <p class="photo_page__characteristics-item">1/320s</p>
-                  </div>
-                </div>
-                <div class="photo_page__characteristics-block">
-                  <i class="photo_page__characteristics-icon">
-                    <svg width="26" height="20">
-                      <use xlink:href="img/sprite.svg#characteristics-5"></use>
-                    </svg>
-                  </i>
-                  <div class="photo_page__characteristics-list">
-                    <p class="photo_page__characteristics-item">100</p>
-                  </div>
-                </div>
+            <div class="forum__sidebar">
+              <div class="edit-topic__buttons">
+                <button type="submit" class="btn btn--full">Сохранить изменения</button>
+                <button class="btn btn--grey btn--full">Удалить тему</button>
               </div>
             </div>
+
           </div>
         </div>
       </div>
-
     </div>
 
     <footer class="footer ">
@@ -506,6 +322,15 @@
           <button type="button" class="btn btn--full btn-submit">Продолжить</button>
         </div>
       </form>
+    </div>
+  </div>
+  <div id="modal-remove-message" class="modal modal-remove">
+    <div class="modal-title">
+      Удалить диалог с “Александра Олегова”
+    </div>
+    <div class="modal-remove__buttons flex">
+      <a href="javascript:" class="btn btn--blue btn-remove-message" rel="modal:close">Да</a>
+      <a href="javascript:" class="btn btn--simple" rel="modal:close">Нет</a>
     </div>
   </div>
 

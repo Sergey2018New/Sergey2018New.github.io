@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>LV &#124; Избранные:</title>
+  <title>LV &#124; Номинация</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="LV - description">
   <link href="img/favicon.ico" rel="shortcut icon" type="image/x-icon">
@@ -69,24 +69,75 @@
         </header>
       </div>
 
-      <div class="photographers photographers_favorites">
-        <div class="photographers__head">
-          <div class="container">
-            <div class="photographers__head_wrap">
-              <div class="photographers__head_title">Избранные:</div>
-              <div class="photographers__nav">
-                <a href="profile_favorits_photos.html" class="photographers__nav-link active">Фотографии</a>
-                <a href="profile_favorits_photographers.html" class="photographers__nav-link ">Фотографы</a>
+      <div class="main_gallery style-nominations">
+        <div class="container main_gallery__container">
+          <div class="main_gallery__wrap">
+            <div class="main_gallery__head">
+              <p class="main_gallery__title">Номинация</p>
+              <div class="head__dropdown main_gallery__dropdown">
+                <button class="head__dropdown-btn main_gallery__dropdown-btn"><span>Волшебный свет</span></button>
+                <div class="head__dropdown-menu main_gallery__dropdown-menu">
+                  <div class="main_gallery__tags">
+                    <div class="main_gallery__tags-item">
+                      <input type="checkbox" name="main_gallery__tags">
+                      <p>Все</p>
+                    </div>
+                    <div class="main_gallery__tags-item">
+                      <input type="checkbox" name="main_gallery__tags">
+                      <p>Лучший полёт</p>
+                    </div>
+                    <div class="main_gallery__tags-item">
+                      <input type="checkbox" name="main_gallery__tags" checked>
+                      <p>Волшебный свет</p>
+                    </div>
+                    <div class="main_gallery__tags-item">
+                      <input type="checkbox" name="main_gallery__tags">
+                      <p>Лучший портрет</p>
+                    </div>
+                    <div class="main_gallery__tags-item">
+                      <input type="checkbox" name="main_gallery__tags">
+                      <p>Лучший репортаж</p>
+                    </div>
+                    <div class="main_gallery__tags-item">
+                      <input type="checkbox" name="main_gallery__tags">
+                      <p>Лучший эмоциональный кадр</p>
+                    </div>
+                    <div class="main_gallery__tags-item">
+                      <input type="checkbox" name="main_gallery__tags">
+                      <p>Лучшая композиция</p>
+                    </div>
+                    <div class="main_gallery__tags-item">
+                      <input type="checkbox" name="main_gallery__tags">
+                      <p>Лучшее отражение</p>
+                    </div>
+                    <div class="main_gallery__tags-item">
+                      <input type="checkbox" name="main_gallery__tags">
+                      <p>Лучший кадр со вспышкой</p>
+                    </div>
+                    <div class="main_gallery__tags-item">
+                      <input type="checkbox" name="main_gallery__tags">
+                      <p>Лучший фейл свадьбы</p>
+                    </div>
+                    <div class="main_gallery__tags-item">
+                      <input type="checkbox" name="main_gallery__tags">
+                      <p>Лучший ночной кадр</p>
+                    </div>
+                    <div class="main_gallery__tags-item">
+                      <input type="checkbox" name="main_gallery__tags">
+                      <p>Лучшая деталь</p>
+                    </div>
+                    <div class="main_gallery__tags-item">
+                      <input type="checkbox" name="main_gallery__tags">
+                      <p>Лучший кадр банкета</p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-        </div>
-        <div class="photographers__gallery main_gallery">
-          <div class="container">
             <div class="main_gallery__blocks">
               <div class="main_gallery__block height-4">
                 <div class="main_gallery__content">
-                  <a href="#" class="main_gallery__link"></a>
+                  <a href="one_photo_page.html" class="main_gallery__link"></a>
                   <img src="img/img-11.jpg" alt="">
                   <div data-tooltip data-tooltip-theme="theme-dark" title="Волшебный свет" class="sticker_mark main_gallery__sticker_mark color-1">
                     <svg class="sticker_mark__bg">
@@ -96,11 +147,23 @@
                       <use xlink:href="img/sprite.svg#lightning"></use>
                     </svg>
                   </div>
+                  <div class="main_gallery__info">
+                    <div class="main_gallery__user">
+                      <img src="img/best-img-6.png" alt="">
+                      <p class="main_gallery__user-name"><a href="photographer_page.html">Глеб Голубин</a></p>
+                    </div>
+                    <div class="main_gallery__likes">
+                      <svg class="icon icon-like">
+                        <use xlink:href="img/icons.svg#like" />
+                      </svg>
+                      <span>34</span>
+                    </div>
+                  </div>
                 </div>
               </div>
               <div class="main_gallery__block height-5">
                 <div class="main_gallery__content">
-                  <a href="#" class="main_gallery__link"></a>
+                  <a href="one_photo_page.html" class="main_gallery__link"></a>
                   <img src="img/img-12.jpg" alt="">
                   <div data-tooltip data-tooltip-theme="theme-dark" title="Волшебный свет" class="sticker_mark main_gallery__sticker_mark color-1">
                     <svg class="sticker_mark__bg">
@@ -110,11 +173,23 @@
                       <use xlink:href="img/sprite.svg#lightning"></use>
                     </svg>
                   </div>
+                  <div class="main_gallery__info">
+                    <div class="main_gallery__user">
+                      <img src="img/best-img-6.png" alt="">
+                      <p class="main_gallery__user-name"><a href="photographer_page.html">Глеб Голубин</a></p>
+                    </div>
+                    <div class="main_gallery__likes">
+                      <svg class="icon icon-like">
+                        <use xlink:href="img/icons.svg#like" />
+                      </svg>
+                      <span>34</span>
+                    </div>
+                  </div>
                 </div>
               </div>
               <div class="main_gallery__block height-6">
                 <div class="main_gallery__content">
-                  <a href="#" class="main_gallery__link"></a>
+                  <a href="one_photo_page.html" class="main_gallery__link"></a>
                   <img src="img/img-13.jpg" alt="">
                   <div data-tooltip data-tooltip-theme="theme-dark" title="Волшебный свет" class="sticker_mark main_gallery__sticker_mark color-1">
                     <svg class="sticker_mark__bg">
@@ -124,11 +199,23 @@
                       <use xlink:href="img/sprite.svg#lightning"></use>
                     </svg>
                   </div>
+                  <div class="main_gallery__info">
+                    <div class="main_gallery__user">
+                      <img src="img/best-img-6.png" alt="">
+                      <p class="main_gallery__user-name"><a href="photographer_page.html">Глеб Голубин</a></p>
+                    </div>
+                    <div class="main_gallery__likes">
+                      <svg class="icon icon-like">
+                        <use xlink:href="img/icons.svg#like" />
+                      </svg>
+                      <span>34</span>
+                    </div>
+                  </div>
                 </div>
               </div>
               <div class="main_gallery__block height-7">
                 <div class="main_gallery__content">
-                  <a href="#" class="main_gallery__link"></a>
+                  <a href="one_photo_page.html" class="main_gallery__link"></a>
                   <img src="img/img-14.jpg" alt="">
                   <div data-tooltip data-tooltip-theme="theme-dark" title="Волшебный свет" class="sticker_mark main_gallery__sticker_mark color-1">
                     <svg class="sticker_mark__bg">
@@ -138,11 +225,23 @@
                       <use xlink:href="img/sprite.svg#lightning"></use>
                     </svg>
                   </div>
+                  <div class="main_gallery__info">
+                    <div class="main_gallery__user">
+                      <img src="img/best-img-6.png" alt="">
+                      <p class="main_gallery__user-name"><a href="photographer_page.html">Глеб Голубин</a></p>
+                    </div>
+                    <div class="main_gallery__likes">
+                      <svg class="icon icon-like">
+                        <use xlink:href="img/icons.svg#like" />
+                      </svg>
+                      <span>34</span>
+                    </div>
+                  </div>
                 </div>
               </div>
               <div class="main_gallery__block height-5">
                 <div class="main_gallery__content">
-                  <a href="#" class="main_gallery__link"></a>
+                  <a href="one_photo_page.html" class="main_gallery__link"></a>
                   <img src="img/img-15.jpg" alt="">
                   <div data-tooltip data-tooltip-theme="theme-dark" title="Волшебный свет" class="sticker_mark main_gallery__sticker_mark color-1">
                     <svg class="sticker_mark__bg">
@@ -152,11 +251,23 @@
                       <use xlink:href="img/sprite.svg#lightning"></use>
                     </svg>
                   </div>
+                  <div class="main_gallery__info">
+                    <div class="main_gallery__user">
+                      <img src="img/best-img-6.png" alt="">
+                      <p class="main_gallery__user-name"><a href="photographer_page.html">Глеб Голубин</a></p>
+                    </div>
+                    <div class="main_gallery__likes">
+                      <svg class="icon icon-like">
+                        <use xlink:href="img/icons.svg#like" />
+                      </svg>
+                      <span>34</span>
+                    </div>
+                  </div>
                 </div>
               </div>
               <div class="main_gallery__block height-8">
                 <div class="main_gallery__content">
-                  <a href="#" class="main_gallery__link"></a>
+                  <a href="one_photo_page.html" class="main_gallery__link"></a>
                   <img src="img/img-16.jpg" alt="">
                   <div data-tooltip data-tooltip-theme="theme-dark" title="Волшебный свет" class="sticker_mark main_gallery__sticker_mark color-1">
                     <svg class="sticker_mark__bg">
@@ -166,11 +277,23 @@
                       <use xlink:href="img/sprite.svg#lightning"></use>
                     </svg>
                   </div>
+                  <div class="main_gallery__info">
+                    <div class="main_gallery__user">
+                      <img src="img/best-img-6.png" alt="">
+                      <p class="main_gallery__user-name"><a href="photographer_page.html">Глеб Голубин</a></p>
+                    </div>
+                    <div class="main_gallery__likes">
+                      <svg class="icon icon-like">
+                        <use xlink:href="img/icons.svg#like" />
+                      </svg>
+                      <span>34</span>
+                    </div>
+                  </div>
                 </div>
               </div>
               <div class="main_gallery__block height-8">
                 <div class="main_gallery__content">
-                  <a href="#" class="main_gallery__link"></a>
+                  <a href="one_photo_page.html" class="main_gallery__link"></a>
                   <img src="img/img-17.jpg" alt="">
                   <div data-tooltip data-tooltip-theme="theme-dark" title="Волшебный свет" class="sticker_mark main_gallery__sticker_mark color-1">
                     <svg class="sticker_mark__bg">
@@ -180,11 +303,23 @@
                       <use xlink:href="img/sprite.svg#lightning"></use>
                     </svg>
                   </div>
+                  <div class="main_gallery__info">
+                    <div class="main_gallery__user">
+                      <img src="img/best-img-6.png" alt="">
+                      <p class="main_gallery__user-name"><a href="photographer_page.html">Глеб Голубин</a></p>
+                    </div>
+                    <div class="main_gallery__likes">
+                      <svg class="icon icon-like">
+                        <use xlink:href="img/icons.svg#like" />
+                      </svg>
+                      <span>34</span>
+                    </div>
+                  </div>
                 </div>
               </div>
               <div class="main_gallery__block height-4">
                 <div class="main_gallery__content">
-                  <a href="#" class="main_gallery__link"></a>
+                  <a href="one_photo_page.html" class="main_gallery__link"></a>
                   <img src="img/img-18.jpg" alt="">
                   <div data-tooltip data-tooltip-theme="theme-dark" title="Волшебный свет" class="sticker_mark main_gallery__sticker_mark color-1">
                     <svg class="sticker_mark__bg">
@@ -194,11 +329,23 @@
                       <use xlink:href="img/sprite.svg#lightning"></use>
                     </svg>
                   </div>
+                  <div class="main_gallery__info">
+                    <div class="main_gallery__user">
+                      <img src="img/best-img-6.png" alt="">
+                      <p class="main_gallery__user-name"><a href="photographer_page.html">Глеб Голубин</a></p>
+                    </div>
+                    <div class="main_gallery__likes">
+                      <svg class="icon icon-like">
+                        <use xlink:href="img/icons.svg#like" />
+                      </svg>
+                      <span>34</span>
+                    </div>
+                  </div>
                 </div>
               </div>
               <div class="main_gallery__block height-5">
                 <div class="main_gallery__content">
-                  <a href="#" class="main_gallery__link"></a>
+                  <a href="one_photo_page.html" class="main_gallery__link"></a>
                   <img src="img/img-19.jpg" alt="">
                   <div data-tooltip data-tooltip-theme="theme-dark" title="Волшебный свет" class="sticker_mark main_gallery__sticker_mark color-1">
                     <svg class="sticker_mark__bg">
@@ -208,11 +355,23 @@
                       <use xlink:href="img/sprite.svg#lightning"></use>
                     </svg>
                   </div>
+                  <div class="main_gallery__info">
+                    <div class="main_gallery__user">
+                      <img src="img/best-img-6.png" alt="">
+                      <p class="main_gallery__user-name"><a href="photographer_page.html">Глеб Голубин</a></p>
+                    </div>
+                    <div class="main_gallery__likes">
+                      <svg class="icon icon-like">
+                        <use xlink:href="img/icons.svg#like" />
+                      </svg>
+                      <span>34</span>
+                    </div>
+                  </div>
                 </div>
               </div>
               <div class="main_gallery__block height-6">
                 <div class="main_gallery__content">
-                  <a href="#" class="main_gallery__link"></a>
+                  <a href="one_photo_page.html" class="main_gallery__link"></a>
                   <img src="img/img-20.jpg" alt="">
                   <div data-tooltip data-tooltip-theme="theme-dark" title="Волшебный свет" class="sticker_mark main_gallery__sticker_mark color-1">
                     <svg class="sticker_mark__bg">
@@ -222,11 +381,23 @@
                       <use xlink:href="img/sprite.svg#lightning"></use>
                     </svg>
                   </div>
+                  <div class="main_gallery__info">
+                    <div class="main_gallery__user">
+                      <img src="img/best-img-6.png" alt="">
+                      <p class="main_gallery__user-name"><a href="photographer_page.html">Глеб Голубин</a></p>
+                    </div>
+                    <div class="main_gallery__likes">
+                      <svg class="icon icon-like">
+                        <use xlink:href="img/icons.svg#like" />
+                      </svg>
+                      <span>34</span>
+                    </div>
+                  </div>
                 </div>
               </div>
               <div class="main_gallery__block height-7">
                 <div class="main_gallery__content">
-                  <a href="#" class="main_gallery__link"></a>
+                  <a href="one_photo_page.html" class="main_gallery__link"></a>
                   <img src="img/img-21.jpg" alt="">
                   <div data-tooltip data-tooltip-theme="theme-dark" title="Волшебный свет" class="sticker_mark main_gallery__sticker_mark color-1">
                     <svg class="sticker_mark__bg">
@@ -236,11 +407,23 @@
                       <use xlink:href="img/sprite.svg#lightning"></use>
                     </svg>
                   </div>
+                  <div class="main_gallery__info">
+                    <div class="main_gallery__user">
+                      <img src="img/best-img-6.png" alt="">
+                      <p class="main_gallery__user-name"><a href="photographer_page.html">Глеб Голубин</a></p>
+                    </div>
+                    <div class="main_gallery__likes">
+                      <svg class="icon icon-like">
+                        <use xlink:href="img/icons.svg#like" />
+                      </svg>
+                      <span>34</span>
+                    </div>
+                  </div>
                 </div>
               </div>
               <div class="main_gallery__block height-5">
                 <div class="main_gallery__content">
-                  <a href="#" class="main_gallery__link"></a>
+                  <a href="one_photo_page.html" class="main_gallery__link"></a>
                   <img src="img/img-22.jpg" alt="">
                   <div data-tooltip data-tooltip-theme="theme-dark" title="Волшебный свет" class="sticker_mark main_gallery__sticker_mark color-1">
                     <svg class="sticker_mark__bg">
@@ -250,11 +433,23 @@
                       <use xlink:href="img/sprite.svg#lightning"></use>
                     </svg>
                   </div>
+                  <div class="main_gallery__info">
+                    <div class="main_gallery__user">
+                      <img src="img/best-img-6.png" alt="">
+                      <p class="main_gallery__user-name"><a href="photographer_page.html">Глеб Голубин</a></p>
+                    </div>
+                    <div class="main_gallery__likes">
+                      <svg class="icon icon-like">
+                        <use xlink:href="img/icons.svg#like" />
+                      </svg>
+                      <span>34</span>
+                    </div>
+                  </div>
                 </div>
               </div>
               <div class="main_gallery__block height-8">
                 <div class="main_gallery__content">
-                  <a href="#" class="main_gallery__link"></a>
+                  <a href="one_photo_page.html" class="main_gallery__link"></a>
                   <img src="img/img-23.jpg" alt="">
                   <div data-tooltip data-tooltip-theme="theme-dark" title="Волшебный свет" class="sticker_mark main_gallery__sticker_mark color-1">
                     <svg class="sticker_mark__bg">
@@ -264,11 +459,23 @@
                       <use xlink:href="img/sprite.svg#lightning"></use>
                     </svg>
                   </div>
+                  <div class="main_gallery__info">
+                    <div class="main_gallery__user">
+                      <img src="img/best-img-6.png" alt="">
+                      <p class="main_gallery__user-name"><a href="photographer_page.html">Глеб Голубин</a></p>
+                    </div>
+                    <div class="main_gallery__likes">
+                      <svg class="icon icon-like">
+                        <use xlink:href="img/icons.svg#like" />
+                      </svg>
+                      <span>34</span>
+                    </div>
+                  </div>
                 </div>
               </div>
               <div class="main_gallery__block height-8">
                 <div class="main_gallery__content">
-                  <a href="#" class="main_gallery__link"></a>
+                  <a href="one_photo_page.html" class="main_gallery__link"></a>
                   <img src="img/img-24.jpg" alt="">
                   <div data-tooltip data-tooltip-theme="theme-dark" title="Волшебный свет" class="sticker_mark main_gallery__sticker_mark color-1">
                     <svg class="sticker_mark__bg">
@@ -278,12 +485,28 @@
                       <use xlink:href="img/sprite.svg#lightning"></use>
                     </svg>
                   </div>
+                  <div class="main_gallery__info">
+                    <div class="main_gallery__user">
+                      <img src="img/best-img-6.png" alt="">
+                      <p class="main_gallery__user-name"><a href="photographer_page.html">Глеб Голубин</a></p>
+                    </div>
+                    <div class="main_gallery__likes">
+                      <svg class="icon icon-like">
+                        <use xlink:href="img/icons.svg#like" />
+                      </svg>
+                      <span>34</span>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-
-
           </div>
+          <a href="#" class="nomination-new__btn-more">
+            <svg class="nomination-new__arr-down">
+              <use xlink:href="img/sprite.svg#arr-down"></use>
+            </svg>
+            Ещё фото
+          </a>
         </div>
       </div>
 
