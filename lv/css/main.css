@@ -13326,6 +13326,27 @@ a.user_info__img-uploading:hover {
   .user_info__links-btn {
     margin-right: 20px;
   }
+
+  .photographer_page__contacts {
+    display: block;
+  }
+
+  .photographer_page__nav {
+    margin-bottom: 35px;
+  }
+
+  .photographer_page__contacts-item {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .photographer_page__contacts-item:last-child {
+    margin-bottom: 0;
+  }
+
+  .photographer_page__contacts-address {
+    max-width: none;
+  }
 }
 
 @media (max-width: 575px) {
