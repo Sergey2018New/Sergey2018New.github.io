@@ -81,12 +81,10 @@ $(document).ready(function () {
 	// Menu Mobile
 	$(".header__btn-menu").on('click', function(){
 		$(".header__nav").toggleClass("active");
-	})
-	$(".header__nav-close").on('click', function(){ 
-		$(".header__nav").removeClass("active");
-	});
+		$(this).toggleClass("active"); 
+	}); 
 
-
+	// Gallery Grid
 	var $grid = $('.main_gallery__blocks').masonry({
 		itemSelector: '.main_gallery__block',
 		columnWidth: '.main_gallery__block',
@@ -215,9 +213,83 @@ $(document).ready(function () {
 		var menu = ".profile-menu"; 
 		if (!$(menu).is(e.target)
 			&& $(e.target).closest(menu).length === 0){
-		  $(menu).removeClass("active");
+			$(menu).removeClass("active");
 		}
-	  });
+	});
 
+	// Восстановление пароля
+	const restoreMain = $(".form-restore__main");
+	const restoreConfirmation = $("#restore_confirmation");
+	const restoreEditNumber = $("#restore_edit_number");  
+	const restoreButtonContinue = $("#restore_button_next");
+	const restoreButtonEditNumber = $("#restore_button_edit_number");
+	const restoreButtonEditSave = $("#restore_button_edit_save");
+	const restoreButtonBack = $("#restore_button_back");
+ 
+	restoreButtonEditNumber.on("click", function(){
+		restoreConfirmation.hide();
+		restoreEditNumber.show();
+	});
+ 
+	restoreButtonContinue.on("click", function(){
+		restoreMain.hide();
+		restoreConfirmation.show();
+	});
+
+	restoreButtonEditSave.on("click", function(){
+		restoreEditNumber.hide();
+		restoreConfirmation.show();
+	});
+ 
+	restoreButtonBack.on("click", function(){
+		restoreEditNumber.hide();
+		restoreConfirmation.show();
+	});
+ 
+
+	// Регистрация
+	const registrationButtonSubmit = $("#registration_button_submit");
+	const registrationButtonConfirm = $("#button_confirmation_email");
+
+
+	registrationButtonSubmit.on("click", function(){
+		$("#modal-confirmation-email").modal({
+			closeText: iconClose,
+		});
+		return false;
+	});
+	registrationButtonConfirm.on("click", function(){
+		$("#modal-completion-registration").modal({
+			closeText: iconClose,
+		});
+		return false;
+	});
+
+	// Завершение регистрации
+
+	const registrationStep = ".completion-registration__step";
+	const registrationProgress = ".completion-registration__progress-item";
+	
+	const registrationButtonStep2 = $("#registration_button_step_2");
+	const registrationButtonStep3 = $("#registration_button_step_3"); 
+	const registrationButtonSkip3 = $("#registration_button_skip_3"); 
+	
+	registrationButtonStep2.on("click", function(){
+		continueStepRegistration(1,2);
+	});  
+	registrationButtonStep3.on("click", function(){
+		continueStepRegistration(2,3); 
+	}); 
+	registrationButtonSkip3.on("click", function(){
+		continueStepRegistration(2,3); 
+	}); 
+
+	function continueStepRegistration(current, next){
+		$(registrationStep).removeClass("active"); 
+		$(registrationStep + '[data-step="' + next + '"]').addClass("active");
+
+		$(registrationProgress + '[data-registration-step="' + current + '"]').addClass("success"); 
+		$(registrationProgress + '[data-registration-step="' + next + '"]').addClass("active"); 
+	} 
 
 });
