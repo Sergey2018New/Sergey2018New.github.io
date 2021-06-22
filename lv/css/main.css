@@ -3146,7 +3146,7 @@ img {
 
 .container {
   width: 100%;
-  max-width: 1920px;
+  max-width: 1280px;
   padding-right: 20px;
   padding-left: 20px;
   margin-left: auto;
@@ -6325,6 +6325,10 @@ input::-ms-clear {
 
 .main_gallery__content:hover .main_gallery__description {
   color: #FFD846;
+}
+
+.main_gallery--home .container {
+  max-width: 1920px;
 }
 
 .main_gallery--home .main_gallery__content {
